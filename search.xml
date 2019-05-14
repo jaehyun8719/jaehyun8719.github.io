@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Tags Testing Article]]></title>
+    <url>%2F2019%2F05%2F14%2Fspringboot%2Findex%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+</search>

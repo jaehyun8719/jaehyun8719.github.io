@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jaehyun&#39;s Dev Story</title>
+  
+  <subtitle>공부해서 남준다.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jaehyun8719.github.io/"/>
+  <updated>2019-05-14T01:10:36.759Z</updated>
+  <id>https://jaehyun8719.github.io/</id>
+  
+  <author>
+    <name>Jaehyun</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tags Testing Article</title>
+    <link href="https://jaehyun8719.github.io/2019/05/14/springboot/index/"/>
+    <id>https://jaehyun8719.github.io/2019/05/14/springboot/index/</id>
+    <published>2019-05-14T01:10:36.759Z</published>
+    <updated>2019-05-14T01:10:36.759Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="https://jaehyun8719.github.io/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="https://jaehyun8719.github.io/tags/Spring-Boot/"/>
+    
+      <category term="Java" scheme="https://jaehyun8719.github.io/tags/Java/"/>
+    
+  </entry>
+  
+</feed>
