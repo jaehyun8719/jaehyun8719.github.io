@@ -99,13 +99,22 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Jaehyun&#39;s Dev Story">
-<meta property="og:url" content="https://jaehyun8719.github.io/index.html">
+  <meta name="description" content="개요Logback은 Java에서 가장 많이 사용되는 logging framework 입니다.  Log4j의 후속 버전으로 새롭게 만든 Logging 라이브러리이며, slf4j API를 구현하므로 다른 logging framework와 logback 간에 쉽게 전환이 가능합니다. Log4j1.x와 Logback비교시 Logback 장점 log4j 보다 메모리">
+<meta name="keywords" content="Java,Logback">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Logback 설정">
+<meta property="og:url" content="https://jaehyun8719.github.io/2019/05/15/Utils/logback/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="개요Logback은 Java에서 가장 많이 사용되는 logging framework 입니다.  Log4j의 후속 버전으로 새롭게 만든 Logging 라이브러리이며, slf4j API를 구현하므로 다른 logging framework와 logback 간에 쉽게 전환이 가능합니다. Log4j1.x와 Logback비교시 Logback 장점 log4j 보다 메모리">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/logback_level.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/logback_src.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/logback_file.png">
+<meta property="og:updated_time" content="2019-05-15T00:56:12.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jaehyun&#39;s Dev Story">
+<meta name="twitter:title" content="Logback 설정">
+<meta name="twitter:description" content="개요Logback은 Java에서 가장 많이 사용되는 logging framework 입니다.  Log4j의 후속 버전으로 새롭게 만든 Logging 라이브러리이며, slf4j API를 구현하므로 다른 logging framework와 logback 간에 쉽게 전환이 가능합니다. Log4j1.x와 Logback비교시 Logback 장점 log4j 보다 메모리">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/logback_level.png">
 
 
 
@@ -115,7 +124,7 @@
 
   
   
-  <link rel="canonical" href="https://jaehyun8719.github.io/">
+  <link rel="canonical" href="https://jaehyun8719.github.io/2019/05/15/Utils/logback/">
 
 
 
@@ -125,7 +134,7 @@
   };
 </script>
 
-  <title>  - Jaehyun's Dev Story </title>
+  <title>Logback 설정 | Jaehyun's Dev Story</title>
   
 
 
@@ -173,8 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +224,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -374,9 +382,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -408,10 +416,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/15/Utils/logback/" class="post-title-link" itemprop="url">Logback 설정</a>
+          <h2 class="post-title" itemprop="name headline">Logback 설정
+
               
             
           </h2>
@@ -506,9 +512,7 @@
       
 
       
-        
-          
-            <h1 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h1><p>Logback은 Java에서 가장 많이 사용되는 logging framework 입니다. </p>
+        <h1 id="개요"><a href="#개요" class="headerlink" title="개요"></a>개요</h1><p>Logback은 Java에서 가장 많이 사용되는 logging framework 입니다. </p>
 <p>Log4j의 후속 버전으로 새롭게 만든 Logging 라이브러리이며, slf4j API를 구현하므로 다른 logging framework와 logback 간에 쉽게 전환이 가능합니다.</p>
 <h1 id="Log4j1-x와-Logback비교시-Logback-장점"><a href="#Log4j1-x와-Logback비교시-Logback-장점" class="headerlink" title="Log4j1.x와 Logback비교시 Logback 장점"></a>Log4j1.x와 Logback비교시 Logback 장점</h1><ol>
 <li>log4j 보다 메모리 점유도 작고, 성능도 10배 이상 향상</li>
@@ -560,8 +564,6 @@
 <li><a href="https://www.baeldung.com/logback" target="_blank" rel="noopener">https://www.baeldung.com/logback</a></li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -582,14 +584,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Logback/" rel="tag"># Logback</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -599,14 +609,22 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -626,8 +644,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -746,6 +773,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#개요"><span class="nav-number">1.</span> <span class="nav-text">개요</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Log4j1-x와-Logback비교시-Logback-장점"><span class="nav-number">2.</span> <span class="nav-text">Log4j1.x와 Logback비교시 Logback 장점</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logback구조"><span class="nav-number">3.</span> <span class="nav-text">Logback구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Log-레벨"><span class="nav-number">4.</span> <span class="nav-text">Log 레벨</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#설정파일-순서대로-높은-우선순위를-가짐"><span class="nav-number">5.</span> <span class="nav-text">설정파일 (순서대로 높은 우선순위를 가짐)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-Dependency"><span class="nav-number">6.</span> <span class="nav-text">Maven Dependency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#기본-구성"><span class="nav-number">7.</span> <span class="nav-text">기본 구성</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#설정-옵션"><span class="nav-number">8.</span> <span class="nav-text">설정 옵션</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number">8.1.</span> <span class="nav-text">configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Logger"><span class="nav-number">8.2.</span> <span class="nav-text">Logger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Appender"><span class="nav-number">8.3.</span> <span class="nav-text">Appender</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logback-xml-샘플"><span class="nav-number">8.4.</span> <span class="nav-text">logback.xml 샘플</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -873,6 +917,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -891,9 +939,28 @@
   <script id="dsq-count-scr" src="https://jaehyun8719.disqus.com/count.js" async></script>
 
 
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2019/05/15/Utils/logback/";
+    this.page.identifier = "2019/05/15/Utils/logback/";
+    this.page.title = 'Logback 설정';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
 
 
 
+
+
+  
 
 
   
