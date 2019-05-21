@@ -99,13 +99,13 @@
 
 
 
-  <meta name="description" content="Spring Boot 2.1.4.RELEASE 버젼에서 Logback 이용해서 logging  설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명">
+  <meta name="description" content="Spring Boot에서 Logback 이용해서 logging 설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명에 대해서는 Logback 설정">
 <meta name="keywords" content="springboot, springboot logback 설정">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot Logback 설정">
 <meta property="og:url" content="https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="Spring Boot 2.1.4.RELEASE 버젼에서 Logback 이용해서 logging  설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명">
+<meta property="og:description" content="Spring Boot에서 Logback 이용해서 logging 설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명에 대해서는 Logback 설정">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/logback/spring_logback1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/logback/spring_logback2.png">
@@ -115,10 +115,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/logback/spring_logback6.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/logback/spring_logback7.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-05-21T02:43:23.877Z">
+<meta property="og:updated_time" content="2019-05-21T08:17:35.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot Logback 설정">
-<meta name="twitter:description" content="Spring Boot 2.1.4.RELEASE 버젼에서 Logback 이용해서 logging  설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명">
+<meta name="twitter:description" content="Spring Boot에서 Logback 이용해서 logging 설정하는 방법에 대해서 설명한다.여기서 application.yml 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 logback-spring.xml 을 이용한 방법에대해서 설명한다.   Logback 에 기본 설명은 하지 않는다. 기본설명에 대해서는 Logback 설정">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/springboot/logback/spring_logback1.png">
 
 
@@ -464,7 +464,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-05-21 11:43:23" itemprop="dateModified" datetime="2019-05-21T11:43:23+09:00">2019-05-21</time>
+                <time title="Modified: 2019-05-21 17:17:35" itemprop="dateModified" datetime="2019-05-21T17:17:35+09:00">2019-05-21</time>
               
             
           </span>
@@ -530,7 +530,7 @@
 
       
         <hr>
-<p>Spring Boot 2.1.4.RELEASE 버젼에서 Logback 이용해서 logging  설정하는 방법에 대해서 설명한다.<br>여기서 <code>application.yml</code> 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 <code>logback-spring.xml</code> 을 이용한 방법에대해서 설명한다. </p>
+<p>Spring Boot에서 Logback 이용해서 logging 설정하는 방법에 대해서 설명한다.<br>여기서 <code>application.yml</code> 을 이용한 설정방법은 설명 하지 않고, 기본 Logback을 확장해서 <code>logback-spring.xml</code> 을 이용한 방법에대해서 설명한다. </p>
 <blockquote>
 <p>Logback 에 기본 설명은 하지 않는다. 기본설명에 대해서는 <a href="https://jaehyun8719.github.io/2019/05/15/utils/logback/">Logback 설정</a> 을 참고 하길 바란다.<br><a id="more"></a></p>
 </blockquote>
@@ -581,7 +581,7 @@
 <p>생성된 파일 확인</p>
 <p><img src="/images/springboot/logback/spring_logback7.png" alt></p>
 <p>실제 로그파일 저장위치를 <code>&lt;property name=&quot;LOG_FILE&quot;&gt;</code> 과 <code>&lt;property name=&quot;LOG_FILE_PROD&quot;&gt;</code> 로 설정했는데, 실제 서버 운영에는 각 저장소가 다르기때문에 같은 name으로 해도된다. 로컬에서 파일이름을 다르게 생성하기 위해서 설정한것이다.</p>
-<h1 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h1><p><a href="https://github.com/jaehyun8719/spring-boot-unity/tree/master/logback" rel="external nofollow noopener noreferrer" target="_blank"><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/github.png" class="full-image" style="max-width: none; width: 200px;"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></a></p>
+<h1 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h1><p><a href="https://github.com/jaehyun8719/spring-boot-unity/tree/master/logback" rel="external nofollow noopener noreferrer" target="_blank"><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/github.png" class="full-image" style="max-width: none; width: 200px;"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></a></p>
 <h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
 <li><a href="https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8</a></li>
 <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.spring.io/spring-boot/docs/current/reference/html/howto-logging.html</a></li>
@@ -826,7 +826,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-Dependency"><span class="nav-number">1.</span> <span class="nav-text">Maven Dependency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Boot-logback-기본-구조"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot logback 기본 구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logback-확장-기능"><span class="nav-number">3.</span> <span class="nav-text">Logback 확장 기능</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#springProfile-소개"><span class="nav-number">3.1.</span> <span class="nav-text">springProfile 소개</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#application-profile-yaml-생성"><span class="nav-number">3.2.</span> <span class="nav-text">application-{profile}.yaml 생성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logback-spring-xml-생성"><span class="nav-number">3.3.</span> <span class="nav-text">logback-spring.xml 생성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#실행"><span class="nav-number">3.4.</span> <span class="nav-text">실행</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Code"><span class="nav-number">4.</span> <span class="nav-text">Source Code</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-Dependency"><span class="nav-number">1.</span> <span class="nav-text">Maven Dependency</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Boot-logback-기본-구조"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot logback 기본 구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logback-확장-기능"><span class="nav-number">3.</span> <span class="nav-text">Logback 확장 기능</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#springProfile-소개"><span class="nav-number">3.1.</span> <span class="nav-text">springProfile 소개</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#application-profile-yaml-생성"><span class="nav-number">3.2.</span> <span class="nav-text">application-{profile}.yaml 생성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logback-spring-xml-생성"><span class="nav-number">3.3.</span> <span class="nav-text">logback-spring.xml 생성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#실행"><span class="nav-number">3.4.</span> <span class="nav-text">실행</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#소스코드"><span class="nav-number">4.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
             
 
           </div>
