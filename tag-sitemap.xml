@@ -3,29 +3,36 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/Java8-In-Action/</loc>
-        <lastmod>2019-05-23T07:57:12.576Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Java/</loc>
-        <lastmod>2019-05-23T07:57:12.576Z</lastmod>
+        <loc>https://jaehyun8719.github.io/tags/Auto-Configuration/</loc>
+        <lastmod>2019-05-29T00:53:07.011Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
-        <lastmod>2019-05-21T08:17:35.177Z</lastmod>
+        <lastmod>2019-05-29T00:53:07.011Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Java/</loc>
+        <lastmod>2019-05-29T00:53:07.011Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
-        <lastmod>2019-05-21T08:17:35.177Z</lastmod>
+        <lastmod>2019-05-29T00:52:12.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Java8-In-Action/</loc>
+        <lastmod>2019-05-29T00:52:12.993Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
