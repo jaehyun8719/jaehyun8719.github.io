@@ -8,8 +8,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/05/28/springboot/auto-configuration/</loc>
-        <lastmod>2019-05-29T00:53:07.011Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/</loc>
+        <lastmod>2019-05-29T09:08:40.135Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +17,15 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
-        <lastmod>2019-05-29T00:52:12.995Z</lastmod>
+        <lastmod>2019-05-29T08:13:47.763Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/05/28/springboot/auto-configuration/</loc>
+        <lastmod>2019-05-29T01:28:38.094Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

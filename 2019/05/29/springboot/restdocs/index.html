@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="Pg-g7AfnjOtI6NvJXfL7bXm8Sdk-e9JrzGqq3jab2OE">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<script src="https://use.fontawesome.com/c08d313be1.js"></script>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Spring REST Docs는 RESTful 서비스를 정확하고 읽기 편하게 문서화하는 것을 돕는 것이다. 테스트 기반의 접근법은 서비스에 대한 문서화의 정확도를 보장해주고, 테스트가 실패할 경우 문서화가 되지 않는다.">
+<meta name="keywords" content="springboot, springboot RestDocs, springboot Rest Docs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot REST Docs">
+<meta property="og:url" content="https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/index.html">
+<meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="Spring REST Docs는 RESTful 서비스를 정확하고 읽기 편하게 문서화하는 것을 돕는 것이다. 테스트 기반의 접근법은 서비스에 대한 문서화의 정확도를 보장해주고, 테스트가 실패할 경우 문서화가 되지 않는다.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_1.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_2.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_3.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_5.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
+<meta property="og:updated_time" content="2019-05-29T09:08:40.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring Boot REST Docs">
+<meta name="twitter:description" content="Spring REST Docs는 RESTful 서비스를 정확하고 읽기 편하게 문서화하는 것을 돕는 것이다. 테스트 기반의 접근법은 서비스에 대한 문서화의 정확도를 보장해주고, 테스트가 실패할 경우 문서화가 되지 않는다.">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_1.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jaehyun's Dev Story" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Spring Boot REST Docs | Jaehyun's Dev Story</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaehyun's Dev Story</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">공부해서 남준다.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">6</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories<span class="badge">3</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">5</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/jaehyun8719" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaehyun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaehyun's Dev Story">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Spring Boot REST Docs
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-05-29 00:00:00 / Modified: 18:08:40" itemprop="dateCreated datePublished" datetime="2019-05-29T00:00:00+09:00">2019-05-29</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring-Boot/" itemprop="url" rel="index"><span itemprop="name">Spring Boot</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/05/29/springboot/restdocs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/05/29/springboot/restdocs/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>Spring REST Docs는 RESTful 서비스를 정확하고 읽기 편하게 문서화하는 것을 돕는 것이다. 테스트 기반의 접근법은 서비스에 대한 문서화의 정확도를 보장해주고, 테스트가 실패할 경우 문서화가 되지 않는다.<br><a id="more"></a></p>
+<h1 id="REST-Docs-장점"><a href="#REST-Docs-장점" class="headerlink" title="REST Docs 장점"></a>REST Docs 장점</h1><ol>
+<li>curl 과 http request snippets이 생성된다.</li>
+<li>snippets 정보를 쉽게 추가 할 수 있다.</li>
+<li>프로젝트 jar파일에 문서를 쉽게 패키지 할 수 있다.</li>
+<li>JSON 과 XML 을 지원한다.</li>
+<li>비지니스 로직과 일치한 API 문서</li>
+</ol>
+<h1 id="구조"><a href="#구조" class="headerlink" title="구조"></a>구조</h1><p><img src="/images/springboot/restdocs/restdocs_1.png" alt></p>
+<h1 id="빌드-설정-Bulid-Configuration"><a href="#빌드-설정-Bulid-Configuration" class="headerlink" title="빌드 설정(Bulid Configuration)"></a>빌드 설정(Bulid Configuration)</h1><figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-hateoas<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span> <span class="comment">&lt;!-- 1 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.restdocs<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-restdocs-mockmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span> <span class="comment">&lt;!-- 2 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.asciidoctor<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>asciidoctor-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">id</span>&gt;</span>generate-docs<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">phase</span>&gt;</span>prepare-package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span> <span class="comment">&lt;!-- 3 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goal</span>&gt;</span>process-asciidoc<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">backend</span>&gt;</span>html<span class="tag">&lt;/<span class="name">backend</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">doctype</span>&gt;</span>book<span class="tag">&lt;/<span class="name">doctype</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependency</span>&gt;</span> <span class="comment">&lt;!-- 4 --&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.restdocs<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-restdocs-asciidoctor<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-restdocs.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><code>spring-restdocs-mockmvc</code>의 test범위에 의존성 추가</li>
+<li>Asciidoctor 플러그인 추가</li>
+<li><code>prepare-package</code>사용하면 문서가 패키지에 포함될 수 있다.</li>
+<li>spring-restdocs-asciidoctorAsciidoctor 플러그인의 의존성 추가. 이렇게하면 파일 snippets에 사용할 속성 <code>.adoc</code>을 가리 키도록 자동으로 구성 된다. <code>target/generated-snippets</code> 또한 <code>operation</code> 블록 매크로 를 사용할 수 있다.</li>
+</ol>
+<h1 id="User-REST-API-추가-me-restdocs-users-패키지-생성"><a href="#User-REST-API-추가-me-restdocs-users-패키지-생성" class="headerlink" title="User REST API 추가(me.restdocs.users 패키지 생성)"></a>User REST API 추가(me.restdocs.users 패키지 생성)</h1><h2 id="User-추가"><a href="#User-추가" class="headerlink" title="User 추가"></a>User 추가</h2><figure class="highlight java"><figcaption><span>User.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Builder</span> <span class="meta">@AllArgsConstructor</span> <span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Getter</span> <span class="meta">@Setter</span> <span class="meta">@EqualsAndHashCode</span>(of = <span class="string">"id"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@NotEmpty</span></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String email;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String address;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="UserResource-추가"><a href="#UserResource-추가" class="headerlink" title="UserResource 추가"></a>UserResource 추가</h2><p>Spring HATEOAS를 사용해서 <code>self-description</code>하게 적용한다.(<a href="https://docs.spring.io/spring-hateoas/docs/0.25.1.RELEASE/reference/html/" rel="external nofollow noopener noreferrer" target="_blank">Spring HATEOS 참조</a>)<br><figure class="highlight java"><figcaption><span>UserResource.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserResource</span> <span class="keyword">extends</span> <span class="title">Resource</span>&lt;<span class="title">User</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">UserResource</span><span class="params">(User user, Link... links)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(user, links);</span><br><span class="line">        add(linkTo(UserController.class).slash(user.getId()).withSelfRel());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="UserController-추가"><a href="#UserController-추가" class="headerlink" title="UserController 추가"></a>UserController 추가</h2><figure class="highlight java"><figcaption><span>UserController.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(value = <span class="string">"/api/users"</span>, produces = MediaTypes.HAL_JSON_UTF8_VALUE)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping</span>(<span class="string">"/&#123;id&#125;"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ResponseEntity <span class="title">getUser</span><span class="params">(@PathVariable String id)</span> </span>&#123;</span><br><span class="line">        User user = User.builder()</span><br><span class="line">                .id(id)</span><br><span class="line">                .email(id + <span class="string">"@mail.com"</span>)</span><br><span class="line">                .address(<span class="string">"Seoul"</span>)</span><br><span class="line">                .build();</span><br><span class="line"></span><br><span class="line">        UserResource userResource = <span class="keyword">new</span> UserResource(user);</span><br><span class="line">        userResource.add(<span class="keyword">new</span> Link(<span class="string">"docs/index.html#resources-user-get"</span>).withRel(<span class="string">"profile"</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ResponseEntity.ok(userResource);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="API-호출-결과-화면"><a href="#API-호출-결과-화면" class="headerlink" title="API 호출 결과 화면"></a>API 호출 결과 화면</h2><p><img src="/images/springboot/restdocs/restdocs_2.png" alt></p>
+<h1 id="문서-패키징-Packaging-the-documentation"><a href="#문서-패키징-Packaging-the-documentation" class="headerlink" title="문서 패키징(Packaging the documentation)"></a>문서 패키징(Packaging the documentation)</h1><p>생성된 문서를 프로젝트의 jar 파일에 패키지화 할 수 있다.<br><figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span> <span class="comment">&lt;!-- 1 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-resources-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>copy-resources<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">phase</span>&gt;</span>prepare-package<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">goal</span>&gt;</span>copy-resources<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span> <span class="comment">&lt;!-- 2 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">outputDirectory</span>&gt;</span>$&#123;project.build.outputDirectory&#125;/static/docs<span class="tag">&lt;/<span class="name">outputDirectory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>$&#123;project.build.directory&#125;/generated-docs<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>Maven Resources 플러그인 추가</li>
+<li>생성 된 문서를 static/docs jar 파일에 포함될 빌드 출력 디렉토리로 복사</li>
+</ol>
+<h1 id="테스트-설정-Test-Configuration"><a href="#테스트-설정-Test-Configuration" class="headerlink" title="테스트 설정(Test Configuration)"></a>테스트 설정(Test Configuration)</h1><h2 id="Test-Class에-AutoConfigureRestDocs와-AutoConfigureMockMvc-추가"><a href="#Test-Class에-AutoConfigureRestDocs와-AutoConfigureMockMvc-추가" class="headerlink" title="Test Class에 @AutoConfigureRestDocs와 @AutoConfigureMockMvc 추가"></a>Test Class에 <code>@AutoConfigureRestDocs</code>와 <code>@AutoConfigureMockMvc</code> 추가</h2><figure class="highlight java"><figcaption><span>UserControllerTest.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@AutoConfigureMockMvc</span> <span class="comment">// 1</span></span><br><span class="line"><span class="meta">@AutoConfigureRestDocs</span> <span class="comment">// 2</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserControllerTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">protected</span> MockMvc mockMvc;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getApi</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        String id = <span class="string">"jaehyun"</span>;</span><br><span class="line"></span><br><span class="line">        mockMvc.perform(get(<span class="string">"/api/users/&#123;id&#125;"</span>, id)</span><br><span class="line">                    .contentType(MediaType.APPLICATION_JSON_UTF8))</span><br><span class="line">                .andDo(print())</span><br><span class="line">                .andExpect(status().isOk())</span><br><span class="line">                .andExpect(jsonPath(<span class="string">"email"</span>).value(<span class="string">"jaehyun@mail.com"</span>))</span><br><span class="line">                .andExpect(jsonPath(<span class="string">"address"</span>).value(<span class="string">"Seoul"</span>))</span><br><span class="line">                .andDo(document(<span class="string">"users-get"</span>, <span class="comment">// 3</span></span><br><span class="line">                        links(</span><br><span class="line">                                linkWithRel(<span class="string">"self"</span>).description(<span class="string">"link to self"</span>)</span><br><span class="line">                                , linkWithRel(<span class="string">"profile"</span>).description(<span class="string">"link to profile"</span>)</span><br><span class="line">                        ),</span><br><span class="line">                        responseHeaders(</span><br><span class="line">                                headerWithName(HttpHeaders.CONTENT_TYPE).description(<span class="string">"content type header"</span>)</span><br><span class="line">                        ),</span><br><span class="line">                        responseFields(</span><br><span class="line">                                fieldWithPath(<span class="string">"id"</span>).description(<span class="string">"사용자 아이디"</span>)</span><br><span class="line">                                , fieldWithPath(<span class="string">"email"</span>).description(<span class="string">"사용자 이메일"</span>)</span><br><span class="line">                                , fieldWithPath(<span class="string">"address"</span>).description(<span class="string">"사용자 주소"</span>)</span><br><span class="line">                                , fieldWithPath(<span class="string">"_links.self.href"</span>).description(<span class="string">"link to self"</span>)</span><br><span class="line">                                , fieldWithPath(<span class="string">"_links.profile.href"</span>).description(<span class="string">"link to self profile"</span>)</span><br><span class="line">                        )</span><br><span class="line">                ));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><code>@AutoConfigureMockMvc</code>는 MockMvc로 Test하기</li>
+<li><code>@AutoConfigureRestDocs</code>는 Spring REST Doc의 자동 설정을 사용</li>
+<li><code>users-get</code> 으로 snippet 생성하여 응답 링크 생성<br><img src="/images/springboot/restdocs/restdocs_3.png" alt></li>
+<li>추가 사용방법</li>
+</ol>
+<ul>
+<li>requestParameters() + parameterWithName()</li>
+<li>pathParameters() + parametersWithName()</li>
+<li>requestParts() + partWithname()</li>
+<li>equestPartBody()</li>
+<li>requestPartFields()</li>
+<li>requestHeaders() + headerWithName()</li>
+<li>requestFields() + fieldWithPath()</li>
+<li>responseHeaders() + headerWithName()</li>
+<li>responseFields() + fieldWithPath()</li>
+</ul>
+<h2 id="Opertarion-index-adoc-파일에-추가"><a href="#Opertarion-index-adoc-파일에-추가" class="headerlink" title="Opertarion index.adoc 파일에 추가"></a>Opertarion index.adoc 파일에 추가</h2><p>bulid 한 Rest docs snippet을 <code>operation</code> 명령어로 연동하기 위해서는 <code>src/main/asciidoc/index.adoc</code> 파일에 추가<br><figure class="highlight java"><figcaption><span>index.adoc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">[[resources-user-get]]</span><br><span class="line">== 사용자 조회</span><br><span class="line"></span><br><span class="line">사용자 리소스는 사용자를 만들거나 조회할 때 사용한다.</span><br><span class="line"></span><br><span class="line">operation::users-get[snippets=<span class="string">'response-fields,curl-request,http-response'</span>]</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">## 실행 방법</span><br><span class="line"><span class="number">1</span>. mvn <span class="keyword">package</span></span><br><span class="line"><span class="number">2</span>. [http:<span class="comment">//localhost:8080/docs/index.html](http://localhost:8080/docs/index.html) 접속</span></span><br><span class="line"></span><br><span class="line">## 결과 화면</span><br><span class="line">![](/images/springboot/restdocs/restdocs_4.png)</span><br><span class="line"></span><br><span class="line"># Customizing requests and responses</span><br><span class="line">요청이나 응답에 대한 json 형식으로 pretty 하게 출력</span><br><span class="line"></span><br><span class="line">## 전처리기 설정</span><br><span class="line"><span class="meta">@TestConfiguration</span> 테스트에서만 작동하는 설정 어노테이션 추가 하고, 전처리기 설정을 withRequestDefaults(prettyPrint()), withResponseDefaults(prettyPrint());로 오버라이딩</span><br><span class="line">```java RestDocsConfiguration.java</span><br><span class="line"><span class="meta">@TestConfiguration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RestDocsConfiguration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestDocsMockMvcConfigurationCustomizer <span class="title">restDocsMockMvcConfigurationCustomizer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> configurer -&gt; configurer.operationPreprocessors()</span><br><span class="line">                .withRequestDefaults(prettyPrint())</span><br><span class="line">                .withResponseDefaults(prettyPrint());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Import-RestDocsConfiguration-class-를-이용해서-RestDocsConfiguration-class-추가"><a href="#Import-RestDocsConfiguration-class-를-이용해서-RestDocsConfiguration-class-추가" class="headerlink" title="@Import(RestDocsConfiguration.class) 를 이용해서 RestDocsConfiguration.class 추가"></a>@Import(RestDocsConfiguration.class) 를 이용해서 RestDocsConfiguration.class 추가</h2><figure class="highlight java"><figcaption><span>UserControllerTest.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@AutoConfigureMockMvc</span></span><br><span class="line"><span class="meta">@AutoConfigureRestDocs</span></span><br><span class="line"><span class="meta">@Import</span>(RestDocsConfiguration.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserControllerTest</span> </span>&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="결과-화면"><a href="#결과-화면" class="headerlink" title="결과 화면"></a>결과 화면</h2><p><img src="/images/springboot/restdocs/restdocs_5.png" alt></p>
+<h1 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h1><p><a href="https://github.com/jaehyun8719/spring-boot-unity/tree/master/restdocs" rel="external nofollow noopener noreferrer" target="_blank"><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/github.png" class="full-image" style="max-width: none; width: 200px;"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></a></p>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
+<li><a href="https://www.inflearn.com/course/spring_rest-api" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/spring_rest-api</a></li>
+<li><a href="https://docs.spring.io/spring-restdocs/docs/2.0.2.RELEASE/reference/html5/#documenting-your-api-customizing-snippets" rel="external nofollow noopener noreferrer" target="_blank">https://docs.spring.io/spring-restdocs/docs/2.0.2.RELEASE/reference/html5/#documenting-your-api-customizing-snippets</a></li>
+<li><a href="https://www.baeldung.com/spring-rest-docs" rel="external nofollow noopener noreferrer" target="_blank">https://www.baeldung.com/spring-rest-docs</a></li>
+<li><a href="https://docs.spring.io/spring-hateoas/docs/0.25.1.RELEASE/reference/html/" rel="external nofollow noopener noreferrer" target="_blank">https://docs.spring.io/spring-hateoas/docs/0.25.1.RELEASE/reference/html/</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>	
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>	
+          
+            <a href="/tags/Rest-Docs/" rel="tag"># Rest Docs</a>	
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/28/springboot/auto-configuration/" rel="next" title="Spring Boot 자동 설정">
+                <i class="fa fa-chevron-left"></i> Spring Boot 자동 설정
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jaehyun</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jaehyun8719" title="GitHub &rarr; https://github.com/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:jaehyun8719@gmail.com" title="E-Mail &rarr; mailto:jaehyun8719@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#REST-Docs-장점"><span class="nav-number">1.</span> <span class="nav-text">REST Docs 장점</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#구조"><span class="nav-number">2.</span> <span class="nav-text">구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#빌드-설정-Bulid-Configuration"><span class="nav-number">3.</span> <span class="nav-text">빌드 설정(Bulid Configuration)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-REST-API-추가-me-restdocs-users-패키지-생성"><span class="nav-number">4.</span> <span class="nav-text">User REST API 추가(me.restdocs.users 패키지 생성)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#User-추가"><span class="nav-number">4.1.</span> <span class="nav-text">User 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserResource-추가"><span class="nav-number">4.2.</span> <span class="nav-text">UserResource 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserController-추가"><span class="nav-number">4.3.</span> <span class="nav-text">UserController 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-호출-결과-화면"><span class="nav-number">4.4.</span> <span class="nav-text">API 호출 결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#문서-패키징-Packaging-the-documentation"><span class="nav-number">5.</span> <span class="nav-text">문서 패키징(Packaging the documentation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#테스트-설정-Test-Configuration"><span class="nav-number">6.</span> <span class="nav-text">테스트 설정(Test Configuration)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Class에-AutoConfigureRestDocs와-AutoConfigureMockMvc-추가"><span class="nav-number">6.1.</span> <span class="nav-text">Test Class에 @AutoConfigureRestDocs와 @AutoConfigureMockMvc 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Opertarion-index-adoc-파일에-추가"><span class="nav-number">6.2.</span> <span class="nav-text">Opertarion index.adoc 파일에 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-RestDocsConfiguration-class-를-이용해서-RestDocsConfiguration-class-추가"><span class="nav-number">6.3.</span> <span class="nav-text">@Import(RestDocsConfiguration.class) 를 이용해서 RestDocsConfiguration.class 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#결과-화면"><span class="nav-number">6.4.</span> <span class="nav-text">결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#소스코드"><span class="nav-number">7.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">8.</span> <span class="nav-text">참조</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinsil</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://jaehyun8719.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/";
+    this.page.identifier = "2019/05/29/springboot/restdocs/";
+    this.page.title = 'Spring Boot REST Docs';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
