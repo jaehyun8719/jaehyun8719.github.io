@@ -113,7 +113,7 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_4.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/restdocs/restdocs_5.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-05-29T09:13:03.645Z">
+<meta property="og:updated_time" content="2019-06-05T03:45:35.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot REST Docs">
 <meta name="twitter:description" content="Spring REST Docs는 RESTful 서비스를 정확하고 읽기 편하게 문서화하는 것을 돕는 것이다. 테스트 기반의 접근법은 서비스에 대한 문서화의 정확도를 보장해주고, 테스트가 실패할 경우 문서화가 되지 않는다.">
@@ -277,7 +277,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">7</span></a>
 
   </li>
         
@@ -315,7 +315,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">5</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">7</span></a>
 
   </li>
 
@@ -445,12 +445,24 @@
                 
               
 
-              <time title="Created: 2019-05-29 00:00:00 / Modified: 18:13:03" itemprop="dateCreated datePublished" datetime="2019-05-29T00:00:00+09:00">2019-05-29</time>
+              <time title="Created: 2019-05-29 00:00:00" itemprop="dateCreated datePublished" datetime="2019-05-29T00:00:00+09:00">2019-05-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-05 12:45:35" itemprop="dateModified" datetime="2019-06-05T12:45:35+09:00">2019-06-05</time>
               
             
           </span>
@@ -559,7 +571,7 @@
 <li>responseHeaders() + headerWithName()</li>
 <li>responseFields() + fieldWithPath()</li>
 </ul>
-<h2 id="Opertarion-index-adoc-파일에-추가"><a href="#Opertarion-index-adoc-파일에-추가" class="headerlink" title="Opertarion index.adoc 파일에 추가"></a>Opertarion index.adoc 파일에 추가</h2><p>bulid 한 Rest docs snippet을 <code>operation</code> 명령어로 연동하기 위해서는 <code>src/main/asciidoc/index.adoc</code> 파일에 추가<br><figure class="highlight java"><figcaption><span>index.adoc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[[resources-user-get]]</span><br><span class="line">== 사용자 조회</span><br><span class="line"></span><br><span class="line">사용자 리소스는 사용자를 만들거나 조회할 때 사용한다.</span><br><span class="line"></span><br><span class="line">operation::users-get[snippets=<span class="string">'response-fields,curl-request,http-response'</span>]</span><br></pre></td></tr></table></figure></p>
+<h2 id="opertarion-index-adoc-파일에-추가"><a href="#opertarion-index-adoc-파일에-추가" class="headerlink" title="opertarion index.adoc 파일에 추가"></a>opertarion index.adoc 파일에 추가</h2><p>bulid 한 Rest docs snippet을 <code>operation</code> 명령어로 연동하기 위해서는 <code>src/main/asciidoc/index.adoc</code> 파일에 추가<br><figure class="highlight java"><figcaption><span>index.adoc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[[resources-user-get]]</span><br><span class="line">== 사용자 조회</span><br><span class="line"></span><br><span class="line">사용자 리소스는 사용자를 만들거나 조회할 때 사용한다.</span><br><span class="line"></span><br><span class="line">operation::users-get[snippets=<span class="string">'response-fields,curl-request,http-response'</span>]</span><br></pre></td></tr></table></figure></p>
 <h2 id="실행-방법"><a href="#실행-방법" class="headerlink" title="실행 방법"></a>실행 방법</h2><ol>
 <li>mvn package</li>
 <li><a href="http://localhost:8080/docs/index.html" rel="external nofollow noopener noreferrer" target="_blank">http://localhost:8080/docs/index.html</a> 접속</li>
@@ -625,6 +637,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/03/java/java8inaction/chapter2/" rel="prev" title="Java8 In Action - 2. 람다 표현식">
+                Java8 In Action - 2. 람다 표현식 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -700,7 +716,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -752,7 +768,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -823,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#REST-Docs-장점"><span class="nav-number">1.</span> <span class="nav-text">REST Docs 장점</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#구조"><span class="nav-number">2.</span> <span class="nav-text">구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#빌드-설정-Bulid-Configuration"><span class="nav-number">3.</span> <span class="nav-text">빌드 설정(Bulid Configuration)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-REST-API-추가-me-restdocs-users-패키지-생성"><span class="nav-number">4.</span> <span class="nav-text">User REST API 추가(me.restdocs.users 패키지 생성)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#User-추가"><span class="nav-number">4.1.</span> <span class="nav-text">User 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserResource-추가"><span class="nav-number">4.2.</span> <span class="nav-text">UserResource 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserController-추가"><span class="nav-number">4.3.</span> <span class="nav-text">UserController 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-호출-결과-화면"><span class="nav-number">4.4.</span> <span class="nav-text">API 호출 결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#문서-패키징-Packaging-the-documentation"><span class="nav-number">5.</span> <span class="nav-text">문서 패키징(Packaging the documentation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#테스트-설정-Test-Configuration"><span class="nav-number">6.</span> <span class="nav-text">테스트 설정(Test Configuration)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Class에-AutoConfigureRestDocs와-AutoConfigureMockMvc-추가"><span class="nav-number">6.1.</span> <span class="nav-text">Test Class에 @AutoConfigureRestDocs와 @AutoConfigureMockMvc 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Opertarion-index-adoc-파일에-추가"><span class="nav-number">6.2.</span> <span class="nav-text">Opertarion index.adoc 파일에 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#실행-방법"><span class="nav-number">6.3.</span> <span class="nav-text">실행 방법</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#결과-화면"><span class="nav-number">6.4.</span> <span class="nav-text">결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Customizing-requests-and-responses"><span class="nav-number">7.</span> <span class="nav-text">Customizing requests and responses</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#전처리기-설정"><span class="nav-number">7.1.</span> <span class="nav-text">전처리기 설정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-RestDocsConfiguration-class-를-이용해서-RestDocsConfiguration-class-추가"><span class="nav-number">7.2.</span> <span class="nav-text">@Import(RestDocsConfiguration.class) 를 이용해서 RestDocsConfiguration.class 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#결과-화면-1"><span class="nav-number">7.3.</span> <span class="nav-text">결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#소스코드"><span class="nav-number">8.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#REST-Docs-장점"><span class="nav-number">1.</span> <span class="nav-text">REST Docs 장점</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#구조"><span class="nav-number">2.</span> <span class="nav-text">구조</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#빌드-설정-Bulid-Configuration"><span class="nav-number">3.</span> <span class="nav-text">빌드 설정(Bulid Configuration)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#User-REST-API-추가-me-restdocs-users-패키지-생성"><span class="nav-number">4.</span> <span class="nav-text">User REST API 추가(me.restdocs.users 패키지 생성)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#User-추가"><span class="nav-number">4.1.</span> <span class="nav-text">User 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserResource-추가"><span class="nav-number">4.2.</span> <span class="nav-text">UserResource 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UserController-추가"><span class="nav-number">4.3.</span> <span class="nav-text">UserController 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#API-호출-결과-화면"><span class="nav-number">4.4.</span> <span class="nav-text">API 호출 결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#문서-패키징-Packaging-the-documentation"><span class="nav-number">5.</span> <span class="nav-text">문서 패키징(Packaging the documentation)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#테스트-설정-Test-Configuration"><span class="nav-number">6.</span> <span class="nav-text">테스트 설정(Test Configuration)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-Class에-AutoConfigureRestDocs와-AutoConfigureMockMvc-추가"><span class="nav-number">6.1.</span> <span class="nav-text">Test Class에 @AutoConfigureRestDocs와 @AutoConfigureMockMvc 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#opertarion-index-adoc-파일에-추가"><span class="nav-number">6.2.</span> <span class="nav-text">opertarion index.adoc 파일에 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#실행-방법"><span class="nav-number">6.3.</span> <span class="nav-text">실행 방법</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#결과-화면"><span class="nav-number">6.4.</span> <span class="nav-text">결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Customizing-requests-and-responses"><span class="nav-number">7.</span> <span class="nav-text">Customizing requests and responses</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#전처리기-설정"><span class="nav-number">7.1.</span> <span class="nav-text">전처리기 설정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-RestDocsConfiguration-class-를-이용해서-RestDocsConfiguration-class-추가"><span class="nav-number">7.2.</span> <span class="nav-text">@Import(RestDocsConfiguration.class) 를 이용해서 RestDocsConfiguration.class 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#결과-화면-1"><span class="nav-number">7.3.</span> <span class="nav-text">결과 화면</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#소스코드"><span class="nav-number">8.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
             
 
           </div>
