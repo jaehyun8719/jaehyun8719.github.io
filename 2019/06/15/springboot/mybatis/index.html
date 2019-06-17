@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/mybatis/mybatis_2.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/springboot/mybatis/mybatis_3.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-06-15T14:11:56.031Z">
+<meta property="og:updated_time" content="2019-06-17T03:09:30.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot Mybatis 설정">
 <meta name="twitter:description" content="Spring Boot Mybatis 구성 및 설정에 대해서 설명한다.">
@@ -313,7 +313,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">8</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">9</span></a>
 
   </li>
 
@@ -443,12 +443,24 @@
                 
               
 
-              <time title="Created: 2019-06-15 00:00:00 / Modified: 23:11:56" itemprop="dateCreated datePublished" datetime="2019-06-15T00:00:00+09:00">2019-06-15</time>
+              <time title="Created: 2019-06-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-15T00:00:00+09:00">2019-06-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-06-17 12:09:30" itemprop="dateModified" datetime="2019-06-17T12:09:30+09:00">2019-06-17</time>
               
             
           </span>
@@ -519,7 +531,7 @@
 <h1 id="Maven-Dependency"><a href="#Maven-Dependency" class="headerlink" title="Maven Dependency"></a>Maven Dependency</h1><p><code>mybatis-spring-boot-starter</code> 추가<br><figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>Spring Boot Mybatis 모듈을 사용하려면 <code>mybatis-spring-boot-autoconfigure</code> 필요하다. <code>mybatis-spring-boot-autoconfigure</code>는 <code>mybatis-spring-boot-starter</code>에 종속 되어있는걸 확인 할 수 있다.<br><figure class="highlight xml"><figcaption><span>mybatis-spring-boot-starter\pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-autoconfigure<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h1 id="Spring-Boot-Mybatis-구조"><a href="#Spring-Boot-Mybatis-구조" class="headerlink" title="Spring Boot Mybatis 구조"></a>Spring Boot Mybatis 구조</h1><h2 id="inmemory-db-H2-Maven-Dependency"><a href="#inmemory-db-H2-Maven-Dependency" class="headerlink" title="inmemory db(H2) Maven Dependency"></a>inmemory db(H2) Maven Dependency</h2><p>mybatis를 이용하기 위해서 Inmemory DB(H2)를 애플리케이션이 동작하면 구성 되도록 설정했다. 개인 DB가 설정 되어있다면 inmemory db(H2) Maven Dependency는 제외 해도 된다.<br><figure class="highlight xml"><figcaption><span>pom.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.h2database<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>h2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>스프링 부트는 <code>schema.sql</code>및 <code>data.sql</code>에서 각각 자동 로드 한다.<br><figure class="highlight sql"><figcaption><span>schema.sql</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">USER</span></span><br><span class="line">(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">integer</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">    full_name <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p>스프링 부트는 <code>schema.sql</code>및 <code>data.sql</code>에서 각각 SQL을 자동 로드 한다.<br><figure class="highlight sql"><figcaption><span>schema.sql</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">USER</span></span><br><span class="line">(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">integer</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">    full_name <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    primary <span class="keyword">key</span>(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight sql"><figcaption><span>data.sql</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">USER</span> (<span class="keyword">id</span>, full_name) <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="string">'jaehyun'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">USER</span> (<span class="keyword">id</span>, full_name) <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="string">'jinsil'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">USER</span> (<span class="keyword">id</span>, full_name) <span class="keyword">VALUES</span> (<span class="number">3</span>, <span class="string">'nada'</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="application-xml"><a href="#application-xml" class="headerlink" title="application.xml"></a>application.xml</h2><figure class="highlight yaml"><figcaption><span>application.yaml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">sa</span></span><br><span class="line"><span class="attr">    password:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:h2:mem:testdb</span></span><br><span class="line"><span class="attr">    driver-class-name:</span> <span class="string">org.h2.Driver</span></span><br><span class="line"><span class="attr">    hikari:</span></span><br><span class="line"><span class="attr">      jdbc-url:</span> <span class="attr">jdbc:h2:~/test</span></span><br><span class="line"><span class="attr">    initialization-mode:</span> <span class="string">always</span></span><br><span class="line"></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line"><span class="attr">  mapper-locations:</span> <span class="attr">classpath:mapper/*.xml</span></span><br><span class="line"><span class="attr">  configuration:</span></span><br><span class="line"><span class="attr">    lazyLoadingEnabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    aggressiveLazyLoading:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    mapUnderscoreToCamelCase:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>Mybatis 자동설정에 대한 구조 확인<br><img src="/images/springboot/mybatis/mybatis_2.png" alt><br><figure class="highlight"><figcaption><span>spring-configuration-metadata.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"sourceType"</span>: <span class="string">"org.mybatis.spring.boot.autoconfigure.MybatisProperties"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"mybatis.mapper-locations"</span>,</span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"Locations of MyBatis mapper files."</span>,</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"java.lang.String[]"</span></span><br><span class="line">&#125;,</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
@@ -584,6 +596,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/16/java/java8inaction/chapter3/" rel="prev" title="Java8 In Action - 3. 스트림 소개">
+                Java8 In Action - 3. 스트림 소개 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -659,7 +675,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1299,6 +1315,26 @@
   
 
   
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
 
   
 
