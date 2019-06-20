@@ -3,21 +3,28 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
-        <lastmod>2019-06-17T03:09:30.039Z</lastmod>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
+        <lastmod>2019-06-20T15:47:29.505Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Java/</loc>
-        <lastmod>2019-06-17T03:09:30.039Z</lastmod>
+        <lastmod>2019-06-20T15:47:29.505Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
+        <lastmod>2019-06-20T15:47:29.505Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
         <lastmod>2019-06-17T03:09:30.039Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
