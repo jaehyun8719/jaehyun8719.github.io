@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
+        <lastmod>2019-07-01T12:25:36.354Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
+        <lastmod>2019-06-26T03:03:27.434Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/</loc>
         <lastmod>2019-06-21T01:54:32.935Z</lastmod>
         <changefreq>weekly</changefreq>

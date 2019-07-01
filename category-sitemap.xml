@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
+        <lastmod>2019-07-01T12:25:36.354Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/categories/Spring-Boot/</loc>
         <lastmod>2019-06-21T01:54:32.935Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,13 +24,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/categories/Utils/</loc>
         <lastmod>2019-06-17T03:09:12.811Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
-        <lastmod>2019-06-17T03:09:12.810Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
