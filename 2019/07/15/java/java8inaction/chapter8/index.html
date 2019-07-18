@@ -106,7 +106,7 @@
 <meta property="og:description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&amp;lt;T&amp;gt;에 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-07-16T01:43:12.884Z">
+<meta property="og:updated_time" content="2019-07-18T01:46:41.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 In Action - 8. null 대신 Optional">
 <meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&amp;lt;T&amp;gt;에 대해서 설명한다.">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-07-16 10:43:12" itemprop="dateModified" datetime="2019-07-16T10:43:12+09:00">2019-07-16</time>
+                <time title="Modified: 2019-07-18 10:46:41" itemprop="dateModified" datetime="2019-07-18T10:46:41+09:00">2019-07-18</time>
               
             
           </span>
@@ -539,7 +539,7 @@
 <ol>
 <li><code>get()</code>은 값을 읽는 가장 간단한 메서드면서 동시에 가장 안전하지 않은 메서드다. 메서드 get은 래핑된 값이 있으면 해당 값을 반환하고 값이 없으면 <code>NoSuchElementException</code>을 발생 시킨다. 따라서 <code>Optional</code> 에 값이 반드시 있다고 가정할 수 있는 상황이 아니면 get 메서드를 사용하지 않는 것이 바람직하다.</li>
 <li><code>orElse(T other)</code> 메서드를 이용하면 <code>Optional</code>이 값을 포함하지 않을 때 디폴트값으로 제공할 수 있다.</li>
-<li><code>orElseGet(Supplier&lt;? extends T&gt; other)</code>는 <code>orElse</code> 메서드에 대응하는 게으른 버전의 메서드가. <code>Optional</code>에 값이 얼을 때만 Supplier가 실행되기 때문이다.</li>
+<li><code>orElseGet(Supplier&lt;? extends T&gt; other)</code>는 <code>orElse</code> 메서드에 대응하는 게으른 버전의 메서드가. <code>Optional</code>에 값이 없을 때만 Supplier가 실행되기 때문이다.</li>
 <li><code>orElseThrow(Supplier&lt;? extends X&gt; exceptionSupplier)</code>는 <code>Optional</code>이 비어있을때 예외를 발생시킨다는 점에서 get 메서드와 비슷하다. 하지만 이 메서드는 발생시킬 예외의 종류를 선택할 수 있다.</li>
 <li><code>ifPresent(Comsumer&lt;? super T&gt; comsumer)</code>를 이용하면 값이 존재할 때 인수로 넘겨준 동작을 실행할 수 있다. 값이 없으면 아무 일도 일어나지 않는다.</li>
 </ol>
@@ -569,7 +569,7 @@
 </tr>
 <tr>
 <td>ifPresent</td>
-<td>값이 존재하면 지정도니 Consumer를 실행하고, 값이 없으면 아무 일도 일어나지 않음.</td>
+<td>값이 존재하면 지정된 Consumer를 실행하고, 값이 없으면 아무 일도 일어나지 않음.</td>
 </tr>
 <tr>
 <td>isPresent</td>
