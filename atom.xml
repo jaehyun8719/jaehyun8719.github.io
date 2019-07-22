@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jaehyun8719.github.io/"/>
-  <updated>2019-07-18T01:46:41.270Z</updated>
+  <updated>2019-07-22T00:51:21.508Z</updated>
   <id>https://jaehyun8719.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML5 - 1.소개</title>
+    <link href="https://jaehyun8719.github.io/2019/07/20/html5/introdution/"/>
+    <id>https://jaehyun8719.github.io/2019/07/20/html5/introdution/</id>
+    <published>2019-07-19T15:00:00.000Z</published>
+    <updated>2019-07-22T00:51:21.508Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>w3schools.com에 내용을 개인적으로 정리한 내용이다.<br>HTML5 소개<br><a id="more"></a></p><h1 id="HTML-이란-무엇인가"><a href="#HTML-이란-무엇인가" class="headerlink" title="HTML 이란 무엇인가?"></a>HTML 이란 무엇인가?</h1><p>HTML은 웹 페이지를 작성하기위한 표준 마크 업 언어다.</p><ol><li>HTML은 하이퍼 텍스트 마크 업 언어</li><li>HTML은 웹 페이지의 구조를 설명한다</li><li>HTML은 일련의 요소로 구성된다</li><li>HTML 요소는 브라우저에 콘텐츠를 표시하는 방법을 알려준다</li><li>HTML 요소는 태그로 표시한다.</li><li>HTML 태그는 “heading”, “paragraph”, “table”등과 같은 내용의 레이블을 표시한다.</li><li>브라우저는 HTML 태그를 표시하지 않지만 이를 사용해 페이지를 렌더링 한다.</li></ol><h1 id="HTML-문서"><a href="#HTML-문서" class="headerlink" title="HTML 문서"></a>HTML 문서</h1><p></p><p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="jaehyun8719" data-slug-hash="oKXXaX" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML5"><br>  <span>See the Pen <a href="https://codepen.io/jaehyun8719/pen/oKXXaX/" rel="external nofollow noopener noreferrer" target="_blank"><br>  HTML5</a> by Jaehyun (<a href="https://codepen.io/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank">@jaehyun8719</a>)<br>  on <a href="https://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.</span><br></p><p></p><script async src="https://static.codepen.io/assets/embed/ei.js"></script><ol><li><code>&lt;!DOCTYPE html&gt;</code>선언은 HTML5가 문서를 정의</li><li><code>&lt;html&gt;</code>요소는 HTML 페이지의 루트 요소입니다</li><li><code>&lt;head&gt;</code>요소는 문서에 대한 메타 정보를 포함</li><li><code>&lt;title&gt;</code>요소는 문서의 제목을 명시</li><li><code>&lt;body&gt;</code>요소는 눈에 보이는 페이지의 내용을 포함</li><li><code>&lt;h1&gt;</code>요소는 큰 제목을 정의</li><li><code>&lt;p&gt;</code>요소는 문단을 정의</li></ol><h1 id="HTML-태그"><a href="#HTML-태그" class="headerlink" title="HTML 태그"></a>HTML 태그</h1><p>HTML 태그는 시작 <code>태그(start tag)</code>와 <code>종료 태그(end tag)</code> 그리고 태그 안에 위치한 <code>content</code>로 구성된다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>내용<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p><code>&lt;p&gt;</code>는 시작 태그(start tag)이며 <code>&lt;/p&gt;</code>는 종료 태그(end tag)이고 <code>내용</code>이 content이다.</p></blockquote><h1 id="HTML-구조"><a href="#HTML-구조" class="headerlink" title="HTML 구조"></a>HTML 구조</h1><p></p><p class="codepen" data-height="557" data-theme-id="dark" data-default-tab="result" data-user="jaehyun8719" data-slug-hash="voONap" style="height: 557px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML5 소개"><br>  <span>See the Pen <a href="https://codepen.io/jaehyun8719/pen/voONap/" rel="external nofollow noopener noreferrer" target="_blank"><br>  HTML5 소개</a> by Jaehyun (<a href="https://codepen.io/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank">@jaehyun8719</a>)<br>  on <a href="https://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.</span><br></p><p></p><script async src="https://static.codepen.io/assets/embed/ei.js"></script><div class="note success">            <p><code>&lt;body&gt;</code> 영역(위의 흰색) 안에있는 내용 만 브라우저에 표시된다.</p>          </div><h1 id="lt-DOCTYPE-gt-선언"><a href="#lt-DOCTYPE-gt-선언" class="headerlink" title="&lt;! DOCTYPE&gt; 선언"></a>&lt;! DOCTYPE&gt; 선언</h1><p><code>&lt;!DOCTYPE&gt;</code>선언은 문서 유형을 타나내며 브라우저에게 웹페이지를 표시하는데 도움을 준다. 코드 안에는 HTML 태그보다 먼저 상단에 한 번만 타나내면 된다.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br></pre></td></tr></table></figure><h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul><li><a href="https://www.w3schools.com/html/html_intro.asp" rel="external nofollow noopener noreferrer" target="_blank">https://www.w3schools.com/html/html_intro.asp</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;w3schools.com에 내용을 개인적으로 정리한 내용이다.&lt;br&gt;HTML5 소개&lt;br&gt;
+    
+    </summary>
+    
+      <category term="HTML5" scheme="https://jaehyun8719.github.io/categories/HTML5/"/>
+    
+    
+      <category term="HTML5" scheme="https://jaehyun8719.github.io/tags/HTML5/"/>
+    
+      <category term="HTML5 소개" scheme="https://jaehyun8719.github.io/tags/HTML5-%EC%86%8C%EA%B0%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Java8 In Action - 8. null 대신 Optional</title>
