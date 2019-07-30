@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HTML5 - 4.제목(Heading)]]></title>
+    <url>%2F2019%2F07%2F29%2Fhtml5%2F04.heading%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 제목(Heading) HTML 제목(Heading)들제목는 &lt;h1&gt; ~ &lt;h6&gt;태그 로 정의되며, &lt;h1&gt;가장 중요한 제목을 정의하고, &lt;h6&gt;가장 중요하지 않은 제목을 정의한다. See the Pen HTML5 04.제목 by Jaehyun (@jaehyun8719) on CodePen. 브라우저는 제목 앞뒤로 공백을 자동으로 추가한다. 표제의 중요성검색 엔진은 제목를 사용하여 웹 페이지의 구조와 내용을 색인화 하며, 문서 구조를 표시하려면 제목를 사용하는 것이 중요하다.&lt;h1&gt;태그는 주요 제목에 사용되어야하며, &lt;h2&gt;태그는 다음으로 중요한 순서대로 사용 되어야한다. 텍스트를 만들기 위해 제목을 사용하지말고 제목에만 HTML 태그를 사용해야 된다. 제목 크기 조절각 HTML 제목에는 기본 크기가 있지만, styleCSS font-size속성을 사용하여 모든 제목의 크기를 바꿀 수 있다. See the Pen HTML5 04.제목 크기 조절 by Jaehyun (@jaehyun8719) on CodePen. HTML 요소HTML &lt;head&gt;요소는 메타 데이터의 컨테이너이며, HTML 메타 데이터는 HTML 문서에 대한 데이터입니다. 메타 데이터는 화면에 표시되지 않는다. &lt;html&gt;태그와 &lt;body&gt;태그 사이에 &lt;head&gt;태그를 정의한다. See the Pen HTML5 03.HTML &lt;head&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_headings.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 제목(Heading)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 3.속성(Attributes)]]></title>
+    <url>%2F2019%2F07%2F28%2Fhtml5%2F03.attributes%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 속성(Attributes) HTML 속성(Attributes) HTML 모든 요소는 속성을 가질 수 있다. 속성은 요소에 대한 추가 정보를 제공한다. 속성은 항상 시작 태그에 명시 된다. 속성은 일반적으로 다음과 같이 이름 / 값 쌍으로 온다. name = “value” href 속성HTLM 링크는 &lt;a&gt;태그로 나타내며, 링크 주소의 속성은 href로 정의된다. See the Pen HTML5 03.href속성 by Jaehyun (@jaehyun8719) on CodePen. src 속성HTML 이미지는 &lt;img&gt;태그로 나타내며, 이미지 속성의 파일 이름은 src속성에 정의 된다. See the Pen HTML5 03.src속성 by Jaehyun (@jaehyun8719) on CodePen. 너비(width)와 높이(height) 속성HTML 이미지에는 이미지 의 폭과 높이를 지정하는 속성 width와 height속성 도 있다. 너비와 높이는 기본적으로 픽셀 단위로 지정 된다. See the Pen HTML5 03.너비(width과)와 높이(height속성) 속성 by Jaehyun (@jaehyun8719) on CodePen. alt 속성alt속성은 이미지를 표시 할 수 없는 경우 대체 텍스트로 대처 한다. (alt속성은 시력이 안좋은 사람들을 위해 음성으로 나타낸다.) See the Pen HTML5 03.alt속성 by Jaehyun (@jaehyun8719) on CodePen. alt속성은 이미지를 표시 할 수 없는 경우에는 텍스트로 대처 한다. See the Pen HTML5 03.alt속성2 by Jaehyun (@jaehyun8719) on CodePen. style 속성style특성 등 색상, 폰트 크기와 같은 요소의 스타일을 지정하는 데 사용된다. See the Pen HTML 03.style 속성 by Jaehyun (@jaehyun8719) on CodePen. lang 특성문서의 언어를 &lt;html&gt;의 lang속성을 이용해서 지정 할 수 있다. 12345678&lt;!DOCTYPE html&gt;&lt;html lang="ko"&gt;&lt;body&gt;...&lt;/body&gt;&lt;/html&gt; 제목 속성&lt;p&gt; 요소에 title 속성을 추가하고, 단락 위로 마우스를 가져 가면 제목에 속성의 값이 툴팁으로 표시됩니다. See the Pen HTML5 03.제목 속성 by Jaehyun (@jaehyun8719) on CodePen. 대문자 보다 소문자를 권장HTML5는 소문자, 대문자를 구별 하지 않지만, W3C 는 HTML에서 소문자를 권장 하고 있다. 인용 속성값HTML5 표준은 속성 값을 따옴표로 묶을 필요가 없지만, W3C는 권장 HTML에서 따옴표를 권장 한다. 12345&lt;!-- 좋은 예 --&gt;&lt;a href="https://jaehyun8719.github.io/"&gt;&lt;!-- 나쁜 예 --&gt;&lt;a href=https://jaehyun8719.github.io/&gt; 참조 https://www.w3schools.com/html/html_attributes.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 속성</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 2.요소(Elements)]]></title>
+    <url>%2F2019%2F07%2F22%2Fhtml5%2F02.elements%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 요소(Elements) HTML 요소(Elements)HTML요소는 start tag(시작 태그)와 end tag(종료 태그)로 이루어진 모든 명령어들을 의미한다.&lt;p&gt;My first paragraph.&lt;/p&gt; Start tag Element content End tag &lt;p&gt; My first paragraph. &lt;/p&gt; &lt;br&gt; 내용이 없는 요소들은 End Tag(종료 태그)가 없다. 중첩된 HTML 요소HTML에는 요소들이 중첩 될 수 있다. 모든 HTML 은 중첩된 HTML 요소로 구성되어있다. See the Pen HTML5 02. 중첩 된 HTML 요소 by Jaehyun (@jaehyun8719) on CodePen. 이 예제에서는 4개의 요소가 포함되어 있다. 예제 설명&lt;html&gt; 요소는 문서 전체를 나타내며, 시작 태그 &lt;html&gt;, 종료 태그 &lt;/html&gt; 요소 안에 &lt;body&gt;가 있다. 12345678&lt;html&gt;&lt;body&gt;&lt;h1&gt;My First Heading&lt;/h1&gt;&lt;p&gt;My first paragraph.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; &lt;body&gt; 요소는 문서 본문을 나타내며, 시작 태그 &lt;body&gt;, 종료 태그 &lt;/body&gt; 요소 안에 2개의 다른 html 요소(&lt;h1&gt;, &lt;p&gt;) 가 있다. 123456&lt;body&gt;&lt;h1&gt;My First Heading&lt;/h1&gt;&lt;p&gt;My first paragraph.&lt;/p&gt;&lt;/body&gt; &lt;h1&gt; 요소는 제목을 나타내며, 시작 태그 &lt;h1&gt;, 종료 태그 &lt;/h1&gt;요소 안에 내용은 My First Heading. 이다 1&lt;h1&gt;My First Heading&lt;/h1&gt; &lt;p&gt; 요소는 단락을 나타내며, 시작 태그 &lt;p&gt;, 종료 태그 &lt;/p&gt; 요소 안에 내용은 My first paragraph. 이다 1&lt;p&gt;My first paragraph.&lt;/p&gt; 종료 태그를 잊지 말자!종료 태그를 안 써도 일부 HTML 요소가 정상적으로 표시 된다. See the Pen HTML 5 02. 종료 태그를 잊지 말자! by Jaehyun (@jaehyun8719) on CodePen. 정상 작동하는 것을 확인 할 수 있다. 브라우저에서 종료 태그는 선택 사항으로 간주 되는데 종료 태그를 잊어 버릴 경우 생각지 못한 오류가 발생 한다. 비어있는 HTML 요소내용이 없는 HTML 요소를 비어있는(Empty) 요소라고 한다.&lt;br&gt;태그는 종료 태그가 없는 비어있는 요소 이다. (&lt;br&gt;태그는 줄 바꿈을 나타내는 태그 이다.) See the Pen HTML5 02.비어있는 HTML 요소 by Jaehyun (@jaehyun8719) on CodePen. 비어있는 요소는 시작 태그에서 &lt;/br&gt; 이와 같이 닫을 수 있다. HTML5에서 닫을 필요는 없지만 더 엄격하게 관리를 원한다면 닫는 것이 좋다. HTML 태그는 대소문자를 구분하지 않는다.HTML 태그는 &lt;P&gt;와 &lt;p&gt;와 같다. 하지만 W3C는 소문자를 권장한다. 참조 https://www.w3schools.com/html/html_elements.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 요소(Elements)</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTML5 - 1.소개]]></title>
-    <url>%2F2019%2F07%2F20%2Fhtml5%2Fintrodution%2F</url>
-    <content type="text"><![CDATA[w3schools.com에 내용을 개인적으로 정리한 내용이다.HTML5 소개 HTML 이란 무엇인가?HTML은 웹 페이지를 작성하기위한 표준 마크 업 언어다. HTML은 하이퍼 텍스트 마크 업 언어 HTML은 웹 페이지의 구조를 설명한다 HTML은 일련의 요소로 구성된다 HTML 요소는 브라우저에 콘텐츠를 표시하는 방법을 알려준다 HTML 요소는 태그로 표시한다. HTML 태그는 “heading”, “paragraph”, “table”등과 같은 내용의 레이블을 표시한다. 브라우저는 HTML 태그를 표시하지 않지만 이를 사용해 페이지를 렌더링 한다. HTML 문서 See the Pen HTML5 by Jaehyun (@jaehyun8719) on CodePen. &lt;!DOCTYPE html&gt;선언은 HTML5가 문서를 정의 &lt;html&gt;요소는 HTML 페이지의 루트 요소입니다 &lt;head&gt;요소는 문서에 대한 메타 정보를 포함 &lt;title&gt;요소는 문서의 제목을 명시 &lt;body&gt;요소는 눈에 보이는 페이지의 내용을 포함 &lt;h1&gt;요소는 큰 제목을 정의 &lt;p&gt;요소는 문단을 정의 HTML 태그HTML 태그는 시작 태그(start tag)와 종료 태그(end tag) 그리고 태그 안에 위치한 content로 구성된다. 1&lt;p&gt;내용&lt;/p&gt; &lt;p&gt;는 시작 태그(start tag)이며 &lt;/p&gt;는 종료 태그(end tag)이고 내용이 content이다. HTML 구조 See the Pen HTML5 소개 by Jaehyun (@jaehyun8719) on CodePen. &lt;body&gt; 영역(위의 흰색) 안에있는 내용 만 브라우저에 표시된다. &lt;! DOCTYPE&gt; 선언&lt;!DOCTYPE&gt;선언은 문서 유형을 타나내며 브라우저에게 웹페이지를 표시하는데 도움을 준다. 코드 안에는 HTML 태그보다 먼저 상단에 한 번만 타나내면 된다. 1&lt;!DOCTYPE html&gt; 참조 https://www.w3schools.com/html/html_intro.asp]]></content>
+    <url>%2F2019%2F07%2F20%2Fhtml5%2F01.introdution%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 소개 HTML 이란 무엇인가?HTML은 웹 페이지를 작성하기위한 표준 마크 업 언어다. HTML은 하이퍼 텍스트 마크 업 언어 HTML은 웹 페이지의 구조를 설명한다 HTML은 일련의 요소로 구성된다 HTML 요소는 브라우저에 콘텐츠를 표시하는 방법을 알려준다 HTML 요소는 태그로 표시한다. HTML 태그는 “heading”, “paragraph”, “table”등과 같은 내용의 레이블을 표시한다. 브라우저는 HTML 태그를 표시하지 않지만 이를 사용해 페이지를 렌더링 한다. HTML 문서 See the Pen HTML5 by Jaehyun (@jaehyun8719) on CodePen. &lt;!DOCTYPE html&gt;선언은 HTML5가 문서를 정의 &lt;html&gt;요소는 HTML 페이지의 루트 요소입니다 &lt;head&gt;요소는 문서에 대한 메타 정보를 포함 &lt;title&gt;요소는 문서의 제목을 명시 &lt;body&gt;요소는 눈에 보이는 페이지의 내용을 포함 &lt;h1&gt;요소는 큰 제목을 정의 &lt;p&gt;요소는 문단을 정의 HTML 태그HTML 태그는 시작 태그(start tag)와 종료 태그(end tag) 그리고 태그 안에 위치한 content로 구성된다. 1&lt;p&gt;내용&lt;/p&gt; &lt;p&gt;는 시작 태그(start tag)이며 &lt;/p&gt;는 종료 태그(end tag)이고 내용이 content이다. HTML 구조 See the Pen HTML5 소개 by Jaehyun (@jaehyun8719) on CodePen. &lt;body&gt; 영역(위의 흰색) 안에있는 내용 만 브라우저에 표시된다. &lt;! DOCTYPE&gt; 선언&lt;!DOCTYPE&gt;선언은 문서 유형을 타나내며 브라우저에게 웹페이지를 표시하는데 도움을 준다. 코드 안에는 HTML 태그보다 먼저 상단에 한 번만 타나내면 된다. 1&lt;!DOCTYPE html&gt; 참조 https://www.w3schools.com/html/html_intro.asp]]></content>
       <categories>
         <category>HTML5</category>
       </categories>

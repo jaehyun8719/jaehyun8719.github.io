@@ -3,15 +3,36 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/HTML5-%EC%86%8C%EA%B0%9C/</loc>
-        <lastmod>2019-07-22T00:51:21.508Z</lastmod>
+        <loc>https://jaehyun8719.github.io/tags/HTML5-%EC%A0%9C%EB%AA%A9-Heading/</loc>
+        <lastmod>2019-07-30T00:48:05.004Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/HTML5/</loc>
-        <lastmod>2019-07-22T00:51:21.508Z</lastmod>
+        <lastmod>2019-07-30T00:48:05.004Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/HTML5-%EC%86%8D%EC%84%B1/</loc>
+        <lastmod>2019-07-30T00:47:40.131Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/HTML5-%EC%9A%94%EC%86%8C-Elements/</loc>
+        <lastmod>2019-07-30T00:46:54.367Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/HTML5-%EC%86%8C%EA%B0%9C/</loc>
+        <lastmod>2019-07-30T00:46:54.366Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
