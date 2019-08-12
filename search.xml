@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[HTML5 - 11.이미지(Images)]]></title>
+    <url>%2F2019%2F08%2F12%2Fhtml5%2F11.images%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 링크(Links) HTML 이미지 구문HTML에서 이미지는 &lt;img&gt;로 정의한다.&lt;img&gt; 태그는 닫는 태그가 없으며, src 속성(이미지 URL)을 항상 포함 시켜야된다. 1&lt;img src="url"&gt; 대체 속성alt 속성은 사용자가 이미지를 볼 수 없는경우(연결이 느릴때, src 속성의 오류 또는 화면 판독기를 사용하는 경우) 이미지에 대체 텍스트를 제공한다.즉, alt 속성 값은 이미지를 설명해야 된다. See the Pen HTML5 11.대체 속성_01 by Jaehyun (@jaehyun8719) on CodePen. 브라우저가 이미지를 찾을 수 없으면 alt속성 값이 표시된다. See the Pen HTML5 11.대체 속성_02 by Jaehyun (@jaehyun8719) on CodePen. 웹페이지에 alt 속성이 없으면 유효성이 올바르게 검사되지 않는다. 이미지 크기 - 너비(width)와 높이(height)stlye 속성을 사용하여 이미지 너비(width)와 높이(height) 를 지정 할 수 있다. See the Pen HTML5 11.이미지 크기 - 너비(width)와 높이(height) _01 by Jaehyun (@jaehyun8719) on CodePen. 또는 width및 height속성을 사용할 수 있다. See the Pen HTML5 11.이미지 크기 - 너비(width)와 높이(height) _02 by Jaehyun (@jaehyun8719) on CodePen. 너비(width)와 높이(height)지정하지 않으면 이미지가로드되는 동안 페이지가 깜빡일 수 있기 때문에, 항상 이미지의 너비(width)와 높이(height)를 지정해야된다. 너비와 높이 속성 또는 스타일 속성width, height 속성은 HTML에 적용 할 수 있지만, style 속성을 사용하여 이미지의 크기를 변경하지 못하게 하는 것이 좋다. See the Pen HTML5 11.너비와 높이 속성 또는 스타일 속성 by Jaehyun (@jaehyun8719) on CodePen. 다른 폴더의 이미지이미지 폴더를 지정하지 않으면 동일안 폴더내에서 이미지를 검색한다. 하위 폴더에 이미지를 저장하고 src속성으로 폴더 이름을 포함시키면 된다. 1&lt;img src="/images/github.png" alt="HTML5 Icon" style="width:128px;height:128px;"&gt; 결과 화면 다른 서버의 이미지src 속성에 웹 사이트 주소(URL)를 입력하여 이미지를 나타낼 수 있다. See the Pen HTML5 11.다른 서버의 이미지 by Jaehyun (@jaehyun8719) on CodePen. 이미지 링크이미지를 링크로 사용하려면 &lt;img&gt;태그 안에 &lt;a&gt;를 넣으면 된다. See the Pen HTML5 11.이미지 링크 by Jaehyun (@jaehyun8719) on CodePen. IE9 및 이전 버전은 이미지 링크인 경우 이미지 주위에 테두리(border:0;)를 표시하지 않도록 추가 되었다. HTML &lt;picture&gt; 요소&lt;picture&gt;요소는 HTML5에서 이미지 리소스를 지정 할 때 유연성을 높이기 위해 도입댔다.브라우저는 &lt;source&gt;요소에서 media속성값의 크기에 맞춰 이미지를 출력한다. 브라우저 창 (뷰포트)이 최소 650 픽셀 인 경우 하나의 사진을 표시하고 그렇지 않은 경우 465 픽셀보다 큰 다른 이미지를 표시한다. 12345&lt;picture&gt; &lt;source media="(min-width: 650px)" srcset="/images/github.png" style="width:100px"&gt; &lt;source media="(min-width: 465px)" srcset="/images/github.png" style="width:200px"&gt; &lt;img src="/images/github.png" alt="github icon" style="width:auto;"&gt;&lt;/picture&gt; 결과 화면 &lt;picture&gt; 요소에 마지막 요소는 항상 &lt;img&gt; 요소로 지정해야 되는 이유는 HTML5를 지원하지 않는 브라우저에서 &lt;img&gt; 요소는 지원되지만 &lt;picture&gt; 요소는 지원하지 않기 때문에 &lt;source&gt;태그와 매치를 시킬 수 없다. 참조 https://www.w3schools.com/html/html_images.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 이미지(Images)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 10.링크(Links)]]></title>
+    <url>%2F2019%2F08%2F10%2Fhtml5%2F10.links%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 링크(Links) HTML 링크 - HyperlinksHTML링크는 하이퍼 링크 이다.링크를 클릭하면 다른 문서로 이동할 수 있고, 링크 위로 마우스를 움직이면 마우스 화살표가 작은 손 모양으로 변한다. 링크는 꼭 텍스트 일 필요는 없다. 이미지 또는 다른 HTML에 요소 일 수 있다. HTML 링크 - 구문하이퍼 링크는 HTML &lt;a&gt;태그 로 정의 한다. 1&lt;a href="url"&gt;link text&lt;/a&gt; See the Pen HTML5 10.HTML 링크 - 구문 by Jaehyun (@jaehyun8719) on CodePen. href속성은 링크의 대상 주소(https://jaehyun8719.github.io/)를 지정하고, 링크의 텍스트를 클릭하면 링크 대상 주소로 화면을 이동한다. 하위 폴더 주소 끝에 슬래시(/)가 없으면 서버에서 두 개의 요청을 생성 할 수 있다. 슬래시(/)가 없으면 서버는 주소 끝에 자동으로 슬래시(/)를 추가한 다음에 새 요청을 만든다. 로컬 링크로컬 링크(같은 프로젝트 내에 있는 링크)는 상대 URL(https : // www ….)없이 지정된다. 1&lt;a href="/2019/08/09/html5/09.comments/"&gt;HTML Images&lt;/a&gt; HTML 링크 색상기본적으로 모든 브라우저의 링크는 다음 같이 표시된다. 방문하지 않은 링크는 밑줄과 파란색으로 표시된다. 방문한 링크는 밑줄이 그어져 있으면 자주색 이다. 활성화 된 링크는 밑줄과 빨간색으로 표시된다. HTML 링크 - 대상 속성target속석은 링크 된 문서를 열 위치를 지정한다.target속성은 다음 값 중 하나를 사용할 수 있다. _blank는 문서를 새 창이나 탭에서 연다. _self는 동일한 창/탭에서 링크 된 문서를 연다.(기본값) _parent는 부모 프레임에서 링크 된 문서를 연다. _top는 링크 된 문서를 창 전체에서 연다. See the Pen HTML5 10.HTML 링크-대상 속성 by Jaehyun (@jaehyun8719) on CodePen. HTML 링크 - 링크 이미지이미지를 링크로 사용하는 방법이다. See the Pen HTML5 10.HTML 링크-링크 이미지 by Jaehyun (@jaehyun8719) on CodePen. 링크 제목title속성은 요소에 대한 추가 정보를 알려주며, 정보에 마우스 커서를 올리면 툴팁 텍스트가 표시된다. See the Pen HTML5 10.링크 제목 by Jaehyun (@jaehyun8719) on CodePen. HTML 링크 - 북마크 생성HTML 책갈피는 독자가 웹 페이지의 특정 부분으로 이동할 수 있도록하는 데 사용된다.링크를 클릭하면 페이지가 책갈피가있는 위츠로 스크롤된다. 예제먼저 다음 id속성을 사용하여 책갈피를 지정한다. 1&lt;h2 id ="C4"&gt;Chapter 4&lt;/h2&gt; 그런 다음 같은 페이지에서 책갈피에 대한 링크(Jump to Chapter 4)를 추가한다. 1&lt;a href="#C4"&gt;Jump to Chapter 4&lt;/a&gt; See the Pen HTML5 10.HTML 링크-북마크 생성 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_links.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 링크(Links)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 9.주석(Comments)]]></title>
+    <url>%2F2019%2F08%2F09%2Fhtml5%2F09.comments%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 주석(Comments) HTML 주석 태그다음 구문을 사용하여 HTML 소스에 주석을 추가 할 수 있다.1&lt;!-- Write your comments here --&gt; 여는 태그에는 느낌표(!)가 있지만 닫는 태그에는 없다. 주석은 브라우저에 표시되지 않지만 HTML 소스 코드를 문서화하는데 도움이 될 수 있다. See the Pen HTML5 09.HTML 주석 태그 by Jaehyun (@jaehyun8719) on CodePen. 주석은 HTML 디버깅에 유용하며, 한 번에 하나씩 HTML 코드 행을 주석 처리하여 오류를 검색 할 수 있다. See the Pen HTML5 09.HTML 주석 태그 예제 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_comments.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 주석(Comments)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 8.인용문(Quotations)]]></title>
+    <url>%2F2019%2F08%2F06%2Fhtml5%2F08.quotation%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 인용문(Quotation) HTML 인용과 열거 요소 See the Pen HTML5 08.HTML 인용과 열거 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML 짧은 인용을 위한 &lt;q&gt;HTML&lt;q&gt;요소는 짧은 인용을 정의한다.브라우저는 보통 &lt;q&gt; 요소를 인용 부호(큰따옴표)로 감싼다. See the Pen HTML5 08.짧은 인용을 위한 &amp;lt;q&amp;gt; by Jaehyun (@jaehyun8719) on CodePen. HTML 긴 인용을 위한 &lt;blockquote&gt;HTML &lt;blockquote&gt; 요소는 다른 소스에 인용된 부분을 정의한다.브라우저는 보통 &lt;blockquote&gt; 요소를 들여쓰기 한다. See the Pen HTML5 08.긴 인용을 위한 &lt;blockquote&gt; by Jaehyun (@jaehyun8719) on CodePen. HTML 약어를 위한 &lt;abbr&gt;HTML &lt;abbr&gt;요소는 약어나 두문자어(머리글자)를 정의한다.표시된 약어는 브라우저, 번역 시스템 및 검색 엔진에 유용한 정보를 제공 할 수 있다. See the Pen HTML5 08.약어를 위한 &lt;abbr&gt; by Jaehyun (@jaehyun8719) on CodePen. HTML 연락 정보를 위한 &lt;address&gt;HTML &lt;address&gt;요소는 문서 또는 기사의 연락처 정보(저자/소유자)를 정의한다.&lt;address&gt;요소는 일반적으로 이탤릭체로 표시되고, 대부분의 브라우저는 요소 앞뒤에 줄 바꿈을 추가한다. See the Pen HTML5 08.연락 정보를 위한 &lt;address&gt; by Jaehyun (@jaehyun8719) on CodePen. HTML 작품 제목을 위한 &lt;cite&gt;HTML &lt;cite&gt;요소는 작품의 제목을 정의한다.브라우저는 &lt;cite&gt;요소를 이태릭 체로 표시한다. See the Pen HTML5 08.작품 제목을 위한 &lt;cite&gt; by Jaehyun (@jaehyun8719) on CodePen. HTML 양방향 재정의를 위한 &lt;bdo&gt;HTML &lt;bdo&gt;요소는 양방향 재정의를 정의한다.&lt;bdo&gt;요소는 현재의 텍스트 방향을 바꾸는데 사용된다. See the Pen HTML5 08.HTML 양방향 재정의를 위한 &amp;lt;bdo&amp;gt; by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_quotation_elements.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 인용문(Quotations)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 7.서식(Formatting)]]></title>
+    <url>%2F2019%2F08%2F04%2Fhtml5%2F07.formatting%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 서식(Formatting) HTML 텍스트 서식 See the Pen HTML5 06.텍스트 서식 by Jaehyun (@jaehyun8719) on CodePen. HTML 서식 요소이전 장에서는 HTML 스타일 속성에 대해 배웠다.HTML은 텍스트를 정의하기 위해서는 특별한 요소가 필요하다.HTML은 &lt;b&gt;와 &lt;i&gt;같은 출력 서식을 사용해서 굵게또는 기울임 꼴 텍스트로 한다. &lt;b&gt; - 볼드 텍스트(Bold text) &lt;strong&gt; - 중요 텍스트(Important text) &lt;i&gt; - 기울임 텍스트(Italic text) &lt;em&gt; - 강조된 텍스트(Emphasized text) &lt;mark&gt; - 표시된 텍스트(Marked text) &lt;small&gt; - 작은 텍스트(Small text) &lt;del&gt; - 삭제된 텍스트(Deleted text) &lt;ins&gt; - 삽입된 텍스트(Inserted text) &lt;sub&gt; - 첨차 텍스트(Subscript text) &lt;sup&gt; - 위첨자 텍스트(Superscript text) HTML &lt;b&gt; 및 &lt;strong&gt; 요소HTML &lt;b&gt;요소는 별 다른 중요함 없이 굵게 표시된 텍스트를 정의한다. See the Pen HTML5 06.HTML &amp;lt;b&amp;gt; 및 &amp;lt;strong&amp;gt; 요소_1 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;strong&gt;요소는 의미가 “강한”중요성이 추가 된 강력한 텍스트를 정의한다. See the Pen HTML5 06.HTML &amp;lt;b&amp;gt; 및 &amp;lt;strong&amp;gt; 요소_2 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;i&gt; 및 &lt;em&gt; 요소HTML &lt;i&gt;요소는 더 이상 중요하지 않고 기울임 텍스트로 정의한다. See the Pen HTML5 06.HTML &lt;i&gt; 및 &lt;em&gt; 요소_1 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;em&gt;요소는 텍스트에 중요성을 추가하여 강조된텍스트로 정의한다. See the Pen HTML5 06.HTML &lt;i&gt; 및 &lt;em&gt; 요소_2 by Jaehyun (@jaehyun8719) on CodePen. 브라우저 표시 에서는 &lt;strong&gt;과 &lt;b&gt;는 같고, &lt;em&gt;과 &lt;i&gt; 같다. 하지만 이러한 태그의 이미 차이는 &lt;b&gt;와 &lt;i&gt; 굵은 이탤릭체 텍스트를 정의하고, &lt;strong&gt;와 &lt;em&gt;텍스는 “중요”를 의미한다. HTML &lt;small&gt; 요소HTML &lt;small&gt;요소는 기본 텍스트보다 작은 텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;small&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;mark&gt; 요소HTML &lt;mark&gt; 요소는 표시된(marked)/하일라이티드(highlighted)텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;mark&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;del&gt; 요소HTML &lt;del&gt;요소는 삭제/제거된 텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;del&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;ins&gt;요소HTML &lt;ins&gt;요소는 삽입/추가된 텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;ins&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;sub&gt; 요소HTML &lt;sub&gt;요소는 아래 첨자 텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;sub&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. HTML &lt;sup&gt; 요소HTML &lt;sup&gt;요소는 위 첨자 텍스트를 정의한다. See the Pen HTML5 06.HTML &lt;sub&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_formatting.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 서식(Formatting)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 6.스타일(Style)]]></title>
+    <url>%2F2019%2F08%2F03%2Fhtml5%2F06.style%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 스타일(Style) HTML Style See the Pen HTML5 06.스타일 by Jaehyun (@jaehyun8719) on CodePen. HTML Style 속성1&lt;tagname style="property:value;"&gt; property는 CSS 의 속성이고, value는 CSS의 값이다. 배경색CSS background-color속성은 HTML의 요소에 배경색을 정의한다.이 예제에서는 value를 powderblue값을 적용 했다. See the Pen HTML5 06.배경색 by Jaehyun (@jaehyun8719) on CodePen. 텍스트 색상CSS color속성은 HTML 요소의 텍스트 색상을 정의한다. See the Pen HTML5 06.텍스트 색상 by Jaehyun (@jaehyun8719) on CodePen. 글꼴CSS font-family속성은 HTML 요소에 사용할 글꼴을 정의한다. See the Pen HTML5 06.글꼴 by Jaehyun (@jaehyun8719) on CodePen. 텍스트 크기CSS font-size속성은 HTML 요소의 텍스트 크기를 정의한다. See the Pen HTML5 06.텍스트 크기 by Jaehyun (@jaehyun8719) on CodePen. 텍스트 정렬CSS text-align속성은 HTML 요소의 가로 텍스트 정렬을 정의한다. See the Pen HTML5 06.텍스트 정렬 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_styles.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 스타일(Style)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[HTML5 - 5.문단(Paragraphs)]]></title>
+    <url>%2F2019%2F08%2F02%2Fhtml5%2F05.paragraphs%2F</url>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 문단(Paragraphs) HTML 문단HTML &lt;p&gt;요소는 문단을 정의한다. See the Pen HTML5 05.HTML 문단 by Jaehyun (@jaehyun8719) on CodePen. 브라우저는 문단의 다음칸에 공백라인을 추가된다. HTML 표시HTML요소는 공백을 추가하여 결과를 나타낼수 없다. 브라우저가 공백을 제거해서 화면에 표시 해주기 때문이다. See the Pen HTML5 05.HTML 표시 by Jaehyun (@jaehyun8719) on CodePen. 종료 태그를 사용대부분의 브라우저에서는 종료 태그를 사용하지 않아도 정상적으로 화면에 출력이 된다. See the Pen HTML5 05.HTML 닫는태그 by Jaehyun (@jaehyun8719) on CodePen. 종료 태그를 사용하지 않으면 생각지 못한 오류가 발생할 수 있다. HTML 줄 바꿈HTML &lt;br&gt;요소는 줄바꿈을 정의한다. 새 문단을 시작하지않고 줄 바꿈을 할때 사용하면 된다. See the Pen HTML5 05.HTML 줄바꿈 by Jaehyun (@jaehyun8719) on CodePen. &lt;br&gt; 요소는 종료 태그가 없는 빈 태그 이다. HTML &lt;pre&gt;요소HTML &lt;pre&gt;요소는 내가 작성한 내용을 그대로 표현한다. 즉, &lt;br&gt;태그와 다르게 공백유지, 문단 유지를 시켜준다. See the Pen HTML5 05.HTML pre 요소 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_paragraphs.asp]]></content>
+      <categories>
+        <category>HTML5</category>
+      </categories>
+      <tags>
+        <tag>HTML5</tag>
+        <tag>HTML5 문단(Paragraphs)</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[HTML5 - 4.제목(Heading)]]></title>
     <url>%2F2019%2F07%2F29%2Fhtml5%2F04.heading%2F</url>
-    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 제목(Heading) HTML 제목(Heading)들제목는 &lt;h1&gt; ~ &lt;h6&gt;태그 로 정의되며, &lt;h1&gt;가장 중요한 제목을 정의하고, &lt;h6&gt;가장 중요하지 않은 제목을 정의한다. See the Pen HTML5 04.제목 by Jaehyun (@jaehyun8719) on CodePen. 브라우저는 제목 앞뒤로 공백을 자동으로 추가한다. 표제의 중요성검색 엔진은 제목를 사용하여 웹 페이지의 구조와 내용을 색인화 하며, 문서 구조를 표시하려면 제목를 사용하는 것이 중요하다.&lt;h1&gt;태그는 주요 제목에 사용되어야하며, &lt;h2&gt;태그는 다음으로 중요한 순서대로 사용 되어야한다. 텍스트를 만들기 위해 제목을 사용하지말고 제목에만 HTML 태그를 사용해야 된다. 제목 크기 조절각 HTML 제목에는 기본 크기가 있지만, styleCSS font-size속성을 사용하여 모든 제목의 크기를 바꿀 수 있다. See the Pen HTML5 04.제목 크기 조절 by Jaehyun (@jaehyun8719) on CodePen. HTML 요소HTML &lt;head&gt;요소는 메타 데이터의 컨테이너이며, HTML 메타 데이터는 HTML 문서에 대한 데이터입니다. 메타 데이터는 화면에 표시되지 않는다. &lt;html&gt;태그와 &lt;body&gt;태그 사이에 &lt;head&gt;태그를 정의한다. See the Pen HTML5 03.HTML &lt;head&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_headings.asp]]></content>
+    <content type="text"><![CDATA[해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 제목(Heading) HTML 제목(Heading)들제목는 &lt;h1&gt; ~ &lt;h6&gt;태그 로 정의되며, &lt;h1&gt;가장 중요한 제목을 정의하고, &lt;h6&gt;가장 중요하지 않은 제을 정의한다. See the Pen HTML5 04.제목 by Jaehyun (@jaehyun8719) on CodePen. 브라우저는 제목 앞뒤로 공백을 자동으로 추가한다. 표제의 중요성검색 엔진은 제목를 사용하여 웹 페이지의 구조와 내용을 색인화 하며, 문서 구조를 표시하려면 제목를 사용하는 것이 중요하다.&lt;h1&gt;태그는 주요 제목에 사용되어야하며, &lt;h2&gt;태그는 다음으로 중요한 순서대로 사용 되어야한다. 텍스트를 만들기 위해 제목을 사용하지말고 제목에만 HTML 태그를 사용해야 된다. 제목 크기 조절각 HTML 제목에는 기본 크기가 있지만, styleCSS font-size속성을 사용하여 모든 제목의 크기를 바꿀 수 있다. See the Pen HTML5 04.제목 크기 조절 by Jaehyun (@jaehyun8719) on CodePen. HTML 요소HTML &lt;head&gt;요소는 메타 데이터의 컨테이너이며, HTML 메타 데이터는 HTML 문서에 대한 데이터입니다. 메타 데이터는 화면에 표시되지 않는다. &lt;html&gt;태그와 &lt;body&gt;태그 사이에 &lt;head&gt;태그를 정의한다. See the Pen HTML5 03.HTML &lt;head&gt; 요소 by Jaehyun (@jaehyun8719) on CodePen. 참조 https://www.w3schools.com/html/html_headings.asp]]></content>
       <categories>
         <category>HTML5</category>
       </categories>
