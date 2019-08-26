@@ -8,8 +8,88 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/05/15/utils/logback/</loc>
+        <lastmod>2019-08-26T03:04:09.001Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
+        <lastmod>2019-08-26T02:59:38.258Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
+        <lastmod>2019-08-26T02:59:35.392Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
+        <lastmod>2019-08-26T02:59:33.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
+        <lastmod>2019-08-26T02:59:30.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
+        <lastmod>2019-08-26T02:59:24.228Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <lastmod>2019-08-26T02:59:16.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
+        <lastmod>2019-08-26T02:59:10.687Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/05/21/java/java8inaction/chapter1/</loc>
+        <lastmod>2019-08-26T02:59:04.213Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
+        <lastmod>2019-08-26T02:58:06.716Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
-        <lastmod>2019-08-26T02:40:45.831Z</lastmod>
+        <lastmod>2019-08-26T02:57:12.091Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -176,64 +256,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
-        <lastmod>2019-07-18T01:46:41.270Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
-        <lastmod>2019-07-16T01:43:04.526Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
-        <lastmod>2019-07-15T00:48:01.665Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
-        <lastmod>2019-07-15T00:48:01.664Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
-        <lastmod>2019-07-01T12:25:36.354Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
-        <lastmod>2019-06-26T03:03:27.434Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/</loc>
         <lastmod>2019-06-21T01:54:32.935Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
-        <lastmod>2019-06-21T01:51:49.719Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -248,32 +272,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/05/15/utils/logback/</loc>
-        <lastmod>2019-06-17T03:09:12.811Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2019-06-15T14:02:44.067Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
-        <lastmod>2019-06-15T14:02:44.065Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/05/21/java/java8inaction/chapter1/</loc>
-        <lastmod>2019-06-05T03:45:35.648Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
