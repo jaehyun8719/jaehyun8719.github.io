@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="Pg-g7AfnjOtI6NvJXfL7bXm8Sdk-e9JrzGqq3jab2OE">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<script src="https://use.fontawesome.com/c08d313be1.js"></script>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 헤드(Head)">
+<meta name="keywords" content="HTML, HTML5, markup language, Head, HTML5 Head, HTML5 헤드, HTML 헤드">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5 - 18.헤드(Head)">
+<meta property="og:url" content="https://jaehyun8719.github.io/2019/08/20/html5/18.head/index.html">
+<meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 헤드(Head)">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-26T01:17:17.799Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5 - 18.헤드(Head)">
+<meta name="twitter:description" content="해당 내용의 저작권은 https://www.w3schools.com/html에 있으며 개인적으로 정리한 내용 입니다.HTML5 헤드(Head)">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jaehyun's Dev Story" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://jaehyun8719.github.io/2019/08/20/html5/18.head/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>HTML5 - 18.헤드(Head) | Jaehyun's Dev Story</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaehyun's Dev Story</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">공부해서 남준다.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">36</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories<span class="badge">5</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">36</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/jaehyun8719" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2019/08/20/html5/18.head/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaehyun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaehyun's Dev Story">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">HTML5 - 18.헤드(Head)
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-08-20 22:00:00" itemprop="dateCreated datePublished" datetime="2019-08-20T22:00:00+09:00">2019-08-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-08-26 10:17:17" itemprop="dateModified" datetime="2019-08-26T10:17:17+09:00">2019-08-26</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/HTML5/" itemprop="url" rel="index"><span itemprop="name">HTML5</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/08/20/html5/18.head/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/20/html5/18.head/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>해당 내용의 저작권은 <a href="https://www.w3schools.com/html" rel="external nofollow noopener noreferrer" target="_blank">https://www.w3schools.com/html</a>에 있으며 개인적으로 정리한 내용 입니다.<br>HTML5 헤드(Head)<br><a id="more"></a></p>
+<h1 id="HTML-lt-head-gt-요소"><a href="#HTML-lt-head-gt-요소" class="headerlink" title="HTML &lt;head&gt;요소"></a>HTML <code>&lt;head&gt;</code>요소</h1><p><code>&lt;head&gt;</code>요소는 <code>&lt;html&gt;</code>태그와 <code>&lt;body&gt;</code>태그 사이에 메타 데이터를 위치 시킨다.<br>즉, HTML 메타 데이터는 HTML 문서에 대한 데이터이며, 메타 데이터는 화면에 표시 되지 않는다.<br>메타 데이터는 일반적으로 문서 제목, 문자 셋, 스타일, 스크립트 및 기타 메타 정보를 정의한다.<br>메타 데이터 태그 : <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;base&gt;</code></p>
+<h1 id="HTML-lt-title-gt-요소"><a href="#HTML-lt-title-gt-요소" class="headerlink" title="HTML &lt;title&gt;요소"></a>HTML <code>&lt;title&gt;</code>요소</h1><p><code>&lt;title&gt;</code>요소는 문서의 제목을 정의하며, 모든 HTML 문서가 필요로 한다.<br><code>&lt;title&gt;</code>요소</p>
+<ul>
+<li>브라우저 탭에서 제목을 정의한다.</li>
+<li>즐겨 찾기에 추가 될때 페이지 제목을 제공한다.</li>
+<li>검색 엔진 결과에 페이지 제목을 표시한다.</li>
+</ul>
+<p></p><p class="codepen" data-height="311" data-theme-id="dark" data-default-tab="html,result" data-user="jaehyun8719" data-slug-hash="KKPgbYp" style="height: 311px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML5 18.HTML &amp;lt;title&amp;gt;요소"><br>  <span>See the Pen <a href="https://codepen.io/jaehyun8719/pen/KKPgbYp/" rel="external nofollow noopener noreferrer" target="_blank"><br>  HTML5 18.HTML &lt;title&gt;요소</a> by Jaehyun (<a href="https://codepen.io/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank">@jaehyun8719</a>)<br>  on <a href="https://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.</span><br></p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h1 id="HTML-lt-style-gt-요소"><a href="#HTML-lt-style-gt-요소" class="headerlink" title="HTML &lt;style&gt;요소"></a>HTML <code>&lt;style&gt;</code>요소</h1><p><code>&lt;style&gt;</code>요소는 단일 HTMl 페이지에 대한 스타일 정볼르 정의하는데 사용된다.</p>
+<p></p><p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="jaehyun8719" data-slug-hash="YzKGdbj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML5 18.HTML &amp;lt;style&amp;gt;요소"><br>  <span>See the Pen <a href="https://codepen.io/jaehyun8719/pen/YzKGdbj/" rel="external nofollow noopener noreferrer" target="_blank"><br>  HTML5 18.HTML &lt;style&gt;요소</a> by Jaehyun (<a href="https://codepen.io/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank">@jaehyun8719</a>)<br>  on <a href="https://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.</span><br></p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h1 id="HTML-lt-link-gt-요소"><a href="#HTML-lt-link-gt-요소" class="headerlink" title="HTML &lt;link&gt;요소"></a>HTML <code>&lt;link&gt;</code>요소</h1><p>`<link>요소는 외부 스타일 시트에 연결하는데 사용된다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"mystyle.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="HTML-lt-meta-gt-요소"><a href="#HTML-lt-meta-gt-요소" class="headerlink" title="HTML &lt;meta&gt;요소"></a>HTML <code>&lt;meta&gt;</code>요소</h1><p><code>&lt;meta&gt;</code>요소는 사용되는 문자 셋, 페이지 설명, 키워드, 작성자 및 기타 메타 데이터를 지정하는데 사용된다. 메타 데이터는 브라우저(내용 표시), 검색엔진(키워드) 및 기타 웹 서비스에서 사용된다.</p>
+<h2 id="문자-셋-정의"><a href="#문자-셋-정의" class="headerlink" title="문자 셋 정의"></a>문자 셋 정의</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="웹-페이지에-대한-설명-정의"><a href="#웹-페이지에-대한-설명-정의" class="headerlink" title="웹 페이지에 대한 설명 정의"></a>웹 페이지에 대한 설명 정의</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"Free Web tutorials"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="검색-엔진에-대한-키워드-정의"><a href="#검색-엔진에-대한-키워드-정의" class="headerlink" title="검색 엔진에 대한 키워드 정의"></a>검색 엔진에 대한 키워드 정의</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"HTML, CSS, XML, JavaScript"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="페이지-작성자-정의"><a href="#페이지-작성자-정의" class="headerlink" title="페이지 작성자 정의"></a>페이지 작성자 정의</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"Jaehyun"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="30초마다-문서-새로-고침"><a href="#30초마다-문서-새로-고침" class="headerlink" title="30초마다 문서 새로 고침"></a>30초마다 문서 새로 고침</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"30"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Viewport-설정"><a href="#Viewport-설정" class="headerlink" title="Viewport 설정"></a>Viewport 설정</h2><p>HTML5는 웹 디자이너가 <code>&lt;meta&gt;</code>태그를 통해 Viviewport는ewport를 제어 할 수 있다.<br>viewport는 웹 페이지에서 사용자가 화면으로 볼 수 있는 영역이다.<br><code>&lt;meta&gt;</code> 모든 웹 페이지에는 다음 viewport는 포함해야된다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>viewport는 장치의 화면 크기에 따라 크기가 조절 된다.</p>
+</blockquote>
+<h1 id="HTML-lt-script-gt-요소"><a href="#HTML-lt-script-gt-요소" class="headerlink" title="HTML &lt;script&gt;요소"></a>HTML <code>&lt;script&gt;</code>요소</h1><p><code>&lt;script&gt;</code>요소는 JavaScript를 정의하는데 사용된다.</p>
+<p></p><p class="codepen" data-height="448" data-theme-id="dark" data-default-tab="html,result" data-user="jaehyun8719" data-slug-hash="YzKGBXJ" style="height: 448px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML5 18.HTML &amp;lt;script&amp;gt;요소"><br>  <span>See the Pen <a href="https://codepen.io/jaehyun8719/pen/YzKGBXJ/" rel="external nofollow noopener noreferrer" target="_blank"><br>  HTML5 18.HTML &lt;script&gt;요소</a> by Jaehyun (<a href="https://codepen.io/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank">@jaehyun8719</a>)<br>  on <a href="https://codepen.io" rel="external nofollow noopener noreferrer" target="_blank">CodePen</a>.</span><br></p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h1 id="HTML-lt-base-gt-요소"><a href="#HTML-lt-base-gt-요소" class="headerlink" title="HTML &lt;base&gt;요소"></a>HTML <code>&lt;base&gt;</code>요소</h1><p>`<base>요소는 페이지의 모든 상대 URL에 대한 기본 URL및 기본 대상을 지정한다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">"https://jaehyun8719.github.io/images/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
+<li><a href="https://www.w3schools.com/html/html_head.asp" rel="external nofollow noopener noreferrer" target="_blank">https://www.w3schools.com/html/html_head.asp</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>	
+          
+            <a href="/tags/HTML5-헤드-Head/" rel="tag"># HTML5 헤드(Head)</a>	
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/20/html5/17.filepaths/" rel="next" title="HTML5 - 17.파일 경로(Filepaths)">
+                <i class="fa fa-chevron-left"></i> HTML5 - 17.파일 경로(Filepaths)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/20/html5/19.layout/" rel="prev" title="HTML5 - 19.레이아웃(Layout)">
+                HTML5 - 19.레이아웃(Layout) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jaehyun</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">35</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jaehyun8719" title="GitHub &rarr; https://github.com/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:jaehyun8719@gmail.com" title="E-Mail &rarr; mailto:jaehyun8719@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-head-gt-요소"><span class="nav-number">1.</span> <span class="nav-text">HTML &lt;head&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-title-gt-요소"><span class="nav-number">2.</span> <span class="nav-text">HTML &lt;title&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-style-gt-요소"><span class="nav-number">3.</span> <span class="nav-text">HTML &lt;style&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-link-gt-요소"><span class="nav-number">4.</span> <span class="nav-text">HTML &lt;link&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-meta-gt-요소"><span class="nav-number">5.</span> <span class="nav-text">HTML &lt;meta&gt;요소</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#문자-셋-정의"><span class="nav-number">5.1.</span> <span class="nav-text">문자 셋 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#웹-페이지에-대한-설명-정의"><span class="nav-number">5.2.</span> <span class="nav-text">웹 페이지에 대한 설명 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#검색-엔진에-대한-키워드-정의"><span class="nav-number">5.3.</span> <span class="nav-text">검색 엔진에 대한 키워드 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#페이지-작성자-정의"><span class="nav-number">5.4.</span> <span class="nav-text">페이지 작성자 정의</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30초마다-문서-새로-고침"><span class="nav-number">5.5.</span> <span class="nav-text">30초마다 문서 새로 고침</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Viewport-설정"><span class="nav-number">5.6.</span> <span class="nav-text">Viewport 설정</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-script-gt-요소"><span class="nav-number">6.</span> <span class="nav-text">HTML &lt;script&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-lt-base-gt-요소"><span class="nav-number">7.</span> <span class="nav-text">HTML &lt;base&gt;요소</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">8.</span> <span class="nav-text">참조</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinsil</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://jaehyun8719.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2019/08/20/html5/18.head/";
+    this.page.identifier = "2019/08/20/html5/18.head/";
+    this.page.title = 'HTML5 - 18.헤드(Head)';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

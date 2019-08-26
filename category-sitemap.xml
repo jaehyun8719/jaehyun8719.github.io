@@ -8,8 +8,15 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript-ES6/</loc>
+        <lastmod>2019-08-26T01:18:12.420Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/categories/HTML5/</loc>
-        <lastmod>2019-08-12T09:35:11.288Z</lastmod>
+        <lastmod>2019-08-26T01:17:17.800Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
