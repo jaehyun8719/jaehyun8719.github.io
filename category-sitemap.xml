@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-ES6/</loc>
+        <lastmod>2019-08-30T09:33:16.720Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
+        <lastmod>2019-08-30T09:33:16.720Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
         <lastmod>2019-08-26T09:03:15.362Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -38,20 +52,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/categories/Spring-Boot/</loc>
         <lastmod>2019-08-26T02:58:06.716Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-ES6/</loc>
-        <lastmod>2019-08-26T02:57:12.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
-        <lastmod>2019-08-26T02:57:12.091Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
