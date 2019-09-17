@@ -9,42 +9,49 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-ES6/</loc>
-        <lastmod>2019-08-30T09:33:16.720Z</lastmod>
+        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
-        <lastmod>2019-08-30T09:33:16.720Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
-        <lastmod>2019-08-26T09:03:15.362Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
-        <lastmod>2019-08-26T09:03:15.362Z</lastmod>
+        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/Utils/Logback/</loc>
-        <lastmod>2019-08-26T03:04:09.001Z</lastmod>
+        <lastmod>2019-09-17T08:33:31.241Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/Utils/</loc>
-        <lastmod>2019-08-26T03:04:09.001Z</lastmod>
+        <lastmod>2019-09-17T08:33:31.241Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
+        <lastmod>2019-09-17T08:33:31.237Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
+        <lastmod>2019-09-17T08:33:31.237Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/HTML5/</loc>
+        <lastmod>2019-09-17T08:33:31.236Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -52,13 +59,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/categories/Spring-Boot/</loc>
         <lastmod>2019-08-26T02:58:06.716Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/HTML5/</loc>
-        <lastmod>2019-08-26T01:17:17.800Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

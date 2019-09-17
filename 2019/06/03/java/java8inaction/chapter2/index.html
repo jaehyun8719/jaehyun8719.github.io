@@ -107,7 +107,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/java/java8inaction/chapter3_1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-08-26T09:03:15.362Z">
+<meta property="og:updated_time" content="2019-09-17T08:33:31.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 In Action - 2. 람다 표현식">
 <meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. 람다 표현식을 어떻게 만드는지, 어떻게 사용하는지, 어떻게 코드를 간결하게 만들수 있는지 설명한다.">
@@ -271,7 +271,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">39</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">45</span></a>
 
   </li>
         
@@ -309,7 +309,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">37</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">39</span></a>
 
   </li>
 
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-08-26 18:03:15" itemprop="dateModified" datetime="2019-08-26T18:03:15+09:00">2019-08-26</time>
+                <time title="Modified: 2019-09-17 17:33:31" itemprop="dateModified" datetime="2019-09-17T17:33:31+09:00">2019-09-17</time>
               
             
           </span>
@@ -575,7 +575,7 @@
 <h1 id="어떻게-람다를-사용할까"><a href="#어떻게-람다를-사용할까" class="headerlink" title="어떻게 람다를 사용할까?"></a>어떻게 람다를 사용할까?</h1><p>함수형 인터페이스라는 문맥에서 람다표현식을 사용할 수 있다.</p>
 <h2 id="함수형-인터페이스"><a href="#함수형-인터페이스" class="headerlink" title="함수형 인터페이스"></a>함수형 인터페이스</h2><p>함수형 인터페이스는 정확히 하나의 추상 메서드를 지정하는 인터페이스이다. 자바 API의 함수형 인터페이스 Comparator, Runnable 등이 있다.<br><figure class="highlight java"><figcaption><span>Comparator.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T o1, T o2)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight java"><figcaption><span>Runnable.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>오직 하나의 추상 메소드를 가진 함수 인터페이스 Runnable을 람다로 표현 했다.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable run = () -&gt; System.out.println(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>오직 하나의 추상 메서드를 가진 함수 인터페이스 Runnable을 람다로 표현 했다.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Runnable run = () -&gt; System.out.println(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure></p>
 <h2 id="함수-디스크립터"><a href="#함수-디스크립터" class="headerlink" title="함수 디스크립터"></a>함수 디스크립터</h2><p>람다 표현식의 시그너처를 서술하는 메서드를 함수 디스크립터(function descriptor)라고 부른다. 예로 <code>(Apple) -&gt; boolean</code>의 <code>test</code>메서드의 시그니처는 <code>boolean</code>이다.<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Predicate&lt;Apple&gt; a = (Apple a) -&gt; <span class="keyword">true</span>;</span><br></pre></td></tr></table></figure></p>
 <h1 id="람다-활용-실행-어라운드-패턴"><a href="#람다-활용-실행-어라운드-패턴" class="headerlink" title="람다 활용: 실행 어라운드 패턴"></a>람다 활용: 실행 어라운드 패턴</h1><p>실제 자원을 처리하는 코드를 설정과 정리 두 과정이 둘러싸인 형태를 실행 어라운드 패턴이라고 부른다.</p>
 <blockquote>
@@ -790,7 +790,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">39</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -922,7 +922,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">37</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
