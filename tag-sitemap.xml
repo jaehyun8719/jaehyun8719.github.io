@@ -3,36 +3,15 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/filter/</loc>
-        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/reduce/</loc>
-        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/map/</loc>
-        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/tags/JavaScript/</loc>
-        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
+        <lastmod>2019-09-25T06:37:06.961Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/JavaScript-ES6/</loc>
-        <lastmod>2019-09-17T08:33:43.354Z</lastmod>
+        <lastmod>2019-09-25T06:37:06.961Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -47,62 +26,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Java/</loc>
         <lastmod>2019-09-17T08:33:31.241Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EB%82%98%EB%A8%B8%EC%A7%80-%EC%97%B0%EC%82%B0%EC%9E%90/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EA%B5%AC%EC%A1%B0-%EB%B6%84%ED%95%B4/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EC%A0%9C%EB%84%88%EB%A0%88%EC%9D%B4%ED%84%B0%EC%99%80-%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EC%A0%84%EA%B0%9C-%EC%97%B0%EC%82%B0%EC%9E%90/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EC%9D%B4%ED%84%B0%EB%A0%88%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/for-of/</loc>
-        <lastmod>2019-09-17T08:33:31.240Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EA%B3%A0%EC%B0%A8-%ED%95%A8%EC%88%98/</loc>
-        <lastmod>2019-09-17T08:33:31.239Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/%EC%9D%BC%EA%B8%89-%ED%95%A8%EC%88%98/</loc>
-        <lastmod>2019-09-17T08:33:31.239Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

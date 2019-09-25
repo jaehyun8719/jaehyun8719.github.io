@@ -105,13 +105,13 @@
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
 <meta property="og:description" content="유인동님의 함수형 프로그래밍과 JavaScript ES6+ 인프런 강의를 듣고 개인적으로 정리한 내용입니다.함수형 프로그래밍과 JavaScript ES6 map, filter, reduce에 대해서 설명한다.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/javascript/es6/chapter2/1.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/javascript/es6/chapter4/1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-09-17T08:33:43.354Z">
+<meta property="og:updated_time" content="2019-09-25T06:37:06.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript ES6 - 4. map, filter, reduce">
 <meta name="twitter:description" content="유인동님의 함수형 프로그래밍과 JavaScript ES6+ 인프런 강의를 듣고 개인적으로 정리한 내용입니다.함수형 프로그래밍과 JavaScript ES6 map, filter, reduce에 대해서 설명한다.">
-<meta name="twitter:image" content="https://jaehyun8719.github.io/images/javascript/es6/chapter2/1.png">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/javascript/es6/chapter4/1.png">
 
 
 
@@ -309,7 +309,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">40</span></a>
 
   </li>
 
@@ -456,7 +456,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-09-17 17:33:43" itemprop="dateModified" datetime="2019-09-17T17:33:43+09:00">2019-09-17</time>
+                <time title="Modified: 2019-09-25 15:37:06" itemprop="dateModified" datetime="2019-09-25T15:37:06+09:00">2019-09-25</time>
               
             
           </span>
@@ -579,8 +579,8 @@
             <p><code>acc</code> 값이 없으면 <code>[1, 2, 3, 4, 5]</code> 에서 맨 앞에 있는 <code>1</code>이 초기 값으로 설정된다. 그래서 <code>2, 3, 4, 5</code> 더한 <code>13</code> 의 결과 값이 나온다.</p>
           </div>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> reduceProducts = [</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">"반팔티"</span>, <span class="attr">price</span>: <span class="number">15000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">"반팔티"</span>, <span class="attr">price</span>: <span class="number">20000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">"핸드폰케이스"</span>, <span class="attr">price</span>: <span class="number">15000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">"후드티"</span>, <span class="attr">price</span>: <span class="number">30000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">"바지"</span>, <span class="attr">price</span>: <span class="number">25000</span>&#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reduce(<span class="function">(<span class="params">totalPrice, product</span>) =&gt;</span> totalPrice + product.price, <span class="number">0</span>, reduceProducts));</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>consolt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">105000</span></span><br></pre></td></tr></table></figure>
-<h1 id="map-filter-reduce-중첩-사용과-함수형-사고"><a href="#map-filter-reduce-중첩-사용과-함수형-사고" class="headerlink" title="map+filter+reduce 중첩 사용과 함수형 사고"></a>map+filter+reduce 중첩 사용과 함수형 사고</h1><h2 id="폴더-구조"><a href="#폴더-구조" class="headerlink" title="폴더 구조"></a>폴더 구조</h2><p><img src="/images/javascript/es6/chapter2/1.png" alt></p>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="number">105000</span></span><br></pre></td></tr></table></figure>
+<h1 id="map-filter-reduce-중첩-사용과-함수형-사고"><a href="#map-filter-reduce-중첩-사용과-함수형-사고" class="headerlink" title="map+filter+reduce 중첩 사용과 함수형 사고"></a>map+filter+reduce 중첩 사용과 함수형 사고</h1><h2 id="폴더-구조"><a href="#폴더-구조" class="headerlink" title="폴더 구조"></a>폴더 구조</h2><p><img src="/images/javascript/es6/chapter4/1.png" alt></p>
 <h3 id="fx-js-함수"><a href="#fx-js-함수" class="headerlink" title="fx.js 함수"></a>fx.js 함수</h3><figure class="highlight javascript"><figcaption><span>fx.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="function">(<span class="params">f, iter</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> res = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> a <span class="keyword">of</span> iter) &#123;</span><br><span class="line">        res.push(f(a));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> filter = <span class="function">(<span class="params">f, iter</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> res = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> a <span class="keyword">of</span> iter) &#123;</span><br><span class="line">        <span class="keyword">if</span> (f(a)) res.push(a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> reduce = <span class="function">(<span class="params">f, acc, iter</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (!iter) &#123;</span><br><span class="line">        iter = acc[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line">        acc = iter.next().value;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> a <span class="keyword">of</span> iter) &#123;</span><br><span class="line">        acc = f(acc, a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> acc;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="20000원-이하의-모든-값의-합"><a href="#20000원-이하의-모든-값의-합" class="headerlink" title="20000원 이하의 모든 값의 합"></a>20000원 이하의 모든 값의 합</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> products = [</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'반팔티'</span>, <span class="attr">price</span>: <span class="number">15000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'긴팔티'</span>, <span class="attr">price</span>: <span class="number">20000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'핸드폰케이스'</span>, <span class="attr">price</span>: <span class="number">15000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'후드티'</span>, <span class="attr">price</span>: <span class="number">30000</span>&#125;,</span><br><span class="line">    &#123;<span class="attr">name</span>: <span class="string">'바지'</span>, <span class="attr">price</span>: <span class="number">25000</span>&#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> add = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(reduce(</span><br><span class="line">    add,</span><br><span class="line">    map(<span class="function"><span class="params">p</span> =&gt;</span> p.price,</span><br><span class="line">        filter(<span class="function"><span class="params">p</span> =&gt;</span> p.price &lt; <span class="number">20000</span>, products))));</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">    reduce(</span><br><span class="line">        add,</span><br><span class="line">        filter(<span class="function"><span class="params">n</span> =&gt;</span> n &gt;= <span class="number">20000</span>,</span><br><span class="line">            map(<span class="function"><span class="params">p</span> =&gt;</span> p.price, products))));</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 30000</span><br><span class="line">&gt; 30000</span><br></pre></td></tr></table></figure>
@@ -618,12 +618,6 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>	
           
-            <a href="/tags/map/" rel="tag"># map</a>	
-          
-            <a href="/tags/reduce/" rel="tag"># reduce</a>	
-          
-            <a href="/tags/filter/" rel="tag"># filter</a>	
-          
         </div>
       
 
@@ -644,6 +638,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/17/javascript/es6/chapter5/" rel="prev" title="JavaScript ES6 - 5. 코드를 값으로 다루어 표현력 높이기">
+                JavaScript ES6 - 5. 코드를 값으로 다루어 표현력 높이기 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -719,7 +717,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-count">40</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -863,7 +861,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
