@@ -418,8 +418,8 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
-        <tag>Spring Boot Mybatis</tag>
         <tag>Java</tag>
+        <tag>Spring Boot Mybatis</tag>
       </tags>
   </entry>
   <entry>
@@ -470,8 +470,8 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
-        <tag>Java</tag>
         <tag>Auto Configuration</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
