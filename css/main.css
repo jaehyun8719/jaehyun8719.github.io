@@ -630,7 +630,7 @@ pre code {
 }
 .highlight figcaption {
   font-size: 1em;
-  color: #ccc;
+  color: #4c4c4c;
   line-height: 1em;
   margin-bottom: 1em;
   margin: 0em;
@@ -1948,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3904ba;
+  background: #bec4e8;
 }
 .feed-link,
 .chat {
@@ -3039,21 +3039,21 @@ ul.breadcrumb li+li:last-child {
   font-size: 1em;
 }
 .post-body h2 {
-  font-size: 1.45em;
+  font-size: 1.35em;
   border-bottom: 1px solid #eee;
 }
 .post-body h2 code {
   font-size: 1em;
 }
 .post-body h3 {
-  font-size: 1.3em;
+  font-size: 1.25em;
   border-bottom: 1px solid #eee;
 }
 .post-body h3 code {
   font-size: 1em;
 }
 .post-body h4 {
-  font-size: 1.2em;
+  font-size: 1.15em;
   border-bottom: 1px dotted #eee;
 }
 .post-body h4 code {
