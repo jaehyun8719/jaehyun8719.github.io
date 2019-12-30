@@ -8,40 +8,16 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
-        <lastmod>2019-09-25T09:58:44.991Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
+        <lastmod>2019-12-30T06:26:36.009Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/09/17/javascript/es6/chapter5/</loc>
-        <lastmod>2019-09-25T06:37:06.961Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/09/16/javascript/es6/chapter4/</loc>
-        <lastmod>2019-09-25T06:37:06.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/09/09/javascript/es6/chapter3/</loc>
-        <lastmod>2019-09-25T06:37:06.959Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/08/28/javascript/es6/chapter2/</loc>
-        <lastmod>2019-09-25T06:37:06.958Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/</loc>
+        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -49,7 +25,55 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
-        <lastmod>2019-09-25T06:37:06.957Z</lastmod>
+        <lastmod>2019-10-31T05:43:45.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/10/28/javascript/es6/chapter6/</loc>
+        <lastmod>2019-10-31T05:41:23.463Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/17/javascript/es6/chapter5/</loc>
+        <lastmod>2019-10-31T05:41:23.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/16/javascript/es6/chapter4/</loc>
+        <lastmod>2019-10-31T05:41:23.462Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/09/javascript/es6/chapter3/</loc>
+        <lastmod>2019-10-31T05:41:23.461Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/08/28/javascript/es6/chapter2/</loc>
+        <lastmod>2019-10-31T05:41:23.460Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
+        <lastmod>2019-09-25T09:58:44.991Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -146,14 +170,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/2019/05/21/java/java8inaction/chapter1/</loc>
         <lastmod>2019-08-26T02:59:04.213Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
-        <lastmod>2019-08-26T02:58:06.716Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

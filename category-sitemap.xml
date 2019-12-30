@@ -9,21 +9,28 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/Spring-Boot/</loc>
-        <lastmod>2019-09-25T09:58:44.991Z</lastmod>
+        <lastmod>2019-12-30T06:26:36.009Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-ES6/</loc>
-        <lastmod>2019-09-25T06:37:06.961Z</lastmod>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/Learning-Javascript/</loc>
+        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
-        <lastmod>2019-09-25T06:37:06.961Z</lastmod>
+        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-Funtional-ES6/</loc>
+        <lastmod>2019-10-31T05:43:45.650Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
