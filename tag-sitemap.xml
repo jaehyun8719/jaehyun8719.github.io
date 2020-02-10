@@ -3,14 +3,28 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
-        <lastmod>2019-12-30T07:05:23.416Z</lastmod>
+        <loc>https://jaehyun8719.github.io/tags/AWS-EC2-Setting/</loc>
+        <lastmod>2020-02-10T07:40:01.843Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS/</loc>
+        <lastmod>2020-02-10T07:40:01.843Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Java/</loc>
+        <lastmod>2019-12-30T07:05:23.416Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
         <lastmod>2019-12-30T07:05:23.416Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[AWS EC2 서버 인스턴스 생성]]></title>
+    <url>%2F2020%2F02%2F10%2Faws%2Fec2-setting%2F</url>
+    <content type="text"><![CDATA[Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다. EC2EC2(Elastic Compute Cloud)는 우리가 쉽게 사양을 고르고 원하는 시간만큼 사용할 수 있는 가상 서버라고 이해하면 되고, 서버 구축하고 보안 및 네트워크 구성과 스토리지 관리가 가능하다. 그리고 트래픽을 예측하여 서버 사양을 구성하지 않고 유동적으로 서버 사양을 변경할 수 있다. EC2 생성시 알아야할 기본 개념AMI(Amazon Machine Image)AMI는 우리가 생성할(Window, Linux 등) EC2 인스턴스의 기반이 되는 이미지이다. 예를 들어 윈도우 설치를 할 때 ISO, CD를 이용하여서 설치 한다고 생각하면 된다. 보안 그룹보안을 위해 IP와 포트 번호를 이용해 정의해서 사용하는 서버 접속 규칙이다. 예를 들어 방화벽으로 특정 IP, 포트 접속을 차단하는 것과 비슷 하게 생각하면 된다. 키 페어서버에 접속하기 위한 열쇠 라고 이해하면 된다. 공개 키 암호화 기법으로 개인키 유출시 허가 받지 않은사람도 서버에 접속 할 수 있으니 개인키는 안전하게 보관해야 된다. AWS EC2 인스턴스 생성서울리전에 프리 티어 Amazon Linux 2 AMI을 인스턴스를 생성 할 것이다. 기존 (Amazon Linux AMI 2018.03.0)은 2020년 12월 31일부로 표준 지원이 종료 된다.) EC2 인스턴스 생성AWS에 로그인한 뒤 AWS 콘솔에 접속하고, 한국 리전을 선택 서비스 메뉴 클릭 후 EC2 검색 하여 EC2 선택 왼쪽 인스턴스 선택하고 오른쪽 인스턴스 시작 선택 AMI 선택(AWS에 더 맞게 튜닝한 Amazon Linux2 선택) 인스턴스 유형 선택(프리 티어 선택)t2.micro를 선택하고 다음:인스턴스 세부 정보 구성 버튼을 클릭한다. 인스턴스 세부 정보 구성(기본 설정값 사용) EC2 인스턴스 저장 장치 선택(기본 설장값 사용) EC2 인스턴스에 태그를 지정 태그를 사용하여 생성한 인스턴스를 성격에 맞게 분류할 때 유용하게 사용할 수 있다. 인스턴스를 생성하기 위해서 태그 추가 버튼을 클릭 후 태그를 생성 하면 된다. 태그를 생성하면 다음: 보안 그룹 구성 선택 인스턴스에 대한 접근을 제어하기 위한 보안 그룹현재 회사에서 운영하는 IP만 접근을 하고싶다면 보안 그룹에서 회사 IP 주소와 포트번호만 허용하는 것이 중요하다. 소스에 0.0.0.0/0은 모든 IP 주소에 인스턴스를 접속 허용 하는 것이다. 지금까지 설정한 인스턴스 설정값 검토 완료후 시작하기 클릭 기존 키페어 선택 또는 새키 페어 생성 창키 페어를 선택하여 새 키 페어 생성을 선택하고 생성할 키 페어 이름을 넣는다. 키 페어 다운로드 버튼을 클릭해 키 페어를 저장해 둔다. 다운로드 받은 키페어는 서버에 접속 할 수 있는 열쇠 이므로 분실 또는 유출 하면 안된다. 키 페어는 지금 창 말고 다시 다운로드 받을 수 없다. 인스턴스 보기 버튼을 클릭해 생성 중인 인스턴스 확인 인스턴스가 생성되기까지는 몇 분 소요 된다. 인스턴스 확인 생성 중인 인스턴스 상태가 pending상태에서 running상태가 될때 까지 기다린다. running시 인스턴스가 올바르게 작동한다는 뜻이다. stopped는 인스턴스 중지 terminated는 인스턴스 삭제 AWS는 사용량 만큼 비용을 지불 해야 한다. 그래서 사용하지 않는 EC2는 인스턴스 상태 -&gt; 중지를 선택하여 꺼두는 것이 좋다. 참조 https://wikibook.co.kr/aws-infra/ https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html Amazon Linux 2 AMI Amazon Linux AMI 2018.03.0]]></content>
+      <categories>
+        <category>AWS</category>
+      </categories>
+      <tags>
+        <tag>AWS</tag>
+        <tag>AWS EC2 Setting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입]]></title>
     <url>%2F2019%2F11%2F20%2Fjavascript%2Flearning-javascript%2Fchapter1%2F</url>
     <content type="text"><![CDATA[Leanring Javascript(러닝 자바스크립트) 읽고 개인적으로 정리한 내용입니다.리터럴과 변수, 상수, 데이터 타입에 대해서 설명 한다. 변수와 상수변수(Variable)변수(Variable)란 간단히 말해 이름이 붙은 값으로, 변수라는 이름이 암시하듯 값은 언제든 바뀔 수 있다. 1let currentTempC = 22; // 섭씨온도 이 문은 변수 currentTempC를 선언(생성)하고 초깃값을 할당하는 두 가지 일을 한다. 그래서 currentTempC값을 언제든 바꿀 수 있다. 1currentTempC = 22.5; 변수를 선언 할때 꼭 초깃값을 지정해야 하는 건 아니다. 초깃값을 할당하지 않으면 암시적으로 특별한 값 undefined가 할당 된다. 1let targetTempC; // let targetTempC = undefined;와 같다. let 문 하나에 변수 여러 개를 선언할 수 있다. 1let targetTempC, room1 = "conference_room_a", room2 = "lobby"; console123456&gt; targetTempC&lt; undefined&gt; room1&lt; "conference_room_a"&gt; room2&lt; "lobby" targetTempC 값을 할당하지 않았으므로 암시적으로 undefined가 할당 되고, room1과 room2는 문자열(텍스를)를 할당하였기 때문에 문자열 변수 이다. 상수(Constant)상수도 변수와 마찬가지로 값을 할당받을 수 있지만, 한 번 할당한 값을 바꿀 수 없다. 1const ROOM_TEMP_C = 21.5, MAX_TEMP_C = 30; 변수보다 상수를 쓰도록 노력하자. 상수를 사용하면 바꾸지 말아야 할 데이터에서 실수로 값을 바꾸는 일이 줄어 든다. 식별자 이름변수와 상수, 함수 이름을 식별자(identifier)라 부른다. 그리고 식별자에는 규칙이 있다. 식별자는 반드시 글자나 달러 기호($), 밑줄(_)로 시작해야 한다. 식별자에는 글자와 숫자, 달러 기호, 밑줄만 쓸 수 있다. 𝜋 나 ⊇ 같은 유니코드 문자도 쓸 수 있다. 예약어는 식별자로 쓸 수 없다 자바 스크립트의 식별자 표기법 카멜 케이스(camel case) : 낙타 혹처럼 보이게 currentTempC 처럼 문자가 변경 될때 대문자를 붙이는 방법이다. 스네이크 케이스(snake case) : current_temp_c 스네이크 케이스에 다라 이름을 만든 방법이다. 리터럴리터럴(literal)이란 값을 프로그램 안에서 직접 지정한다는 의미이다.리터럴과 식별자의 차이를 예를 들면 room1변수에 값 &quot;confrence_room_a&quot;은 할당 했을때, room1은 변수를 가리키는 식별자이며, &quot;confrence_room_a&quot; 문자열 리터럴인 동시에 room1의 값이다. 12345let room1 = "conference_room_a"; // "conference_room_a"(따옴표 안)은 리터럴이다.let currentRoom = room1; // currentRoom의 값은 room1값("conference_room_a")과 같다.currentRoom = conference_room_a // conference_room_a란 식별자가 존재하지 않으므로 에러가 난다. console12Uncaught ReferenceError: conference_room_a is not defined at &lt;anonymous&gt;:3:1 원시 타입과 객체자바스크립트에의 값은 원시 값(primitive) 또는 객체(object) 이다.원시 타입 6가지 숫자 문자열 불리언 null undefined 심볼(Symbol) 원시 값과 다르게 객체는 여러 가지 형태와 값을 가질 수 있다 Array Date RegExp Map과 WeakMap Set과 WeakSet 숫자자바스크립트는 10진수, 16진수, 지수 등 어떤 리터럴 형식을 사용하더라도 결국 숫자는 더블 형식으로 저장 된다. 123456789let count = 10; // 숫자 리터럴. count는 더블이다const blue = 0x000ff; // 16진수, 16진수ff는 10진수 255와 같다.const umask = 0o0022; // 8진수, 8진수 22는 십진수 18과 같다.const roomTemp = 21.5; // 십진수const c = 3.0e6; // 지수 (3.0 x 10^6 = 3,000,000)const e = -1.6e-19; // 지수 (-1.6 x 10^-19 = 0.00000000000000000016)const inf = Infinity;const ninf = -Infinity;const nan = NaN; // "숫자가 아님" console12345678910111213141516&gt; count&lt; 10&gt; blue&lt; 255&gt; umask&lt; 18&gt; roomTemp&lt; 21.5&gt; c&lt; 3000000&gt; e&lt; -1.6e-19&gt; inf&lt; Infinity&gt; ninf&lt; -Infinity 또한 숫자에 대응하는 Number 객체에는 중요한 숫자형 값에 해당하는 유용한 프로퍼티가 있다. 12345678const small = Number.EPSILON; // 1에 더했을 때 1과 구분되는 결과를 만들 수 있는 가장 작은값이다. 근사치 2.2e-16const bigInt = Number.MAX_SAFE_INTEGER; // 표현할 수 있는 가장 큰 정수const max = Number.MAX_VALUE; // 표현할 수 있는 가장 큰 숫자const minInt = Number.MIN_SAFE_INTEGER; // 표현할 수 있는 가장 작은 정수const min = Number.MIN_VALUE; // 표현할 수 있는 가장 작은 숫자const nInf = Number.NEGATIVE_INFINITY; // -Infinityconst nan = Number.NaN; // Nanconst inf = Number.POSITIVE_INFINITY; // Infinity console12345678910111213141516&gt; small&lt; 2.220446049250313e-16&gt; bigInt&lt; 9007199254740991&gt; max&lt; 1.7976931348623157e+308&gt; minInt&lt; -9007199254740991&gt; min&lt; 5e-324&gt; nInf&lt; -Infinity&gt; nan&lt; NaN&gt; inf&lt; Infinity 특수문자 코드 설명 예제 \n 줄바꿈 문자 “Line1\nLine2” \r 캐리지 리턴(Carriage return) “Windows line 1\r\nWindows line2” \t 탭 “Speed:\t60kph” \’ 작은따옴표, 꼭 이스케이프할 필요가 없어도 작은따옴표를 쓸 수 있는 곳에서는 항상 이스케이프한 작은 따옴표를 쓸 수 있다 “Don\’t” \” 큰따옴표, 꼭 이스케이프할 필요가 없어도 큰따옴표를 쓸 수 있는 곳에는 항상 이스케이프한 큰따옴표를 쓸 수 있다. ‘Sam Said \”hello\”.’ ` 백틱. ES6에서 새로 생겼다. `New in ES6: \` strings.` \$ 달러 기호. ES6에서 새로 생겼다. `New in ES6: ${interpolation}` \ 역슬래시 “Use \\ to represent \!” 템플릿 문자열문자열 병합을 통해 변수나 상수를 문자열 안에 쓸 수 있다. ES5 12var currentTemp = 19.5;const message = "The current temperature is " + currentTemp + "\u00b0C"; ES6에서는 문자열 템플릿(template)기능이 도입댔다. ES612var currentTemp = 19.5;const message = `The current temperature is $&#123;currentTemp&#125; \u00b0C`; 숫자와 문자열숫자를 따옴표 안에 넣으면 그건 숫자가 아니라 문자열이다. 하지만 자바스크립트는 필요하다면 숫자가 들어 있는 문자열을 자동으로 숫자로 바꾼다.숫자열과 문자열은 명확하게 표시해주는것이 좋다. 12const result1 = 3 + "30"; // 3이 문자열로 바뀐다. const result2 = 3 * "30"; // '30'이 숫자로 바뀐다. console1234&gt; result1&lt; "330"&gt; result2&lt; 90 심볼심볼(symbol)은 유일한 토큰을 나타내기 위해 ES6에서 도입한 새 데이터 타입이다. 123const RED = Symbol("The color of a sunset!");const ORANGE = Symbol("The color of a sunset!");RED === ORANGE console1&gt; false null과 undefined1234let currentTemp; // 암시적으로 undefinedconst targetTemp = null; // null 값이므로 아직 모르는 값currentTemp = 19.5; // 19.5라는 값이 있음.currentTemp = undefined; 객체1const obj = &#123;&#125;; 객체의 콘텐츠는 프로퍼티(property) 또는 멤버(member)라고 부른다. 프로퍼티 이름은 반드시 문자열 또는 심볼이어야 하며, 값은 어떤 타입이든 상관없다. 1obj.color = &quot;yellow&quot;; 프로퍼티 이름에 유요한 식별자를 써야 멤버 접근 연산자(member access operator) .를 사용할 수 있다. 프로퍼티 이름에 유요한 식별자가 아닌 이름을 쓴다면 계산된 멤버 접근 연산자(computed member access operator) []를 써야 한다. 123obj["not an identifier"] = 3;obj["not an identifier"]; // 3obj["color"]; // "yellow" 심볼 프로퍼티에 접근할 때도 대괄호를 사용한다. 123const SIZE = Symbol();obj[SIZE] = 8;obj[SIZE]; // 8 배열1234567const a1 = [1, 2, 3, 4] // 숫자로 구성된 배열const a2 = [1, 'tow', 3, null] // 여러 가지 타입으로 구성된 배열const a3 = [ // 객체가 들어있는 배열 &#123;name: "Ruby", hardness: 9&#125;, &#123;name: "Diamond", hardness: 10&#125;, &#123;name: "Topaz", hardness: 8&#125;] 참조 http://m.hanbit.co.kr/store/books/book_view.html?p_code=B2328850940]]></content>
@@ -23,9 +35,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -50,9 +62,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -64,9 +76,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -78,9 +90,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -92,9 +104,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -106,9 +118,9 @@
         <category>JavaScript Funtional ES6</category>
       </categories>
       <tags>
+        <tag>JavaScript Funtional ES6</tag>
         <tag>JavaScript ES6</tag>
         <tag>JavaScript</tag>
-        <tag>JavaScript Funtional ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -185,8 +197,8 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
-        <tag>Java</tag>
         <tag>Spring Boot Admin</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -263,8 +275,8 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
-        <tag>Auto Configuration</tag>
         <tag>Java</tag>
+        <tag>Auto Configuration</tag>
       </tags>
   </entry>
   <entry>
