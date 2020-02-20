@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next gemini" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="Pg-g7AfnjOtI6NvJXfL7bXm8Sdk-e9JrzGqq3jab2OE">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<script src="https://use.fontawesome.com/c08d313be1.js"></script>
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="Leanring Javascript(러닝 자바스크립트) 읽고 개인적으로 정리한 내용입니다.리터럴과 변수, 상수, 데이터 타입에 대해서 설명 한다.">
+<meta name="keywords" content="javascript, javascript es6, JavaScript ES6, Learning Javascript, 러닝 자바스크립트, ES6 리터럴과 변수, ES6 상수, ES6 데이터 타입, javascript 리터럴과 변수, javascript 상수, javascript 데이터 타입">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입">
+<meta property="og:url" content="https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/index.html">
+<meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="Leanring Javascript(러닝 자바스크립트) 읽고 개인적으로 정리한 내용입니다.리터럴과 변수, 상수, 데이터 타입에 대해서 설명 한다.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-20T02:53:13.849Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입">
+<meta name="twitter:description" content="Leanring Javascript(러닝 자바스크립트) 읽고 개인적으로 정리한 내용입니다.리터럴과 변수, 상수, 데이터 타입에 대해서 설명 한다.">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Jaehyun's Dev Story" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입 | Jaehyun's Dev Story</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jaehyun's Dev Story</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description">공부해서 남준다.</h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">17</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories<span class="badge">9</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">24</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>Search</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/jaehyun8719" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jaehyun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaehyun's Dev Story">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-11-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-20T00:00:00+09:00">2019-11-20</time>
+            
+
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/JavaScript/Learning-Javascript/" itemprop="url" rel="index"><span itemprop="name">Learning Javascript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2019/11/20/javascript/learning-javascript/chapter1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/11/20/javascript/learning-javascript/chapter1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<p>Leanring Javascript(러닝 자바스크립트) 읽고 개인적으로 정리한 내용입니다.<br>리터럴과 변수, 상수, 데이터 타입에 대해서 설명 한다.<br><a id="more"></a></p>
+<h1 id="변수와-상수"><a href="#변수와-상수" class="headerlink" title="변수와 상수"></a>변수와 상수</h1><h2 id="변수-Variable"><a href="#변수-Variable" class="headerlink" title="변수(Variable)"></a>변수(Variable)</h2><p>변수(Variable)란 간단히 말해 이름이 붙은 값으로, 변수라는 이름이 암시하듯 값은 언제든 바뀔 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> currentTempC = <span class="number">22</span>; <span class="comment">// 섭씨온도</span></span><br></pre></td></tr></table></figure>
+<p>이 문은 변수 <code>currentTempC</code>를 선언(생성)하고 초깃값을 할당하는 두 가지 일을 한다. 그래서 <code>currentTempC</code>값을 언제든 바꿀 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">currentTempC = <span class="number">22.5</span>;</span><br></pre></td></tr></table></figure>
+<p>변수를 선언 할때 꼭 초깃값을 지정해야 하는 건 아니다. 초깃값을 할당하지 않으면 암시적으로 특별한 값 <code>undefined</code>가 할당 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> targetTempC; <span class="comment">// let targetTempC = undefined;와 같다.</span></span><br></pre></td></tr></table></figure>
+<p>let 문 하나에 변수 여러 개를 선언할 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> targetTempC, room1 = <span class="string">"conference_room_a"</span>, room2 = <span class="string">"lobby"</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; targetTempC</span><br><span class="line">&lt; <span class="literal">undefined</span></span><br><span class="line">&gt; room1</span><br><span class="line">&lt; <span class="string">"conference_room_a"</span></span><br><span class="line">&gt; room2</span><br><span class="line">&lt; <span class="string">"lobby"</span></span><br></pre></td></tr></table></figure>
+<p><code>targetTempC</code> 값을 할당하지 않았으므로 암시적으로 <code>undefined</code>가 할당 되고, <code>room1</code>과 <code>room2</code>는 문자열(텍스를)를 할당하였기 때문에 문자열 변수 이다.</p>
+<h2 id="상수-Constant"><a href="#상수-Constant" class="headerlink" title="상수(Constant)"></a>상수(Constant)</h2><p>상수도 변수와 마찬가지로 값을 할당받을 수 있지만, 한 번 할당한 값을 바꿀 수 없다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ROOM_TEMP_C = <span class="number">21.5</span>, MAX_TEMP_C = <span class="number">30</span>;</span><br></pre></td></tr></table></figure>
+<div class="note info">
+            <p>변수보다 상수를 쓰도록 노력하자. 상수를 사용하면 바꾸지 말아야 할 데이터에서 실수로 값을 바꾸는 일이 줄어 든다.</p>
+          </div>
+<h1 id="식별자-이름"><a href="#식별자-이름" class="headerlink" title="식별자 이름"></a>식별자 이름</h1><p>변수와 상수, 함수 이름을 식별자(identifier)라 부른다. 그리고 식별자에는 규칙이 있다.</p>
+<ul>
+<li>식별자는 반드시 글자나 달러 기호($), 밑줄(_)로 시작해야 한다.</li>
+<li>식별자에는 글자와 숫자, 달러 기호, 밑줄만 쓸 수 있다.</li>
+<li>𝜋 나 ⊇ 같은 유니코드 문자도 쓸 수 있다.</li>
+<li>예약어는 식별자로 쓸 수 없다</li>
+</ul>
+<p>자바 스크립트의 식별자 표기법</p>
+<ul>
+<li>카멜 케이스(camel case) : 낙타 혹처럼 보이게 currentTempC 처럼 문자가 변경 될때 대문자를 붙이는 방법이다.</li>
+<li>스네이크 케이스(snake case) : current_temp_c 스네이크 케이스에 다라 이름을 만든 방법이다.</li>
+</ul>
+<h1 id="리터럴"><a href="#리터럴" class="headerlink" title="리터럴"></a>리터럴</h1><p>리터럴(literal)이란 값을 프로그램 안에서 직접 지정한다는 의미이다.<br>리터럴과 식별자의 차이를 예를 들면 <code>room1</code>변수에 값 <code>&quot;confrence_room_a&quot;</code>은 할당 했을때, <code>room1</code>은 변수를 가리키는 식별자이며, <code>&quot;confrence_room_a&quot;</code> 문자열 리터럴인 동시에 <code>room1</code>의 값이다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> room1 = <span class="string">"conference_room_a"</span>; <span class="comment">// "conference_room_a"(따옴표 안)은 리터럴이다.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> currentRoom = room1;         <span class="comment">// currentRoom의 값은 room1값("conference_room_a")과 같다.</span></span><br><span class="line"></span><br><span class="line">currentRoom = conference_room_a  <span class="comment">// conference_room_a란 식별자가 존재하지 않으므로 에러가 난다.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Uncaught <span class="built_in">ReferenceError</span>: conference_room_a is not defined</span><br><span class="line">    at &lt;anonymous&gt;:<span class="number">3</span>:<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h1 id="원시-타입과-객체"><a href="#원시-타입과-객체" class="headerlink" title="원시 타입과 객체"></a>원시 타입과 객체</h1><p>자바스크립트에의 값은 원시 값(primitive) 또는 객체(object) 이다.<br>원시 타입 6가지</p>
+<ul>
+<li>숫자</li>
+<li>문자열</li>
+<li>불리언</li>
+<li>null</li>
+<li>undefined</li>
+<li>심볼(Symbol)</li>
+</ul>
+<p>원시 값과 다르게 객체는 여러 가지 형태와 값을 가질 수 있다</p>
+<ul>
+<li>Array</li>
+<li>Date</li>
+<li>RegExp</li>
+<li>Map과 WeakMap</li>
+<li>Set과 WeakSet</li>
+</ul>
+<h1 id="숫자"><a href="#숫자" class="headerlink" title="숫자"></a>숫자</h1><p>자바스크립트는 10진수, 16진수, 지수 등 어떤 리터럴 형식을 사용하더라도 결국 숫자는 더블 형식으로 저장 된다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">10</span>;           <span class="comment">// 숫자 리터럴. count는 더블이다</span></span><br><span class="line"><span class="keyword">const</span> blue = <span class="number">0x000ff</span>;     <span class="comment">// 16진수, 16진수ff는 10진수 255와 같다.</span></span><br><span class="line"><span class="keyword">const</span> umask = <span class="number">0o0022</span>;     <span class="comment">// 8진수, 8진수 22는 십진수 18과 같다.</span></span><br><span class="line"><span class="keyword">const</span> roomTemp = <span class="number">21.5</span>;    <span class="comment">// 십진수</span></span><br><span class="line"><span class="keyword">const</span> c = <span class="number">3.0e6</span>;          <span class="comment">// 지수 (3.0 x 10^6 = 3,000,000)</span></span><br><span class="line"><span class="keyword">const</span> e = <span class="number">-1.6e-19</span>;       <span class="comment">// 지수 (-1.6 x 10^-19 = 0.00000000000000000016)</span></span><br><span class="line"><span class="keyword">const</span> inf = <span class="literal">Infinity</span>;</span><br><span class="line"><span class="keyword">const</span> ninf = -<span class="literal">Infinity</span>;</span><br><span class="line"><span class="keyword">const</span> nan = <span class="literal">NaN</span>;          <span class="comment">// "숫자가 아님"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; count</span><br><span class="line">&lt; <span class="number">10</span></span><br><span class="line">&gt; blue</span><br><span class="line">&lt; <span class="number">255</span></span><br><span class="line">&gt; umask</span><br><span class="line">&lt; <span class="number">18</span></span><br><span class="line">&gt; roomTemp</span><br><span class="line">&lt; <span class="number">21.5</span></span><br><span class="line">&gt; c</span><br><span class="line">&lt; <span class="number">3000000</span></span><br><span class="line">&gt; e</span><br><span class="line">&lt; <span class="number">-1.6e-19</span></span><br><span class="line">&gt; inf</span><br><span class="line">&lt; <span class="literal">Infinity</span></span><br><span class="line">&gt; ninf</span><br><span class="line">&lt; -<span class="literal">Infinity</span></span><br></pre></td></tr></table></figure>
+<p>또한 숫자에 대응하는 <code>Number</code> 객체에는 중요한 숫자형 값에 해당하는 유용한 프로퍼티가 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> small = <span class="built_in">Number</span>.EPSILON;             <span class="comment">// 1에 더했을 때 1과 구분되는 결과를 만들 수 있는 가장 작은값이다. 근사치 2.2e-16</span></span><br><span class="line"><span class="keyword">const</span> bigInt = <span class="built_in">Number</span>.MAX_SAFE_INTEGER;   <span class="comment">// 표현할 수 있는 가장 큰 정수</span></span><br><span class="line"><span class="keyword">const</span> max = <span class="built_in">Number</span>.MAX_VALUE;             <span class="comment">// 표현할 수 있는 가장 큰 숫자</span></span><br><span class="line"><span class="keyword">const</span> minInt = <span class="built_in">Number</span>.MIN_SAFE_INTEGER;   <span class="comment">// 표현할 수 있는 가장 작은 정수</span></span><br><span class="line"><span class="keyword">const</span> min = <span class="built_in">Number</span>.MIN_VALUE;             <span class="comment">// 표현할 수 있는 가장 작은 숫자</span></span><br><span class="line"><span class="keyword">const</span> nInf = <span class="built_in">Number</span>.NEGATIVE_INFINITY;    <span class="comment">// -Infinity</span></span><br><span class="line"><span class="keyword">const</span> nan = <span class="built_in">Number</span>.NaN;                   <span class="comment">// Nan</span></span><br><span class="line"><span class="keyword">const</span> inf = <span class="built_in">Number</span>.POSITIVE_INFINITY;     <span class="comment">// Infinity</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt; small</span><br><span class="line">&lt; <span class="number">2.220446049250313e-16</span></span><br><span class="line">&gt; bigInt</span><br><span class="line">&lt; <span class="number">9007199254740991</span></span><br><span class="line">&gt; max</span><br><span class="line">&lt; <span class="number">1.7976931348623157e+308</span></span><br><span class="line">&gt; minInt</span><br><span class="line">&lt; <span class="number">-9007199254740991</span></span><br><span class="line">&gt; min</span><br><span class="line">&lt; <span class="number">5e-324</span></span><br><span class="line">&gt; nInf</span><br><span class="line">&lt; -<span class="literal">Infinity</span></span><br><span class="line">&gt; nan</span><br><span class="line">&lt; <span class="literal">NaN</span></span><br><span class="line">&gt; inf</span><br><span class="line">&lt; <span class="literal">Infinity</span></span><br></pre></td></tr></table></figure>
+<h1 id="특수문자"><a href="#특수문자" class="headerlink" title="특수문자"></a>특수문자</h1><table>
+<thead>
+<tr>
+<th>코드</th>
+<th>설명</th>
+<th>예제</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>줄바꿈 문자</td>
+<td>“Line1\nLine2”</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>캐리지 리턴(Carriage return)</td>
+<td>“Windows line 1\r\nWindows line2”</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>탭</td>
+<td>“Speed:\t60kph”</td>
+</tr>
+<tr>
+<td>\’</td>
+<td>작은따옴표, 꼭 이스케이프할 필요가 없어도 작은따옴표를 쓸 수 있는 곳에서는 항상 이스케이프한 작은 따옴표를 쓸 수 있다</td>
+<td>“Don\’t”</td>
+</tr>
+<tr>
+<td>\”</td>
+<td>큰따옴표, 꼭 이스케이프할 필요가 없어도 큰따옴표를 쓸 수 있는 곳에는 항상 이스케이프한 큰따옴표를 쓸 수 있다.</td>
+<td>‘Sam Said \”hello\”.’</td>
+</tr>
+<tr>
+<td>`</td>
+<td>백틱. ES6에서 새로 생겼다.</td>
+<td>`New in ES6: \` strings.`</td>
+</tr>
+<tr>
+<td>\$</td>
+<td>달러 기호. ES6에서 새로 생겼다.</td>
+<td>`New in ES6: ${interpolation}`</td>
+</tr>
+<tr>
+<td>\</td>
+<td>역슬래시</td>
+<td>“Use \\ to represent \!”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="템플릿-문자열"><a href="#템플릿-문자열" class="headerlink" title="템플릿 문자열"></a>템플릿 문자열</h2><p>문자열 병합을 통해 변수나 상수를 문자열 안에 쓸 수 있다.</p>
+<figure class="highlight javascript"><figcaption><span>ES5 </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> currentTemp = <span class="number">19.5</span>;</span><br><span class="line"><span class="keyword">const</span> message = <span class="string">"The current temperature is "</span> + currentTemp + <span class="string">"\u00b0C"</span>;</span><br></pre></td></tr></table></figure>
+<p>ES6에서는 문자열 템플릿(template)기능이 도입댔다.</p>
+<figure class="highlight javascript"><figcaption><span>ES6</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> currentTemp = <span class="number">19.5</span>;</span><br><span class="line"><span class="keyword">const</span> message = <span class="string">`The current temperature is <span class="subst">$&#123;currentTemp&#125;</span> \u00b0C`</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="숫자와-문자열"><a href="#숫자와-문자열" class="headerlink" title="숫자와 문자열"></a>숫자와 문자열</h2><p>숫자를 따옴표 안에 넣으면 그건 숫자가 아니라 문자열이다. 하지만 자바스크립트는 필요하다면 숫자가 들어 있는 문자열을 자동으로 숫자로 바꾼다.<br>숫자열과 문자열은 명확하게 표시해주는것이 좋다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> result1 = <span class="number">3</span> + <span class="string">"30"</span>; <span class="comment">// 3이 문자열로 바뀐다. </span></span><br><span class="line"><span class="keyword">const</span> result2 = <span class="number">3</span> * <span class="string">"30"</span>; <span class="comment">// '30'이 숫자로 바뀐다.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; result1</span><br><span class="line">&lt; <span class="string">"330"</span></span><br><span class="line">&gt; result2</span><br><span class="line">&lt; <span class="number">90</span></span><br></pre></td></tr></table></figure>
+<h2 id="심볼"><a href="#심볼" class="headerlink" title="심볼"></a>심볼</h2><p>심볼(symbol)은 유일한 토큰을 나타내기 위해 ES6에서 도입한 새 데이터 타입이다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> RED = <span class="built_in">Symbol</span>(<span class="string">"The color of a sunset!"</span>);</span><br><span class="line"><span class="keyword">const</span> ORANGE = <span class="built_in">Symbol</span>(<span class="string">"The color of a sunset!"</span>);</span><br><span class="line">RED === ORANGE</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>console</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="null과-undefined"><a href="#null과-undefined" class="headerlink" title="null과 undefined"></a>null과 undefined</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> currentTemp;              <span class="comment">// 암시적으로 undefined</span></span><br><span class="line"><span class="keyword">const</span> targetTemp = <span class="literal">null</span>;      <span class="comment">// null 값이므로 아직 모르는 값</span></span><br><span class="line">currentTemp = <span class="number">19.5</span>;           <span class="comment">// 19.5라는 값이 있음.</span></span><br><span class="line">currentTemp = <span class="literal">undefined</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>객체의 콘텐츠는 프로퍼티(property) 또는 멤버(member)라고 부른다. 프로퍼티 이름은 반드시 문자열 또는 심볼이어야 하며, 값은 어떤 타입이든 상관없다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj.color = &quot;yellow&quot;;</span><br></pre></td></tr></table></figure>
+<p>프로퍼티 이름에 유요한 식별자를 써야 멤버 접근 연산자(member access operator) <code>.</code>를 사용할 수 있다. 프로퍼티 이름에 유요한 식별자가 아닌 이름을 쓴다면 계산된 멤버 접근 연산자(computed member access operator) <code>[]</code>를 써야 한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj[<span class="string">"not an identifier"</span>] = <span class="number">3</span>;</span><br><span class="line">obj[<span class="string">"not an identifier"</span>];    <span class="comment">// 3</span></span><br><span class="line">obj[<span class="string">"color"</span>];                <span class="comment">// "yellow"</span></span><br></pre></td></tr></table></figure>
+<p>심볼 프로퍼티에 접근할 때도 대괄호를 사용한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> SIZE = <span class="built_in">Symbol</span>();</span><br><span class="line">obj[SIZE] = <span class="number">8</span>;</span><br><span class="line">obj[SIZE];               <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<h2 id="배열"><a href="#배열" class="headerlink" title="배열"></a>배열</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]             <span class="comment">// 숫자로 구성된 배열</span></span><br><span class="line"><span class="keyword">const</span> a2 = [<span class="number">1</span>, <span class="string">'tow'</span>, <span class="number">3</span>, <span class="literal">null</span>]      <span class="comment">// 여러 가지 타입으로 구성된 배열</span></span><br><span class="line"><span class="keyword">const</span> a3 = [                        <span class="comment">// 객체가 들어있는 배열</span></span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">"Ruby"</span>, <span class="attr">hardness</span>: <span class="number">9</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">"Diamond"</span>, <span class="attr">hardness</span>: <span class="number">10</span>&#125;,</span><br><span class="line">  &#123;<span class="attr">name</span>: <span class="string">"Topaz"</span>, <span class="attr">hardness</span>: <span class="number">8</span>&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
+<li><a href="http://m.hanbit.co.kr/store/books/book_view.html?p_code=B2328850940" rel="external nofollow noopener noreferrer" target="_blank">http://m.hanbit.co.kr/store/books/book_view.html?p_code=B2328850940</a></li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript-ES6/" rel="tag"># JavaScript ES6</a>	
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>	
+          
+            <a href="/tags/Learning-Javascript/" rel="tag"># Learning Javascript</a>	
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/28/javascript/es6/chapter6/" rel="next" title="JavaScript ES6 - 6. HTML 출력해보기">
+                <i class="fa fa-chevron-left"></i> JavaScript ES6 - 6. HTML 출력해보기
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/10/aws/ec2-setting/" rel="prev" title="AWS EC2 서버 인스턴스 생성">
+                AWS EC2 서버 인스턴스 생성 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jaehyun</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/jaehyun8719" title="GitHub &rarr; https://github.com/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:jaehyun8719@gmail.com" title="E-Mail &rarr; mailto:jaehyun8719@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#변수와-상수"><span class="nav-number">1.</span> <span class="nav-text">변수와 상수</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#변수-Variable"><span class="nav-number">1.1.</span> <span class="nav-text">변수(Variable)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#상수-Constant"><span class="nav-number">1.2.</span> <span class="nav-text">상수(Constant)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#식별자-이름"><span class="nav-number">2.</span> <span class="nav-text">식별자 이름</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#리터럴"><span class="nav-number">3.</span> <span class="nav-text">리터럴</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#원시-타입과-객체"><span class="nav-number">4.</span> <span class="nav-text">원시 타입과 객체</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#숫자"><span class="nav-number">5.</span> <span class="nav-text">숫자</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#특수문자"><span class="nav-number">6.</span> <span class="nav-text">특수문자</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#템플릿-문자열"><span class="nav-number">6.1.</span> <span class="nav-text">템플릿 문자열</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#숫자와-문자열"><span class="nav-number">6.2.</span> <span class="nav-text">숫자와 문자열</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#심볼"><span class="nav-number">6.3.</span> <span class="nav-text">심볼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null과-undefined"><span class="nav-number">6.4.</span> <span class="nav-text">null과 undefined</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#객체"><span class="nav-number">6.5.</span> <span class="nav-text">객체</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#배열"><span class="nav-number">6.6.</span> <span class="nav-text">배열</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">7.</span> <span class="nav-text">참조</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinsil</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Gemini</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://jaehyun8719.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/";
+    this.page.identifier = "2019/11/20/javascript/learning-javascript/chapter1/";
+    this.page.title = 'Learning Javascript - 1. 리터럴과 변수, 상수, 데이터 타입';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
