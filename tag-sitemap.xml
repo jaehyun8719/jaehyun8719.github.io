@@ -3,14 +3,21 @@
 
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/AWS-EC2-Setting/</loc>
-        <lastmod>2020-02-10T08:20:13.465Z</lastmod>
+        <loc>https://jaehyun8719.github.io/tags/AWS-Auto-Scailing/</loc>
+        <lastmod>2020-02-20T09:22:46.305Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/AWS/</loc>
+        <lastmod>2020-02-20T09:22:46.305Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS-EC2-Setting/</loc>
         <lastmod>2020-02-10T08:20:13.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
