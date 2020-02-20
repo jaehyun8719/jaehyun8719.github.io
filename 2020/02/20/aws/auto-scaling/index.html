@@ -127,7 +127,7 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-20.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-21.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-22.png">
-<meta property="og:updated_time" content="2020-02-20T09:22:46.305Z">
+<meta property="og:updated_time" content="2020-02-20T09:46:55.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Auto Scaling">
 <meta name="twitter:description" content="Amazon Auto Scaling 생성 방법에 대해서 설명한다.2020년 02월 20일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
@@ -459,7 +459,7 @@
                 
               
 
-              <time title="Created: 2020-02-20 00:00:00 / Modified: 18:22:46" itemprop="dateCreated datePublished" datetime="2020-02-20T00:00:00+09:00">2020-02-20</time>
+              <time title="Created: 2020-02-20 00:00:00 / Modified: 18:46:55" itemprop="dateCreated datePublished" datetime="2020-02-20T00:00:00+09:00">2020-02-20</time>
             
 
           </span>
@@ -557,18 +557,12 @@
 <div class="note info no-icon">
             <p>시작 템플릿이 생성되지 않으면 아래 목록에 보이지 않는다.</p>
           </div>
-<h3 id="Auto-Scaling-그룹-세부-정보-구성"><a href="#Auto-Scaling-그룹-세부-정보-구성" class="headerlink" title="Auto Scaling 그룹 세부 정보 구성"></a>Auto Scaling 그룹 세부 정보 구성</h3><p><img src="/images/aws/auto-scaling/auto-scaling-11.png" alt></p>
-<div class="note info no-icon">
-            <p>서브넷은 인스턴스들을 어떤 네트워크 망에 띄울 것인지 정하는 것이며, ap-northeast-2a와 ap-northeast-2c의 기본값 모두 지정한다.<br>인스턴스들 중 절반은 서울 리전의 a 가용 여역에, 다른 절반은 서울 리전의 c 가용 영역에 생성한다는 의미이다.</p>
-          </div>
-<h3 id="조정-정책-구성"><a href="#조정-정책-구성" class="headerlink" title="조정 정책 구성"></a>조정 정책 구성</h3><p><img src="/images/aws/auto-scaling/auto-scaling-12.png" alt></p>
-<div class="note info no-icon">
-            <p>인스턴스 수를 자동으로 조절하기 위한 화면이며, 최소 1개에서 최대 2개의 인스턴스를 실행하게 해서 평균 CPU 사용률 80%를 기준으로 설정한다.<br>이와 같은 설정을 하면 Auto Scaling 그룹 내에서 CPU 사용률리 80% 넘는지 안 넘는지에 따라 인스턴스의 수가 최소 1개에서 최대 2개로 자동으로 변하게 된다.</p>
-          </div>
-<h3 id="알림-구성"><a href="#알림-구성" class="headerlink" title="알림 구성"></a>알림 구성</h3><p><img src="/images/aws/auto-scaling/auto-scaling-13.png" alt></p>
-<div class="note info no-icon">
-            <p>인스턴스의 변화가 있을 경우 알림을 받을 수 있으나, 현재 알림 설정에 대해서는 넘어간다.</p>
-          </div>
+<h3 id="Auto-Scaling-그룹-세부-정보-구성"><a href="#Auto-Scaling-그룹-세부-정보-구성" class="headerlink" title="Auto Scaling 그룹 세부 정보 구성"></a>Auto Scaling 그룹 세부 정보 구성</h3><p>서브넷은 인스턴스들을 어떤 네트워크 망에 띄울 것인지 정하는 것이며, ap-northeast-2a와 ap-northeast-2c의 기본값 모두 지정한다.<br>인스턴스들 중 절반은 서울 리전의 a 가용 여역에, 다른 절반은 서울 리전의 c 가용 영역에 생성한다는 의미이다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-11.png" alt></p>
+<h3 id="조정-정책-구성"><a href="#조정-정책-구성" class="headerlink" title="조정 정책 구성"></a>조정 정책 구성</h3><p>인스턴스 수를 자동으로 조절하기 위한 화면이며, 최소 1개에서 최대 2개의 인스턴스를 실행하게 해서 평균 CPU 사용률 80%를 기준으로 설정한다.<br>이와 같은 설정을 하면 Auto Scaling 그룹 내에서 CPU 사용률리 80% 넘는지 안 넘는지에 따라 인스턴스의 수가 최소 1개에서 최대 2개로 자동으로 변하게 된다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-12.png" alt></p>
+<h3 id="알림-구성"><a href="#알림-구성" class="headerlink" title="알림 구성"></a>알림 구성</h3><p>인스턴스의 변화가 있을 경우 알림을 받을 수 있으나, 현재 알림 설정에 대해서는 넘어간다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-13.png" alt></p>
 <h3 id="태그-구성"><a href="#태그-구성" class="headerlink" title="태그 구성"></a>태그 구성</h3><p><img src="/images/aws/auto-scaling/auto-scaling-14.png" alt></p>
 <h3 id="검토"><a href="#검토" class="headerlink" title="검토"></a>검토</h3><p><img src="/images/aws/auto-scaling/auto-scaling-15.png" alt></p>
 <h3 id="Auto-Scaling-그룹-생성-완료"><a href="#Auto-Scaling-그룹-생성-완료" class="headerlink" title="Auto Scaling 그룹 생성 완료"></a>Auto Scaling 그룹 생성 완료</h3><p><img src="/images/aws/auto-scaling/auto-scaling-16.png" alt></p>
@@ -656,19 +650,16 @@
 </tbody>
 </table>
 <h1 id="Auto-Scaling을-통한-인스턴스-자동-추가-제거"><a href="#Auto-Scaling을-통한-인스턴스-자동-추가-제거" class="headerlink" title="Auto Scaling을 통한 인스턴스 자동 추가, 제거"></a>Auto Scaling을 통한 인스턴스 자동 추가, 제거</h1><p><code>EXCERCISE_GROUP</code>에 대해 CPU 사용률이 80%넘으면 인스턴스를 추가하고, 80%이하로 떨어지면 인스턴스를 하나 줄이는 조정 정책을 추가하였다.</p>
-<h2 id="편집-EXERCISE-GROUP"><a href="#편집-EXERCISE-GROUP" class="headerlink" title="편집 EXERCISE_GROUP"></a>편집 EXERCISE_GROUP</h2><p><img src="/images/aws/auto-scaling/auto-scaling-18.png" alt></p>
+<h2 id="편집-EXERCISE-GROUP"><a href="#편집-EXERCISE-GROUP" class="headerlink" title="편집 EXERCISE_GROUP"></a>편집 EXERCISE_GROUP</h2><p>편집 버튼을 눌러 이동한다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-18.png" alt></p>
 <p><img src="/images/aws/auto-scaling/auto-scaling-19.png" alt></p>
 <div class="note info no-icon">
             <p>이 설정은 EXERCISE-GROUP에서 관리하는 인스턴스를 1대 실행할 것이고, 사용자나 자동 스케일링 조건에 의해 인스턴스 수가 늘어도 최대 2대까지만 가능하며 인스턴스가 줄어도 최소 1대는 실행 중이어야 한다는 뜻이다.</p>
           </div>
-<h2 id="인스턴스-상태-확인"><a href="#인스턴스-상태-확인" class="headerlink" title="인스턴스 상태 확인"></a>인스턴스 상태 확인</h2><p><img src="/images/aws/auto-scaling/auto-scaling-20.png" alt></p>
-<div class="note info no-icon">
-            <p>인스턴스 탭에서 실행된 하나의 인스턴스의 상태가 <code>InServie</code>가 될 때까지 기다린다.</p>
-          </div>
-<h2 id="실행중인-인스턴스-확인"><a href="#실행중인-인스턴스-확인" class="headerlink" title="실행중인 인스턴스 확인"></a>실행중인 인스턴스 확인</h2><p><img src="/images/aws/auto-scaling/auto-scaling-21.png" alt></p>
-<div class="note info no-icon">
-            <p>AMI 으로 생성한 <code>exercise-group</code> 인스턴스가 <code>runnung</code>중인 걸 확인한다.</p>
-          </div>
+<h2 id="인스턴스-상태-확인"><a href="#인스턴스-상태-확인" class="headerlink" title="인스턴스 상태 확인"></a>인스턴스 상태 확인</h2><p>인스턴스 탭에서 실행된 하나의 인스턴스의 상태가 <code>InServie</code>가 될 때까지 기다린다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-20.png" alt></p>
+<h2 id="실행중인-인스턴스-확인"><a href="#실행중인-인스턴스-확인" class="headerlink" title="실행중인 인스턴스 확인"></a>실행중인 인스턴스 확인</h2><p>AMI 으로 생성한 <code>exercise-group</code> 인스턴스가 <code>runnung</code>중인 걸 확인한다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-21.png" alt></p>
 <h2 id="테스트-putty-접속"><a href="#테스트-putty-접속" class="headerlink" title="테스트(putty 접속)"></a>테스트(putty 접속)</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> sudo amazon-linux-extras install epel</span><br><span class="line"><span class="meta">$</span> sudo yum install stress -y</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> stress --cpu 1 --timeout 600</span><br><span class="line">stress: info: [4281] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon">
             <p>600초 동안 1개의 CPU 사용량을 최대로 늘린다. 그러면 5분 ~ 10분 뒤에 하나의 인스턴스가 더 생성 된다.</p>
