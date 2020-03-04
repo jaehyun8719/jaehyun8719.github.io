@@ -97,13 +97,13 @@
 
 
 
-  <meta name="description" content="Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
 <meta name="keywords" content="AWS, AWS EC2, AWS EC2 생성, AWS EC2 Instance Setting, AWS EC2 생성, AWS EC2 설정, AWS EC2 방법, 아마존 인스턴스 생성, 아마존 인스턴스 설정">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS EC2 서버 인스턴스 생성">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-2.png">
@@ -125,10 +125,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-18.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-19.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-20.png">
-<meta property="og:updated_time" content="2020-02-20T08:50:14.120Z">
+<meta property="og:updated_time" content="2020-03-04T05:30:00.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS EC2 서버 인스턴스 생성">
-<meta name="twitter:description" content="Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-1.png">
 
 
@@ -531,7 +531,7 @@
 
       
         <hr>
-<p>Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.<br>2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
+<p>서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.<br>2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
 <h1 id="EC2"><a href="#EC2" class="headerlink" title="EC2"></a>EC2</h1><p>EC2(Elastic Compute Cloud)는 우리가 쉽게 사양을 고르고 원하는 시간만큼 사용할 수 있는 <code>가상 서버</code>라고 이해하면 되고, 서버 구축하고 보안 및 네트워크 구성과 스토리지 관리가 가능하다. 그리고 트래픽을 예측하여 서버 사양을 구성하지 않고 유동적으로 서버 사양을 변경할 수 있다.</p>
 <h1 id="EC2-생성시-알아야할-기본-개념"><a href="#EC2-생성시-알아야할-기본-개념" class="headerlink" title="EC2 생성시 알아야할 기본 개념"></a>EC2 생성시 알아야할 기본 개념</h1><h2 id="AMI-Amazon-Machine-Image"><a href="#AMI-Amazon-Machine-Image" class="headerlink" title="AMI(Amazon Machine Image)"></a>AMI(Amazon Machine Image)</h2><p>AMI는 우리가 생성할(Window, Linux 등) EC2 인스턴스의 기반이 되는 이미지이다. 예를 들어 윈도우 설치를 할 때 ISO, CD를 이용하여서 설치 한다고 생각하면 된다.</p>
 <h2 id="보안-그룹"><a href="#보안-그룹" class="headerlink" title="보안 그룹"></a>보안 그룹</h2><p>보안을 위해 IP와 포트 번호를 이용해 정의해서 사용하는 서버 접속 규칙이다. 예를 들어 방화벽으로 특정 IP, 포트 접속을 차단하는 것과 비슷 하게 생각하면 된다.</p>
