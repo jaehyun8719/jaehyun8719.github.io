@@ -107,7 +107,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/java/java8inaction/chapter2_1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-08-26T02:59:04.213Z">
+<meta property="og:updated_time" content="2020-03-10T06:59:08.025Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 In Action - 1. 동작 파라미터화 코드 전달하기">
 <meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. 동작 파라미터화(behavior parameterization)를 이용하면 자주 바뀌는 요구 사항에 효과적으로 대응할 수 있다. 이번 장에서는 기존에 사용했던 방식과 람다로 사용했을 시 변화되는 코드를 확인한다.">
@@ -279,7 +279,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">18</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">19</span></a>
 
   </li>
         
@@ -317,7 +317,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">25</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">26</span></a>
 
   </li>
 
@@ -520,7 +520,7 @@
 
       
         <hr>
-<p>Java8 In Action 을 읽고 정리한 내용이다. 동작 파라미터화(behavior parameterization)를 이용하면 자주 바뀌는 요구 사항에 효과적으로 대응할 수 있다. 이번 장에서는 기존에 사용했던 방식과 람다로 사용했을 시 변화되는 코드를 확인한다.<br><a id="more"></a></p>
+<p><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123" rel="external nofollow noopener noreferrer" target="_blank">Java8 In Action</a> 을 읽고 정리한 내용이다. 동작 파라미터화(behavior parameterization)를 이용하면 자주 바뀌는 요구 사항에 효과적으로 대응할 수 있다. 이번 장에서는 기존에 사용했던 방식과 람다로 사용했을 시 변화되는 코드를 확인한다.<br><a id="more"></a></p>
 <h1 id="변화하는-요구사항에-대응하기"><a href="#변화하는-요구사항에-대응하기" class="headerlink" title="변화하는 요구사항에 대응하기"></a>변화하는 요구사항에 대응하기</h1><p>농장 재고 목록에 애플리케이션 리스트에서 녹색(green) 사과만 필터링하는 기능 추가</p>
 <h2 id="녹색-사과-필터링"><a href="#녹색-사과-필터링" class="headerlink" title="녹색 사과 필터링"></a>녹색 사과 필터링</h2><p>단순히 녹색(green) 사과만 필터링하는 소스이다.<br><figure class="highlight java"><figcaption><span>Apple.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Getter</span> <span class="meta">@Setter</span> <span class="meta">@ToString</span> <span class="meta">@AllArgsConstructor</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Apple</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String color = StringUtils.EMPTY;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight java"><figcaption><span>FilteringApples.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FilteringApples</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">          List&lt;Apple&gt; apple = Arrays.asList(<span class="keyword">new</span> Apple(<span class="string">"green"</span>), <span class="keyword">new</span> Apple(<span class="string">"red"</span>));</span><br><span class="line">                </span><br><span class="line">          List&lt;Apple&gt; greenApples = filterGreenApples(apple);</span><br><span class="line">          System.out.println(greenApples.toString());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Apple&gt; <span class="title">filterGreenApples</span><span class="params">(List&lt;Apple&gt; inventory)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Apple&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (Apple apple : inventory) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">"green"</span>.equals(apple.getColor())) &#123;</span><br><span class="line">                result.add(apple);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -692,7 +692,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -780,7 +780,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

@@ -106,7 +106,7 @@
 <meta property="og:description" content="Java8 In Action 을 읽고 정리한 내용이다. 필터링, 슬라이싱, 매칭, 검색, 매칭, 리듀싱, 특정 범위의 숫자와 같은 숫자 스트림 사용하기, 다중 소스로부터 스트림 만들기, 무한 스트림 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-08-26T02:59:30.310Z">
+<meta property="og:updated_time" content="2020-03-10T06:59:39.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 In Action - 5. 스트림 활용">
 <meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. 필터링, 슬라이싱, 매칭, 검색, 매칭, 리듀싱, 특정 범위의 숫자와 같은 숫자 스트림 사용하기, 다중 소스로부터 스트림 만들기, 무한 스트림 대해서 설명한다.">
@@ -278,7 +278,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">18</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">19</span></a>
 
   </li>
         
@@ -316,7 +316,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">25</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">26</span></a>
 
   </li>
 
@@ -519,7 +519,7 @@
 
       
         <hr>
-<p>Java8 In Action 을 읽고 정리한 내용이다. 필터링, 슬라이싱, 매칭, 검색, 매칭, 리듀싱, 특정 범위의 숫자와 같은 숫자 스트림 사용하기, 다중 소스로부터 스트림 만들기, 무한 스트림 대해서 설명한다.<br><a id="more"></a></p>
+<p><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123" rel="external nofollow noopener noreferrer" target="_blank">Java8 In Action</a> 을 읽고 정리한 내용이다. 필터링, 슬라이싱, 매칭, 검색, 매칭, 리듀싱, 특정 범위의 숫자와 같은 숫자 스트림 사용하기, 다중 소스로부터 스트림 만들기, 무한 스트림 대해서 설명한다.<br><a id="more"></a></p>
 <h1 id="필터링과-슬라이싱"><a href="#필터링과-슬라이싱" class="headerlink" title="필터링과 슬라이싱"></a>필터링과 슬라이싱</h1><p>프레디케이트 필터링, 고유 요소 필터링, 스트림의 일부 요소를 무시하거나 스트림을 주어진 크기로 축소하는 방법을 설명한다.</p>
 <h2 id="프레디케이트로-필터링"><a href="#프레디케이트로-필터링" class="headerlink" title="프레디케이트로 필터링"></a>프레디케이트로 필터링</h2><p>스트림 인터페이스는 <code>filter</code> 메서드를 지원한다. filter 메서드는 <code>프레디케이트</code>(불린을 반환하는 함수)를 인수로 받아서 프레디케이트와 일치하는 모든 요소를 포함하는 스트림을 반환한다.<br><figure class="highlight java"><figcaption><span>Filtering.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Filtering</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Dish&gt; vegetarianMenu = Dish.menu.stream()</span><br><span class="line">                                             .filter(d -&gt; d.isVegetarian())</span><br><span class="line">                                             .collect(toList());    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="고유-소요-필터링"><a href="#고유-소요-필터링" class="headerlink" title="고유 소요 필터링"></a>고유 소요 필터링</h2><p>스트림은 고유 요소로 이루어진 스트림을 반환하는 <code>distinct</code>라는 메서드도 지원한다.(고유 여부는 스트림에서 만든 객체의 <code>hashCode</code>, <code>equals</code>로 결정된다.)<br><figure class="highlight java"><figcaption><span>Filtering.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Filtering</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; numbers = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">        numbers.stream()</span><br><span class="line">               .filter(i -&gt; i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">               .forEach(i -&gt; System.out.println(i));</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"---------------------------------------"</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; numbers2 = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">        numbers2.stream()</span><br><span class="line">                .filter(i -&gt; i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">                .distinct()</span><br><span class="line">                .forEach(i -&gt; System.out.println(i));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -842,7 +842,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -930,7 +930,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

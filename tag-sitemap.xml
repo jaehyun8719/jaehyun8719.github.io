@@ -3,8 +3,64 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS-Elastic-Load-Balancing/</loc>
+        <lastmod>2020-03-10T09:33:16.311Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS/</loc>
+        <lastmod>2020-03-10T09:33:16.311Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Java8-In-Action/</loc>
+        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/Java/</loc>
-        <lastmod>2020-03-04T09:34:28.648Z</lastmod>
+        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Learning-Javascript/</loc>
+        <lastmod>2020-03-10T06:58:19.699Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/JavaScript/</loc>
+        <lastmod>2020-03-10T06:58:19.699Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/JavaScript-ES6/</loc>
+        <lastmod>2020-03-10T06:58:19.699Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS-EC2-Setting/</loc>
+        <lastmod>2020-03-10T06:57:53.723Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/AWS-Auto-Scailing/</loc>
+        <lastmod>2020-03-10T06:57:48.986Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -12,27 +68,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
         <lastmod>2020-03-04T09:34:28.648Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/AWS-Auto-Scailing/</loc>
-        <lastmod>2020-03-04T05:30:08.851Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/AWS/</loc>
-        <lastmod>2020-03-04T05:30:08.851Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/AWS-EC2-Setting/</loc>
-        <lastmod>2020-03-04T05:30:00.497Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -47,27 +82,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
         <lastmod>2019-12-30T07:05:23.416Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Learning-Javascript/</loc>
-        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/JavaScript/</loc>
-        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/JavaScript-ES6/</loc>
-        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -89,13 +103,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot-with-React/</loc>
         <lastmod>2019-09-25T09:58:44.991Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Java8-In-Action/</loc>
-        <lastmod>2019-09-17T08:33:31.237Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

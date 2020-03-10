@@ -106,7 +106,7 @@
 <meta property="og:description" content="Java8 In Action 을 읽고 정리한 내용이다. 자바8에서 날짜와 시간 문제를 개선하는 새로운 날짜와 시간 API를 제공하는 새로운 기능에 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2019-08-26T02:59:24.228Z">
+<meta property="og:updated_time" content="2020-03-10T06:59:24.425Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 In Action - 4. 새로운 날짜와 시간 API">
 <meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. 자바8에서 날짜와 시간 문제를 개선하는 새로운 날짜와 시간 API를 제공하는 새로운 기능에 대해서 설명한다.">
@@ -278,7 +278,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">18</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">19</span></a>
 
   </li>
         
@@ -316,7 +316,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">25</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">26</span></a>
 
   </li>
 
@@ -519,7 +519,7 @@
 
       
         <hr>
-<p>Java8 In Action 을 읽고 정리한 내용이다. 자바8에서 날짜와 시간 문제를 개선하는 새로운 날짜와 시간 API를 제공하는 새로운 기능에 대해서 설명한다.<br><a id="more"></a></p>
+<p><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123" rel="external nofollow noopener noreferrer" target="_blank">Java8 In Action</a> 을 읽고 정리한 내용이다. 자바8에서 날짜와 시간 문제를 개선하는 새로운 날짜와 시간 API를 제공하는 새로운 기능에 대해서 설명한다.<br><a id="more"></a></p>
 <h1 id="Localdate-LocalTime-Instant-Duration-Period"><a href="#Localdate-LocalTime-Instant-Duration-Period" class="headerlink" title="Localdate, LocalTime, Instant, Duration, Period"></a>Localdate, LocalTime, Instant, Duration, Period</h1><p><code>java.time</code> 패키지는 <code>Localdate</code>, <code>LocalTime</code>, <code>LocalDateTime</code>, <code>Instant</code>, <code>Duration</code>, <code>Period</code> 등 새로운 클래스를 제공한다.</p>
 <h2 id="LocaDate와-LocalTime-사용"><a href="#LocaDate와-LocalTime-사용" class="headerlink" title="LocaDate와 LocalTime 사용"></a>LocaDate와 LocalTime 사용</h2><p><code>LocalDate</code> 인스턴스는 시간을 제외한 날짜를 표현하는 불변 객체다. 정적 팩토리 메서드는 <code>of</code>로 <code>LocalDate</code> 인스턴스를 만들 수 있다.<br><figure class="highlight java"><figcaption><span>DateTimeExamples.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DateTimeExamples</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        useLocalDate();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">useLocalDate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LocalDate today = LocalDate.now(); <span class="comment">// 시스템의 현재 날짜 정보</span></span><br><span class="line">        System.out.println(<span class="string">"today : "</span> + today);</span><br><span class="line"></span><br><span class="line">        LocalDate date = LocalDate.of(<span class="number">2019</span>, <span class="number">06</span>, <span class="number">21</span>);</span><br><span class="line">        System.out.println(<span class="string">"date : "</span> + date);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> year = date.getYear();</span><br><span class="line">        System.out.println(<span class="string">"year : "</span> + year);</span><br><span class="line"></span><br><span class="line">        Month month = date.getMonth();</span><br><span class="line">        System.out.println(<span class="string">"month : "</span> + month);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> day = date.getDayOfMonth();</span><br><span class="line">        System.out.println(<span class="string">"day : "</span> + day);</span><br><span class="line"></span><br><span class="line">        DayOfWeek dayOfWeek = date.getDayOfWeek();</span><br><span class="line">        System.out.println(<span class="string">"dayOfWeek : "</span> + dayOfWeek);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> len = date.lengthOfMonth(); <span class="comment">// 6월의 일수</span></span><br><span class="line">        System.out.println(<span class="string">"len : "</span> + len);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> leap = date.isLeapYear(); <span class="comment">// 윤년이 아님</span></span><br><span class="line">        System.out.println(<span class="string">"leap : "</span> + leap);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
@@ -889,7 +889,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -977,7 +977,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

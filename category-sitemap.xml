@@ -8,6 +8,41 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/categories/AWS/</loc>
+        <lastmod>2020-03-10T09:33:16.311Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
+        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
+        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/Learning-Javascript/</loc>
+        <lastmod>2020-03-10T06:58:19.699Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
+        <lastmod>2020-03-10T06:58:19.699Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/categories/Utils/Logback/</loc>
         <lastmod>2020-03-04T09:34:28.648Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -22,13 +57,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/categories/AWS/</loc>
-        <lastmod>2020-03-04T05:30:08.851Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/categories/Spring-Boot/</loc>
         <lastmod>2019-12-30T07:05:23.416Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -36,36 +64,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/categories/JavaScript/Learning-Javascript/</loc>
-        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/JavaScript/</loc>
-        <lastmod>2019-12-20T02:53:13.849Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/categories/JavaScript/JavaScript-Funtional-ES6/</loc>
         <lastmod>2019-10-31T05:43:45.650Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
-        <lastmod>2019-09-17T08:33:31.237Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Java/</loc>
-        <lastmod>2019-09-17T08:33:31.237Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
