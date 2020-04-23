@@ -97,43 +97,49 @@
 
 
 
-  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
-<meta name="keywords" content="AWS, AWS Elastic Load Balancing, AWS 서버 트래픽 분산, AWS Elastic Load Balancing 생성, AWS Elastic Load Balancing 설정, AWS Elastic Load Balancing 방법, AWS ELB, AWS ELB 생성, AWS ELB 설정, AWS ELB 방법, AWS ELB 서버, AWS 로드밸런서, AWS 로드밸런서 생성, AWS 로드밸런서 설정, AWS 로드밸런서 방법">
+  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
+<meta name="keywords" content="AWS, AWS Blue&#x2F;Green deployment, AWS deployment, AWS 블루 그린 배포, AWS 배포과정, AWS 서버 단위 배포, AWS 배포">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AWS Elastic Load Balancing">
-<meta property="og:url" content="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/index.html">
+<meta property="og:title" content="AWS Blue&#x2F;Green deployment">
+<meta property="og:url" content="https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-1.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-2.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-3.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-4.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-5.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-6.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-7.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-8.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-9.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-10.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-11.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-12.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-13.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-14.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-15.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-16.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-17.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-18.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-19.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-20.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-21.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-22.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-23.png">
-<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-24.png">
-<meta property="og:updated_time" content="2020-03-10T09:43:12.209Z">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-1.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-2.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-3.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-4.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-5.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-6.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-7.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-8.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-9.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-10.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-11.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-12.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-13.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-14.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-15.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-16.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-17.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-18.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-19.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-20.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-21.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-22.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-23.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-24.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-25.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-26.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-27.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-28.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-29.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-30.png">
+<meta property="og:updated_time" content="2020-04-23T06:21:12.407Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AWS Elastic Load Balancing">
-<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
-<meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-1.png">
+<meta name="twitter:title" content="AWS Blue&#x2F;Green deployment">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-1.png">
 
 
 
@@ -143,7 +149,7 @@
 
   
   
-  <link rel="canonical" href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">
+  <link rel="canonical" href="https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/">
 
 
 
@@ -153,7 +159,7 @@
   };
 </script>
 
-  <title>AWS Elastic Load Balancing | Jaehyun's Dev Story</title>
+  <title>AWS Blue/Green deployment | Jaehyun's Dev Story</title>
   
 
 
@@ -301,7 +307,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">19</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">20</span></a>
 
   </li>
         
@@ -339,7 +345,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">26</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">27</span></a>
 
   </li>
 
@@ -426,7 +432,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jaehyun">
@@ -443,7 +449,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">AWS Elastic Load Balancing
+          <h2 class="post-title" itemprop="name headline">AWS Blue/Green deployment
 
               
             
@@ -469,7 +475,7 @@
                 
               
 
-              <time title="Created: 2020-03-10 00:00:00 / Modified: 18:43:12" itemprop="dateCreated datePublished" datetime="2020-03-10T00:00:00+09:00">2020-03-10</time>
+              <time title="Created: 2020-04-22 00:00:00" itemprop="dateCreated datePublished" datetime="2020-04-22T00:00:00+09:00">2020-04-22</time>
             
 
           </span>
@@ -505,8 +511,8 @@
                 </span>
             
                 <span class="post-meta-item-text">Comments: </span>
-                <a href="/2020/03/10/aws/elastic-load-balancing/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/03/10/aws/elastic-load-balancing/" itemprop="commentCount"></span>
+                <a href="/2020/04/22/aws/blue-green-deployment/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/04/22/aws/blue-green-deployment/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -535,111 +541,147 @@
 
       
         <hr>
-<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.<br>2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
-<h1 id="Elastic-Load-Balancing"><a href="#Elastic-Load-Balancing" class="headerlink" title="Elastic Load Balancing"></a>Elastic Load Balancing</h1><p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-1.png" alt></p>
-<p>Elastic Load Balancing(ELB, 이하 로드 밸런서)은 위에 그림에 <code>로드 밸런서</code>의 역할을 하는 AWS 서비스 이다. <code>클라이언트</code>의 요청을 직접 받고 그 요청을 <code>로드 밸런서</code>가 관리하고 있는 <code>서버</code>들에게 여러개의 요청을 골고루 전달해주는 역할을 한다. 단점으로는 AWS에서 로드 밸런서의 기능을 하는 서버를 내부적으로 관리해주기 때문에 우리가 직접 SSH로 접속할 수는 없다. </p>
+<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.</p>
 <div class="note info no-icon">
-            <p><code>로드 밸런서</code>가 받은 요청을 특정 <a href="https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/">인스턴스(EC2)</a>들 또는 <a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/#Auto-Scaling">Auto-Scaling 그룹</a>으로 전달하여 설정할 수 있다.</p>
+            <p>Blue/Green 배포전 필요한 설정 참고</p><ol><li><a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">Auto Scaling</a></li><li><a href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">Elastic Load Balancing</a> </li></ol>
           </div>
-<h1 id="대상-그룹"><a href="#대상-그룹" class="headerlink" title="대상 그룹"></a>대상 그룹</h1><p>대상 그룹(Target Group)은 로드 밸런서가 요청을 전달할 서버들을 묶어둔 개념적인 그룹이며, 이 대상 그룹 내에는 <a href="https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/">인스턴스(EC2)</a>나 <a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/#Auto-Scaling">Auto-Scaling 그룹</a> 이 포할될 수 있다.</p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-2.png" alt></p>
+<a id="more"></a>
+<h1 id="AWS에서-Blue-Green-배포-개념"><a href="#AWS에서-Blue-Green-배포-개념" class="headerlink" title="AWS에서 Blue/Green 배포 개념"></a>AWS에서 Blue/Green 배포 개념</h1><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-1.png" alt></p>
 <ol>
-<li><code>대상 그룹 A</code>에는 EC2 인스턴스 2개</li>
-<li><code>대상 그룹 B</code>에는 EC2 인스턴스 3개 그중에 EC2 인스턴스 2개는 Auto Scaling 그룹에 포함</li>
-<li><code>대상 그룹 A</code> + <code>대상 그룹 B</code>에 총 EC2 인스턴스 5개 </li>
-<li><code>로드 밸런서</code>에는 <code>대상 그룹 A, B</code>가 등록돼 있기 때문에 <code>클라이언트</code>가 <code>로드 밸런서</code>로 보낸 요청들을 5개의 EC2 인스턴스가 나눠서 처리한다.</li>
+<li><code>EC2 인스턴스 v1</code>을 정지하고 <code>AMI v1</code> 생성용 인스턴스를 생성</li>
 </ol>
-<div class="note info no-icon">
-            <p><code>로드 밸런서</code>에 직접 <code>EC2 인스턴스</code>나 <code>Auto Scaling 그룹</code>을 등록하지 않는 이유는 로드 밸런서는 요청한 포트에 따라 다양한 대상 그룹으로 요청을 전달 할 수 있다.<br>예를 들어 80번 443번 포트는 <code>대상 그룹 A</code>에 5000번 포트는 <code>대상 그룹 B</code>에 전달하여 설정 할 수 있기때문이다. </p>
-          </div>
-<h1 id="로드-밸런서의-상태-검사"><a href="#로드-밸런서의-상태-검사" class="headerlink" title="로드 밸런서의 상태 검사"></a>로드 밸런서의 상태 검사</h1><p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-3.png" alt></p>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-2.png" alt></p>
+<ol start="2">
+<li><code>v2</code>을 배포 후 인스턴스 종료하고 <code>AMI v2</code> 와 <code>시작 템플릿 v2</code>생성</li>
+<li>로드 밸런서에 <code>Green 그룹</code>을 등록해서 <code>Green</code>, <code>Blue</code> 인스턴스들을 나눠서 처리</li>
+<li><code>Green</code>, <code>Blue</code> 요청 처리에 문제가 없으면 <code>Blue 그룹</code>을 로드 밸런서에서 제외</li>
+<li>몇 시간 모니터링 후 문제가 없으면 <code>Blue 그룹</code> 인스턴스를 모두 종료</li>
+</ol>
+<h1 id="Blue-Green-배포"><a href="#Blue-Green-배포" class="headerlink" title="Blue/Green 배포"></a>Blue/Green 배포</h1><h2 id="Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><a href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기" class="headerlink" title="Blue/Green 배포를 위한 Auto Scaling 그룹 만들기"></a>Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-3.png" alt></p>
 <ol>
-<li>정상적으로 동작하고 있는지 확인하기 위해 상태 검사(Health Check) 를 한다.</li>
-<li>로드 밸런서는 자기가 관리하는 서버들에게 GET/health를 등록해두면 로드 밸런서는 주기적으로 요청을 보내서 상태 코드 200을 확인한다.</li>
-<li>상태 코드의 주기 또는 비정상 코드를 몇번만에 응답을 해야 하는지도 설정 가능하다.</li>
+<li>Blue 그룹을 생성하기 위해 <code>[Auto Scaling 그룹 생성]</code> 클릭</li>
 </ol>
-<h1 id="Auto-Scaling-그룹-대상-그룹-로드-밸런스-구성"><a href="#Auto-Scaling-그룹-대상-그룹-로드-밸런스-구성" class="headerlink" title="Auto Scaling 그룹, 대상 그룹, 로드 밸런스 구성"></a>Auto Scaling 그룹, 대상 그룹, 로드 밸런스 구성</h1><p>Auto Scaling 그룹을 이용한 실습이다. <a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">Auto-Scaling 그룹</a> 관련해서는 참고하길 바란다.</p>
-<h2 id="로드-밸런서-생성"><a href="#로드-밸런서-생성" class="headerlink" title="로드 밸런서 생성"></a>로드 밸런서 생성</h2><p>EC2 서비스의 <code>로드 밸런싱</code> -&gt; <code>로드 밸런서</code> 메뉴 선택한 뒤 <code>로드 밸런서 생성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-4.png" alt></p>
-<h2 id="로드-밸런서-유형-선택"><a href="#로드-밸런서-유형-선택" class="headerlink" title="로드 밸런서 유형 선택"></a>로드 밸런서 유형 선택</h2><p>일반적으로 HTTP, HTTPS 요청을 받으려고 하므로 <code>Applcation Load Balancer</code>에 <code>생성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-5.png" alt></p>
-<h3 id="로드-밸런서-구성"><a href="#로드-밸런서-구성" class="headerlink" title="로드 밸런서 구성"></a>로드 밸런서 구성</h3><p>이름, 리스너, 가용영역 추가후 <code>다음:보안 설정 구성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-6.png" alt></p>
-<h3 id="보안-설정-구성"><a href="#보안-설정-구성" class="headerlink" title="보안 설정 구성"></a>보안 설정 구성</h3><p>HTTPS 리스너를 추가하지 않아서 생기는 경고이므로 무시하고 <code>다음:보안 설정 구성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-7.png" alt></p>
-<h3 id="보안-그룹-구성"><a href="#보안-그룹-구성" class="headerlink" title="보안 그룹 구성"></a>보안 그룹 구성</h3><p>실습 중에는 HTTP 80포트관련만 받을 것이다. 그러므로 미리 보안 그룹에서 생성한 web 관련 보안 그룹을 선택 후 <code>다음:라우팅 구성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-8.png" alt></p>
-<h3 id="라우팅-등록"><a href="#라우팅-등록" class="headerlink" title="라우팅 등록"></a>라우팅 등록</h3><ol>
-<li>대상 그룹이 없기 때문에 새 대상 그룹인 <code>exercise-target-group</code>생성</li>
-<li>상태 검사는 모든 인스턴스 대상으로 <code>/health</code> 요청을 주기적으로 날리고 HTTP 상태코드 200을 응답하는지 확인하기 위해 추가</li>
-<li><code>다음:상태 등로</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-9.png" alt></li>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-4.png" alt><br><img src="/images/aws/blue-green-deployment/blue-green-deployment-5.png" alt></p>
+<ol start="2">
+<li><code>[시작 템플릿]</code>에서 기존에 AMI로 만든 <code>exercise-launch-template</code>를 선택하여 <code>다음</code> 클릭</li>
 </ol>
-<h3 id="대상-그룹-1"><a href="#대상-그룹-1" class="headerlink" title="대상 그룹"></a>대상 그룹</h3><p>대상 그룹에 관리할 인스턴스를 추가할 수 있는 화면이며, <a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">Auto-Scaling 그룹</a>에서 생성된 인스턴스가 보일 것이다.<br>인스턴스를 직접 추가할 수 있지만 <code>Auto Scaling 그룹</code> 자체를 <code>대상 그룹</code>에 등록해서 새로운 인스턴스들이 실핼될 때마다 자동으로 <code>대상 그룹</code>에 등록되게 할 것이므로 <code>다음:검토</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-10.png" alt></p>
-<h3 id="검토"><a href="#검토" class="headerlink" title="검토"></a>검토</h3><p>검토 화면에서 앞서 설정한 값이 정상인지 확인 뒤 <code>생성</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-11.png" alt></p>
-<h2 id="로드-밸런서-생성-확인"><a href="#로드-밸런서-생성-확인" class="headerlink" title="로드 밸런서 생성 확인"></a>로드 밸런서 생성 확인</h2><p><code>로드 밸런싱</code> -&gt; <code>로드 밸런서</code> 방금 생성한 로그 밸런서 확인<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-12.png" alt></p>
-<h2 id="Auto-Scaling-그룹에-대상-그룹-추가"><a href="#Auto-Scaling-그룹에-대상-그룹-추가" class="headerlink" title="Auto Scaling 그룹에 대상 그룹 추가"></a>Auto Scaling 그룹에 대상 그룹 추가</h2><p><code>Auto Scaling 그룹</code> -&gt; <code>세부 정보</code> 탭 -&gt; <code>편집</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-13.png" alt></p>
-<p><code>대상 그룹(exercise-target-group)</code> 추가 -&gt; <code>저장</code> 버튼 클릭<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-14.png" alt></p>
-<p><code>로드 밸런싱</code> -&gt; <code>대상 그룹</code> -&gt; <code>대상</code> 탭에서 대상 그룹에 Auto Scaling 그룹의 인스턴스가 대상에 등록된것을 확인<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-15.png" alt></p>
-<h2 id="로드-밸런서-작동-확인"><a href="#로드-밸런서-작동-확인" class="headerlink" title="로드 밸런서 작동 확인"></a>로드 밸런서 작동 확인</h2><p><code>로드 밸런싱</code> -&gt; <code>로드밸런서</code> -&gt; <code>exercise-lb</code> 선택 -&gt; <code>DNS 이름</code> 복사 후 접속 확인<br><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-16.png" alt></p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-17.png" alt></p>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-6.png" alt></p>
+<ol start="3">
+<li><code>[시작 템플릿 준수]</code> 선택 </li>
+<li>a, c 리전의 기본값을 설정 후 <code>[다음]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-7.png" alt></p>
+<ol start="5">
+<li><code>로드 밸런스</code> 설정한 <code>exercise-target-group</code> 선택 후 <code>[다음]</code> 클릭</li>
+</ol>
 <div class="note info no-icon">
-            <p>server name에 등록을 하지 않아서 애플리케이션에 접속 할 수 있는 이유는 요청 받았을 때 정확히 일치하는 서버가 없더라도 가장 근접한 서버를 찾아서 실행 해준다.</p>
+            <p>exercise-target-group 은 미리 로드 밸런스를 설정 해서 생성된 그룹이다. 로드 밸런스 부분 참고</p>
           </div>
-<h1 id="장애-조치-구성"><a href="#장애-조치-구성" class="headerlink" title="장애 조치 구성"></a>장애 조치 구성</h1><p>장애 조치란 2개의 시스템이 있을 경우 1개의 시스템에서 장애가 발생시 전체 시스템이 죽는게 아니라 다른 예비 시스템에 즉시 요청을 대신 처리하여 시스템에 문제가 생기지 않도록 하는 것이다. </p>
-<h1 id="Auto-Scaling-그룹을-이용한-장애-조치"><a href="#Auto-Scaling-그룹을-이용한-장애-조치" class="headerlink" title="Auto Scaling 그룹을 이용한 장애 조치"></a>Auto Scaling 그룹을 이용한 장애 조치</h1><p>Auto Scaling 그룹과 로드 밸런서를 이용하면 장애 조치를 구현할 수 있는데, 로드 밸런서에서 관리하는 서버 인스턴스들의 상태를 계속해서 파악을 하고 로드 밸런서는 응답이 없는 해당 인스턴스에는 요청을 하지않는디. 결과적으로 클라이언트는 에러 응답을 받지않고 정상적인 응답만 받는다.</p>
-<h1 id="Auto-Scaling-그룹과-로드-밸런서를-통한-장애-조치"><a href="#Auto-Scaling-그룹과-로드-밸런서를-통한-장애-조치" class="headerlink" title="Auto Scaling 그룹과 로드 밸런서를 통한 장애 조치"></a>Auto Scaling 그룹과 로드 밸런서를 통한 장애 조치</h1><p>여기서 2개의 서버로 서비스하다가 한 서버 장애가 나는 경우 로드 밸런서가 자동으로 정상적인 서버에만 요청하는지 확인한다.</p>
-<h2 id="로드-밸런서-상태-검사-편집"><a href="#로드-밸런서-상태-검사-편집" class="headerlink" title="로드 밸런서 상태 검사 편집"></a>로드 밸런서 상태 검사 편집</h2><p><code>로드 밸런싱</code> -&gt; <code>대상 그룹</code> -&gt; <code>상태 검사</code> 탭 -&gt; <code>상태 검사 편집</code> 버튼 클릭</p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-18.png" alt></p>
-<p>상태값 변경 후 <code>저장</code> 버튼 클릭</p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-19.png" alt></p>
-<table>
-<thead>
-<tr>
-<th>항목</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>경로</td>
-<td>인스턴스가 정상인지 확인하기 위해 호출할 URL주소</td>
-</tr>
-<tr>
-<td>정상 임계 값</td>
-<td>연속으로 몇 번 정상 응답을 해야만 정상 상태로 볼 것인지 지정</td>
-</tr>
-<tr>
-<td>비정상 임계 값</td>
-<td>연속으로 몇 번 비정상 응답을 해야만 정상 상태로 볼 것인지 지정</td>
-</tr>
-<tr>
-<td>제한 시간</td>
-<td>타임아웃 시간으로 응답이 몇 초 이내로 오지 않을 경우 비정상 응답으로 판단할지 지정</td>
-</tr>
-<tr>
-<td>간격</td>
-<td>몇 초 간격으로 인스턴스의 상태를 물어볼지 지정하는 항목</td>
-</tr>
-<tr>
-<td>성공 코드</td>
-<td>어떤 HTTP 응답 코드를 줬을 경우 정상 상태로 판단할 것인지 지정</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Auto-Scaling-원하는-용량-최소-그룹-크기-변경"><a href="#Auto-Scaling-원하는-용량-최소-그룹-크기-변경" class="headerlink" title="Auto Scaling 원하는 용량, 최소 그룹 크기 변경"></a>Auto Scaling 원하는 용량, 최소 그룹 크기 변경</h2><p><code>AUTO SCALING</code> -&gt; Auto Scaling 그룹 -&gt; <code>편집</code> 버튼 클릭</p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-20.png" alt></p>
-<h2 id="인스턴스-확인"><a href="#인스턴스-확인" class="headerlink" title="인스턴스 확인"></a>인스턴스 확인</h2><p><code>Instance management</code> 탭 </p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-21.png" alt></p>
-<h2 id="두-서버에-SSH-접속-후-실시간-로그-확인"><a href="#두-서버에-SSH-접속-후-실시간-로그-확인" class="headerlink" title="두 서버에 SSH 접속 후 실시간 로그 확인"></a>두 서버에 SSH 접속 후 실시간 로그 확인</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cd /opt/nginx/logs</span><br><span class="line"><span class="meta">$</span> tail -f access.log</span><br></pre></td></tr></table></figure>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-22.png" alt></p>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-8.png" alt></p>
+<ol start="6">
+<li><code>그룹 크기</code> 설정 후 <code>[다음]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-9.png" alt></p>
+<ol start="7">
+<li>메일, 연락처 알림은 추가 하지 않으므로 <code>[다음]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-10.png" alt></p>
+<ol start="8">
+<li>태그 추가 후 <code>[다음]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-11.png" alt></p>
+<ol start="9">
+<li>검토 화면에서 값들이 제대로 설정됐는지 확인하고 <code>Auto Scaling 그룹 생성</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-12.png" alt></p>
+<ol start="10">
+<li>Auto Scaling 생성 확인</li>
+</ol>
+<h2 id="기존-버전의-코드-서비스하기"><a href="#기존-버전의-코드-서비스하기" class="headerlink" title="기존 버전의 코드 서비스하기"></a>기존 버전의 코드 서비스하기</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-13.png" alt></p>
+<ol>
+<li><code>[로드 밸런서]</code> -&gt; <code>[exercise-lb]</code> 선택 -&gt; <code>DNS 이름</code> 복사</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-14.png" alt></p>
+<ol start="2">
+<li>브라우저에서 로드 밸런서의 DNS 주소로 접속 확인</li>
+</ol>
+<h2 id="새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><a href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성" class="headerlink" title="새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성"></a>새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-15.png" alt></p>
+<ol>
+<li>인스턴스 상태 <code>[stopeed]</code> 상태에서 오른쪽 마우스 클릭 <code>[이미지]</code> -&gt; <code>[이미지 생성]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-16.png" alt></p>
+<ol start="2">
+<li><code>[이미지 이름]</code> 입력 후 <code>[이미지 생성]</code> 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-17.png" alt></p>
+<ol start="3">
+<li><code>[이미지]</code> -&gt; <code>[AMI]</code> 메뉴에 이미지가 생성될때까지 기다리면 상태 값이 <code>available</code>로 변경 확인</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-18.png" alt></p>
+<ol start="4">
+<li><code>[인스턴스]</code> -&gt; <code>[시작 템플릿]</code> 에서 <code>[시작 템플릿 생성]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-19.png" alt></p>
+<ol start="5">
+<li>템플릿 생성 정보 입력 후 <code>[시작 템플릿 생성]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-20.png" alt></p>
+<ol start="6">
+<li><code>[인스턴스]</code> -&gt; <code>[시작 템플릿]</code> 에서 <code>exercise-launch-template-beta</code> 시작 템플릿 생성 확인</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-21.png" alt></p>
+<ol start="7">
+<li><code>[Auto Scaling 그룹 생성]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-22.png" alt></p>
+<ol start="8">
+<li>위에 정보 입력 후 <code>[다음]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-23.png" alt></p>
+<ol start="9">
+<li>세부 정보 구성 후 <code>[다음]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-24.png" alt></p>
+<ol start="10">
+<li><code>로드 밸런스</code> 설정한 <code>exercise-target-group</code> 선택 후 <code>[다음]</code> 클릭</li>
+</ol>
 <div class="note info no-icon">
-            <p>Elastic Load Balancing 에서 200코드로 2개의 서버에 Health Check를 하고 있는것을 확인할 수 있다.</p>
+            <p>exercise-target-group 은 미리 로드 밸런스를 설정 해서 생성된 그룹이다. 로드 밸런스 부분 참고</p>
           </div>
-<h2 id="장애-발생-처리"><a href="#장애-발생-처리" class="headerlink" title="장애 발생 처리"></a>장애 발생 처리</h2><p>A 서버 종료 후 브라우저를 연속으로 새로고침 을 하면 처음에는 상태코드 502가 나오고 우리가 설정한 정상 임계값인 200이 아니므로 B 서버가 요청을 처리한다. </p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-23.png" alt></p>
-<p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-24.png" alt></p>
+<ol start="11">
+<li>그 이하 설정은 <code>Blue</code>와 같으니 위에 부분을 참고하면 된다.</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-25.png" alt></p>
+<ol start="12">
+<li><code>EXERCISE-GROUP-GREEN</code> 생성 확인</li>
+</ol>
+<h1 id="로드-밸런서에-등록해-Blue-Green-배포-진행하기"><a href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기" class="headerlink" title="로드 밸런서에 등록해 Blue/Green 배포 진행하기"></a>로드 밸런서에 등록해 Blue/Green 배포 진행하기</h1><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-26.png" alt></p>
+<ol>
+<li>로드 밸런서에 DNS 이름을 복사 후 브라우저에 새로고침을 해보면 2가지 화면이 나오는 것을 확인할 수 있다.</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-27.png" alt></p>
+<ol start="2">
+<li>Blue/Green 처리 과정 화면</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-28.png" alt></p>
+<ol start="3">
+<li>Green 그룹이 로드 밸런서에 올바르게 등록된것을 확인했으니 Blue 그룹에 대상 그룹을 제거 해야된다. <code>[Auto Scaling Groups]</code> -&gt; <code>[EXERCISE-GROUP-BLUE]</code> 선택 -&gt; <code>[편집]</code> 버튼 클릭</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-29.png" alt></p>
+<ol start="4">
+<li>로드 밸런싱 타겟 제거 후 저장</li>
+</ol>
+<p><img src="/images/aws/blue-green-deployment/blue-green-deployment-30.png" alt></p>
+<ol start="5">
+<li>로드 밸런서에 DNS 이름을 복사 후 브라우저에 새로고침을 해보면 Blue 화면이 나오는 것을 확인할 수 있다.</li>
+</ol>
 <div class="note warning no-icon">
-            <p>모든 실습이 완료되면 Auto Scaling 그룹에서 원하는 용량, 최소 그룹 크기, 최대 그룹 크기를 0으로 변경하여 인스턴스를 종료하자. </p>
+            <p>Auto Scaling은 항상 사용하지 않을때는 <code>그룹 세부 정보</code>에서 원하는 용량, 최소 그룹 크기 를 <code>0</code>로 해줘야 추가 요금이 발생하지 않는다.</p>
           </div>
-<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>운영 중 Elastic Load Balancing으로 하나의 서버가 장애가 발생했을 경우 다른 서버에 분산할 수 있다는 것을 알았다. 하지만 Elastic Load Balancing만으로는 서버의 개수를 유동적으로 할 수 없다는 단점이 있는데, Auto Scaling 그룹으로 서버의 개수를 유동적으로 할 수 있다는 강점이 생긴다. 하나의 기능보다 AWS는 여러 가 기능을 결합하여 잘 사용하면 더 좋은 서비스를 구현할 수 있다고 생각을 한다.</p>
+<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>AWS에서 배포 방법을 공부하기 위해서는 기본적으로 로드밸런서, 시작템플릿, AMI 등 개념을 알고 있어야 할 것 같다.<br>서비스를 배포 하는 도중에 서비스가 중단이 되면 큰 문제가 발생하지만, Blue/Green 배포 방법으로 서비스가 중단 되지 않고 서비스를 계속 진행 할 수 있다.<br>내가 기본적으로 생각하는 개념은 로드 밸런서의 중심으로 새로운 각 인스턴스에 하나씩 반영하면서 서버가 중지 되지 않는것처럼 보이게 하는것 같다.</p>
 <h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
 <li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
-<li><a href="https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html</a></li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></li>
 </ul>
 
       
@@ -666,7 +708,7 @@
           
             <a href="/tags/AWS/" rel="tag"># AWS</a>	
           
-            <a href="/tags/AWS-Elastic-Load-Balancing/" rel="tag"># AWS Elastic Load Balancing</a>	
+            <a href="/tags/AWS-Blue-Green-deployment/" rel="tag"># AWS Blue/Green deployment</a>	
           
         </div>
       
@@ -679,8 +721,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/20/aws/auto-scaling/" rel="next" title="AWS Auto Scaling">
-                <i class="fa fa-chevron-left"></i> AWS Auto Scaling
+              <a href="/2020/03/10/aws/elastic-load-balancing copy/" rel="next" title="AWS Elastic Load Balancing">
+                <i class="fa fa-chevron-left"></i> AWS Elastic Load Balancing
               </a>
             
           </div>
@@ -763,7 +805,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -853,7 +895,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">19</span>
+                      
+                    
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -924,7 +968,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Elastic-Load-Balancing"><span class="nav-number">1.</span> <span class="nav-text">Elastic Load Balancing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#대상-그룹"><span class="nav-number">2.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#로드-밸런서의-상태-검사"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서의 상태 검사</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Auto-Scaling-그룹-대상-그룹-로드-밸런스-구성"><span class="nav-number">4.</span> <span class="nav-text">Auto Scaling 그룹, 대상 그룹, 로드 밸런스 구성</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서-생성"><span class="nav-number">4.1.</span> <span class="nav-text">로드 밸런서 생성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서-유형-선택"><span class="nav-number">4.2.</span> <span class="nav-text">로드 밸런서 유형 선택</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-구성"><span class="nav-number">4.2.1.</span> <span class="nav-text">로드 밸런서 구성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#보안-설정-구성"><span class="nav-number">4.2.2.</span> <span class="nav-text">보안 설정 구성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#보안-그룹-구성"><span class="nav-number">4.2.3.</span> <span class="nav-text">보안 그룹 구성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#라우팅-등록"><span class="nav-number">4.2.4.</span> <span class="nav-text">라우팅 등록</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#대상-그룹-1"><span class="nav-number">4.2.5.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#검토"><span class="nav-number">4.2.6.</span> <span class="nav-text">검토</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서-생성-확인"><span class="nav-number">4.3.</span> <span class="nav-text">로드 밸런서 생성 확인</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-그룹에-대상-그룹-추가"><span class="nav-number">4.4.</span> <span class="nav-text">Auto Scaling 그룹에 대상 그룹 추가</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서-작동-확인"><span class="nav-number">4.5.</span> <span class="nav-text">로드 밸런서 작동 확인</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#장애-조치-구성"><span class="nav-number">5.</span> <span class="nav-text">장애 조치 구성</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Auto-Scaling-그룹을-이용한-장애-조치"><span class="nav-number">6.</span> <span class="nav-text">Auto Scaling 그룹을 이용한 장애 조치</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Auto-Scaling-그룹과-로드-밸런서를-통한-장애-조치"><span class="nav-number">7.</span> <span class="nav-text">Auto Scaling 그룹과 로드 밸런서를 통한 장애 조치</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서-상태-검사-편집"><span class="nav-number">7.1.</span> <span class="nav-text">로드 밸런서 상태 검사 편집</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-원하는-용량-최소-그룹-크기-변경"><span class="nav-number">7.2.</span> <span class="nav-text">Auto Scaling 원하는 용량, 최소 그룹 크기 변경</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#인스턴스-확인"><span class="nav-number">7.3.</span> <span class="nav-text">인스턴스 확인</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#두-서버에-SSH-접속-후-실시간-로그-확인"><span class="nav-number">7.4.</span> <span class="nav-text">두 서버에 SSH 접속 후 실시간 로그 확인</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#장애-발생-처리"><span class="nav-number">7.5.</span> <span class="nav-text">장애 발생 처리</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#정리"><span class="nav-number">8.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AWS에서-Blue-Green-배포-개념"><span class="nav-number">1.</span> <span class="nav-text">AWS에서 Blue/Green 배포 개념</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Blue-Green-배포"><span class="nav-number">2.</span> <span class="nav-text">Blue/Green 배포</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><span class="nav-number">2.1.</span> <span class="nav-text">Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#기존-버전의-코드-서비스하기"><span class="nav-number">2.2.</span> <span class="nav-text">기존 버전의 코드 서비스하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><span class="nav-number">2.3.</span> <span class="nav-text">새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서에 등록해 Blue/Green 배포 진행하기</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#정리"><span class="nav-number">4.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
             
 
           </div>
@@ -1087,9 +1131,9 @@
 
 <script>
   var disqus_config = function() {
-    this.page.url = "https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/";
-    this.page.identifier = "2020/03/10/aws/elastic-load-balancing/";
-    this.page.title = 'AWS Elastic Load Balancing';
+    this.page.url = "https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/";
+    this.page.identifier = "2020/04/22/aws/blue-green-deployment/";
+    this.page.title = 'AWS Blue/Green deployment';
     };
   function loadComments() {
     var d = document, s = d.createElement('script');
