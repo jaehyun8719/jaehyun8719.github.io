@@ -8,22 +8,22 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/categories/AWS/</loc>
-        <lastmod>2020-04-23T07:16:20.873Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/categories/Java/Java8-In-Action/</loc>
-        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <lastmod>2020-04-28T03:07:00.293Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/Java/</loc>
-        <lastmod>2020-03-10T06:59:56.774Z</lastmod>
+        <lastmod>2020-04-28T03:07:00.293Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/AWS/</loc>
+        <lastmod>2020-04-23T07:16:20.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
