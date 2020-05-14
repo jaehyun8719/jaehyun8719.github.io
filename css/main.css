@@ -22,37 +22,35 @@
   --highlight-gutter-background: #3c3c3c;
   --highlight-gutter-foreground: #bcbcbc;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --body-bg-color: #282828;
-    --content-bg-color: #333;
-    --card-bg-color: #555;
-    --text-color: #ccc;
-    --blockquote-color: #bbb;
-    --link-color: #ccc;
-    --link-hover-color: #eee;
-    --brand-color: #ddd;
-    --brand-hover-color: #ddd;
-    --table-row-odd-bg-color: #282828;
-    --table-row-hover-bg-color: #363636;
-    --menu-item-bg-color: #555;
-    --btn-default-bg: #222;
-    --btn-default-color: #ccc;
-    --btn-default-border-color: #555;
-    --btn-default-hover-bg: #666;
-    --btn-default-hover-color: #ccc;
-    --btn-default-hover-border-color: #666;
-    --highlight-background: #1d1f21;
-    --highlight-foreground: #c5c8c6;
-    --highlight-gutter-background: #2d2f31;
-    --highlight-gutter-foreground: #b4b7b5;
-  }
-  img {
-    opacity: 0.75;
-  }
-  img:hover {
-    opacity: 0.9;
-  }
+:root {
+  --body-bg-color: #282828;
+  --content-bg-color: #333;
+  --card-bg-color: #555;
+  --text-color: #ccc;
+  --blockquote-color: #bbb;
+  --link-color: #ccc;
+  --link-hover-color: #eee;
+  --brand-color: #ddd;
+  --brand-hover-color: #ddd;
+  --table-row-odd-bg-color: #282828;
+  --table-row-hover-bg-color: #363636;
+  --menu-item-bg-color: #555;
+  --btn-default-bg: #222;
+  --btn-default-color: #ccc;
+  --btn-default-border-color: #555;
+  --btn-default-hover-bg: #666;
+  --btn-default-hover-color: #ccc;
+  --btn-default-hover-border-color: #666;
+  --highlight-background: #1d1f21;
+  --highlight-foreground: #c5c8c6;
+  --highlight-gutter-background: #2d2f31;
+  --highlight-gutter-foreground: #b4b7b5;
+}
+img {
+  opacity: 0.75;
+}
+img:hover {
+  opacity: 0.9;
 }
 html {
   line-height: 1.15; /* 1 */
@@ -493,7 +491,6 @@ td {
   font-weight: bold;
 }
 
-@media (prefers-color-scheme: dark) {
 /* Tomorrow Night Theme */
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Original theme - https://github.com/chriskempson/tomorrow-theme */
@@ -570,7 +567,6 @@ td {
   font-weight: bold;
 }
 
-}
 .highlight:hover .copy-btn,
 .highlight .copy-btn:focus {
   opacity: 1;
@@ -1573,7 +1569,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffd154;
+  background: #4bd5ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2630,51 +2626,49 @@ ul.breadcrumb li + li:last-child {
   border-bottom: 1px solid #111;
   color: #111;
 }
-@media (prefers-color-scheme: dark) {
-  .tag-cloud-0 {
-    border-bottom: 1px solid #555;
-    color: #555;
-  }
-  .tag-cloud-1 {
-    border-bottom: 1px solid #646464;
-    color: #646464;
-  }
-  .tag-cloud-2 {
-    border-bottom: 1px solid #737373;
-    color: #737373;
-  }
-  .tag-cloud-3 {
-    border-bottom: 1px solid #828282;
-    color: #828282;
-  }
-  .tag-cloud-4 {
-    border-bottom: 1px solid #929292;
-    color: #929292;
-  }
-  .tag-cloud-5 {
-    border-bottom: 1px solid #a1a1a1;
-    color: #a1a1a1;
-  }
-  .tag-cloud-6 {
-    border-bottom: 1px solid #b0b0b0;
-    color: #b0b0b0;
-  }
-  .tag-cloud-7 {
-    border-bottom: 1px solid #c0c0c0;
-    color: #c0c0c0;
-  }
-  .tag-cloud-8 {
-    border-bottom: 1px solid #cfcfcf;
-    color: #cfcfcf;
-  }
-  .tag-cloud-9 {
-    border-bottom: 1px solid #dedede;
-    color: #dedede;
-  }
-  .tag-cloud-10 {
-    border-bottom: 1px solid #eee;
-    color: #eee;
-  }
+.tag-cloud-0 {
+  border-bottom: 1px solid #555;
+  color: #555;
+}
+.tag-cloud-1 {
+  border-bottom: 1px solid #646464;
+  color: #646464;
+}
+.tag-cloud-2 {
+  border-bottom: 1px solid #737373;
+  color: #737373;
+}
+.tag-cloud-3 {
+  border-bottom: 1px solid #828282;
+  color: #828282;
+}
+.tag-cloud-4 {
+  border-bottom: 1px solid #929292;
+  color: #929292;
+}
+.tag-cloud-5 {
+  border-bottom: 1px solid #a1a1a1;
+  color: #a1a1a1;
+}
+.tag-cloud-6 {
+  border-bottom: 1px solid #b0b0b0;
+  color: #b0b0b0;
+}
+.tag-cloud-7 {
+  border-bottom: 1px solid #c0c0c0;
+  color: #c0c0c0;
+}
+.tag-cloud-8 {
+  border-bottom: 1px solid #cfcfcf;
+  color: #cfcfcf;
+}
+.tag-cloud-9 {
+  border-bottom: 1px solid #dedede;
+  color: #dedede;
+}
+.tag-cloud-10 {
+  border-bottom: 1px solid #eee;
+  color: #eee;
 }
 .search-pop-overlay {
   background: rgba(0,0,0,0);
@@ -2926,7 +2920,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 .menu .menu-item .badge {
-  background: #ccc;
+  background: #555;
   border-radius: 10px;
   color: #fff;
   float: right;
