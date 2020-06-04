@@ -1581,7 +1581,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #16be2d;
+  background: #93fed5;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1977,7 +1977,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.05em;
+    font-size: 1.08em;
   }
 }
 .post-body .exturl .fa {
