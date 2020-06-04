@@ -3,22 +3,43 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-output/</loc>
+        <lastmod>2020-06-04T07:19:11.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-entry/</loc>
+        <lastmod>2020-06-04T07:19:11.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
+        <lastmod>2020-06-04T07:19:11.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/NodeJs/</loc>
-        <lastmod>2020-05-21T09:08:23.175Z</lastmod>
+        <lastmod>2020-06-04T02:25:48.954Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/node-js/</loc>
-        <lastmod>2020-05-21T09:08:23.175Z</lastmod>
+        <lastmod>2020-06-04T02:25:48.954Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/javascript/</loc>
-        <lastmod>2020-05-21T09:08:23.175Z</lastmod>
+        <lastmod>2020-06-04T02:25:48.954Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
