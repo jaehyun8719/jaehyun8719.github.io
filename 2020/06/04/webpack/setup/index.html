@@ -21,23 +21,23 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="https://webpack.js.org/은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
+  <meta name="description" content="webpack은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
 <meta name="keywords" content="webpack, webpack setup, wepack entry, webpack output, webpack 엔트리 아웃풋, webpack 엔트리, webpack 아웃풋, 웹팩 엔트리, 웹팩 아웃풋">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1. webpack entry&#x2F;output">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/06/04/webpack/setup/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="https://webpack.js.org/은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
+<meta property="og:description" content="webpack은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/setup/setup_1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/setup/setup_2.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/setup/setup_3.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/setup/setup_4.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2020-06-04T07:19:11.189Z">
+<meta property="og:updated_time" content="2020-06-04T07:22:19.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1. webpack entry&#x2F;output">
-<meta name="twitter:description" content="https://webpack.js.org/은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
+<meta name="twitter:description" content="webpack은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/webpack/setup/setup_1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/06/04/webpack/setup/">
@@ -267,7 +267,7 @@
 
       
         <hr>
-<p><a href="webpack">https://webpack.js.org/</a>은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.<br>시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.<br><a id="more"></a></p>
+<p><a href="\ttps://webpack.js.org/">webpack</a>은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.<br>시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.<br><a id="more"></a></p>
 <h1 id="환경-설정"><a href="#환경-설정" class="headerlink" title="환경 설정"></a>환경 설정</h1><ul>
 <li>node: v12.16.3</li>
 <li>npm: 6.14.5</li>
@@ -275,7 +275,7 @@
 <li>webpack-cli: 3.3.11</li>
 </ul>
 <h1 id="모듈-구조"><a href="#모듈-구조" class="headerlink" title="모듈 구조"></a>모듈 구조</h1><p><img src="/images/webpack/setup/setup_1.png" alt></p>
-<h1 id="webpack-설치"><a href="#webpack-설치" class="headerlink" title="webpack 설치"></a>webpack 설치</h1><p><a href="webpack">https://webpack.js.org/</a> 패키지와 웹팩 터미널 도구인 <a href="webpack-cli">https://github.com/webpack/webpack-cli</a> 설치한다.</p>
+<h1 id="webpack-설치"><a href="#webpack-설치" class="headerlink" title="webpack 설치"></a>webpack 설치</h1><p><a href="\ttps://webpack.js.org/">webpack</a> 패키지와 웹팩 터미널 도구인 <a href="https://github.com/webpack/webpack-cli" rel="external nofollow noopener noreferrer" target="_blank">webpack-cli</a> 설치한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D webpack webpack-cli</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node_modules/.bin/webpack --<span class="built_in">help</span></span><br><span class="line">webpack-cli 3.3.11</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon">

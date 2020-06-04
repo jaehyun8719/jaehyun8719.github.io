@@ -2771,7 +2771,7 @@ limit --> collect
     <title>1. webpack entry/output</title>
     <url>/2020/06/04/webpack/setup/</url>
     <content><![CDATA[<hr>
-<p><a href="webpack">https://webpack.js.org/</a>은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.<br>시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.<br><a id="more"></a></p>
+<p><a href="\ttps://webpack.js.org/">webpack</a>은 여러개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.<br>시작점(entry)으로부터 의존적인 모듈을 전부 찾아내서 하나의 결과물을 만들어 낸다.<br><a id="more"></a></p>
 <h1 id="환경-설정"><a href="#환경-설정" class="headerlink" title="환경 설정"></a>환경 설정</h1><ul>
 <li>node: v12.16.3</li>
 <li>npm: 6.14.5</li>
@@ -2779,7 +2779,7 @@ limit --> collect
 <li>webpack-cli: 3.3.11</li>
 </ul>
 <h1 id="모듈-구조"><a href="#모듈-구조" class="headerlink" title="모듈 구조"></a>모듈 구조</h1><p><img src="/images/webpack/setup/setup_1.png" alt></p>
-<h1 id="webpack-설치"><a href="#webpack-설치" class="headerlink" title="webpack 설치"></a>webpack 설치</h1><p><a href="webpack">https://webpack.js.org/</a> 패키지와 웹팩 터미널 도구인 <a href="webpack-cli">https://github.com/webpack/webpack-cli</a> 설치한다.</p>
+<h1 id="webpack-설치"><a href="#webpack-설치" class="headerlink" title="webpack 설치"></a>webpack 설치</h1><p><a href="\ttps://webpack.js.org/">webpack</a> 패키지와 웹팩 터미널 도구인 <a href="https://github.com/webpack/webpack-cli" rel="external nofollow noopener noreferrer" target="_blank">webpack-cli</a> 설치한다.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -D webpack webpack-cli</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ node_modules/.bin/webpack --<span class="built_in">help</span></span><br><span class="line">webpack-cli 3.3.11</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon">
