@@ -3,6 +3,55 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/Rest-Docs/</loc>
+        <lastmod>2020-06-05T08:56:12.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Java/</loc>
+        <lastmod>2020-06-05T08:56:12.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
+        <lastmod>2020-06-05T08:56:12.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
+        <lastmod>2020-06-05T08:54:09.542Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
+        <lastmod>2020-06-05T08:51:40.810Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Auto-Configuration/</loc>
+        <lastmod>2020-06-05T08:49:25.369Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
+        <lastmod>2020-06-05T08:47:09.514Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/React/</loc>
         <lastmod>2020-06-05T08:43:31.430Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -11,13 +60,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot-with-React/</loc>
-        <lastmod>2020-06-05T08:43:31.430Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
         <lastmod>2020-06-05T08:43:31.430Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -82,48 +124,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot-WebServer/</loc>
         <lastmod>2020-05-14T03:21:25.233Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Java/</loc>
-        <lastmod>2020-05-14T03:21:25.233Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Rest-Docs/</loc>
-        <lastmod>2020-05-14T03:21:15.925Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
-        <lastmod>2020-05-14T03:21:09.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
-        <lastmod>2020-05-14T03:21:03.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Auto-Configuration/</loc>
-        <lastmod>2020-05-14T03:20:55.350Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
-        <lastmod>2020-05-14T03:20:45.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

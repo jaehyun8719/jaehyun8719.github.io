@@ -8,6 +8,46 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/</loc>
+        <lastmod>2020-06-05T08:56:12.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
+        <lastmod>2020-06-05T08:54:09.542Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
+        <lastmod>2020-06-05T08:51:40.810Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/05/28/springboot/auto-configuration/</loc>
+        <lastmod>2020-06-05T08:49:25.369Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
+        <lastmod>2020-06-05T08:47:09.514Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
         <lastmod>2020-06-05T08:43:31.430Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,46 +82,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2020-05-14T03:21:25.233Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/05/29/springboot/restdocs/</loc>
-        <lastmod>2020-05-14T03:21:15.925Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
-        <lastmod>2020-05-14T03:21:09.558Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
-        <lastmod>2020-05-14T03:21:03.054Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/05/28/springboot/auto-configuration/</loc>
-        <lastmod>2020-05-14T03:20:55.350Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/20/springboot/admin/</loc>
-        <lastmod>2020-05-14T03:20:45.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
