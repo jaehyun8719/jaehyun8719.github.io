@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/React/</loc>
+        <lastmod>2020-06-05T08:43:31.430Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-with-React/</loc>
+        <lastmod>2020-06-05T08:43:31.430Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
+        <lastmod>2020-06-05T08:43:31.430Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/webpack-output/</loc>
         <lastmod>2020-06-05T08:41:45.687Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,27 +75,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/javascript/</loc>
         <lastmod>2020-06-04T02:25:48.954Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/React/</loc>
-        <lastmod>2020-05-14T03:21:34.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-with-React/</loc>
-        <lastmod>2020-05-14T03:21:34.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot/</loc>
-        <lastmod>2020-05-14T03:21:34.249Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
