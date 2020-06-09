@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-28.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-29.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-30.png">
-<meta property="og:updated_time" content="2020-04-23T06:39:04.970Z">
+<meta property="og:updated_time" content="2020-06-09T01:19:50.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Blue&#x2F;Green deployment">
 <meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
@@ -297,7 +297,7 @@
             <p>Blue/Green 배포전 필요한 설정 참고</p><ol><li><a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">Auto Scaling</a></li><li><a href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">Elastic Load Balancing</a> </li></ol>
           </div>
 <a id="more"></a>
-<h1 id="AWS에서-Blue-Green-배포-개념"><a href="#AWS에서-Blue-Green-배포-개념" class="headerlink" title="AWS에서 Blue/Green 배포 개념"></a>AWS에서 Blue/Green 배포 개념</h1><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-1.png" alt></p>
+<h2 id="AWS에서-Blue-Green-배포-개념"><a href="#AWS에서-Blue-Green-배포-개념" class="headerlink" title="AWS에서 Blue/Green 배포 개념"></a>AWS에서 Blue/Green 배포 개념</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-1.png" alt></p>
 <ol>
 <li><code>EC2 인스턴스 v1</code>을 정지하고 <code>AMI v1</code> 생성용 인스턴스를 생성</li>
 </ol>
@@ -308,7 +308,7 @@
 <li><code>Green</code>, <code>Blue</code> 요청 처리에 문제가 없으면 <code>Blue 그룹</code>을 로드 밸런서에서 제외</li>
 <li>몇 시간 모니터링 후 문제가 없으면 <code>Blue 그룹</code> 인스턴스를 모두 종료</li>
 </ol>
-<h1 id="Blue-Green-배포"><a href="#Blue-Green-배포" class="headerlink" title="Blue/Green 배포"></a>Blue/Green 배포</h1><h2 id="Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><a href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기" class="headerlink" title="Blue/Green 배포를 위한 Auto Scaling 그룹 만들기"></a>Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-3.png" alt></p>
+<h2 id="Blue-Green-배포"><a href="#Blue-Green-배포" class="headerlink" title="Blue/Green 배포"></a>Blue/Green 배포</h2><h3 id="Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><a href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기" class="headerlink" title="Blue/Green 배포를 위한 Auto Scaling 그룹 만들기"></a>Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</h3><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-3.png" alt></p>
 <ol>
 <li>Blue 그룹을 생성하기 위해 <code>[Auto Scaling 그룹 생성]</code> 클릭</li>
 </ol>
@@ -348,7 +348,7 @@
 <ol start="10">
 <li>Auto Scaling 생성 확인</li>
 </ol>
-<h2 id="기존-버전의-코드-서비스하기"><a href="#기존-버전의-코드-서비스하기" class="headerlink" title="기존 버전의 코드 서비스하기"></a>기존 버전의 코드 서비스하기</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-13.png" alt></p>
+<h3 id="기존-버전의-코드-서비스하기"><a href="#기존-버전의-코드-서비스하기" class="headerlink" title="기존 버전의 코드 서비스하기"></a>기존 버전의 코드 서비스하기</h3><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-13.png" alt></p>
 <ol>
 <li><code>[로드 밸런서]</code> -&gt; <code>[exercise-lb]</code> 선택 -&gt; <code>DNS 이름</code> 복사</li>
 </ol>
@@ -356,7 +356,7 @@
 <ol start="2">
 <li>브라우저에서 로드 밸런서의 DNS 주소로 접속 확인</li>
 </ol>
-<h2 id="새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><a href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성" class="headerlink" title="새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성"></a>새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-15.png" alt></p>
+<h3 id="새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><a href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성" class="headerlink" title="새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성"></a>새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</h3><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-15.png" alt></p>
 <ol>
 <li>인스턴스 상태 <code>[stopeed]</code> 상태에서 오른쪽 마우스 클릭 <code>[이미지]</code> -&gt; <code>[이미지 생성]</code> 클릭</li>
 </ol>
@@ -406,7 +406,7 @@
 <ol start="12">
 <li><code>EXERCISE-GROUP-GREEN</code> 생성 확인</li>
 </ol>
-<h1 id="로드-밸런서에-등록해-Blue-Green-배포-진행하기"><a href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기" class="headerlink" title="로드 밸런서에 등록해 Blue/Green 배포 진행하기"></a>로드 밸런서에 등록해 Blue/Green 배포 진행하기</h1><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-26.png" alt></p>
+<h2 id="로드-밸런서에-등록해-Blue-Green-배포-진행하기"><a href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기" class="headerlink" title="로드 밸런서에 등록해 Blue/Green 배포 진행하기"></a>로드 밸런서에 등록해 Blue/Green 배포 진행하기</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-26.png" alt></p>
 <ol>
 <li>로드 밸런서에 DNS 이름을 복사 후 브라우저에 새로고침을 해보면 2가지 화면이 나오는 것을 확인할 수 있다.</li>
 </ol>
@@ -429,8 +429,8 @@
 <div class="note warning no-icon">
             <p>Auto Scaling은 항상 사용하지 않을때는 <code>그룹 세부 정보</code>에서 원하는 용량, 최소 그룹 크기 를 <code>0</code>로 해줘야 추가 요금이 발생하지 않는다.</p>
           </div>
-<h1 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h1><p>AWS에서 배포 방법을 공부하기 위해서는 기본적으로 로드밸런서, 시작템플릿, AMI 등 개념을 알고 있어야 할 것 같다.<br>서비스를 배포 하는 도중에 서비스가 중단이 되면 큰 문제가 발생하지만, Blue/Green 배포 방법으로 서비스가 중단 되지 않고 서비스를 계속 진행 할 수 있다.<br>내가 기본적으로 생각하는 개념은 로드 밸런서의 중심으로 새로운 각 인스턴스에 하나씩 반영하면서 서버가 중지 되지 않는것처럼 보이게 하는것 같다.</p>
-<h1 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h1><ul>
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>AWS에서 배포 방법을 공부하기 위해서는 기본적으로 로드밸런서, 시작템플릿, AMI 등 개념을 알고 있어야 할 것 같다.<br>서비스를 배포 하는 도중에 서비스가 중단이 되면 큰 문제가 발생하지만, Blue/Green 배포 방법으로 서비스가 중단 되지 않고 서비스를 계속 진행 할 수 있다.<br>내가 기본적으로 생각하는 개념은 로드 밸런서의 중심으로 새로운 각 인스턴스에 하나씩 반영하면서 서버가 중지 되지 않는것처럼 보이게 하는것 같다.</p>
+<h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
 <li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
 <li><a href="https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></li>
 </ul>
@@ -525,7 +525,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AWS에서-Blue-Green-배포-개념"><span class="nav-number">1.</span> <span class="nav-text">AWS에서 Blue/Green 배포 개념</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Blue-Green-배포"><span class="nav-number">2.</span> <span class="nav-text">Blue/Green 배포</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><span class="nav-number">2.1.</span> <span class="nav-text">Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#기존-버전의-코드-서비스하기"><span class="nav-number">2.2.</span> <span class="nav-text">기존 버전의 코드 서비스하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><span class="nav-number">2.3.</span> <span class="nav-text">새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서에 등록해 Blue/Green 배포 진행하기</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#정리"><span class="nav-number">4.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS에서-Blue-Green-배포-개념"><span class="nav-number">1.</span> <span class="nav-text">AWS에서 Blue/Green 배포 개념</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Blue-Green-배포"><span class="nav-number">2.</span> <span class="nav-text">Blue/Green 배포</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><span class="nav-number">2.1.</span> <span class="nav-text">Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#기존-버전의-코드-서비스하기"><span class="nav-number">2.2.</span> <span class="nav-text">기존 버전의 코드 서비스하기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><span class="nav-number">2.3.</span> <span class="nav-text">새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서에 등록해 Blue/Green 배포 진행하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#정리"><span class="nav-number">4.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
