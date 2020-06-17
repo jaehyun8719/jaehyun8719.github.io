@@ -1140,7 +1140,7 @@
 </ul>
 <h4 id="webpack-빌드-확인-1"><a href="#webpack-빌드-확인-1" class="headerlink" title="webpack 빌드 확인"></a>webpack 빌드 확인</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm run build</span><br></pre></td></tr></table></figure>
 <ul>
-<li><a href="https://caniuse.com/#search=Promise(" rel="external nofollow noopener noreferrer" target="_blank">caniuse</a>) 에서 <code>Promise()</code> 브라우져 지원 확인</li>
+<li><a href="https://caniuse.com/#search=Promise" rel="external nofollow noopener noreferrer" target="_blank">caniuse</a> 에서 <code>Promise()</code> 브라우져 지원 확인</li>
 </ul>
 <p><img src="/images/webpack/babel/babel_3.png" alt></p>
 <ul>
