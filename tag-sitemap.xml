@@ -3,6 +3,55 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/sass/</loc>
+        <lastmod>2020-06-17T08:16:17.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/babel-polyfile/</loc>
+        <lastmod>2020-06-17T08:16:17.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/babel-preset/</loc>
+        <lastmod>2020-06-17T08:16:17.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/babel/</loc>
+        <lastmod>2020-06-17T08:16:17.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/NodeJs/</loc>
+        <lastmod>2020-06-15T02:59:02.991Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/node-js/</loc>
+        <lastmod>2020-06-15T02:59:02.991Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/javascript/</loc>
+        <lastmod>2020-06-15T02:59:02.991Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/webpack-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</loc>
         <lastmod>2020-06-10T09:33:11.689Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -117,27 +166,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
         <lastmod>2020-06-09T01:17:15.353Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/NodeJs/</loc>
-        <lastmod>2020-06-09T01:16:36.550Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/node-js/</loc>
-        <lastmod>2020-06-09T01:16:36.550Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/javascript/</loc>
-        <lastmod>2020-06-09T01:16:36.550Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

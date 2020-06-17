@@ -9,7 +9,14 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/webpack/</loc>
-        <lastmod>2020-06-10T09:33:11.689Z</lastmod>
+        <lastmod>2020-06-17T08:16:17.982Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/Node-js/</loc>
+        <lastmod>2020-06-15T02:59:02.991Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -66,13 +73,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/categories/Utils/</loc>
         <lastmod>2020-06-09T01:17:15.353Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/categories/Node-js/</loc>
-        <lastmod>2020-06-09T01:16:36.550Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
