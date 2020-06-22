@@ -1131,7 +1131,7 @@
 <figure class="highlight js"><figcaption><span>app.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">""</span>;</span><br><span class="line"><span class="built_in">console</span>.log();</span><br><span class="line"></span><br><span class="line">name = <span class="string">"jaehyun"</span>;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/webpack/eslint-prettier/eslint-prettier_4.gif" alt></p>
 <ul>
-<li>2번째 줄에서는 ESLint 의 에러가 발생</li>
+<li>2번째 줄에서는 ESLint의 에러가 발생으로 로그창에 에러내용 출력</li>
 <li>3번째 줄에서는 prettier의 <code>;;;;;;</code> 삭제</li>
 <li>5번째 줄에서는 prettier의 <code>&#39;&#39;</code> 을 <code>&quot;&quot;</code>로 변경</li>
 </ul>
