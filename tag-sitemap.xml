@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-prettier/</loc>
+        <lastmod>2020-06-22T07:33:05.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-lint/</loc>
+        <lastmod>2020-06-22T07:33:05.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
+        <lastmod>2020-06-22T07:33:05.310Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/sass/</loc>
         <lastmod>2020-06-17T08:47:09.095Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,13 +81,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/webpack-plugin/</loc>
-        <lastmod>2020-06-10T09:33:11.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
         <lastmod>2020-06-10T09:33:11.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
