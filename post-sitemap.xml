@@ -8,16 +8,40 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
-        <lastmod>2020-06-22T09:41:45.940Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
+        <lastmod>2020-06-22T10:00:00.758Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
-        <lastmod>2020-06-17T08:47:09.095Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
+        <lastmod>2020-06-22T09:58:52.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
+        <lastmod>2020-06-22T09:56:58.848Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
+        <lastmod>2020-06-22T09:55:17.231Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
+        <lastmod>2020-06-22T09:53:52.478Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,22 +50,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/</loc>
         <lastmod>2020-06-15T02:59:02.991Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
-        <lastmod>2020-06-10T09:33:11.689Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
-        <lastmod>2020-06-10T05:41:24.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -250,14 +258,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
         <lastmod>2020-06-05T08:43:31.430Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
-        <lastmod>2020-06-05T08:41:45.687Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
