@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-dev-server/</loc>
+        <lastmod>2020-06-24T05:21:42.424Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
+        <lastmod>2020-06-24T05:21:42.424Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/sass/</loc>
         <lastmod>2020-06-22T10:00:00.758Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,13 +53,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/webpack-plugin/</loc>
-        <lastmod>2020-06-22T09:58:52.683Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
         <lastmod>2020-06-22T09:58:52.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
