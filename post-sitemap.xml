@@ -8,16 +8,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
-        <lastmod>2020-06-24T06:28:36.794Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
-        <lastmod>2020-06-22T10:00:00.758Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
+        <lastmod>2020-06-24T06:33:11.244Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,7 +17,7 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
-        <lastmod>2020-06-22T09:58:52.683Z</lastmod>
+        <lastmod>2020-06-24T06:33:08.877Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -33,15 +25,7 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
-        <lastmod>2020-06-22T09:56:58.848Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
-        <lastmod>2020-06-22T09:55:17.231Z</lastmod>
+        <lastmod>2020-06-24T06:33:05.275Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -49,7 +33,23 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
-        <lastmod>2020-06-22T09:53:52.478Z</lastmod>
+        <lastmod>2020-06-24T06:33:01.323Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
+        <lastmod>2020-06-24T06:32:55.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
+        <lastmod>2020-06-24T06:32:48.379Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
