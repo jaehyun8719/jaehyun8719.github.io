@@ -8,16 +8,24 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
-        <lastmod>2020-06-24T06:33:11.244Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
+        <lastmod>2020-06-24T07:35:18.761Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
-        <lastmod>2020-06-24T06:33:08.877Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
+        <lastmod>2020-06-24T07:28:18.323Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
+        <lastmod>2020-06-24T07:28:16.282Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,15 +33,15 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
-        <lastmod>2020-06-24T06:33:05.275Z</lastmod>
+        <lastmod>2020-06-24T07:28:15.228Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
-        <lastmod>2020-06-24T06:33:01.323Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
+        <lastmod>2020-06-24T07:28:14.018Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -42,14 +50,6 @@
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
         <lastmod>2020-06-24T06:32:55.469Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
-        <lastmod>2020-06-24T06:32:48.379Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
