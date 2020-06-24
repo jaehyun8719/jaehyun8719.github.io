@@ -21,13 +21,13 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="김정환님의 프론트엔드 개발환경의 이해와 실습 인프런 강의를 듣고 개인적으로 정리한 내용입니다.webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와">
+  <meta name="description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
 <meta name="keywords" content="lint, prettier, webpack lint, webpack prettier, 웹팩 린트, 웹팩 프리티어">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5. ESLint &amp; prettier">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="김정환님의 프론트엔드 개발환경의 이해와 실습 인프런 강의를 듣고 개인적으로 정리한 내용입니다.webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와">
+<meta property="og:description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_2.gif">
@@ -35,10 +35,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_4.gif">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_5.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2020-06-24T07:35:18.761Z">
+<meta property="og:updated_time" content="2020-06-24T07:42:13.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5. ESLint &amp; prettier">
-<meta name="twitter:description" content="김정환님의 프론트엔드 개발환경의 이해와 실습 인프런 강의를 듣고 개인적으로 정리한 내용입니다.webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와">
+<meta name="twitter:description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/">
@@ -268,7 +268,7 @@
 
       
         <hr>
-<p>김정환님의 <a href="https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#" rel="external nofollow noopener noreferrer" target="_blank">프론트엔드 개발환경의 이해와 실습</a> 인프런 강의를 듣고 개인적으로 정리한 내용입니다.<br><a href="https://webpack.js.org/" rel="external nofollow noopener noreferrer" target="_blank">webpack</a>은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.</p>
+<p><a href="https://webpack.js.org/" rel="external nofollow noopener noreferrer" target="_blank">webpack</a>은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.</p>
 <ol>
 <li><a href="https://eslint.org/" rel="external nofollow noopener noreferrer" target="_blank">ESLint</a>는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구</li>
 <li><a href="https://prettier.io/" rel="external nofollow noopener noreferrer" target="_blank">Prettier</a>는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.<a id="more"></a>
