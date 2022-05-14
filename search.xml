@@ -590,7 +590,7 @@
 </ul>
 <h2 id="준영속-상태"><a href="#준영속-상태" class="headerlink" title="준영속 상태"></a>준영속 상태</h2><p>JPA가 영속성 컨텍스트에서 분리</p>
 <figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> member = em.find(Member::<span class="keyword">class</span>.java, <span class="number">1L</span>)</span><br><span class="line">em.detach(member)</span><br></pre></td></tr></table></figure>
-<h1 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h1><p><a href="https://github.com/jaehyun8719/kotlin-jpa-study"><img src="/images/github.png" width="200" /></a></p>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-jpa-study"><img src="/images/github.png" width="200" /></a></p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
 <li><a href="https://www.inflearn.com/course/ORM-JPA-Basic">https://www.inflearn.com/course/ORM-JPA-Basic</a></li>
 </ul>
