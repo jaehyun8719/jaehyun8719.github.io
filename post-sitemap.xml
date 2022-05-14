@@ -32,7 +32,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
+        <loc>https://jaehyun8719.github.io/2019/05/15/utils/logback/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +40,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/05/15/utils/logback/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -88,7 +88,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -104,7 +104,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -144,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/</loc>
+        <loc>https://jaehyun8719.github.io/2019/10/28/javascript/es6/chapter6/</loc>
         <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -152,7 +152,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/10/28/javascript/es6/chapter6/</loc>
+        <loc>https://jaehyun8719.github.io/2019/11/20/javascript/learning-javascript/chapter1/</loc>
         <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -176,7 +176,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
+        <loc>https://jaehyun8719.github.io/2019/08/28/javascript/es6/chapter2/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -184,7 +184,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/08/28/javascript/es6/chapter2/</loc>
+        <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -208,22 +208,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
-        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
-        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -241,6 +225,22 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
+        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
