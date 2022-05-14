@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="Pg-g7AfnjOtI6NvJXfL7bXm8Sdk-e9JrzGqq3jab2OE">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Node.js를 백엔드 구현체로 사용하지 않고, 프론트 엔드 개발을 할때 개발 환경에 대한 이해를 하기 위해 작성하였다.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="프론트엔드 개발에 Node.js 가 필요한 이유">
+<meta property="og:url" content="https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/index.html">
+<meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="Node.js를 백엔드 구현체로 사용하지 않고, 프론트 엔드 개발을 할때 개발 환경에 대한 이해를 하기 위해 작성하였다.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/nodejs/nodejs-npm/nodejs-npm-1.png">
+<meta property="article:published_time" content="2020-05-20T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-08T07:52:50.125Z">
+<meta property="article:author" content="Jaehyun">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="node.js">
+<meta property="article:tag" content="NodeJs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/nodejs/nodejs-npm/nodejs-npm-1.png">
+
+<link rel="canonical" href="https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>프론트엔드 개발에 Node.js 가 필요한 이유 | Jaehyun's Dev Story</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158660323-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158660323-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Jaehyun's Dev Story</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">공부해서 남준다.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/jaehyun8719" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jaehyun">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaehyun's Dev Story">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          프론트엔드 개발에 Node.js 가 필요한 이유
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-21 00:00:00" itemprop="dateCreated datePublished" datetime="2020-05-21T00:00:00+09:00">2020-05-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/05/21/nodejs/nodejs-npm/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/05/21/nodejs/nodejs-npm/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<p>Node.js를 백엔드 구현체로 사용하지 않고, 프론트 엔드 개발을 할때 개발 환경에 대한 이해를 하기 위해 작성하였다.<br><span id="more"></span></p>
+<h2 id="Node-js-설치"><a href="#Node-js-설치" class="headerlink" title="Node.js 설치"></a>Node.js 설치</h2><ol>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://nodejs.org/ko/">https://nodejs.org/ko/</a> 사이트 가서 노드의 최신 버전을 다운로드</li>
+</ol>
+<p><img src="/images/nodejs/nodejs-npm/nodejs-npm-1.png" alt></p>
+<div class="note info no-icon">
+            <p>LTS 버젼은 안정적인 버젼으로 Java에서도 대부분 LTS 버젼을 많이 사용한다. (Current 버전은 최신 기술을 테스트할 때 개발 서버에서만 사용하길 권장한다.)</p>
+          </div>
+<ol start="2">
+<li><p>설치는 <code>Next</code>버튼을 눌러 완료 하면 된다.</p>
+</li>
+<li><p>cmd 실행</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ node</span><br><span class="line">Welcome to Node.js v12.16.3.</span><br><span class="line">Type <span class="string">&quot;.help&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt; 1 + 1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon">
+            <p>정수를 계산하면 입력된 결과 값이 나온다. 즉, 자바스크립의 코드를 입력하면 즉시 결과를 확인 할 수 있다.</p>
+          </div>
+<ol start="4">
+<li>Node.js 버젼 확인<br>node 실행 창을 나오는 명령어는 <code>.exit</code>와 <code>ctrl + c</code>를 연속 두번 입력하면 된다.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node --version</span><br><span class="line">v12.16.3</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>NPM(Node Package Manage) 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ npm</span><br><span class="line"></span><br><span class="line">Usage: npm &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> &lt;<span class="built_in">command</span>&gt; is one of:</span><br><span class="line">    access, adduser, audit, bin, bugs, c, cache, ci, cit,</span><br><span class="line">    clean-install, clean-install-test, completion, config,</span><br><span class="line">    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,</span><br><span class="line">    edit, explore, fund, get, <span class="built_in">help</span>, help-search, hook, i, init,</span><br><span class="line">    install, install-ci-test, install-test, it, <span class="built_in">link</span>, list, <span class="built_in">ln</span>,</span><br><span class="line">    login, <span class="built_in">logout</span>, <span class="built_in">ls</span>, org, outdated, owner, pack, ping, prefix,</span><br><span class="line">    profile, prune, publish, rb, rebuild, repo, restart, root,</span><br><span class="line">    run, run-script, s, se, search, <span class="built_in">set</span>, shrinkwrap, star,</span><br><span class="line">    stars, start, stop, t, team, <span class="built_in">test</span>, token, tst, un,</span><br><span class="line">    uninstall, unpublish, unstar, up, update, v, version, view,</span><br><span class="line">    <span class="built_in">whoami</span></span><br><span class="line"></span><br><span class="line">npm &lt;<span class="built_in">command</span>&gt; -h  quick <span class="built_in">help</span> on &lt;<span class="built_in">command</span>&gt;</span><br><span class="line">npm -l            display full usage info</span><br><span class="line">npm <span class="built_in">help</span> &lt;term&gt;   search <span class="keyword">for</span> <span class="built_in">help</span> on &lt;term&gt;</span><br><span class="line">npm <span class="built_in">help</span> npm      involved overview</span><br><span class="line"></span><br><span class="line">Specify configs <span class="keyword">in</span> the ini-formatted file:</span><br><span class="line">    C:\Users\jaehy\.npmrc</span><br><span class="line">or on the <span class="built_in">command</span> line via: npm &lt;<span class="built_in">command</span>&gt; --key value</span><br><span class="line">Config info can be viewed via: npm <span class="built_in">help</span> config</span><br><span class="line"></span><br><span class="line">npm@6.13.2 C:\Users\jaehy\AppData\Roaming\npm\node_modules\npm</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>NPM 버젼 확인</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm --version</span><br><span class="line">6.13.2</span><br></pre></td></tr></table></figure>
+<h2 id="프로젝트-초기화"><a href="#프로젝트-초기화" class="headerlink" title="프로젝트 초기화"></a>프로젝트 초기화</h2><p>외부 라이브러리를 다운로드하고 빌드 하는 등 명령어를 자동화하여 프로젝트를 관리하는 도구가 존재하는데, 예를 들어 자바의 Maven, Gradle이 있다.<br>NPM은 자바스크립트의 빌드 도구 이다.</p>
+<h3 id="INIT"><a href="#INIT" class="headerlink" title="INIT"></a>INIT</h3><p>NPM에 <code>init</code> 명령을 사용하여 프로젝트를 생성(sample이라는 폴더를 생성하여 실행) 하면 <code>pacakge.json</code>파일이 생성 된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">$ npm init</span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See `npm <span class="built_in">help</span> json` <span class="keyword">for</span> definitive documentation on these fields</span><br><span class="line">and exactly what they <span class="keyword">do</span>.</span><br><span class="line"></span><br><span class="line">Use `npm install &lt;pkg&gt;` afterwards to install a package and</span><br><span class="line">save it as a dependency <span class="keyword">in</span> the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">package name: (sample)</span><br><span class="line">version: (1.0.0)</span><br><span class="line">description:</span><br><span class="line">entry point: (index.js)</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>:</span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC)</span><br><span class="line">About to write to E:\97.private_work\sample\package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;sample&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Is this OK? (<span class="built_in">yes</span>)</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon">
+            <p><code>npm init -y</code> 명령어를 사용하면 질문을 스킵하고 <code>package.json</code> 파일이 생성된다.</p>
+          </div>
+<h3 id="Package-json"><a href="#Package-json" class="headerlink" title="Package.json"></a>Package.json</h3><p>Node.js 는 Package.json 파일에 모든 프로젝트 정보를 기록한다.</p>
+<table>
+<thead>
+<tr>
+<th>정보명</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>프로젝트 이름</td>
+</tr>
+<tr>
+<td>version</td>
+<td>프로젝트 버전 정보</td>
+</tr>
+<tr>
+<td>description</td>
+<td>프로젝트 설명</td>
+</tr>
+<tr>
+<td>main</td>
+<td>노드 어플리케이션일 경우 진입점 경로</td>
+</tr>
+<tr>
+<td>scripts</td>
+<td>프로젝트 명령어를 등록</td>
+</tr>
+<tr>
+<td>author</td>
+<td>작성자</td>
+</tr>
+<tr>
+<td>license</td>
+<td>라이센스</td>
+</tr>
+</tbody>
+</table>
+<h2 id="프로젝트-명령어"><a href="#프로젝트-명령어" class="headerlink" title="프로젝트 명령어"></a>프로젝트 명령어</h2><p>package.json<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sample&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;index.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;test&quot;</span><span class="punctuation">:</span> <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ISC&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>script 에 test 명령어 실행하면 <code>echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1</code> 출력 되는 것을 확인 할 수 있다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">&gt; sample@1.0.0 <span class="built_in">test</span> E:\97.private_work\sample</span><br><span class="line">&gt; <span class="built_in">echo</span> <span class="string">&quot;Error: no test specified&quot;</span> &amp;&amp; <span class="built_in">exit</span> 1</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;Error: no test specified&quot;</span></span><br><span class="line">npm ERR! Test failed.  See above <span class="keyword">for</span> more details.</span><br></pre></td></tr></table></figure>
+<p>NPM에서 사용할 수 있는 명령어가 있는데, 대부분 <code>start, test, install, uninstall</code>을 많이 사용 한다. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ npm</span><br><span class="line"></span><br><span class="line">Usage: npm &lt;<span class="built_in">command</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">where</span> &lt;<span class="built_in">command</span>&gt; is one of:</span><br><span class="line">    access, adduser, audit, bin, bugs, c, cache, ci, cit,</span><br><span class="line">    clean-install, clean-install-test, completion, config,</span><br><span class="line">    create, ddp, dedupe, deprecate, dist-tag, docs, doctor,</span><br><span class="line">    edit, explore, fund, get, <span class="built_in">help</span>, help-search, hook, i, init,</span><br><span class="line">    install, install-ci-test, install-test, it, <span class="built_in">link</span>, list, <span class="built_in">ln</span>,</span><br><span class="line">    login, <span class="built_in">logout</span>, <span class="built_in">ls</span>, org, outdated, owner, pack, ping, prefix,</span><br><span class="line">    profile, prune, publish, rb, rebuild, repo, restart, root,</span><br><span class="line">    run, run-script, s, se, search, <span class="built_in">set</span>, shrinkwrap, star,</span><br><span class="line">    stars, start, stop, t, team, <span class="built_in">test</span>, token, tst, un,</span><br><span class="line">    uninstall, unpublish, unstar, up, update, v, version, view,</span><br><span class="line">    <span class="built_in">whoami</span></span><br></pre></td></tr></table></figure>
+<p><code>package.json</code>에 커스텀으로 등록한 명령어 실행</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">	<span class="string">&quot;bulid&quot;</span> : <span class="string">&quot;빌드 실행&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> npm run bulid</span><br><span class="line"></span><br><span class="line">&gt; sample@1.0.0 bulid E:\97.private_work\sample</span><br><span class="line">&gt; 빌드 실행</span><br></pre></td></tr></table></figure>
+<h2 id="패키지-설치"><a href="#패키지-설치" class="headerlink" title="패키지 설치"></a>패키지 설치</h2><p><code>npm install</code> 명령어로 외부 패키지를 프로젝트 폴더에 다운로드하여 <code>package.json</code>에 정보를 기록한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install react</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;react&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^16.13.1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><code>16.13.1</code> 버전을 설치</p>
+<div class="note info no-icon">
+            <p>^16.13.1<br>16은 Major Version으로 기존 Version 과 호환되지 않게 변경<br>13은 Minor Version으로 기존 Version 과 호환되면서 기능이 추가<br>1은 Patch Version으로 기존 버전과 호환되면서 버그를 수정</p>
+          </div>    
+<h2 id="버전의-범위"><a href="#버전의-범위" class="headerlink" title="버전의 범위"></a>버전의 범위</h2><h3 id="단순-버전-관리"><a href="#단순-버전-관리" class="headerlink" title="단순 버전 관리"></a>단순 버전 관리</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">16.13.1</span><br></pre></td></tr></table></figure>
+<h3 id="특정-버전보다-높거나-낮을-경우"><a href="#특정-버전보다-높거나-낮을-경우" class="headerlink" title="특정 버전보다 높거나 낮을 경우"></a>특정 버전보다 높거나 낮을 경우</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;16.13.1</span><br><span class="line">&gt;=16.13.1</span><br><span class="line">&lt;16.13.1</span><br><span class="line">&lt;=16.13.1</span><br></pre></td></tr></table></figure>
+<h3 id="틸드-와-캐럿-을-이용해-범위"><a href="#틸드-와-캐럿-을-이용해-범위" class="headerlink" title="틸드(~)와 캐럿(^)을 이용해 범위"></a>틸드(~)와 캐럿(^)을 이용해 범위</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~16.13.1</span><br><span class="line">^16.13.1</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon">
+            <p><code>~</code>는 Patch Version을 변경 즉, 16.13.1에서 1을 변경<br><code>^</code>은 Minor Version, Patch Version을 변경 즉, 16.13.1에서 13과 1을 변경</p>
+          </div>    
+<h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#">https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/node-js/" rel="tag"># node.js</a>
+              <a href="/tags/NodeJs/" rel="tag"># NodeJs</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/22/aws/blue-green-deployment/" rel="prev" title="AWS Blue/Green deployment">
+      <i class="fa fa-chevron-left"></i> AWS Blue/Green deployment
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/04/webpack/setup/" rel="next" title="1. webpack entry/output">
+      1. webpack entry/output <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js-%EC%84%A4%EC%B9%98"><span class="nav-number">1.</span> <span class="nav-text">Node.js 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B4%88%EA%B8%B0%ED%99%94"><span class="nav-number">2.</span> <span class="nav-text">프로젝트 초기화</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#INIT"><span class="nav-number">2.1.</span> <span class="nav-text">INIT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Package-json"><span class="nav-number">2.2.</span> <span class="nav-text">Package.json</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%AA%85%EB%A0%B9%EC%96%B4"><span class="nav-number">3.</span> <span class="nav-text">프로젝트 명령어</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%8C%A8%ED%82%A4%EC%A7%80-%EC%84%A4%EC%B9%98"><span class="nav-number">4.</span> <span class="nav-text">패키지 설치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%B2%84%EC%A0%84%EC%9D%98-%EB%B2%94%EC%9C%84"><span class="nav-number">5.</span> <span class="nav-text">버전의 범위</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%8B%A8%EC%88%9C-%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC"><span class="nav-number">5.1.</span> <span class="nav-text">단순 버전 관리</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8A%B9%EC%A0%95-%EB%B2%84%EC%A0%84%EB%B3%B4%EB%8B%A4-%EB%86%92%EA%B1%B0%EB%82%98-%EB%82%AE%EC%9D%84-%EA%B2%BD%EC%9A%B0"><span class="nav-number">5.2.</span> <span class="nav-text">특정 버전보다 높거나 낮을 경우</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%8B%B8%EB%93%9C-%EC%99%80-%EC%BA%90%EB%9F%BF-%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%B4-%EB%B2%94%EC%9C%84"><span class="nav-number">5.3.</span> <span class="nav-text">틸드(~)와 캐럿(^)을 이용해 범위</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">6.</span> <span class="nav-text">참조</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jaehyun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jaehyun8719" title="GitHub → https://github.com/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jaehyun8719@gmail.com" title="E-Mail → mailto:jaehyun8719@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinsil</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'dark',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/";
+    this.page.identifier = "2020/05/21/nodejs/nodejs-npm/";
+    this.page.title = "프론트엔드 개발에 Node.js 가 필요한 이유";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jaehyun8719.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
