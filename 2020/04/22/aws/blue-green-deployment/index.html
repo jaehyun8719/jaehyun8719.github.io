@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -21,13 +21,14 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue&#x2F;Green deployment 생성 방법에 대해서 설명한다.              Blue&#x2F;Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
+  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
+<meta name="keywords" content="AWS, AWS Blue&#x2F;Green deployment, AWS deployment, AWS 블루 그린 배포, AWS 배포과정, AWS 서버 단위 배포, AWS 배포">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Blue&#x2F;Green deployment">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue&#x2F;Green deployment 생성 방법에 대해서 설명한다.              Blue&#x2F;Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
-<meta property="og:locale" content="en_US">
+<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-2.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-3.png">
@@ -58,12 +59,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-28.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-29.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-30.png">
-<meta property="article:published_time" content="2020-04-21T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:52:50.122Z">
-<meta property="article:author" content="Jaehyun">
-<meta property="article:tag" content="AWS">
-<meta property="article:tag" content="AWS Blue&#x2F;Green deployment">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.122Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS Blue&#x2F;Green deployment">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.              Blue/Green 배포전 필요한 설정 참고Auto ScalingElastic Load Balancing">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/blue-green-deployment/blue-green-deployment-1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/">
@@ -168,17 +167,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -293,11 +292,11 @@
 
       
         <hr>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.</p>
+<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Blue/Green deployment 생성 방법에 대해서 설명한다.</p>
 <div class="note info no-icon">
             <p>Blue/Green 배포전 필요한 설정 참고</p><ol><li><a href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">Auto Scaling</a></li><li><a href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">Elastic Load Balancing</a> </li></ol>
           </div>
-<span id="more"></span>
+<a id="more"></a>
 <h2 id="AWS에서-Blue-Green-배포-개념"><a href="#AWS에서-Blue-Green-배포-개념" class="headerlink" title="AWS에서 Blue/Green 배포 개념"></a>AWS에서 Blue/Green 배포 개념</h2><p><img src="/images/aws/blue-green-deployment/blue-green-deployment-1.png" alt></p>
 <ol>
 <li><code>EC2 인스턴스 v1</code>을 정지하고 <code>AMI v1</code> 생성용 인스턴스를 생성</li>
@@ -432,8 +431,8 @@
           </div>
 <h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>AWS에서 배포 방법을 공부하기 위해서는 기본적으로 로드밸런서, 시작템플릿, AMI 등 개념을 알고 있어야 할 것 같다.<br>서비스를 배포 하는 도중에 서비스가 중단이 되면 큰 문제가 발생하지만, Blue/Green 배포 방법으로 서비스가 중단 되지 않고 서비스를 계속 진행 할 수 있다.<br>내가 기본적으로 생각하는 개념은 로드 밸런서의 중심으로 새로운 각 인스턴스에 하나씩 반영하면서 서버가 중지 되지 않는것처럼 보이게 하는것 같다.</p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">https://wikibook.co.kr/aws-infra/</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html">https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></li>
+<li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/codedeploy/latest/userguide/deployment-groups-create-blue-green.html</a></li>
 </ul>
 
     </div>
@@ -526,7 +525,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS%EC%97%90%EC%84%9C-Blue-Green-%EB%B0%B0%ED%8F%AC-%EA%B0%9C%EB%85%90"><span class="nav-number">1.</span> <span class="nav-text">AWS에서 Blue&#x2F;Green 배포 개념</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Blue-Green-%EB%B0%B0%ED%8F%AC"><span class="nav-number">2.</span> <span class="nav-text">Blue&#x2F;Green 배포</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blue-Green-%EB%B0%B0%ED%8F%AC%EB%A5%BC-%EC%9C%84%ED%95%9C-Auto-Scaling-%EA%B7%B8%EB%A3%B9-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="nav-number">2.1.</span> <span class="nav-text">Blue&#x2F;Green 배포를 위한 Auto Scaling 그룹 만들기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B8%B0%EC%A1%B4-%EB%B2%84%EC%A0%84%EC%9D%98-%EC%BD%94%EB%93%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0"><span class="nav-number">2.2.</span> <span class="nav-text">기존 버전의 코드 서비스하기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%83%88%EB%A1%9C%EC%9A%B4-%EB%B2%84%EC%A0%84%EC%9D%98-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%A0%81%EC%9A%A9%ED%95%9C-AMI%EC%99%80-%EC%8B%9C%EC%9E%91-%ED%85%9C%ED%94%8C%EB%A6%BF-%EC%83%9D%EC%84%B1"><span class="nav-number">2.3.</span> <span class="nav-text">새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C%EC%97%90-%EB%93%B1%EB%A1%9D%ED%95%B4-Blue-Green-%EB%B0%B0%ED%8F%AC-%EC%A7%84%ED%96%89%ED%95%98%EA%B8%B0"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서에 등록해 Blue&#x2F;Green 배포 진행하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%A0%95%EB%A6%AC"><span class="nav-number">4.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS에서-Blue-Green-배포-개념"><span class="nav-number">1.</span> <span class="nav-text">AWS에서 Blue/Green 배포 개념</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Blue-Green-배포"><span class="nav-number">2.</span> <span class="nav-text">Blue/Green 배포</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blue-Green-배포를-위한-Auto-Scaling-그룹-만들기"><span class="nav-number">2.1.</span> <span class="nav-text">Blue/Green 배포를 위한 Auto Scaling 그룹 만들기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#기존-버전의-코드-서비스하기"><span class="nav-number">2.2.</span> <span class="nav-text">기존 버전의 코드 서비스하기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#새로운-버전의-코드를-적용한-AMI와-시작-템플릿-생성"><span class="nav-number">2.3.</span> <span class="nav-text">새로운 버전의 코드를 적용한 AMI와 시작 템플릿 생성</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서에-등록해-Blue-Green-배포-진행하기"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서에 등록해 Blue/Green 배포 진행하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#정리"><span class="nav-number">4.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -540,20 +539,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -619,26 +618,18 @@
 
   
   <script src="/lib/anime.min.js"></script>
-
 <script src="/js/utils.js"></script>
-
-
 <script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
 
 
-
   
 
 
 
 
-  
-<script src="/js/local-search.js"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 

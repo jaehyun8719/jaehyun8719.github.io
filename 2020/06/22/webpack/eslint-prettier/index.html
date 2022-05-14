@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,25 +22,23 @@
   </script>
 
   <meta name="description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
+<meta name="keywords" content="lint, prettier, webpack lint, webpack prettier, 웹팩 린트, 웹팩 프리티어">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5. ESLint &amp; prettier">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
 <meta property="og:description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_2.gif">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_3.gif">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_4.gif">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_5.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="article:published_time" content="2020-06-21T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:52:50.127Z">
-<meta property="article:author" content="Jaehyun">
-<meta property="article:tag" content="webpack">
-<meta property="article:tag" content="webpack lint">
-<meta property="article:tag" content="webpack prettier">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.127Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5. ESLint &amp; prettier">
+<meta name="twitter:description" content="webpack은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.  ESLint는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구 Prettier는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/webpack/eslint-prettier/eslint-prettier_1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/">
@@ -145,17 +143,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -270,10 +268,10 @@
 
       
         <hr>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://webpack.js.org/">webpack</a>은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.</p>
+<p><a href="https://webpack.js.org/" rel="external nofollow noopener noreferrer" target="_blank">webpack</a>은 여러 개 파일을 하나의 파일로 합쳐주는 번들러(bundler)다.</p>
 <ol>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://eslint.org/">ESLint</a>는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구</li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://prettier.io/">Prettier</a>는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.<span id="more"></span>
+<li><a href="https://eslint.org/" rel="external nofollow noopener noreferrer" target="_blank">ESLint</a>는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구</li>
+<li><a href="https://prettier.io/" rel="external nofollow noopener noreferrer" target="_blank">Prettier</a>는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.<a id="more"></a>
 </li>
 </ol>
 <h2 id="환경-설정"><a href="#환경-설정" class="headerlink" title="환경 설정"></a>환경 설정</h2><ul>
@@ -283,29 +281,29 @@
 <li>webpack-cli: 3.3.11</li>
 </ul>
 <h2 id="모듈-구조"><a href="#모듈-구조" class="headerlink" title="모듈 구조"></a>모듈 구조</h2><p><img src="/images/webpack/eslint-prettier/eslint-prettier_1.png" alt></p>
-<h2 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://eslint.org/">ESLint</a>는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구</p>
+<h2 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h2><p><a href="https://eslint.org/" rel="external nofollow noopener noreferrer" target="_blank">ESLint</a>는 ECMAScript 코드에서 문제점을 검사하고 더 나은 코드로 정정하는 도구</p>
 <h3 id="ESLint-설치"><a href="#ESLint-설치" class="headerlink" title="ESLint 설치"></a>ESLint 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D eslint</span><br></pre></td></tr></table></figure>
-<h3 id="ESLint-초기화"><a href="#ESLint-초기화" class="headerlink" title="ESLint 초기화"></a>ESLint 초기화</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npx eslint --init </span><br></pre></td></tr></table></figure>
+<h3 id="ESLint-초기화"><a href="#ESLint-초기화" class="headerlink" title="ESLint 초기화"></a>ESLint 초기화</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npx eslint --init</span><br></pre></td></tr></table></figure>
 <p><img src="/images/webpack/eslint-prettier/eslint-prettier_2.gif" alt></p>
 <div class="note info no-icon">
             <p>대화식 명령어로 진행하는데 현재 사용하고 있는 환경에 대해 답을 하면 된다.<br><code>.eslintrc</code> 파일이 자동 생성된다.</p>
           </div>
-<h3 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title="eslintrc.js"></a>eslintrc.js</h3><p>ESLint 가 제공하는 여러 가지 규칙을 미리 정해 놓은 eslint:recommended 설정<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://eslint.org/docs/rules/">ESLint 규칙</a> 목록에서 왼쪽에 체크 표시되어 있는 설정을 활성화</p>
-<figure class="highlight js"><figcaption><span>.eslintrc.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">env</span>: &#123;</span><br><span class="line">        <span class="attr">browser</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">es2020</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">extends</span>: <span class="string">&quot;eslint:recommended&quot;</span>,</span><br><span class="line">    <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">        <span class="attr">ecmaVersion</span>: <span class="number">11</span>,</span><br><span class="line">        <span class="attr">sourceType</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">rules</span>: &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="eslintrc-js"><a href="#eslintrc-js" class="headerlink" title="eslintrc.js"></a>eslintrc.js</h3><p>ESLint 가 제공하는 여러 가지 규칙을 미리 정해 놓은 eslint:recommended 설정<br><a href="https://eslint.org/docs/rules/" rel="external nofollow noopener noreferrer" target="_blank">ESLint 규칙</a> 목록에서 왼쪽에 체크 표시되어 있는 설정을 활성화</p>
+<figure class="highlight js"><figcaption><span>.eslintrc.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    env: &#123;</span><br><span class="line">        browser: <span class="literal">true</span>,</span><br><span class="line">        es2020: <span class="literal">true</span>,</span><br><span class="line">        node: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    extends: <span class="string">"eslint:recommended"</span>,</span><br><span class="line">    parserOptions: &#123;</span><br><span class="line">        ecmaVersion: <span class="number">11</span>,</span><br><span class="line">        sourceType: <span class="string">"module"</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    rules: &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>node: true</code>는 <code>webpack.config.js</code> 빌드시 node 환경도 적용</li>
 <li>이 설정 외에 규칙이 필요하면 rules 속성에 추가하면 된다.</li>
 </ul>
 <div class="note info no-icon">
-            <p>외부 스타일 가이드 중에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/airbnb/javascript">Airbnb Style Guide</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/google/eslint-config-google">Google Style Guide</a>가 대표적인 가이드로 많이 사용된다.</p>
+            <p>외부 스타일 가이드 중에 <a href="https://github.com/airbnb/javascript" rel="external nofollow noopener noreferrer" target="_blank">Airbnb Style Guide</a>, <a href="https://github.com/google/eslint-config-google" rel="external nofollow noopener noreferrer" target="_blank">Google Style Guide</a>가 대표적인 가이드로 많이 사용된다.</p>
           </div>
 <h3 id="eslintignore-생성-선택-사항"><a href="#eslintignore-생성-선택-사항" class="headerlink" title=".eslintignore 생성(선택 사항)"></a>.eslintignore 생성(선택 사항)</h3><p>ESLint에 적용되지 않는 대상을 정하는 파일</p>
-<figure class="highlight js"><figcaption><span>.eslintignore</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack.<span class="property">config</span>.<span class="property">js</span></span><br></pre></td></tr></table></figure>
-<h3 id="package-json에-추가"><a href="#package-json에-추가" class="headerlink" title="package.json에 추가"></a>package.json에 추가</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;webpack --progress&quot;</span>,</span><br><span class="line">    <span class="string">&quot;lint&quot;</span>: <span class="string">&quot;eslint src --fix&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>.eslintignore</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">webpack.config.js</span><br></pre></td></tr></table></figure>
+<h3 id="package-json에-추가"><a href="#package-json에-추가" class="headerlink" title="package.json에 추가"></a>package.json에 추가</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"webpack --progress"</span>,</span><br><span class="line">    <span class="string">"lint"</span>: <span class="string">"eslint src --fix"</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>eslint src --fix</code> 명령어로 <code>src</code> 하위 폴더에 있는 파일을 ESLint 적용, <code>--fix</code>는 ESLint에 적용된 파일을 자동으로 스타일 코드로 수정</li>
 </ul>
-<h3 id="app-js-코드-수정"><a href="#app-js-코드-수정" class="headerlink" title="app.js 코드 수정"></a>app.js 코드 수정</h3><figure class="highlight js"><figcaption><span>src/app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;jaehyun&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);;;;;;;;;;;;;;;;;;;;;</span><br></pre></td></tr></table></figure>
+<h3 id="app-js-코드-수정"><a href="#app-js-코드-수정" class="headerlink" title="app.js 코드 수정"></a>app.js 코드 수정</h3><figure class="highlight js"><figcaption><span>src/app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">"jaehyun"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(name);;;;;;;;;;;;;;;;;;;;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>;;;;;;;;;;;;;;;;;;;;</code>을 추가하여 ESLint 불필요한 부분 수정되는지 확인</li>
 </ul>
@@ -315,43 +313,43 @@
 <li><code>;;;;;;;;;;;;;;;;;;;;</code>삭제되었는지 확인</li>
 <li>이외에도 여러 가지 스타일 코드대로 수정이 된다.</li>
 </ul>
-<h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><p>여기서는 단독으로 Prettier 방법보다 ESLint와 함께 통합하는 방법에 대해서만 설명한다.<br><a target="_blank" rel="external nofollow noopener noreferrer" href="https://prettier.io/">Prettier</a>는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.</p>
+<h2 id="Prettier"><a href="#Prettier" class="headerlink" title="Prettier"></a>Prettier</h2><p>여기서는 단독으로 Prettier 방법보다 ESLint와 함께 통합하는 방법에 대해서만 설명한다.<br><a href="https://prettier.io/" rel="external nofollow noopener noreferrer" target="_blank">Prettier</a>는 코드를 일관적인 스타일로 코드를 만들어 주는 도구이고, ESLint와 다르게 품질 관련된 기능은 사용되지 않는다.</p>
 <h3 id="prettier-설치"><a href="#prettier-설치" class="headerlink" title="prettier 설치"></a>prettier 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D prettier</span><br></pre></td></tr></table></figure>
-<h3 id="eslint-plugin-prettier-설치"><a href="#eslint-plugin-prettier-설치" class="headerlink" title="eslint-plugin-prettier 설치"></a>eslint-plugin-prettier 설치</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/prettier/eslint-plugin-prettier">eslint-plugin-prettier</a>는 프리티어 규칙을 ESLint 규칙으로 추가하는 플러그인</p>
+<h3 id="eslint-plugin-prettier-설치"><a href="#eslint-plugin-prettier-설치" class="headerlink" title="eslint-plugin-prettier 설치"></a>eslint-plugin-prettier 설치</h3><p><a href="https://github.com/prettier/eslint-plugin-prettier" rel="external nofollow noopener noreferrer" target="_blank">eslint-plugin-prettier</a>는 프리티어 규칙을 ESLint 규칙으로 추가하는 플러그인</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D eslint-plugin-prettier</span><br></pre></td></tr></table></figure>
-<h3 id="prettierrc-생성"><a href="#prettierrc-생성" class="headerlink" title=".prettierrc 생성"></a>.prettierrc 생성</h3><p>prettier에 대한 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://prettier.io/docs/en/options.html">Option</a>에 대해서 설정</p>
-<figure class="highlight js"><figcaption><span>.prettierrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;tabWidth&quot;</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="prettierrc-생성"><a href="#prettierrc-생성" class="headerlink" title=".prettierrc 생성"></a>.prettierrc 생성</h3><p>prettier에 대한 <a href="https://prettier.io/docs/en/options.html" rel="external nofollow noopener noreferrer" target="_blank">Option</a>에 대해서 설정</p>
+<figure class="highlight js"><figcaption><span>.prettierrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"tabWidth"</span>: <span class="number">4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>여기서는 탭 간격만 기본값이 2를 tab 간격을 4로 설정하였다.</li>
 </ul>
-<h3 id="eslintrc-js-수정"><a href="#eslintrc-js-수정" class="headerlink" title="eslintrc.js 수정"></a>eslintrc.js 수정</h3><figure class="highlight js"><figcaption><span>.eslintrc.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">env</span>: &#123;</span><br><span class="line">        <span class="attr">browser</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">es2020</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">node</span>: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">extends</span>: <span class="string">&quot;eslint:recommended&quot;</span>,</span><br><span class="line">    <span class="attr">parserOptions</span>: &#123;</span><br><span class="line">        <span class="attr">ecmaVersion</span>: <span class="number">11</span>,</span><br><span class="line">        <span class="attr">sourceType</span>: <span class="string">&quot;module&quot;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">rules</span>: &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="app-js-코드-수정-1"><a href="#app-js-코드-수정-1" class="headerlink" title="app.js 코드 수정"></a>app.js 코드 수정</h3><figure class="highlight js"><figcaption><span>app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>();;;;;;;</span><br></pre></td></tr></table></figure>
+<h3 id="eslintrc-js-수정"><a href="#eslintrc-js-수정" class="headerlink" title="eslintrc.js 수정"></a>eslintrc.js 수정</h3><figure class="highlight js"><figcaption><span>.eslintrc.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    env: &#123;</span><br><span class="line">        browser: <span class="literal">true</span>,</span><br><span class="line">        es2020: <span class="literal">true</span>,</span><br><span class="line">        node: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    extends: <span class="string">"eslint:recommended"</span>,</span><br><span class="line">    parserOptions: &#123;</span><br><span class="line">        ecmaVersion: <span class="number">11</span>,</span><br><span class="line">        sourceType: <span class="string">"module"</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    rules: &#123;&#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="app-js-코드-수정-1"><a href="#app-js-코드-수정-1" class="headerlink" title="app.js 코드 수정"></a>app.js 코드 수정</h3><figure class="highlight js"><figcaption><span>app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">""</span>;</span><br><span class="line"><span class="built_in">console</span>.log();;;;;;;</span><br></pre></td></tr></table></figure>
 <h3 id="ESLint-빌드-1"><a href="#ESLint-빌드-1" class="headerlink" title="ESLint 빌드"></a>ESLint 빌드</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm run lint</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><figcaption><span>app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>();</span><br><span class="line"></span><br><span class="line">name = <span class="string">&quot;jaehyun&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><figcaption><span>app.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">""</span>;</span><br><span class="line"><span class="built_in">console</span>.log();</span><br><span class="line"></span><br><span class="line">name = <span class="string">"jaehyun"</span>;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/webpack/eslint-prettier/eslint-prettier_4.gif" alt></p>
 <ul>
 <li>2번째 줄에서는 ESLint의 에러가 발생으로 로그창 에 에러 내용 출력</li>
 <li>3번째 줄에서는 prettier의 <code>;;;;;;</code> 삭제</li>
 <li>5번째 줄에서는 prettier의 <code>&#39;&#39;</code> 을 <code>&quot;&quot;</code>로 변경</li>
 </ul>
-<h2 id="자동화"><a href="#자동화" class="headerlink" title="자동화"></a>자동화</h2><p>git commit 시 자동으로 ESLint 빌드를 실행하기 위해서는 Git Hook을 이용해야 된다.<br>Git Hook을 쉽게 사용할 수 있는 도구는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/typicode/husky">husky</a>이다.</p>
+<h2 id="자동화"><a href="#자동화" class="headerlink" title="자동화"></a>자동화</h2><p>git commit 시 자동으로 ESLint 빌드를 실행하기 위해서는 Git Hook을 이용해야 된다.<br>Git Hook을 쉽게 사용할 수 있는 도구는 <a href="https://github.com/typicode/husky" rel="external nofollow noopener noreferrer" target="_blank">husky</a>이다.</p>
 <h3 id="husky-설치"><a href="#husky-설치" class="headerlink" title="husky 설치"></a>husky 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D husky</span><br></pre></td></tr></table></figure>
-<h3 id="package-json에-추가-1"><a href="#package-json에-추가-1" class="headerlink" title="package.json에 추가"></a>package.json에 추가</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;husky&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;hooks&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;pre-commit&quot;</span>: <span class="string">&quot;eslint src --fix&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="package-json에-추가-1"><a href="#package-json에-추가-1" class="headerlink" title="package.json에 추가"></a>package.json에 추가</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"husky"</span>: &#123;</span><br><span class="line">  <span class="string">"hooks"</span>: &#123;</span><br><span class="line">    <span class="string">"pre-commit"</span>: <span class="string">"eslint src --fix"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <div class="note info no-icon">
             <p>commit 하기 전에 ESLint 실행하고 오류를 발견하면 커밋 과정은 취소된다.</p>
           </div>
-<h3 id="변경된-파일만-ESLint-검사"><a href="#변경된-파일만-ESLint-검사" class="headerlink" title="변경된 파일만 ESLint 검사"></a>변경된 파일만 ESLint 검사</h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/okonet/lint-staged">lint-staged</a>를 이용해서 변경된 파일만 ESLint 실행하는 도구</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D lint-staged</span><br></pre></td></tr></table></figure>
-<h3 id="package-json-수정"><a href="#package-json-수정" class="headerlink" title="package.json 수정"></a>package.json 수정</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;husky&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;hooks&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;pre-commit&quot;</span>: <span class="string">&quot;lint-staged&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">&quot;lint-staged&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;*.js&quot;</span>: <span class="string">&quot;eslint --fix&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="변경된-파일만-ESLint-검사"><a href="#변경된-파일만-ESLint-검사" class="headerlink" title="변경된 파일만 ESLint 검사"></a>변경된 파일만 ESLint 검사</h3><p><a href="https://github.com/okonet/lint-staged" rel="external nofollow noopener noreferrer" target="_blank">lint-staged</a>를 이용해서 변경된 파일만 ESLint 실행하는 도구</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -D lint-staged</span><br></pre></td></tr></table></figure>
+<h3 id="package-json-수정"><a href="#package-json-수정" class="headerlink" title="package.json 수정"></a>package.json 수정</h3><figure class="highlight js"><figcaption><span>package.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"husky"</span>: &#123;</span><br><span class="line">  <span class="string">"hooks"</span>: &#123;</span><br><span class="line">    <span class="string">"pre-commit"</span>: <span class="string">"lint-staged"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line"><span class="string">"lint-staged"</span>: &#123;</span><br><span class="line">  <span class="string">"*.js"</span>: <span class="string">"eslint --fix"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/images/webpack/eslint-prettier/eslint-prettier_5.png" alt></p>
 <ul>
 <li>app.js에 변수명을 선언하지 않았기 때문에 commit을 할 수 없고, ESLint 에러가 나타난다.</li>
 </ul>
-<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jaehyun8719/frontend-dev-env.git"><img src="/images/github.png" width="200"></a></p>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/frontend-dev-env.git" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#">https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://eslint.org/">https://eslint.org/</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://prettier.io/">https://prettier.io/</a></li>
+<li><a href="https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD#</a></li>
+<li><a href="https://eslint.org/" rel="external nofollow noopener noreferrer" target="_blank">https://eslint.org/</a></li>
+<li><a href="https://prettier.io/" rel="external nofollow noopener noreferrer" target="_blank">https://prettier.io/</a></li>
 </ul>
 
     </div>
@@ -445,7 +443,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95"><span class="nav-number">1.</span> <span class="nav-text">환경 설정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AA%A8%EB%93%88-%EA%B5%AC%EC%A1%B0"><span class="nav-number">2.</span> <span class="nav-text">모듈 구조</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ESLint"><span class="nav-number">3.</span> <span class="nav-text">ESLint</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-%EC%84%A4%EC%B9%98"><span class="nav-number">3.1.</span> <span class="nav-text">ESLint 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-%EC%B4%88%EA%B8%B0%ED%99%94"><span class="nav-number">3.2.</span> <span class="nav-text">ESLint 초기화</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintrc-js"><span class="nav-number">3.3.</span> <span class="nav-text">eslintrc.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintignore-%EC%83%9D%EC%84%B1-%EC%84%A0%ED%83%9D-%EC%82%AC%ED%95%AD"><span class="nav-number">3.4.</span> <span class="nav-text">.eslintignore 생성(선택 사항)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json%EC%97%90-%EC%B6%94%EA%B0%80"><span class="nav-number">3.5.</span> <span class="nav-text">package.json에 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app-js-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95"><span class="nav-number">3.6.</span> <span class="nav-text">app.js 코드 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-%EB%B9%8C%EB%93%9C"><span class="nav-number">3.7.</span> <span class="nav-text">ESLint 빌드</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prettier"><span class="nav-number">4.</span> <span class="nav-text">Prettier</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prettier-%EC%84%A4%EC%B9%98"><span class="nav-number">4.1.</span> <span class="nav-text">prettier 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslint-plugin-prettier-%EC%84%A4%EC%B9%98"><span class="nav-number">4.2.</span> <span class="nav-text">eslint-plugin-prettier 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prettierrc-%EC%83%9D%EC%84%B1"><span class="nav-number">4.3.</span> <span class="nav-text">.prettierrc 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintrc-js-%EC%88%98%EC%A0%95"><span class="nav-number">4.4.</span> <span class="nav-text">eslintrc.js 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app-js-%EC%BD%94%EB%93%9C-%EC%88%98%EC%A0%95-1"><span class="nav-number">4.5.</span> <span class="nav-text">app.js 코드 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-%EB%B9%8C%EB%93%9C-1"><span class="nav-number">4.6.</span> <span class="nav-text">ESLint 빌드</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9E%90%EB%8F%99%ED%99%94"><span class="nav-number">5.</span> <span class="nav-text">자동화</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#husky-%EC%84%A4%EC%B9%98"><span class="nav-number">5.1.</span> <span class="nav-text">husky 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json%EC%97%90-%EC%B6%94%EA%B0%80-1"><span class="nav-number">5.2.</span> <span class="nav-text">package.json에 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%B3%80%EA%B2%BD%EB%90%9C-%ED%8C%8C%EC%9D%BC%EB%A7%8C-ESLint-%EA%B2%80%EC%82%AC"><span class="nav-number">5.3.</span> <span class="nav-text">변경된 파일만 ESLint 검사</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json-%EC%88%98%EC%A0%95"><span class="nav-number">5.4.</span> <span class="nav-text">package.json 수정</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C"><span class="nav-number">6.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">7.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#환경-설정"><span class="nav-number">1.</span> <span class="nav-text">환경 설정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#모듈-구조"><span class="nav-number">2.</span> <span class="nav-text">모듈 구조</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ESLint"><span class="nav-number">3.</span> <span class="nav-text">ESLint</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-설치"><span class="nav-number">3.1.</span> <span class="nav-text">ESLint 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-초기화"><span class="nav-number">3.2.</span> <span class="nav-text">ESLint 초기화</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintrc-js"><span class="nav-number">3.3.</span> <span class="nav-text">eslintrc.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintignore-생성-선택-사항"><span class="nav-number">3.4.</span> <span class="nav-text">.eslintignore 생성(선택 사항)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json에-추가"><span class="nav-number">3.5.</span> <span class="nav-text">package.json에 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app-js-코드-수정"><span class="nav-number">3.6.</span> <span class="nav-text">app.js 코드 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-빌드"><span class="nav-number">3.7.</span> <span class="nav-text">ESLint 빌드</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prettier"><span class="nav-number">4.</span> <span class="nav-text">Prettier</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#prettier-설치"><span class="nav-number">4.1.</span> <span class="nav-text">prettier 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslint-plugin-prettier-설치"><span class="nav-number">4.2.</span> <span class="nav-text">eslint-plugin-prettier 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prettierrc-생성"><span class="nav-number">4.3.</span> <span class="nav-text">.prettierrc 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslintrc-js-수정"><span class="nav-number">4.4.</span> <span class="nav-text">eslintrc.js 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app-js-코드-수정-1"><span class="nav-number">4.5.</span> <span class="nav-text">app.js 코드 수정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ESLint-빌드-1"><span class="nav-number">4.6.</span> <span class="nav-text">ESLint 빌드</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#자동화"><span class="nav-number">5.</span> <span class="nav-text">자동화</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#husky-설치"><span class="nav-number">5.1.</span> <span class="nav-text">husky 설치</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json에-추가-1"><span class="nav-number">5.2.</span> <span class="nav-text">package.json에 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#변경된-파일만-ESLint-검사"><span class="nav-number">5.3.</span> <span class="nav-text">변경된 파일만 ESLint 검사</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json-수정"><span class="nav-number">5.4.</span> <span class="nav-text">package.json 수정</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">6.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">7.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -459,20 +457,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -538,26 +536,18 @@
 
   
   <script src="/lib/anime.min.js"></script>
-
 <script src="/js/utils.js"></script>
-
-
 <script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
 
 
-
   
 
 
 
 
-  
-<script src="/js/local-search.js"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 

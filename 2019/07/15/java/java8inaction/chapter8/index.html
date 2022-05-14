@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -21,20 +21,19 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&lt;T&gt;에 대해서 설명한다.">
+  <meta name="description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&amp;lt;T&amp;gt;에 대해서 설명한다.">
+<meta name="keywords" content="java, java8 in action, 람다, lambda, Optional">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8 In Action - 8. null 대신 Optional">
 <meta property="og:url" content="https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&lt;T&gt;에 대해서 설명한다.">
-<meta property="og:locale" content="en_US">
+<meta property="og:description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&amp;lt;T&amp;gt;에 대해서 설명한다.">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="article:published_time" content="2019-07-14T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:52:50.124Z">
-<meta property="article:author" content="Jaehyun">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Java8 In Action">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.124Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java8 In Action - 8. null 대신 Optional">
+<meta name="twitter:description" content="Java8 In Action 을 읽고 정리한 내용이다. java.util.Optional&amp;lt;T&amp;gt;에 대해서 설명한다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/github.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/">
@@ -139,17 +138,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -268,7 +267,7 @@
 
       
         <hr>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123">Java8 In Action</a> 을 읽고 정리한 내용이다. <code>java.util.Optional&lt;T&gt;</code>에 대해서 설명한다.<br><span id="more"></span></p>
+<p><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123" rel="external nofollow noopener noreferrer" target="_blank">Java8 In Action</a> 을 읽고 정리한 내용이다. <code>java.util.Optional&lt;T&gt;</code>에 대해서 설명한다.<br><a id="more"></a></p>
 <h2 id="Optional-적용-패턴"><a href="#Optional-적용-패턴" class="headerlink" title="Optional 적용 패턴"></a>Optional 적용 패턴</h2><h3 id="Optional-객체-만들기"><a href="#Optional-객체-만들기" class="headerlink" title="Optional 객체 만들기"></a>Optional 객체 만들기</h3><p><code>Optional</code>을 사용하려면 <code>Optional</code> 객체를 만들어야 한다. 다양한 방법으로 <code>Optional</code> 객체를 만들 수 있다.</p>
 <h4 id="빈-Optional"><a href="#빈-Optional" class="headerlink" title="빈 Optional"></a>빈 Optional</h4><p>정적 팩토리 메서드 <code>Optional.empty</code>로 빈 <code>Optional</code> 객체를 얻을 수 있다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Optional&lt;Car&gt; optionalCar = Optional.empty();</span><br></pre></td></tr></table></figure>
@@ -349,13 +348,13 @@
 </tbody>
 </table>
 <h2 id="Optional을-사용한-실용-예제"><a href="#Optional을-사용한-실용-예제" class="headerlink" title="Optional을 사용한 실용 예제"></a>Optional을 사용한 실용 예제</h2><h3 id="잠재적으로-null이-될-수-있는-대상을-Optional로-감싸기"><a href="#잠재적으로-null이-될-수-있는-대상을-Optional로-감싸기" class="headerlink" title="잠재적으로 null이 될 수 있는 대상을 Optional로 감싸기"></a>잠재적으로 null이 될 수 있는 대상을 Optional로 감싸기</h3><p>Map 클래스의 get 메서드의 시그너처는 우리가 고칠 수 없지만 get 메서드의 반환값은 Optional로 감쌀 수 있다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line"><span class="type">Object</span> <span class="variable">value</span> <span class="operator">=</span> map.get(<span class="string">&quot;key&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">Optional&lt;Object&gt; value = Optional.ofNullable(map.get(<span class="string">&quot;key&quot;</span>));</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Before</span></span><br><span class="line">Object value = map.get(<span class="string">"key"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line">Optional&lt;Object&gt; value = Optional.ofNullable(map.get(<span class="string">"key"</span>));</span><br></pre></td></tr></table></figure>
 <h3 id="예외의-Optional"><a href="#예외의-Optional" class="headerlink" title="예외의 Optional"></a>예외의 Optional</h3><p>문자열을 정수 Optional로 변환</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Optional&lt;Integer&gt; <span class="title function_">stringToInt</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Optional.of(Integer.parseInt(s)); <span class="comment">// 문자열을 정수로 변환할 수 잇으면 정수로 변환된 값을 포함하는 Optional을 반환한다.</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">        <span class="keyword">return</span> Optional.empty(); <span class="comment">// 그렇지 않으면 빈 Optiona을 반환한다.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="응용"><a href="#응용" class="headerlink" title="응용"></a>응용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Properties</span> <span class="variable">props</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">props.setProperty(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;5&quot;</span>);</span><br><span class="line">props.setProperty(<span class="string">&quot;b&quot;</span>, <span class="string">&quot;true&quot;</span>);</span><br><span class="line">props.setProperty(<span class="string">&quot;c&quot;</span>, <span class="string">&quot;-3&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Before</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">readDurationImperative</span><span class="params">(Properties props, String name)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">value</span> <span class="operator">=</span> props.getProperty(name);</span><br><span class="line">    <span class="keyword">if</span> (value != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> Integer.parseInt(value);</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NumberFormatException nfe) &#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">readDurationWithOptional</span><span class="params">(Properties props, String name)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> Optional.ofNullable(props.getProperty(name))</span><br><span class="line">            .flatMap(s -&gt; stringToInt(s))</span><br><span class="line">            .filter(i -&gt; i &gt; <span class="number">0</span>).orElse(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jaehyun8719/java-study/tree/master/java-in-action8/src/main/java/me/action/chapter8"><img src="/images/github.png" width="200"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Optional&lt;Integer&gt; <span class="title">stringToInt</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Optional.of(Integer.parseInt(s)); <span class="comment">// 문자열을 정수로 변환할 수 잇으면 정수로 변환된 값을 포함하는 Optional을 반환한다.</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (NumberFormatException e) &#123;</span><br><span class="line">        <span class="keyword">return</span> Optional.empty(); <span class="comment">// 그렇지 않으면 빈 Optiona을 반환한다.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="응용"><a href="#응용" class="headerlink" title="응용"></a>응용</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Properties props = <span class="keyword">new</span> Properties();</span><br><span class="line">props.setProperty(<span class="string">"a"</span>, <span class="string">"5"</span>);</span><br><span class="line">props.setProperty(<span class="string">"b"</span>, <span class="string">"true"</span>);</span><br><span class="line">props.setProperty(<span class="string">"c"</span>, <span class="string">"-3"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Before</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readDurationImperative</span><span class="params">(Properties props, String name)</span> </span>&#123;</span><br><span class="line">    String value = props.getProperty(name);</span><br><span class="line">    <span class="keyword">if</span> (value != <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">int</span> i = Integer.parseInt(value);</span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NumberFormatException nfe) &#123; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// After</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">readDurationWithOptional</span><span class="params">(Properties props, String name)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Optional.ofNullable(props.getProperty(name))</span><br><span class="line">            .flatMap(s -&gt; stringToInt(s))</span><br><span class="line">            .filter(i -&gt; i &gt; <span class="number">0</span>).orElse(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/java-study/tree/master/java-in-action8/src/main/java/me/action/chapter8" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123">http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123</a></li>
+<li><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123" rel="external nofollow noopener noreferrer" target="_blank">http://www.hanbit.co.kr/store/books/look.php?p_code=B1999551123</a></li>
 </ul>
 
     </div>
@@ -448,7 +447,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-%EC%A0%81%EC%9A%A9-%ED%8C%A8%ED%84%B4"><span class="nav-number">1.</span> <span class="nav-text">Optional 적용 패턴</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional-%EA%B0%9D%EC%B2%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="nav-number">1.1.</span> <span class="nav-text">Optional 객체 만들기</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%B9%88-Optional"><span class="nav-number">1.1.1.</span> <span class="nav-text">빈 Optional</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%92%EC%9C%BC%EB%A1%9C-Optional-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="nav-number">1.1.2.</span> <span class="nav-text">null이 아닌 값으로 Optional 만들기</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null%EA%B0%92%EC%9C%BC%EB%A1%9C-Optional-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="nav-number">1.1.3.</span> <span class="nav-text">null값으로 Optional 만들기</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%94%94%ED%8F%B4%ED%8A%B8-%EC%95%A1%EC%85%98%EA%B3%BC-Optional-%EC%96%B8%EB%9E%A9"><span class="nav-number">1.2.</span> <span class="nav-text">디폴트 액션과 Optional 언랩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%9D%98-%EB%A9%94%EC%84%9C%EB%93%9C"><span class="nav-number">2.</span> <span class="nav-text">Optional 클래스의 메서드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%9C-%EC%8B%A4%EC%9A%A9-%EC%98%88%EC%A0%9C"><span class="nav-number">3.</span> <span class="nav-text">Optional을 사용한 실용 예제</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9E%A0%EC%9E%AC%EC%A0%81%EC%9C%BC%EB%A1%9C-null%EC%9D%B4-%EB%90%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EB%8C%80%EC%83%81%EC%9D%84-Optional%EB%A1%9C-%EA%B0%90%EC%8B%B8%EA%B8%B0"><span class="nav-number">3.1.</span> <span class="nav-text">잠재적으로 null이 될 수 있는 대상을 Optional로 감싸기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%98%88%EC%99%B8%EC%9D%98-Optional"><span class="nav-number">3.2.</span> <span class="nav-text">예외의 Optional</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%91%EC%9A%A9"><span class="nav-number">4.</span> <span class="nav-text">응용</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%86%8C%EC%8A%A4%EC%BD%94%EB%93%9C"><span class="nav-number">5.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">6.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-적용-패턴"><span class="nav-number">1.</span> <span class="nav-text">Optional 적용 패턴</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional-객체-만들기"><span class="nav-number">1.1.</span> <span class="nav-text">Optional 객체 만들기</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#빈-Optional"><span class="nav-number">1.1.1.</span> <span class="nav-text">빈 Optional</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null이-아닌-값으로-Optional-만들기"><span class="nav-number">1.1.2.</span> <span class="nav-text">null이 아닌 값으로 Optional 만들기</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#null값으로-Optional-만들기"><span class="nav-number">1.1.3.</span> <span class="nav-text">null값으로 Optional 만들기</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#디폴트-액션과-Optional-언랩"><span class="nav-number">1.2.</span> <span class="nav-text">디폴트 액션과 Optional 언랩</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-클래스의-메서드"><span class="nav-number">2.</span> <span class="nav-text">Optional 클래스의 메서드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional을-사용한-실용-예제"><span class="nav-number">3.</span> <span class="nav-text">Optional을 사용한 실용 예제</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#잠재적으로-null이-될-수-있는-대상을-Optional로-감싸기"><span class="nav-number">3.1.</span> <span class="nav-text">잠재적으로 null이 될 수 있는 대상을 Optional로 감싸기</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#예외의-Optional"><span class="nav-number">3.2.</span> <span class="nav-text">예외의 Optional</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#응용"><span class="nav-number">4.</span> <span class="nav-text">응용</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">5.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">6.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -462,20 +461,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -541,26 +540,18 @@
 
   
   <script src="/lib/anime.min.js"></script>
-
 <script src="/js/utils.js"></script>
-
-
 <script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
 
 
-
   
 
 
 
 
-  
-<script src="/js/local-search.js"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 

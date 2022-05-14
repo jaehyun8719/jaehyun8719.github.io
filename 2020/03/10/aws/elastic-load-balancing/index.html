@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,12 +22,13 @@
   </script>
 
   <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta name="keywords" content="AWS, AWS Elastic Load Balancing, AWS 서버 트래픽 분산, AWS Elastic Load Balancing 생성, AWS Elastic Load Balancing 설정, AWS Elastic Load Balancing 방법, AWS ELB, AWS ELB 생성, AWS ELB 설정, AWS ELB 방법, AWS ELB 서버, AWS 로드밸런서, AWS 로드밸런서 생성, AWS 로드밸런서 설정, AWS 로드밸런서 방법">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Elastic Load Balancing">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
 <meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-2.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-3.png">
@@ -52,12 +53,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-22.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-23.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-24.png">
-<meta property="article:published_time" content="2020-03-09T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:52:50.122Z">
-<meta property="article:author" content="Jaehyun">
-<meta property="article:tag" content="AWS">
-<meta property="article:tag" content="AWS Elastic Load Balancing">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.122Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS Elastic Load Balancing">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/elastic-load-balancing/elastic-load-balancing-1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/">
@@ -162,17 +161,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -287,7 +286,7 @@
 
       
         <hr>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.<br>2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><span id="more"></span></p>
+<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 AWS Elastic Load Balancing 생성 방법에 대해서 설명한다.<br>2020년 03월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
 <h2 id="Elastic-Load-Balancing"><a href="#Elastic-Load-Balancing" class="headerlink" title="Elastic Load Balancing"></a>Elastic Load Balancing</h2><p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-1.png" alt></p>
 <p>Elastic Load Balancing(ELB, 이하 로드 밸런서)은 위에 그림에 <code>로드 밸런서</code>의 역할을 하는 AWS 서비스 이다. <code>클라이언트</code>의 요청을 직접 받고 그 요청을 <code>로드 밸런서</code>가 관리하고 있는 <code>서버</code>들에게 여러개의 요청을 골고루 전달해주는 역할을 한다. 단점으로는 AWS에서 로드 밸런서의 기능을 하는 서버를 내부적으로 관리해주기 때문에 우리가 직접 SSH로 접속할 수는 없다. </p>
 <div class="note info no-icon">
@@ -377,7 +376,7 @@
 <p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-20.png" alt></p>
 <h3 id="인스턴스-확인"><a href="#인스턴스-확인" class="headerlink" title="인스턴스 확인"></a>인스턴스 확인</h3><p><code>Instance management</code> 탭 </p>
 <p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-21.png" alt></p>
-<h3 id="두-서버에-SSH-접속-후-실시간-로그-확인"><a href="#두-서버에-SSH-접속-후-실시간-로그-확인" class="headerlink" title="두 서버에 SSH 접속 후 실시간 로그 확인"></a>두 서버에 SSH 접속 후 실시간 로그 확인</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> /opt/nginx/logs</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">tail</span> -f access.log</span></span><br></pre></td></tr></table></figure>
+<h3 id="두-서버에-SSH-접속-후-실시간-로그-확인"><a href="#두-서버에-SSH-접속-후-실시간-로그-확인" class="headerlink" title="두 서버에 SSH 접속 후 실시간 로그 확인"></a>두 서버에 SSH 접속 후 실시간 로그 확인</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> /opt/nginx/logs</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> tail -f access.log</span></span><br></pre></td></tr></table></figure>
 <p><img src="/images/aws/elastic-load-balancing/elastic-load-balancing-22.png" alt></p>
 <div class="note info no-icon">
             <p>Elastic Load Balancing 에서 200코드로 2개의 서버에 Health Check를 하고 있는것을 확인할 수 있다.</p>
@@ -390,8 +389,8 @@
           </div>
 <h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>운영 중 Elastic Load Balancing으로 하나의 서버가 장애가 발생했을 경우 다른 서버에 분산할 수 있다는 것을 알았다. 하지만 Elastic Load Balancing만으로는 서버의 개수를 유동적으로 할 수 없다는 단점이 있는데, Auto Scaling 그룹으로 서버의 개수를 유동적으로 할 수 있다는 강점이 생긴다. 하나의 기능보다 AWS는 여러 가 기능을 결합하여 잘 사용하면 더 좋은 서비스를 구현할 수 있다고 생각을 한다.</p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">https://wikibook.co.kr/aws-infra/</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html">https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html</a></li>
+<li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/userguide/what-is-load-balancing.html</a></li>
 </ul>
 
     </div>
@@ -484,7 +483,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Elastic-Load-Balancing"><span class="nav-number">1.</span> <span class="nav-text">Elastic Load Balancing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8C%80%EC%83%81-%EA%B7%B8%EB%A3%B9"><span class="nav-number">2.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C%EC%9D%98-%EC%83%81%ED%83%9C-%EA%B2%80%EC%82%AC"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서의 상태 검사</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-%EA%B7%B8%EB%A3%B9-%EB%8C%80%EC%83%81-%EA%B7%B8%EB%A3%B9-%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%8A%A4-%EA%B5%AC%EC%84%B1"><span class="nav-number">4.</span> <span class="nav-text">Auto Scaling 그룹, 대상 그룹, 로드 밸런스 구성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EC%83%9D%EC%84%B1"><span class="nav-number">4.1.</span> <span class="nav-text">로드 밸런서 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EC%9C%A0%ED%98%95-%EC%84%A0%ED%83%9D"><span class="nav-number">4.2.</span> <span class="nav-text">로드 밸런서 유형 선택</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EA%B5%AC%EC%84%B1"><span class="nav-number">4.2.1.</span> <span class="nav-text">로드 밸런서 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%B3%B4%EC%95%88-%EC%84%A4%EC%A0%95-%EA%B5%AC%EC%84%B1"><span class="nav-number">4.2.2.</span> <span class="nav-text">보안 설정 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%B3%B4%EC%95%88-%EA%B7%B8%EB%A3%B9-%EA%B5%AC%EC%84%B1"><span class="nav-number">4.2.3.</span> <span class="nav-text">보안 그룹 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%9D%BC%EC%9A%B0%ED%8C%85-%EB%93%B1%EB%A1%9D"><span class="nav-number">4.2.4.</span> <span class="nav-text">라우팅 등록</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EB%8C%80%EC%83%81-%EA%B7%B8%EB%A3%B9-1"><span class="nav-number">4.2.5.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EA%B2%80%ED%86%A0"><span class="nav-number">4.2.6.</span> <span class="nav-text">검토</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EC%83%9D%EC%84%B1-%ED%99%95%EC%9D%B8"><span class="nav-number">4.3.</span> <span class="nav-text">로드 밸런서 생성 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Scaling-%EA%B7%B8%EB%A3%B9%EC%97%90-%EB%8C%80%EC%83%81-%EA%B7%B8%EB%A3%B9-%EC%B6%94%EA%B0%80"><span class="nav-number">4.4.</span> <span class="nav-text">Auto Scaling 그룹에 대상 그룹 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EC%9E%91%EB%8F%99-%ED%99%95%EC%9D%B8"><span class="nav-number">4.5.</span> <span class="nav-text">로드 밸런서 작동 확인</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9E%A5%EC%95%A0-%EC%A1%B0%EC%B9%98-%EA%B5%AC%EC%84%B1"><span class="nav-number">5.</span> <span class="nav-text">장애 조치 구성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-%EA%B7%B8%EB%A3%B9%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9E%A5%EC%95%A0-%EC%A1%B0%EC%B9%98"><span class="nav-number">6.</span> <span class="nav-text">Auto Scaling 그룹을 이용한 장애 조치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-%EA%B7%B8%EB%A3%B9%EA%B3%BC-%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C%EB%A5%BC-%ED%86%B5%ED%95%9C-%EC%9E%A5%EC%95%A0-%EC%A1%B0%EC%B9%98"><span class="nav-number">7.</span> <span class="nav-text">Auto Scaling 그룹과 로드 밸런서를 통한 장애 조치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A1%9C%EB%93%9C-%EB%B0%B8%EB%9F%B0%EC%84%9C-%EC%83%81%ED%83%9C-%EA%B2%80%EC%82%AC-%ED%8E%B8%EC%A7%91"><span class="nav-number">7.1.</span> <span class="nav-text">로드 밸런서 상태 검사 편집</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Scaling-%EC%9B%90%ED%95%98%EB%8A%94-%EC%9A%A9%EB%9F%89-%EC%B5%9C%EC%86%8C-%EA%B7%B8%EB%A3%B9-%ED%81%AC%EA%B8%B0-%EB%B3%80%EA%B2%BD"><span class="nav-number">7.2.</span> <span class="nav-text">Auto Scaling 원하는 용량, 최소 그룹 크기 변경</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%ED%99%95%EC%9D%B8"><span class="nav-number">7.3.</span> <span class="nav-text">인스턴스 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%91%90-%EC%84%9C%EB%B2%84%EC%97%90-SSH-%EC%A0%91%EC%86%8D-%ED%9B%84-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EB%A1%9C%EA%B7%B8-%ED%99%95%EC%9D%B8"><span class="nav-number">7.4.</span> <span class="nav-text">두 서버에 SSH 접속 후 실시간 로그 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9E%A5%EC%95%A0-%EB%B0%9C%EC%83%9D-%EC%B2%98%EB%A6%AC"><span class="nav-number">7.5.</span> <span class="nav-text">장애 발생 처리</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%A0%95%EB%A6%AC"><span class="nav-number">8.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Elastic-Load-Balancing"><span class="nav-number">1.</span> <span class="nav-text">Elastic Load Balancing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#대상-그룹"><span class="nav-number">2.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#로드-밸런서의-상태-검사"><span class="nav-number">3.</span> <span class="nav-text">로드 밸런서의 상태 검사</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-그룹-대상-그룹-로드-밸런스-구성"><span class="nav-number">4.</span> <span class="nav-text">Auto Scaling 그룹, 대상 그룹, 로드 밸런스 구성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-생성"><span class="nav-number">4.1.</span> <span class="nav-text">로드 밸런서 생성</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-유형-선택"><span class="nav-number">4.2.</span> <span class="nav-text">로드 밸런서 유형 선택</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#로드-밸런서-구성"><span class="nav-number">4.2.1.</span> <span class="nav-text">로드 밸런서 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#보안-설정-구성"><span class="nav-number">4.2.2.</span> <span class="nav-text">보안 설정 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#보안-그룹-구성"><span class="nav-number">4.2.3.</span> <span class="nav-text">보안 그룹 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#라우팅-등록"><span class="nav-number">4.2.4.</span> <span class="nav-text">라우팅 등록</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#대상-그룹-1"><span class="nav-number">4.2.5.</span> <span class="nav-text">대상 그룹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#검토"><span class="nav-number">4.2.6.</span> <span class="nav-text">검토</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-생성-확인"><span class="nav-number">4.3.</span> <span class="nav-text">로드 밸런서 생성 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Scaling-그룹에-대상-그룹-추가"><span class="nav-number">4.4.</span> <span class="nav-text">Auto Scaling 그룹에 대상 그룹 추가</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-작동-확인"><span class="nav-number">4.5.</span> <span class="nav-text">로드 밸런서 작동 확인</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#장애-조치-구성"><span class="nav-number">5.</span> <span class="nav-text">장애 조치 구성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-그룹을-이용한-장애-조치"><span class="nav-number">6.</span> <span class="nav-text">Auto Scaling 그룹을 이용한 장애 조치</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-그룹과-로드-밸런서를-통한-장애-조치"><span class="nav-number">7.</span> <span class="nav-text">Auto Scaling 그룹과 로드 밸런서를 통한 장애 조치</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#로드-밸런서-상태-검사-편집"><span class="nav-number">7.1.</span> <span class="nav-text">로드 밸런서 상태 검사 편집</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Scaling-원하는-용량-최소-그룹-크기-변경"><span class="nav-number">7.2.</span> <span class="nav-text">Auto Scaling 원하는 용량, 최소 그룹 크기 변경</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#인스턴스-확인"><span class="nav-number">7.3.</span> <span class="nav-text">인스턴스 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#두-서버에-SSH-접속-후-실시간-로그-확인"><span class="nav-number">7.4.</span> <span class="nav-text">두 서버에 SSH 접속 후 실시간 로그 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#장애-발생-처리"><span class="nav-number">7.5.</span> <span class="nav-text">장애 발생 처리</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#정리"><span class="nav-number">8.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">9.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -498,20 +497,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -577,26 +576,18 @@
 
   
   <script src="/lib/anime.min.js"></script>
-
 <script src="/js/utils.js"></script>
-
-
 <script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
 
 
-
   
 
 
 
 
-  
-<script src="/js/local-search.js"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 

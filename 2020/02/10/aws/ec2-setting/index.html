@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.2.0">
+<meta name="generator" content="Hexo 3.9.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -22,12 +22,13 @@
   </script>
 
   <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta name="keywords" content="AWS, AWS EC2, AWS EC2 생성, AWS EC2 Instance Setting, AWS EC2 생성, AWS EC2 설정, AWS EC2 방법, 아마존 인스턴스 생성, 아마존 인스턴스 설정">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS EC2 서버 인스턴스 생성">
 <meta property="og:url" content="https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
 <meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-1.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-2.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-3.png">
@@ -48,12 +49,10 @@
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-18.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-19.png">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-20.png">
-<meta property="article:published_time" content="2020-02-09T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:52:50.122Z">
-<meta property="article:author" content="Jaehyun">
-<meta property="article:tag" content="AWS">
-<meta property="article:tag" content="AWS EC2 Setting">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.122Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS EC2 서버 인스턴스 생성">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/ec2-setting/ec2-setting-1.png">
 
 <link rel="canonical" href="https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/">
@@ -158,17 +157,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">41</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">37</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">11</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -283,12 +282,12 @@
 
       
         <hr>
-<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.<br>2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><span id="more"></span></p>
+<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 Amazon Elastic Compute Cloud(Amazon EC2) 초기 생성 방법에 대해서 설명한다.<br>2020년 02월 10일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
 <h2 id="EC2"><a href="#EC2" class="headerlink" title="EC2"></a>EC2</h2><p>EC2(Elastic Compute Cloud)는 우리가 쉽게 사양을 고르고 원하는 시간만큼 사용할 수 있는 <code>가상 서버</code>라고 이해하면 되고, 서버 구축하고 보안 및 네트워크 구성과 스토리지 관리가 가능하다. 그리고 트래픽을 예측하여 서버 사양을 구성하지 않고 유동적으로 서버 사양을 변경할 수 있다.</p>
 <h2 id="EC2-생성시-알아야할-기본-개념"><a href="#EC2-생성시-알아야할-기본-개념" class="headerlink" title="EC2 생성시 알아야할 기본 개념"></a>EC2 생성시 알아야할 기본 개념</h2><h3 id="AMI-Amazon-Machine-Image"><a href="#AMI-Amazon-Machine-Image" class="headerlink" title="AMI(Amazon Machine Image)"></a>AMI(Amazon Machine Image)</h3><p>AMI는 우리가 생성할(Window, Linux 등) EC2 인스턴스의 기반이 되는 이미지이다. 예를 들어 윈도우 설치를 할 때 ISO, CD를 이용하여서 설치 한다고 생각하면 된다.</p>
 <h3 id="보안-그룹"><a href="#보안-그룹" class="headerlink" title="보안 그룹"></a>보안 그룹</h3><p>보안을 위해 IP와 포트 번호를 이용해 정의해서 사용하는 서버 접속 규칙이다. 예를 들어 방화벽으로 특정 IP, 포트 접속을 차단하는 것과 비슷 하게 생각하면 된다.</p>
 <h3 id="키-페어"><a href="#키-페어" class="headerlink" title="키 페어"></a>키 페어</h3><p>서버에 접속하기 위한 열쇠 라고 이해하면 된다. 공개 키 암호화 기법으로 개인키 유출시 허가 받지 않은사람도 서버에 접속 할 수 있으니 개인키는 안전하게 보관해야 된다.</p>
-<h2 id="AWS-EC2-인스턴스-생성"><a href="#AWS-EC2-인스턴스-생성" class="headerlink" title="AWS EC2 인스턴스 생성"></a>AWS EC2 인스턴스 생성</h2><p>서울리전에 프리 티어 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/amazon-linux-2/">Amazon Linux 2 AMI</a>을 인스턴스를 생성 할 것이다. 기존 (<a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/amazon-linux-ami/">Amazon Linux AMI 2018.03.0</a>)은 2020년 12월 31일부로 표준 지원이 종료 된다.)</p>
+<h2 id="AWS-EC2-인스턴스-생성"><a href="#AWS-EC2-인스턴스-생성" class="headerlink" title="AWS EC2 인스턴스 생성"></a>AWS EC2 인스턴스 생성</h2><p>서울리전에 프리 티어 <a href="https://aws.amazon.com/ko/amazon-linux-2/" rel="external nofollow noopener noreferrer" target="_blank">Amazon Linux 2 AMI</a>을 인스턴스를 생성 할 것이다. 기존 (<a href="https://aws.amazon.com/ko/amazon-linux-ami/" rel="external nofollow noopener noreferrer" target="_blank">Amazon Linux AMI 2018.03.0</a>)은 2020년 12월 31일부로 표준 지원이 종료 된다.)</p>
 <h3 id="EC2-인스턴스-생성"><a href="#EC2-인스턴스-생성" class="headerlink" title="EC2 인스턴스 생성"></a>EC2 인스턴스 생성</h3><h4 id="AWS에-로그인한-뒤-AWS-콘솔에-접속하고-한국-리전을-선택"><a href="#AWS에-로그인한-뒤-AWS-콘솔에-접속하고-한국-리전을-선택" class="headerlink" title="AWS에 로그인한 뒤 AWS 콘솔에 접속하고, 한국 리전을 선택"></a>AWS에 로그인한 뒤 AWS 콘솔에 접속하고, 한국 리전을 선택</h4><p><img src="/images/aws/ec2-setting/ec2-setting-1.png" alt></p>
 <h4 id="서비스-메뉴-클릭-후-EC2-검색-하여-EC2-선택"><a href="#서비스-메뉴-클릭-후-EC2-검색-하여-EC2-선택" class="headerlink" title="서비스 메뉴 클릭 후 EC2 검색 하여 EC2 선택"></a><code>서비스</code> 메뉴 클릭 후 <code>EC2</code> 검색 하여 <code>EC2</code> 선택</h4><p><img src="/images/aws/ec2-setting/ec2-setting-2.png" width="800px"></p>
 <h4 id="왼쪽-인스턴스-선택하고-오른쪽-인스턴스-시작-선택"><a href="#왼쪽-인스턴스-선택하고-오른쪽-인스턴스-시작-선택" class="headerlink" title="왼쪽 인스턴스 선택하고 오른쪽 인스턴스 시작 선택"></a>왼쪽 <code>인스턴스</code> 선택하고 오른쪽 <code>인스턴스 시작</code> 선택</h4><p><img src="/images/aws/ec2-setting/ec2-setting-3.png" alt></p>
@@ -336,7 +335,7 @@
 <div class="note info no-icon">
             <p>퍼블릭 도메인과 IP는 별도의 설정을 하지 않는 이상 인스턴스가 꺼질 때 사라지고 다시 켜질 때마다 새로 할당 받는다.</p>
           </div>
-<h2 id="PuTTy를-이용한-접속-방법-window-기준-설명"><a href="#PuTTy를-이용한-접속-방법-window-기준-설명" class="headerlink" title="PuTTy를 이용한 접속 방법(window 기준 설명)"></a>PuTTy를 이용한 접속 방법(window 기준 설명)</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTy 설치 링크</a></p>
+<h2 id="PuTTy를-이용한-접속-방법-window-기준-설명"><a href="#PuTTy를-이용한-접속-방법-window-기준-설명" class="headerlink" title="PuTTy를 이용한 접속 방법(window 기준 설명)"></a>PuTTy를 이용한 접속 방법(window 기준 설명)</h2><p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" rel="external nofollow noopener noreferrer" target="_blank">PuTTy 설치 링크</a></p>
 <ol>
 <li>PuTTy 프로그램을 AWS에서 내려받은 키 페어 파일을 바로 사용할 수 없다. 그래서 <code>PuTTy Key Generator</code>를 이용해서 키 페어 파일을 변환 시켜야 된다.</li>
 <li><code>Load</code> -&gt; <code>키페어 파일 로드</code> -&gt; <code>RSA 선택</code> -&gt; <code>Save Private Key</code><br><img src="/images/aws/ec2-setting/ec2-setting-15.png" alt></li>
@@ -347,10 +346,10 @@
 <li>접속 확인<br><img src="/images/aws/ec2-setting/ec2-setting-20.png" alt></li>
 </ol>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wikibook.co.kr/aws-infra/">https://wikibook.co.kr/aws-infra/</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/amazon-linux-2/">https://aws.amazon.com/ko/amazon-linux-2/</a></li>
-<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/amazon-linux-ami/">https://aws.amazon.com/ko/amazon-linux-ami/</a></li>
+<li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/concepts.html</a></li>
+<li><a href="https://aws.amazon.com/ko/amazon-linux-2/" rel="external nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/ko/amazon-linux-2/</a></li>
+<li><a href="https://aws.amazon.com/ko/amazon-linux-ami/" rel="external nofollow noopener noreferrer" target="_blank">https://aws.amazon.com/ko/amazon-linux-ami/</a></li>
 </ul>
 
     </div>
@@ -443,7 +442,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2"><span class="nav-number">1.</span> <span class="nav-text">EC2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2-%EC%83%9D%EC%84%B1%EC%8B%9C-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%A0-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90"><span class="nav-number">2.</span> <span class="nav-text">EC2 생성시 알아야할 기본 개념</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI-Amazon-Machine-Image"><span class="nav-number">2.1.</span> <span class="nav-text">AMI(Amazon Machine Image)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%B3%B4%EC%95%88-%EA%B7%B8%EB%A3%B9"><span class="nav-number">2.2.</span> <span class="nav-text">보안 그룹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%82%A4-%ED%8E%98%EC%96%B4"><span class="nav-number">2.3.</span> <span class="nav-text">키 페어</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS-EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%9D%EC%84%B1"><span class="nav-number">3.</span> <span class="nav-text">AWS EC2 인스턴스 생성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%9D%EC%84%B1"><span class="nav-number">3.1.</span> <span class="nav-text">EC2 인스턴스 생성</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AWS%EC%97%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%9C-%EB%92%A4-AWS-%EC%BD%98%EC%86%94%EC%97%90-%EC%A0%91%EC%86%8D%ED%95%98%EA%B3%A0-%ED%95%9C%EA%B5%AD-%EB%A6%AC%EC%A0%84%EC%9D%84-%EC%84%A0%ED%83%9D"><span class="nav-number">3.1.1.</span> <span class="nav-text">AWS에 로그인한 뒤 AWS 콘솔에 접속하고, 한국 리전을 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%84%9C%EB%B9%84%EC%8A%A4-%EB%A9%94%EB%89%B4-%ED%81%B4%EB%A6%AD-%ED%9B%84-EC2-%EA%B2%80%EC%83%89-%ED%95%98%EC%97%AC-EC2-%EC%84%A0%ED%83%9D"><span class="nav-number">3.1.2.</span> <span class="nav-text">서비스 메뉴 클릭 후 EC2 검색 하여 EC2 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%99%BC%EC%AA%BD-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%84%A0%ED%83%9D%ED%95%98%EA%B3%A0-%EC%98%A4%EB%A5%B8%EC%AA%BD-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%8B%9C%EC%9E%91-%EC%84%A0%ED%83%9D"><span class="nav-number">3.1.3.</span> <span class="nav-text">왼쪽 인스턴스 선택하고 오른쪽 인스턴스 시작 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMI-%EC%84%A0%ED%83%9D-AWS%EC%97%90-%EB%8D%94-%EB%A7%9E%EA%B2%8C-%ED%8A%9C%EB%8B%9D%ED%95%9C-Amazon-Linux2-%EC%84%A0%ED%83%9D"><span class="nav-number">3.1.4.</span> <span class="nav-text">AMI 선택(AWS에 더 맞게 튜닝한 Amazon Linux2 선택)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%9C%A0%ED%98%95-%EC%84%A0%ED%83%9D-%ED%94%84%EB%A6%AC-%ED%8B%B0%EC%96%B4-%EC%84%A0%ED%83%9D"><span class="nav-number">3.1.5.</span> <span class="nav-text">인스턴스 유형 선택(프리 티어 선택)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%84%B8%EB%B6%80-%EC%A0%95%EB%B3%B4-%EA%B5%AC%EC%84%B1-%EA%B8%B0%EB%B3%B8-%EC%84%A4%EC%A0%95%EA%B0%92-%EC%82%AC%EC%9A%A9"><span class="nav-number">3.1.6.</span> <span class="nav-text">인스턴스 세부 정보 구성(기본 설정값 사용)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%A0%80%EC%9E%A5-%EC%9E%A5%EC%B9%98-%EC%84%A0%ED%83%9D-%EA%B8%B0%EB%B3%B8-%EC%84%A4%EC%9E%A5%EA%B0%92-%EC%82%AC%EC%9A%A9"><span class="nav-number">3.1.7.</span> <span class="nav-text">EC2 인스턴스 저장 장치 선택(기본 설장값 사용)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EC2-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%97%90-%ED%83%9C%EA%B7%B8%EB%A5%BC-%EC%A7%80%EC%A0%95"><span class="nav-number">3.1.8.</span> <span class="nav-text">EC2 인스턴스에 태그를 지정</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%91%EA%B7%BC%EC%9D%84-%EC%A0%9C%EC%96%B4%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%B3%B4%EC%95%88-%EA%B7%B8%EB%A3%B9"><span class="nav-number">3.1.9.</span> <span class="nav-text">인스턴스에 대한 접근을 제어하기 위한 보안 그룹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80-%EC%84%A4%EC%A0%95%ED%95%9C-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%84%A4%EC%A0%95%EA%B0%92-%EA%B2%80%ED%86%A0-%EC%99%84%EB%A3%8C%ED%9B%84-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%ED%81%B4%EB%A6%AD"><span class="nav-number">3.1.10.</span> <span class="nav-text">지금까지 설정한 인스턴스 설정값 검토 완료후 시작하기 클릭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EA%B8%B0%EC%A1%B4-%ED%82%A4%ED%8E%98%EC%96%B4-%EC%84%A0%ED%83%9D-%EB%98%90%EB%8A%94-%EC%83%88%ED%82%A4-%ED%8E%98%EC%96%B4-%EC%83%9D%EC%84%B1-%EC%B0%BD"><span class="nav-number">3.1.11.</span> <span class="nav-text">기존 키페어 선택 또는 새키 페어 생성 창</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EB%B3%B4%EA%B8%B0-%EB%B2%84%ED%8A%BC%EC%9D%84-%ED%81%B4%EB%A6%AD%ED%95%B4-%EC%83%9D%EC%84%B1-%EC%A4%91%EC%9D%B8-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%ED%99%95%EC%9D%B8"><span class="nav-number">3.1.12.</span> <span class="nav-text">인스턴스 보기 버튼을 클릭해 생성 중인 인스턴스 확인</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%ED%99%95%EC%9D%B8"><span class="nav-number">3.2.</span> <span class="nav-text">인스턴스 확인</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8"><span class="nav-number">3.2.1.</span> <span class="nav-text">인스턴스 상태 확인</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%84%A4%EC%A0%95-%ED%99%95%EC%9D%B8-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%A0%95%EB%B3%B4%EB%A7%8C-%ED%99%95%EC%9D%B8"><span class="nav-number">3.2.2.</span> <span class="nav-text">인스턴스 설정 확인 (간단한 정보만 확인)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PuTTy%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%91%EC%86%8D-%EB%B0%A9%EB%B2%95-window-%EA%B8%B0%EC%A4%80-%EC%84%A4%EB%AA%85"><span class="nav-number">4.</span> <span class="nav-text">PuTTy를 이용한 접속 방법(window 기준 설명)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%B0%B8%EC%A1%B0"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2"><span class="nav-number">1.</span> <span class="nav-text">EC2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EC2-생성시-알아야할-기본-개념"><span class="nav-number">2.</span> <span class="nav-text">EC2 생성시 알아야할 기본 개념</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI-Amazon-Machine-Image"><span class="nav-number">2.1.</span> <span class="nav-text">AMI(Amazon Machine Image)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#보안-그룹"><span class="nav-number">2.2.</span> <span class="nav-text">보안 그룹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#키-페어"><span class="nav-number">2.3.</span> <span class="nav-text">키 페어</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS-EC2-인스턴스-생성"><span class="nav-number">3.</span> <span class="nav-text">AWS EC2 인스턴스 생성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EC2-인스턴스-생성"><span class="nav-number">3.1.</span> <span class="nav-text">EC2 인스턴스 생성</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AWS에-로그인한-뒤-AWS-콘솔에-접속하고-한국-리전을-선택"><span class="nav-number">3.1.1.</span> <span class="nav-text">AWS에 로그인한 뒤 AWS 콘솔에 접속하고, 한국 리전을 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#서비스-메뉴-클릭-후-EC2-검색-하여-EC2-선택"><span class="nav-number">3.1.2.</span> <span class="nav-text">서비스 메뉴 클릭 후 EC2 검색 하여 EC2 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#왼쪽-인스턴스-선택하고-오른쪽-인스턴스-시작-선택"><span class="nav-number">3.1.3.</span> <span class="nav-text">왼쪽 인스턴스 선택하고 오른쪽 인스턴스 시작 선택</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMI-선택-AWS에-더-맞게-튜닝한-Amazon-Linux2-선택"><span class="nav-number">3.1.4.</span> <span class="nav-text">AMI 선택(AWS에 더 맞게 튜닝한 Amazon Linux2 선택)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스-유형-선택-프리-티어-선택"><span class="nav-number">3.1.5.</span> <span class="nav-text">인스턴스 유형 선택(프리 티어 선택)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스-세부-정보-구성-기본-설정값-사용"><span class="nav-number">3.1.6.</span> <span class="nav-text">인스턴스 세부 정보 구성(기본 설정값 사용)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EC2-인스턴스-저장-장치-선택-기본-설장값-사용"><span class="nav-number">3.1.7.</span> <span class="nav-text">EC2 인스턴스 저장 장치 선택(기본 설장값 사용)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EC2-인스턴스에-태그를-지정"><span class="nav-number">3.1.8.</span> <span class="nav-text">EC2 인스턴스에 태그를 지정</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스에-대한-접근을-제어하기-위한-보안-그룹"><span class="nav-number">3.1.9.</span> <span class="nav-text">인스턴스에 대한 접근을 제어하기 위한 보안 그룹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#지금까지-설정한-인스턴스-설정값-검토-완료후-시작하기-클릭"><span class="nav-number">3.1.10.</span> <span class="nav-text">지금까지 설정한 인스턴스 설정값 검토 완료후 시작하기 클릭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#기존-키페어-선택-또는-새키-페어-생성-창"><span class="nav-number">3.1.11.</span> <span class="nav-text">기존 키페어 선택 또는 새키 페어 생성 창</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스-보기-버튼을-클릭해-생성-중인-인스턴스-확인"><span class="nav-number">3.1.12.</span> <span class="nav-text">인스턴스 보기 버튼을 클릭해 생성 중인 인스턴스 확인</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#인스턴스-확인"><span class="nav-number">3.2.</span> <span class="nav-text">인스턴스 확인</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스-상태-확인"><span class="nav-number">3.2.1.</span> <span class="nav-text">인스턴스 상태 확인</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#인스턴스-설정-확인-간단한-정보만-확인"><span class="nav-number">3.2.2.</span> <span class="nav-text">인스턴스 설정 확인 (간단한 정보만 확인)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PuTTy를-이용한-접속-방법-window-기준-설명"><span class="nav-number">4.</span> <span class="nav-text">PuTTy를 이용한 접속 방법(window 기준 설명)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,20 +456,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -536,26 +535,18 @@
 
   
   <script src="/lib/anime.min.js"></script>
-
 <script src="/js/utils.js"></script>
-
-
 <script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
 
 
-
   
 
 
 
 
-  
-<script src="/js/local-search.js"></script>
-
+  <script src="/js/local-search.js"></script>
 
 
 
