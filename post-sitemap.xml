@@ -9,15 +9,7 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2022/05/14/jpa/persistence-context/</loc>
-        <lastmod>2022-05-14T18:16:01.546Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
-        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
+        <lastmod>2022-05-14T18:23:33.180Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,6 +17,14 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
+        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
         <lastmod>2022-04-08T07:52:50.128Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -168,31 +168,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/09/09/javascript/es6/chapter3/</loc>
-        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
-        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
-        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/09/16/javascript/es6/chapter4/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -208,6 +184,30 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/08/24/javascript/es6/chapter1/</loc>
+        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/09/javascript/es6/chapter3/</loc>
+        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/09/16/javascript/es6/chapter4/</loc>
+        <lastmod>2022-04-08T07:52:50.124Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -216,7 +216,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -224,7 +224,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -264,7 +264,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/</loc>
+        <loc>https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +272,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/03/10/aws/elastic-load-balancing/</loc>
+        <loc>https://jaehyun8719.github.io/2020/02/10/aws/ec2-setting/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
