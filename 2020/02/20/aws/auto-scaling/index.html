@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="Pg-g7AfnjOtI6NvJXfL7bXm8Sdk-e9JrzGqq3jab2OE">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto Sans:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Auto Scaling 생성 방법에 대해서 설명한다.2020년 02월 20일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta name="keywords" content="AWS, AWS Auto Scaling, AWS Auto Scaling 그룹, AWS 오토스케일링, AWS Auto Scaling 생성, AWS Auto Scaling 설정, AWS Auto Scaling 방법, 아마존 오토스케일링 생성, 아마존 오토스케일링 설정">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Auto Scaling">
+<meta property="og:url" content="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/index.html">
+<meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
+<meta property="og:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Auto Scaling 생성 방법에 대해서 설명한다.2020년 02월 20일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-1.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-2.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-3.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-4.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-5.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-6.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-7.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-8.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-9.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-10.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-11.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-12.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-13.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-14.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-15.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-16.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-17.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-18.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-19.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-20.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-21.png">
+<meta property="og:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-22.png">
+<meta property="og:updated_time" content="2022-04-08T07:52:50.122Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS Auto Scaling">
+<meta name="twitter:description" content="서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 를 읽고 실습 한 내용이고 Amazon Auto Scaling 생성 방법에 대해서 설명한다.2020년 02월 20일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.">
+<meta name="twitter:image" content="https://jaehyun8719.github.io/images/aws/auto-scaling/auto-scaling-1.png">
+
+<link rel="canonical" href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>AWS Auto Scaling | Jaehyun's Dev Story</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158660323-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158660323-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Jaehyun's Dev Story</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">공부해서 남준다.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">44</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">36</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/jaehyun8719" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jaehyun">
+      <meta itemprop="description" content>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jaehyun's Dev Story">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AWS Auto Scaling
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-20 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-20T00:00:00+09:00">2020-02-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AWS/" itemprop="url" rel="index"><span itemprop="name">AWS</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2020/02/20/aws/auto-scaling/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/02/20/aws/auto-scaling/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <hr>
+<p><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">서비스 운영이 쉬워지는 AWS 인프라 구축 가이드</a> 를 읽고 실습 한 내용이고 Amazon Auto Scaling 생성 방법에 대해서 설명한다.<br>2020년 02월 20일 기준으로 AWS UI가 변경 될 수 있으니, 참고 하길 바란다.<br><a id="more"></a></p>
+<h2 id="Auto-Scaling"><a href="#Auto-Scaling" class="headerlink" title="Auto Scaling"></a>Auto Scaling</h2><p>Auto Scaling 이란 트래픽에 따라 서버의 수를 자동으로 늘리고 줄이는 자동 조정(Auto Scaling) 이다. 예를 들어 하나의 인스턴스의 CPU사용률이 5분동안 80%이상을 넘어서면 Auto Scaling 그룹에서 똑같은 인스턴스를 하나 더 생성한다. 그래서 하나더 생성된 인스턴스를 통해서 분산 처리가 되어 CPU가 정상 범위로 내려오면, 똑같이 생성된 인스턴스는 자동으로 제거가 되면서 비용을 절감 할 수 있다.</p>
+<h2 id="AWS-Auto-Scaling-그룹의-구성"><a href="#AWS-Auto-Scaling-그룹의-구성" class="headerlink" title="AWS Auto Scaling 그룹의 구성"></a>AWS Auto Scaling 그룹의 구성</h2><p><img src="/images/aws/auto-scaling/auto-scaling-1.png" alt></p>
+<ol>
+<li>Auto Scaling 그룹을 생성하기 위해서는 생성할 EC2 인스턴스(B 인스턴스)를 선택</li>
+<li>B 인스턴스의 현재환경을 스냅숏으로 AMI 생성</li>
+<li>AMI를 이용해 어떤 사양의 인스턴스를 띄울지 미리 정의해두는 시작 템플릿 생성</li>
+<li>Auto Scaling 그룹에서 B 인스턴스의 환경을 갖고 있으며 시작 템플릿에서 정의된 설정으로 생성된 인스턴스들을 자동으로 생성</li>
+</ol>
+<h2 id="Auto-Scaling-그룹-생성"><a href="#Auto-Scaling-그룹-생성" class="headerlink" title="Auto Scaling 그룹 생성"></a>Auto Scaling 그룹 생성</h2><h3 id="AMI-이미지-생성-방법"><a href="#AMI-이미지-생성-방법" class="headerlink" title="AMI 이미지 생성 방법"></a>AMI 이미지 생성 방법</h3><h4 id="AMI-이미지-생성"><a href="#AMI-이미지-생성" class="headerlink" title="AMI 이미지 생성"></a>AMI 이미지 생성</h4><p><img src="/images/aws/auto-scaling/auto-scaling-2.png" alt></p>
+<div class="note info no-icon">
+            <p>EC2 인스턴스 스냅숏을 생성 할때는 안전하게 시스템을 <code>stopped</code>상태로 변경후 생성하는게 좋다.</p>
+          </div>
+<h4 id="이미지-생성-버튼-클릭"><a href="#이미지-생성-버튼-클릭" class="headerlink" title="이미지 생성 버튼 클릭"></a>이미지 생성 버튼 클릭</h4><p><img src="/images/aws/auto-scaling/auto-scaling-3.png" alt></p>
+<h4 id="이미지-생성-요청-성공"><a href="#이미지-생성-요청-성공" class="headerlink" title="이미지 생성 요청 성공"></a>이미지 생성 요청 성공</h4><p><img src="/images/aws/auto-scaling/auto-scaling-4.png" alt></p>
+<h3 id="시작-템플릿-생성-방법"><a href="#시작-템플릿-생성-방법" class="headerlink" title="시작 템플릿 생성 방법"></a>시작 템플릿 생성 방법</h3><h4 id="시작-템플릿-생성"><a href="#시작-템플릿-생성" class="headerlink" title="시작 템플릿 생성"></a>시작 템플릿 생성</h4><p><img src="/images/aws/auto-scaling/auto-scaling-5.png" alt></p>
+<h4 id="시작-템플릿-설정-값-지정"><a href="#시작-템플릿-설정-값-지정" class="headerlink" title="시작 템플릿 설정 값 지정"></a>시작 템플릿 설정 값 지정</h4><p><img src="/images/aws/auto-scaling/auto-scaling-6.png" alt></p>
+<ol>
+<li>시작 템플릿 이름 입력</li>
+<li>AMI ID는 AMI에서 생성된 이미지 AMI ID 입력후 선택</li>
+<li>인스턴스 유형 선택</li>
+<li>기존에 만들었어 키페어 선택</li>
+<li>VPC 선택</li>
+<li><code>web, ssh</code> 의 보안 그룹 적용(테스트할 보안 그룹 적용 하면 됨)</li>
+</ol>
+<h4 id="시작-템플릿-생성-확인"><a href="#시작-템플릿-생성-확인" class="headerlink" title="시작 템플릿 생성 확인"></a>시작 템플릿 생성 확인</h4><p><img src="/images/aws/auto-scaling/auto-scaling-7.png" alt></p>
+<h4 id="메뉴에서-시작-템플릿-생성-확인"><a href="#메뉴에서-시작-템플릿-생성-확인" class="headerlink" title="메뉴에서 시작 템플릿 생성 확인"></a>메뉴에서 시작 템플릿 생성 확인</h4><p><img src="/images/aws/auto-scaling/auto-scaling-8.png" alt></p>
+<h3 id="Auto-Scaling-그룹"><a href="#Auto-Scaling-그룹" class="headerlink" title="Auto Scaling 그룹"></a>Auto Scaling 그룹</h3><h4 id="Auto-Scaling-그룹-생성-1"><a href="#Auto-Scaling-그룹-생성-1" class="headerlink" title="Auto Scaling 그룹 생성"></a>Auto Scaling 그룹 생성</h4><p><img src="/images/aws/auto-scaling/auto-scaling-9.png" alt></p>
+<h4 id="생성한-시작템플릿을-연결"><a href="#생성한-시작템플릿을-연결" class="headerlink" title="생성한 시작템플릿을 연결"></a>생성한 시작템플릿을 연결</h4><p><img src="/images/aws/auto-scaling/auto-scaling-10.png" alt></p>
+<div class="note info no-icon">
+            <p>시작 템플릿이 생성되지 않으면 아래 목록에 보이지 않는다.</p>
+          </div>
+<h4 id="Auto-Scaling-그룹-세부-정보-구성"><a href="#Auto-Scaling-그룹-세부-정보-구성" class="headerlink" title="Auto Scaling 그룹 세부 정보 구성"></a>Auto Scaling 그룹 세부 정보 구성</h4><p>서브넷은 인스턴스들을 어떤 네트워크 망에 띄울 것인지 정하는 것이며, ap-northeast-2a와 ap-northeast-2c의 기본값 모두 지정한다.<br>인스턴스들 중 절반은 서울 리전의 a 가용 여역에, 다른 절반은 서울 리전의 c 가용 영역에 생성한다는 의미이다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-11.png" alt></p>
+<h4 id="조정-정책-구성"><a href="#조정-정책-구성" class="headerlink" title="조정 정책 구성"></a>조정 정책 구성</h4><p>인스턴스 수를 자동으로 조절하기 위한 화면이며, 최소 1개에서 최대 2개의 인스턴스를 실행하게 해서 평균 CPU 사용률 80%를 기준으로 설정한다.<br>이와 같은 설정을 하면 Auto Scaling 그룹 내에서 CPU 사용률리 80% 넘는지 안 넘는지에 따라 인스턴스의 수가 최소 1개에서 최대 2개로 자동으로 변하게 된다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-12.png" alt></p>
+<h4 id="알림-구성"><a href="#알림-구성" class="headerlink" title="알림 구성"></a>알림 구성</h4><p>인스턴스의 변화가 있을 경우 알림을 받을 수 있으나, 현재 알림 설정에 대해서는 넘어간다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-13.png" alt></p>
+<h4 id="태그-구성"><a href="#태그-구성" class="headerlink" title="태그 구성"></a>태그 구성</h4><p><img src="/images/aws/auto-scaling/auto-scaling-14.png" alt></p>
+<h4 id="검토"><a href="#검토" class="headerlink" title="검토"></a>검토</h4><p><img src="/images/aws/auto-scaling/auto-scaling-15.png" alt></p>
+<h4 id="Auto-Scaling-그룹-생성-완료"><a href="#Auto-Scaling-그룹-생성-완료" class="headerlink" title="Auto Scaling 그룹 생성 완료"></a>Auto Scaling 그룹 생성 완료</h4><p><img src="/images/aws/auto-scaling/auto-scaling-16.png" alt></p>
+<h4 id="Auto-Scaling-그룹-화면-구성"><a href="#Auto-Scaling-그룹-화면-구성" class="headerlink" title="Auto Scaling 그룹 화면 구성"></a>Auto Scaling 그룹 화면 구성</h4><p><img src="/images/aws/auto-scaling/auto-scaling-17.png" alt></p>
+<p>각 탭에 있는 간단한 내용 정리</p>
+<table>
+<thead>
+<tr>
+<th>탭 이름</th>
+<th>항목 이름</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>세부 정보</td>
+<td>원하는 용량</td>
+<td>그룹 내 목표로 하는 인스턴스 수, 사용자가 임의로 지정할 수도 있고 자동 조정 정책에 맞게 이 값이 바뀔 수 있다. 이 값이 변경되면 Auto Scaling 그룹에서는 현재 정상 상태인 인스턴스 수가 그 값과 같아질 때까지 인스턴스를 생성하거나 줄인다.</td>
+</tr>
+<tr>
+<td></td>
+<td>최소, 최대 그룹 크기</td>
+<td>이 그룹 내 최소 / 최대로 유지할 인스턴스 수, 예를 들어 최소가 2이면 자동 조정 정책이나 사람에 의해 인스턴스 수를 2개 미만으로 줄일 수 없다.</td>
+</tr>
+<tr>
+<td></td>
+<td>시작 템플릿</td>
+<td>어떤 설정(AMI 종류, EC2 인스턴스 설정 등등)을 갖고 인스턴스를 생성할 것인지 지정해 놓은 설정, 과거에는 시작 구성을 이용했지만 지금은 새로 나온 기능인 시작 템플릿을 이용하도록 추천하고 있다.</td>
+</tr>
+<tr>
+<td></td>
+<td>클래식 로드 밸런서 / 대상 그룹</td>
+<td>어떤 로드 밸런스로부터 클라이언트 요청을 받을 것인지 지정한다. 하나도 없을 때는 요청을 받지 않는다. 과거에는 클래식 로드 밸런서를 사용했지만 지금은 새로 나온 기능인 애플리케이션 로드 밸런서와 대상 그룹을 사용하는 것을 추천하고 있다.</td>
+</tr>
+<tr>
+<td></td>
+<td>태그</td>
+<td>Auto Scaling 그룹 내 생성될 인스턴스들에 자동으로 지정할 태그 목록을 보여준다.</td>
+</tr>
+<tr>
+<td>활동 기록</td>
+<td></td>
+<td>Auto Scaling 그룹 내 인스턴스의 실행, 종료, 실패 등에 대한 로그가 남는다. 자동으로 진행되기 때문에 문제가 발생했을 때 해당 기록을 보면 어떤 일들이 일어났는지 파악하기 쉽다.</td>
+</tr>
+<tr>
+<td>조정 정책</td>
+<td></td>
+<td>자동으로 인스턴스를 늘리고 줄이기 위한 정책들을 표시한다. 기본적인 설정으로 CPU 사용량, 네트워크 사용량으로 처리할 수 있다. AWS CloudWatch를 통한 추가 설정을 하면 메모리 사용량, 디스크 사용량, 외부 지표 등 다양한 경우에 대해서도 인스턴스 수를 조절할 수 있다.</td>
+</tr>
+<tr>
+<td></td>
+<td>예약된 작업</td>
+<td>CPU와 같은 자원에 대한 조건이 아닌 조건으로 삼아 특정 시간에 인스턴스수를 변화시킬 수 있는 설정 목록을 보여준다. Cron 표현식을 이용해 매주 월요일 오전 5시와 같은 복잡한 규칙의 작업도 생성할 수 있다.</td>
+</tr>
+<tr>
+<td>인스턴스</td>
+<td>인스턴스 관리</td>
+<td>이 그룹에서 관리하고 있는 인스턴스들의 목록을 보여준다. 실행 중인 인스턴스뿐만 아니라 새로 실행되고 있거나 종료 중인 인스턴스들까지 모두 표시된다.</td>
+</tr>
+<tr>
+<td></td>
+<td>인스턴스 ID</td>
+<td>인스턴스의 고유 ID, 이 아이디를 이용해 <code>인스턴스</code> 메뉴에서 직접 인스턴스를 찾을 수 있다.</td>
+</tr>
+<tr>
+<td></td>
+<td>수명 주기</td>
+<td>현재 인스턴스의 상태, 생성 중, 서비스 중(InService), 종료 중 등의 상태를 가지고있고 InService 상태인 경우에만 정상적으로 서비스 중임을 나타낸다.</td>
+</tr>
+<tr>
+<td></td>
+<td>시작 구성 / 템플릿</td>
+<td>어떤 시작 구성이나 시작 템플릿을 이용해서 생성된 인스턴스인지 나타낸다.</td>
+</tr>
+<tr>
+<td></td>
+<td>수명 주기 후크</td>
+<td>Auto Scaling 그룹 내 인스턴스의 생명주기에 후크를 걸어 인스턴스의 변화가 있을 때마다 외부 서비스와 연동할 수 있다. 현재 걸려 있는 후크들의 목록을 보여준다.</td>
+</tr>
+<tr>
+<td>모니터링</td>
+<td></td>
+<td>그룹 지표 수집을 활성화해둔 경우 Auto Scaling 그룹에 대한 모니터링 그래프들을 보여준다. 인스턴스 수 변화 추이 등의 데이터를 확인할 수 있다.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Auto-Scaling을-통한-인스턴스-자동-추가-제거"><a href="#Auto-Scaling을-통한-인스턴스-자동-추가-제거" class="headerlink" title="Auto Scaling을 통한 인스턴스 자동 추가, 제거"></a>Auto Scaling을 통한 인스턴스 자동 추가, 제거</h2><p><code>EXCERCISE_GROUP</code>에 대해 CPU 사용률이 80%넘으면 인스턴스를 추가하고, 80%이하로 떨어지면 인스턴스를 하나 줄이는 조정 정책을 추가하였다.</p>
+<h3 id="편집-EXERCISE-GROUP"><a href="#편집-EXERCISE-GROUP" class="headerlink" title="편집 EXERCISE_GROUP"></a>편집 EXERCISE_GROUP</h3><p>편집 버튼을 눌러 이동한다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-18.png" alt></p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-19.png" alt></p>
+<div class="note info no-icon">
+            <p>이 설정은 EXERCISE-GROUP에서 관리하는 인스턴스를 1대 실행할 것이고, 사용자나 자동 스케일링 조건에 의해 인스턴스 수가 늘어도 최대 2대까지만 가능하며 인스턴스가 줄어도 최소 1대는 실행 중이어야 한다는 뜻이다.</p>
+          </div>
+<h3 id="인스턴스-상태-확인"><a href="#인스턴스-상태-확인" class="headerlink" title="인스턴스 상태 확인"></a>인스턴스 상태 확인</h3><p>인스턴스 탭에서 실행된 하나의 인스턴스의 상태가 <code>InServie</code>가 될 때까지 기다린다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-20.png" alt></p>
+<h3 id="실행중인-인스턴스-확인"><a href="#실행중인-인스턴스-확인" class="headerlink" title="실행중인 인스턴스 확인"></a>실행중인 인스턴스 확인</h3><p>AMI 으로 생성한 <code>exercise-group</code> 인스턴스가 <code>runnung</code>중인 걸 확인한다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-21.png" alt></p>
+<h3 id="테스트-putty-접속"><a href="#테스트-putty-접속" class="headerlink" title="테스트(putty 접속)"></a>테스트(putty 접속)</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo amazon-linux-extras install epel</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo yum install stress -y</span></span><br><span class="line"></span><br><span class="line"><span class="meta">$</span><span class="bash"> stress --cpu 1 --timeout 600</span></span><br><span class="line">stress: info: [4281] dispatching hogs: 1 cpu, 0 io, 0 vm, 0 hdd</span><br></pre></td></tr></table></figure>
+<div class="note info no-icon">
+            <p>600초 동안 1개의 CPU 사용량을 최대로 늘린다. 그러면 5분 ~ 10분 뒤에 하나의 인스턴스가 더 생성 된다.</p>
+          </div>
+<h3 id="추가된-인스턴스-생성-확인"><a href="#추가된-인스턴스-생성-확인" class="headerlink" title="추가된 인스턴스 생성 확인"></a>추가된 인스턴스 생성 확인</h3><p>생성 확인후 CPU 사용률이 다시 정상적으로 줄어든 후 대기 시간인 300초 가 지나면 인스턴스 수가 1대로 줄어든다.</p>
+<p><img src="/images/aws/auto-scaling/auto-scaling-22.png" alt></p>
+<div class="note info no-icon">
+            <p>실습을 모두 끝낸 후 모든 Auto Scaling 그룹 내의 인스턴스를 종료하고 싶다면 <code>최대 그룹 크기</code>를 <code>0</code>으로 해주면 된다. 인스턴스를 직접 중지하거나 종료하면 Auto Scaling 내에 <code>최소 그룹 크기</code>가 <code>1</code>로 설정 되어 인스턴스를 하나 더 자동으로 생성한다.</p>
+          </div>
+<h2 id="정리"><a href="#정리" class="headerlink" title="정리"></a>정리</h2><p>Auto Scaling은 AMI를 이용해서 인스턴스를 생성하며, 그 과정에 보안 그룹 등 다양한 설정들을 지정해야 한다. 시작 템플릿이라는 설정 파일에 그 설정을 저장해 두고 Auto Scaling 그룹에서 가져다 쓰는 방식이다. 실습을 하고 나서 한가지 궁금한점이 생겼는데 Auto Scaling 그룹을 사용하게 된다면 <code>EC2 인스턴스</code>가 되어 직접 사용되지 않고 <code>AMI 인스터스</code>가 직접 사용하게 된다. <code>EC2 인스턴스가</code> 변경 되면 <code>AMI 인스턴스</code>를 생성하기 위해서는 모든 작업 다시 해야된다는 문제점이 있다. 문제점을 해결하려고 찾아봤는데 추 후에 공부하게 될 배포 자동화로 해결을 하면 된다. 궁금하니 배포 자동화를 공부 해야 겠다. </p>
+<h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
+<li><a href="https://wikibook.co.kr/aws-infra/" rel="external nofollow noopener noreferrer" target="_blank">https://wikibook.co.kr/aws-infra/</a></li>
+<li><a href="https://docs.aws.amazon.com/ko_kr/autoscaling/plans/userguide/what-is-aws-auto-scaling.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.aws.amazon.com/ko_kr/autoscaling/plans/userguide/what-is-aws-auto-scaling.html</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/AWS/" rel="tag"># AWS</a>
+              <a href="/tags/AWS-Auto-Scailing/" rel="tag"># AWS Auto Scailing</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/10/aws/ec2-setting/" rel="prev" title="AWS EC2 서버 인스턴스 생성">
+      <i class="fa fa-chevron-left"></i> AWS EC2 서버 인스턴스 생성
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/10/aws/elastic-load-balancing/" rel="next" title="AWS Elastic Load Balancing">
+      AWS Elastic Load Balancing <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling"><span class="nav-number">1.</span> <span class="nav-text">Auto Scaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AWS-Auto-Scaling-그룹의-구성"><span class="nav-number">2.</span> <span class="nav-text">AWS Auto Scaling 그룹의 구성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling-그룹-생성"><span class="nav-number">3.</span> <span class="nav-text">Auto Scaling 그룹 생성</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AMI-이미지-생성-방법"><span class="nav-number">3.1.</span> <span class="nav-text">AMI 이미지 생성 방법</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AMI-이미지-생성"><span class="nav-number">3.1.1.</span> <span class="nav-text">AMI 이미지 생성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#이미지-생성-버튼-클릭"><span class="nav-number">3.1.2.</span> <span class="nav-text">이미지 생성 버튼 클릭</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#이미지-생성-요청-성공"><span class="nav-number">3.1.3.</span> <span class="nav-text">이미지 생성 요청 성공</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#시작-템플릿-생성-방법"><span class="nav-number">3.2.</span> <span class="nav-text">시작 템플릿 생성 방법</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#시작-템플릿-생성"><span class="nav-number">3.2.1.</span> <span class="nav-text">시작 템플릿 생성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#시작-템플릿-설정-값-지정"><span class="nav-number">3.2.2.</span> <span class="nav-text">시작 템플릿 설정 값 지정</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#시작-템플릿-생성-확인"><span class="nav-number">3.2.3.</span> <span class="nav-text">시작 템플릿 생성 확인</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#메뉴에서-시작-템플릿-생성-확인"><span class="nav-number">3.2.4.</span> <span class="nav-text">메뉴에서 시작 템플릿 생성 확인</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto-Scaling-그룹"><span class="nav-number">3.3.</span> <span class="nav-text">Auto Scaling 그룹</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Auto-Scaling-그룹-생성-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">Auto Scaling 그룹 생성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#생성한-시작템플릿을-연결"><span class="nav-number">3.3.2.</span> <span class="nav-text">생성한 시작템플릿을 연결</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Auto-Scaling-그룹-세부-정보-구성"><span class="nav-number">3.3.3.</span> <span class="nav-text">Auto Scaling 그룹 세부 정보 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#조정-정책-구성"><span class="nav-number">3.3.4.</span> <span class="nav-text">조정 정책 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#알림-구성"><span class="nav-number">3.3.5.</span> <span class="nav-text">알림 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#태그-구성"><span class="nav-number">3.3.6.</span> <span class="nav-text">태그 구성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#검토"><span class="nav-number">3.3.7.</span> <span class="nav-text">검토</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Auto-Scaling-그룹-생성-완료"><span class="nav-number">3.3.8.</span> <span class="nav-text">Auto Scaling 그룹 생성 완료</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Auto-Scaling-그룹-화면-구성"><span class="nav-number">3.3.9.</span> <span class="nav-text">Auto Scaling 그룹 화면 구성</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-Scaling을-통한-인스턴스-자동-추가-제거"><span class="nav-number">4.</span> <span class="nav-text">Auto Scaling을 통한 인스턴스 자동 추가, 제거</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#편집-EXERCISE-GROUP"><span class="nav-number">4.1.</span> <span class="nav-text">편집 EXERCISE_GROUP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#인스턴스-상태-확인"><span class="nav-number">4.2.</span> <span class="nav-text">인스턴스 상태 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#실행중인-인스턴스-확인"><span class="nav-number">4.3.</span> <span class="nav-text">실행중인 인스턴스 확인</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#테스트-putty-접속"><span class="nav-number">4.4.</span> <span class="nav-text">테스트(putty 접속)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#추가된-인스턴스-생성-확인"><span class="nav-number">4.5.</span> <span class="nav-text">추가된 인스턴스 생성 확인</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#정리"><span class="nav-number">5.</span> <span class="nav-text">정리</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">6.</span> <span class="nav-text">참조</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jaehyun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/jaehyun8719" title="GitHub → https://github.com/jaehyun8719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jaehyun8719@gmail.com" title="E-Mail → mailto:jaehyun8719@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → /atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jinsil</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'dark',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jaehyun8719.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/";
+    this.page.identifier = "2020/02/20/aws/auto-scaling/";
+    this.page.title = "AWS Auto Scaling";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://jaehyun8719.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
