@@ -9,7 +9,7 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2022/05/23/jpa/entity-mapping/</loc>
-        <lastmod>2022-05-23T12:15:01.609Z</lastmod>
+        <lastmod>2022-05-23T13:28:27.216Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -216,7 +216,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -224,7 +224,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -256,7 +256,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/</loc>
+        <loc>https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -264,7 +264,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/</loc>
+        <loc>https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
