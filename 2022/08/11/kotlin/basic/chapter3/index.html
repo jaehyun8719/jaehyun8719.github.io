@@ -30,7 +30,7 @@
 <meta property="og:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 Type을 다루는 방법에 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2022-08-11T12:36:40.143Z">
+<meta property="og:updated_time" content="2022-08-12T10:35:18.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="자바 개발자를 위한 코틀린 입문 - 3. 코틀린에서 Type을 다루는 방법">
 <meta name="twitter:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 Type을 다루는 방법에 대해서 설명한다.">
@@ -148,7 +148,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">39</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">40</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -278,7 +278,7 @@
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printAgeIfPerson</span><span class="params">(obj: <span class="type">Any</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj !<span class="keyword">is</span> Person) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="as"><a href="#as" class="headerlink" title="as?"></a>as?</h3><p><code>as?</code>를 이용해서 Object 앖이 null 인지를 체크 할 수 있다.</p>
 <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    printAgeIfPerson(<span class="literal">null</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printAgeIfAsPerson</span><span class="params">(obj: <span class="type">Any</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> person = obj <span class="keyword">as</span>? Person</span><br><span class="line">    println(person?.age)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="특이한-타입-3다지"><a href="#특이한-타입-3다지" class="headerlink" title="특이한 타입 3다지"></a>특이한 타입 3다지</h2><h3 id="Any"><a href="#Any" class="headerlink" title="Any"></a>Any</h3><ul>
+<h2 id="특이한-타입-3가지"><a href="#특이한-타입-3가지" class="headerlink" title="특이한 타입 3가지"></a>특이한 타입 3가지</h2><h3 id="Any"><a href="#Any" class="headerlink" title="Any"></a>Any</h3><ul>
 <li>JAVA의 Object 역할</li>
 <li>모든 Primitive Type의 최상의 타입도 Any</li>
 <li>Any 자체로는 null을 포함할 수 없어 null 포함하고 싶다면, Any?로 표현</li>
@@ -326,7 +326,10 @@
     <a href="/2022/08/11/kotlin/basic/chapter2/" rel="prev" title="자바 개발자를 위한 코틀린 입문 - 2. 코틀린에서 null을 다루는 방법">
       <i class="fa fa-chevron-left"></i> 자바 개발자를 위한 코틀린 입문 - 2. 코틀린에서 null을 다루는 방법
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/08/12/kotlin/basic/chapter4/" rel="next" title="자바 개발자를 위한 코틀린 입문 - 4. 코틀린에서 연사자를 다루는 방법">
+      자바 개발자를 위한 코틀린 입문 - 4. 코틀린에서 연사자를 다루는 방법 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -392,7 +395,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#기본타입"><span class="nav-number">1.</span> <span class="nav-text">기본타입</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#타입-캐스팅"><span class="nav-number">2.</span> <span class="nav-text">타입 캐스팅</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#is-as"><span class="nav-number">2.1.</span> <span class="nav-text">is, as</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#is"><span class="nav-number">3.</span> <span class="nav-text">!is</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#as"><span class="nav-number">3.1.</span> <span class="nav-text">as?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#특이한-타입-3다지"><span class="nav-number">4.</span> <span class="nav-text">특이한 타입 3다지</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Any"><span class="nav-number">4.1.</span> <span class="nav-text">Any</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unit"><span class="nav-number">4.2.</span> <span class="nav-text">Unit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nothing"><span class="nav-number">4.3.</span> <span class="nav-text">Nothing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-interpolation-String-indexing"><span class="nav-number">5.</span> <span class="nav-text">String interpolation / String indexing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-interpolation"><span class="nav-number">5.1.</span> <span class="nav-text">String interpolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-indexing"><span class="nav-number">5.2.</span> <span class="nav-text">String indexing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">6.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">7.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#기본타입"><span class="nav-number">1.</span> <span class="nav-text">기본타입</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#타입-캐스팅"><span class="nav-number">2.</span> <span class="nav-text">타입 캐스팅</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#is-as"><span class="nav-number">2.1.</span> <span class="nav-text">is, as</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#is"><span class="nav-number">3.</span> <span class="nav-text">!is</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#as"><span class="nav-number">3.1.</span> <span class="nav-text">as?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#특이한-타입-3가지"><span class="nav-number">4.</span> <span class="nav-text">특이한 타입 3가지</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Any"><span class="nav-number">4.1.</span> <span class="nav-text">Any</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unit"><span class="nav-number">4.2.</span> <span class="nav-text">Unit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nothing"><span class="nav-number">4.3.</span> <span class="nav-text">Nothing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String-interpolation-String-indexing"><span class="nav-number">5.</span> <span class="nav-text">String interpolation / String indexing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-interpolation"><span class="nav-number">5.1.</span> <span class="nav-text">String interpolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-indexing"><span class="nav-number">5.2.</span> <span class="nav-text">String indexing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">6.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">7.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -406,7 +409,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
