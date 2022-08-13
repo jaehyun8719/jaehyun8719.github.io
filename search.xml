@@ -3912,4 +3912,29 @@ limit --> collect
         <tag>kotlin basic</tag>
       </tags>
   </entry>
+  <entry>
+    <title>자바 개발자를 위한 코틀린 입문 - 6. 코틀린에서 반복문을 다루는 방법</title>
+    <url>/2022/08/13/kotlin/basic/chapter6/</url>
+    <content><![CDATA[<hr>
+<p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 반복문을 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
+<h2 id="for-each-문"><a href="#for-each-문" class="headerlink" title="for each 문"></a>for each 문</h2><figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = listOf(<span class="number">1L</span>, <span class="number">2L</span>, <span class="number">3L</span>)</span><br><span class="line"><span class="keyword">for</span> (number <span class="keyword">in</span> numbers) &#123;</span><br><span class="line">    println(number)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 전통적인 for문</span></span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..<span class="number">3</span>) &#123;</span><br><span class="line">    println(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 숫자가 내려가는 for문</span></span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">3</span> downTo <span class="number">1</span>) &#123;</span><br><span class="line">    println(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2씩 올리는 경우</span></span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..<span class="number">5</span> step <span class="number">2</span>) &#123;</span><br><span class="line">    println(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Progression과-Range"><a href="#Progression과-Range" class="headerlink" title="Progression과 Range"></a>Progression과 Range</h2><h3 id="연산자"><a href="#연산자" class="headerlink" title="..연산자"></a>..연산자</h3><ol>
+<li>.. 연산자는 범위를 만들어 내는 연산자로 1..3은 1부터 3의 범위를 나타낸다.</li>
+<li>IntRange는 IntProgression(등차수열)을 상속 받어 등차수열을 만든다.</li>
+<li>downTo, step 도 함수(중위 호출 함수)</li>
+</ol>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-basic/tree/6-loop" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
+<h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
+<li><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/java-to-kotlin</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>kotlin</category>
+        <category>kotlin basic</category>
+      </categories>
+      <tags>
+        <tag>kotlin</tag>
+        <tag>kotlin basic</tag>
+      </tags>
+  </entry>
 </search>
