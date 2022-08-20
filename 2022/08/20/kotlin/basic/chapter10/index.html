@@ -21,22 +21,22 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 함수를 다루는 방법에 대해서 설명한다.">
-<meta name="keywords" content="kotlin, kotlin 함수, kotlin default parameter, kotlin named argument, kotlin 가변인자, 코틀린 default parameter, 코틀린 named argument, 코틀린 가변인자">
+  <meta name="description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 상속을 다루는 방법에 대해서 설명한다.">
+<meta name="keywords" content="kotlin, kotlin 상속, kotlin inheritance, kotlin 추상 클래스, kotlin abstract, kotlin 인터페이스, kotlin interface, kotlin override, kotlin open, 코틀린 상속, 코틀린 inheritance, kotlin 추상 클래스, 코틀린 abstract, 코틀린 인터페이스, 코틀린 interface, 코틀린 override, 코틀린 open">
 <meta property="og:type" content="article">
-<meta property="og:title" content="자바 개발자를 위한 코틀린 입문 - 8. 코틀린에서 함수를 다루는 방법">
-<meta property="og:url" content="https://jaehyun8719.github.io/2022/08/18/kotlin/basic/chapter8/index.html">
+<meta property="og:title" content="자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법">
+<meta property="og:url" content="https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter10/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 함수를 다루는 방법에 대해서 설명한다.">
+<meta property="og:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 상속을 다루는 방법에 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2022-08-20T06:19:11.330Z">
+<meta property="og:updated_time" content="2022-08-20T08:47:03.060Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="자바 개발자를 위한 코틀린 입문 - 8. 코틀린에서 함수를 다루는 방법">
-<meta name="twitter:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 함수를 다루는 방법에 대해서 설명한다.">
+<meta name="twitter:title" content="자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법">
+<meta name="twitter:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 상속을 다루는 방법에 대해서 설명한다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/github.png">
 
-<link rel="canonical" href="https://jaehyun8719.github.io/2022/08/18/kotlin/basic/chapter8/">
+<link rel="canonical" href="https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter10/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>자바 개발자를 위한 코틀린 입문 - 8. 코틀린에서 함수를 다루는 방법 | Jaehyun's Dev Story</title>
+  <title>자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법 | Jaehyun's Dev Story</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158660323-1"></script>
     <script>
@@ -202,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2022/08/18/kotlin/basic/chapter8/">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -215,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          자바 개발자를 위한 코틀린 입문 - 8. 코틀린에서 함수를 다루는 방법
+          자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법
         </h1>
 
         <div class="post-meta">
@@ -225,7 +225,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-08-18 00:00:00" itemprop="dateCreated datePublished" datetime="2022-08-18T00:00:00+09:00">2022-08-18</time>
+              <time title="Created: 2022-08-20 20:00:00" itemprop="dateCreated datePublished" datetime="2022-08-20T20:00:00+09:00">2022-08-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -250,8 +250,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2022/08/18/kotlin/basic/chapter8/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/08/18/kotlin/basic/chapter8/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2022/08/20/kotlin/basic/chapter10/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/08/20/kotlin/basic/chapter10/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -267,15 +267,21 @@
 
       
         <hr>
-<p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 함수를 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
-<h2 id="함수-선언-문법"><a href="#함수-선언-문법" class="headerlink" title="함수 선언 문법"></a>함수 선언 문법</h2><p>if - else 문은 expression 이기때문에 아래와 같이 함수 선언이 가능하다.</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">max</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> b   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">max2</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span>: <span class="built_in">Int</span> =</span><br><span class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        a</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        b</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// type 추론이 가능하기때문에 type 생략 가능</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">max3</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = <span class="keyword">if</span> (a &gt; b) a <span class="keyword">else</span>  b</span><br></pre></td></tr></table></figure>
-<h2 id="default-parameter"><a href="#default-parameter" class="headerlink" title="default parameter"></a>default parameter</h2><p>JAVA에서 Overloading을 하여 parameter 값을 넣어줘야하는데, parameter 값이 없을떄는 default parameter 값이 적용된다.</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    repeat(<span class="string">"Hello World"</span>)</span><br><span class="line">    repeat(<span class="string">"Hello World"</span>, <span class="number">2</span>)</span><br><span class="line">    repeat(<span class="string">"Hello World"</span>, <span class="number">6</span>, <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">repeat</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    str: <span class="type">String</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    num: <span class="type">Int</span> = <span class="number">3</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    useNewLine: <span class="type">Boolean</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..num) &#123;</span><br><span class="line">        <span class="keyword">if</span> (useNewLine) &#123;</span><br><span class="line">            println(str)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            print(str)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="named-argument"><a href="#named-argument" class="headerlink" title="named argument"></a>named argument</h2><p>parameter를 통해서 직접 지정하고, 지정되지 않는 parameter는 기본값을 사용한다.</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    repeat(<span class="string">"Hello World"</span>, useNewLine = <span class="literal">false</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">repeat</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">    str: <span class="type">String</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    num: <span class="type">Int</span> = <span class="number">3</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">    useNewLine: <span class="type">Boolean</span> = <span class="literal">true</span></span></span></span><br><span class="line"><span class="function"><span class="params">)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">1</span>..num) &#123;</span><br><span class="line">        <span class="keyword">if</span> (useNewLine) &#123;</span><br><span class="line">            println(str)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            print(str)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="같은-타입의-여러-파라미터-받기-가변인자"><a href="#같은-타입의-여러-파라미터-받기-가변인자" class="headerlink" title="같은 타입의 여러 파라미터 받기 (가변인자)"></a>같은 타입의 여러 파라미터 받기 (가변인자)</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> basic</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    printAll(<span class="string">"A"</span>, <span class="string">"B"</span>, <span class="string">"C"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">val</span> array = arrayOf(<span class="string">"A"</span>, <span class="string">"B"</span>, <span class="string">"C"</span>)</span><br><span class="line">    printAll(*array) <span class="comment">// spread 연산자</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">printAll</span><span class="params">(<span class="keyword">vararg</span> strings: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (str <span class="keyword">in</span> strings) &#123;</span><br><span class="line">        println(str)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-basic/tree/8-fun" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
+<p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 상속을 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
+<h2 id="추상-클래스"><a href="#추상-클래스" class="headerlink" title="추상 클래스"></a>추상 클래스</h2><figure class="highlight kotlin"><figcaption><span>Animal.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>(</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">val</span> species: String,</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">open</span> <span class="keyword">val</span> legCount: <span class="built_in">Int</span>,</span><br><span class="line">) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">abstract</span> <span class="function"><span class="keyword">fun</span> <span class="title">move</span><span class="params">()</span></span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>상위 클래스의 생성자를 바로 호출</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Cat(</span><br><span class="line">    species: String</span><br><span class="line">) : Animal(species, 4) &#123;</span><br><span class="line"></span><br><span class="line">    override fun move() &#123;</span><br><span class="line">        println(&quot; 고양이가 사뿐 사뿐 걸어가~&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Penguin</span></span>(</span><br><span class="line">    species: String</span><br><span class="line">) : Animal(species, <span class="number">2</span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> wingCount: <span class="built_in">Int</span> = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">move</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(<span class="string">"펭귄이 움직인다~"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 프로퍼치를 override 할 때 무조건 open 을 붙여 줘야 한다.</span></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">val</span> legCount: <span class="built_in">Int</span></span><br><span class="line">        <span class="keyword">get</span>() = <span class="keyword">super</span>.legCount + <span class="keyword">this</span>.wingCount</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="인터페이스"><a href="#인터페이스" class="headerlink" title="인터페이스"></a>인터페이스</h2><figure class="highlight plain"><figcaption><span>Flyable.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">interface Flyable &#123;</span><br><span class="line"></span><br><span class="line">    fun act() &#123;</span><br><span class="line">        println(&quot;파닥 파닥&quot;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><figcaption><span>Swimable.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Swimable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">act</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(<span class="string">"어푸 어푸"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><figcaption><span>Penguin.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Penguin</span> </span>(</span><br><span class="line">    species: String</span><br><span class="line">) : Animal(species, <span class="number">2</span>), Swimable, Flyable &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> wingCount: <span class="built_in">Int</span> = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">move</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(<span class="string">"펭귄이 움직인다~"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">val</span> legCount: <span class="built_in">Int</span></span><br><span class="line">        <span class="keyword">get</span>() = <span class="keyword">super</span>.legCount + <span class="keyword">this</span>.wingCount</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 중복되는 인터페이스를 특정할때 `super&lt;타입&gt;.함수` 사용</span></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">act</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>&lt;Swimable&gt;.act()</span><br><span class="line">        <span class="keyword">super</span>&lt;Flyable&gt;.act()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="상속-관련-키워드"><a href="#상속-관련-키워드" class="headerlink" title="상속 관련 키워드"></a>상속 관련 키워드</h2><ol>
+<li>final: override를 할 수 없게 한다. default로 보이지 핞게 존재</li>
+<li>open: override를 열어 준다.</li>
+<li>abstract: 반드시 override 해야 한다.</li>
+<li>override: 상위 타입을 오버라이드 하고 있다.</li>
+</ol>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-basic/tree/10-inheritance" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
 <li><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/java-to-kotlin</a></li>
 </ul>
@@ -298,13 +304,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/08/13/kotlin/basic/chapter7/" rel="prev" title="자바 개발자를 위한 코틀린 입문 - 7. 코틀린에서 예외를 다루는 방법">
-      <i class="fa fa-chevron-left"></i> 자바 개발자를 위한 코틀린 입문 - 7. 코틀린에서 예외를 다루는 방법
+    <a href="/2022/08/20/kotlin/basic/chapter9/" rel="prev" title="자바 개발자를 위한 코틀린 입문 - 9. 코틀린에서 클래스를 다루는 방법">
+      <i class="fa fa-chevron-left"></i> 자바 개발자를 위한 코틀린 입문 - 9. 코틀린에서 클래스를 다루는 방법
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/08/20/kotlin/basic/chapter9/" rel="next" title="자바 개발자를 위한 코틀린 입문 - 9. 코틀린에서 클래스를 다루는 방법">
-      자바 개발자를 위한 코틀린 입문 - 9. 코틀린에서 클래스를 다루는 방법 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -370,7 +373,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#함수-선언-문법"><span class="nav-number">1.</span> <span class="nav-text">함수 선언 문법</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#default-parameter"><span class="nav-number">2.</span> <span class="nav-text">default parameter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#named-argument"><span class="nav-number">3.</span> <span class="nav-text">named argument</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#같은-타입의-여러-파라미터-받기-가변인자"><span class="nav-number">4.</span> <span class="nav-text">같은 타입의 여러 파라미터 받기 (가변인자)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">5.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">6.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#추상-클래스"><span class="nav-number">1.</span> <span class="nav-text">추상 클래스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#인터페이스"><span class="nav-number">2.</span> <span class="nav-text">인터페이스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#상속-관련-키워드"><span class="nav-number">3.</span> <span class="nav-text">상속 관련 키워드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">4.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">5.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -516,9 +519,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://jaehyun8719.github.io/2022/08/18/kotlin/basic/chapter8/";
-    this.page.identifier = "2022/08/18/kotlin/basic/chapter8/";
-    this.page.title = "자바 개발자를 위한 코틀린 입문 - 8. 코틀린에서 함수를 다루는 방법";
+    this.page.url = "https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter10/";
+    this.page.identifier = "2022/08/20/kotlin/basic/chapter10/";
+    this.page.title = "자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
