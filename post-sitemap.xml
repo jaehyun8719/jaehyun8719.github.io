@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter11/</loc>
-        <lastmod>2022-08-22T10:04:34.756Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2022/08/20/kotlin/basic/chapter12/</loc>
+        <lastmod>2022-08-22T10:51:55.738Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2022/08/22/kotlin/basic/chapter11/</loc>
+        <lastmod>2022-08-22T10:18:00.773Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
