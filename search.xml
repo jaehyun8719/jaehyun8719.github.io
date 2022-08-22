@@ -4141,7 +4141,7 @@ limit --> collect
   </entry>
   <entry>
     <title>자바 개발자를 위한 코틀린 입문 - 12. 코틀린에서 object를 다루는 방법</title>
-    <url>/2022/08/20/kotlin/basic/chapter12/</url>
+    <url>/2022/08/22/kotlin/basic/chapter12/</url>
     <content><![CDATA[<hr>
 <p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 object를 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
 <h2 id="static-함수와-변수"><a href="#static-함수와-변수" class="headerlink" title="static 함수와 변수"></a>static 함수와 변수</h2><p>companion object(동행 객체)는 클래스와 동일하는 유일한 오브젝트 이다.<br>const를 붙이는 이유는 컴파일시 값을 할당한다.</p>
