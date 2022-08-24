@@ -21,22 +21,22 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 접근 제어를 다루는 방법에 대해서 설명한다.">
-<meta name="keywords" content="kotlin, kotlin 접근 제어, kotlin visibility modifier, kotlin public, kotlin protected, kotlin internal, kotlin private, 코틀린 public, 코틀린 protected, 코틀린 internal, 코틀린 private, 코틀린 접근 제어, 코틀린 visibility modifier">
+  <meta name="description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 컬렉션을 다루는 방법에 대해서 설명한다.">
+<meta name="keywords" content="kotlin, kotlin array, kotlin collection, - [kotlin, kotlin basic]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="자바 개발자를 위한 코틀린 입문 - 11. 코틀린에서 접근 제어를 다루는 방법">
-<meta property="og:url" content="https://jaehyun8719.github.io/2022/08/22/kotlin/basic/chapter11/index.html">
+<meta property="og:title" content="자바 개발자를 위한 코틀린 입문 - 14. 코틀린에서 컬렉션을 다루는 방법">
+<meta property="og:url" content="https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 접근 제어를 다루는 방법에 대해서 설명한다.">
+<meta property="og:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 컬렉션을 다루는 방법에 대해서 설명한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2022-08-22T10:18:00.773Z">
+<meta property="og:updated_time" content="2022-08-24T12:29:08.004Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="자바 개발자를 위한 코틀린 입문 - 11. 코틀린에서 접근 제어를 다루는 방법">
-<meta name="twitter:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 접근 제어를 다루는 방법에 대해서 설명한다.">
+<meta name="twitter:title" content="자바 개발자를 위한 코틀린 입문 - 14. 코틀린에서 컬렉션을 다루는 방법">
+<meta name="twitter:description" content="자바 개발자를 위한 코틀린 입문 에 강의 내용을 정리한 내용이다.코틀린에서 컬렉션을 다루는 방법에 대해서 설명한다.">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/github.png">
 
-<link rel="canonical" href="https://jaehyun8719.github.io/2022/08/22/kotlin/basic/chapter11/">
+<link rel="canonical" href="https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>자바 개발자를 위한 코틀린 입문 - 11. 코틀린에서 접근 제어를 다루는 방법 | Jaehyun's Dev Story</title>
+  <title>자바 개발자를 위한 코틀린 입문 - 14. 코틀린에서 컬렉션을 다루는 방법 | Jaehyun's Dev Story</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158660323-1"></script>
     <script>
@@ -202,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2022/08/22/kotlin/basic/chapter11/">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -215,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          자바 개발자를 위한 코틀린 입문 - 11. 코틀린에서 접근 제어를 다루는 방법
+          자바 개발자를 위한 코틀린 입문 - 14. 코틀린에서 컬렉션을 다루는 방법
         </h1>
 
         <div class="post-meta">
@@ -225,20 +225,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-08-22 00:00:00" itemprop="dateCreated datePublished" datetime="2022-08-22T00:00:00+09:00">2022-08-22</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/kotlin/" itemprop="url" rel="index"><span itemprop="name">kotlin</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/kotlin/kotlin-basic/" itemprop="url" rel="index"><span itemprop="name">kotlin basic</span></a>
-                </span>
+              <time title="Created: 2022-08-24 20:00:00" itemprop="dateCreated datePublished" datetime="2022-08-24T20:00:00+09:00">2022-08-24</time>
             </span>
 
           
@@ -250,8 +237,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2022/08/22/kotlin/basic/chapter11/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/08/22/kotlin/basic/chapter11/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2022/08/24/kotlin/basic/chapter14/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/08/24/kotlin/basic/chapter14/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -267,66 +254,18 @@
 
       
         <hr>
-<p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 접근 제어를 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
-<h2 id="접근-제어"><a href="#접근-제어" class="headerlink" title="접근 제어"></a>접근 제어</h2><ul>
-<li>Koltin의 기본 접근 지시어는 <code>public</code> 이다</li>
+<p><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">자바 개발자를 위한 코틀린 입문</a> 에 강의 내용을 정리한 내용이다.<br>코틀린에서 컬렉션을 다루는 방법에 대해서 설명한다.<br><a id="more"></a></p>
+<h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><p>가변(Mutable) 컬렉션은 컬렉션에 elemendt를 추가, 삭제할 수 있다.<br>불변 컬렉션은 element를 추가, 삭제할 수 없다. </p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 불변</span><br><span class="line">val numbers = listOf(100, 200)</span><br><span class="line">// 가변</span><br><span class="line">val numbers = mutableListOf(100, 200)</span><br><span class="line">numbers.add(300)</span><br><span class="line"></span><br><span class="line">val emptyList = emptyList&lt;Int&gt;()</span><br><span class="line"></span><br><span class="line">// 값 출력</span><br><span class="line">println(numbers[0])</span><br><span class="line"></span><br><span class="line">// For Each</span><br><span class="line">for (number in numbers) &#123;</span><br><span class="line">    println(number)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 전통적인 for문</span><br><span class="line">for ((index, number) in numbers.withIndex()) &#123;</span><br><span class="line">    println(&quot;$index $number&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><p>Set은 List와 다르게 순서가 없고, 값은 element는 하나만 존재할 수 있다<br>자료구조적 의미만 제외하면 모든 기능은 List와 비슷하다.</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 불변</span></span><br><span class="line"><span class="keyword">val</span> numbers = setOf(<span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line"><span class="comment">// 가변</span></span><br><span class="line"><span class="keyword">val</span> mutableNumbers = mutableSetOf(<span class="number">100</span>, <span class="number">200</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Map</span></span><br><span class="line"><span class="keyword">val</span> map = mutableMapOf&lt;<span class="built_in">Int</span>, String&gt;()</span><br><span class="line">map[<span class="number">1</span>] = <span class="string">"MONDAY"</span></span><br><span class="line">map[<span class="number">2</span>] = <span class="string">"SUNDAY"</span></span><br><span class="line"></span><br><span class="line">mapOf(<span class="number">1</span> to <span class="string">"MONDAY"</span>, <span class="number">2</span> to <span class="string">"SUNDAY"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// for</span></span><br><span class="line"><span class="keyword">for</span> (key <span class="keyword">in</span> map.keys) &#123;</span><br><span class="line">    println(key)</span><br><span class="line">    println(map[key])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ((key, value) <span class="keyword">in</span> map.entries) &#123;</span><br><span class="line">    println(key)</span><br><span class="line">    println(value)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="컬렉션의-null-가능성"><a href="#컬렉션의-null-가능성" class="headerlink" title="컬렉션의 null 가능성"></a>컬렉션의 null 가능성</h2><ul>
+<li>List&lt;Int?&gt;: 리스트에 null 들어갈 수 있지만, 리스트는 절대 null이 아님</li>
+<li>List<int>?: 리스트에 null 들어갈 수 없지만, 리스트는 절대 null일 수 있음</int></li>
+<li>List&lt;Int?&gt;?: 리스트에 null이 들어갈 수도 있고, 리스트가 null일 수도 있음</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>접근 제어 명령어</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public</td>
-<td>모든 곳에서 접근 가능</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>선언된 클래스 또는 하위 클래스에서만 접급 가능</td>
-</tr>
-<tr>
-<td>internal</td>
-<td>같은 모듈에서만 접근 가능</td>
-</tr>
-<tr>
-<td>private</td>
-<td>선언된 클래스 내에서만 접근 가능</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Kotlin 파일</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>접근 제어 명령어</th>
-<th>설명</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public</td>
-<td>기본값은 어디서든 접근</td>
-</tr>
-<tr>
-<td>protected</td>
-<td>파일(최상단)에는 사용 불가능</td>
-</tr>
-<tr>
-<td>internal</td>
-<td>같은 모듈에서만 접근 가능</td>
-</tr>
-<tr>
-<td>private</td>
-<td>같은 파일 내에서만 접근 가능</td>
-</tr>
-</tbody>
-</table>
-<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-basic/tree/11-visibility-modifier" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
+<h2 id="소스코드"><a href="#소스코드" class="headerlink" title="소스코드"></a>소스코드</h2><p><a href="https://github.com/jaehyun8719/kotlin-basic/tree/14-collection" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/github.png" width="200"></a></p>
 <h2 id="참조"><a href="#참조" class="headerlink" title="참조"></a>참조</h2><ul>
 <li><a href="https://www.inflearn.com/course/java-to-kotlin" rel="external nofollow noopener noreferrer" target="_blank">https://www.inflearn.com/course/java-to-kotlin</a></li>
 </ul>
@@ -349,13 +288,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/08/20/kotlin/basic/chapter10/" rel="prev" title="자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법">
-      <i class="fa fa-chevron-left"></i> 자바 개발자를 위한 코틀린 입문 - 10. 코틀린에서 상속을 다루는 방법
+    <a href="/2022/08/24/kotlin/basic/chapter13/" rel="prev" title="자바 개발자를 위한 코틀린 입문 - 13. 코틀린에서 다양한를 다루는 방법">
+      <i class="fa fa-chevron-left"></i> 자바 개발자를 위한 코틀린 입문 - 13. 코틀린에서 다양한를 다루는 방법
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/08/22/kotlin/basic/chapter12/" rel="next" title="자바 개발자를 위한 코틀린 입문 - 12. 코틀린에서 object를 다루는 방법">
-      자바 개발자를 위한 코틀린 입문 - 12. 코틀린에서 object를 다루는 방법 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -421,7 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#접근-제어"><span class="nav-number">1.</span> <span class="nav-text">접근 제어</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">2.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">3.</span> <span class="nav-text">참조</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection"><span class="nav-number">1.</span> <span class="nav-text">Collection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#List"><span class="nav-number">1.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.2.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">1.3.</span> <span class="nav-text">Map</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#컬렉션의-null-가능성"><span class="nav-number">2.</span> <span class="nav-text">컬렉션의 null 가능성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#소스코드"><span class="nav-number">3.</span> <span class="nav-text">소스코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#참조"><span class="nav-number">4.</span> <span class="nav-text">참조</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -567,9 +503,9 @@ if (document.querySelectorAll('pre.mermaid').length) {
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://jaehyun8719.github.io/2022/08/22/kotlin/basic/chapter11/";
-    this.page.identifier = "2022/08/22/kotlin/basic/chapter11/";
-    this.page.title = "자바 개발자를 위한 코틀린 입문 - 11. 코틀린에서 접근 제어를 다루는 방법";
+    this.page.url = "https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/";
+    this.page.identifier = "2022/08/24/kotlin/basic/chapter14/";
+    this.page.title = "자바 개발자를 위한 코틀린 입문 - 14. 코틀린에서 컬렉션을 다루는 방법";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
