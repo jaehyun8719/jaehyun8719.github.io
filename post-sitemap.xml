@@ -8,7 +8,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/09/01/jpa/advanced-mapping/</loc>
+        <loc>https://jaehyun8719.github.io/2022/09/01/jpa/basic/advanced-mapping/</loc>
         <lastmod>2022-09-01T11:51:08.003Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -136,7 +136,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/05/28/jpa/relation-mapping/</loc>
+        <loc>https://jaehyun8719.github.io/2022/05/28/jpa/basic/relation-mapping/</loc>
         <lastmod>2022-05-28T09:58:56.262Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -144,7 +144,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/05/23/jpa/entity-mapping/</loc>
+        <loc>https://jaehyun8719.github.io/2022/05/23/jpa/basic/entity-mapping/</loc>
         <lastmod>2022-05-23T13:28:27.216Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -152,7 +152,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/05/14/jpa/persistence-context/</loc>
+        <loc>https://jaehyun8719.github.io/2022/05/14/jpa/basic/persistence-context/</loc>
         <lastmod>2022-05-14T18:41:52.766Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -18,8 +18,8 @@
   
   <entry>
     <title>JPA - 고급 맵핑(Advancded Mapping)</title>
-    <link href="https://jaehyun8719.github.io/2022/09/01/jpa/advanced-mapping/"/>
-    <id>https://jaehyun8719.github.io/2022/09/01/jpa/advanced-mapping/</id>
+    <link href="https://jaehyun8719.github.io/2022/09/01/jpa/basic/advanced-mapping/"/>
+    <id>https://jaehyun8719.github.io/2022/09/01/jpa/basic/advanced-mapping/</id>
     <published>2022-08-31T15:00:00.000Z</published>
     <updated>2022-09-01T11:51:08.003Z</updated>
     
@@ -440,8 +440,8 @@
   
   <entry>
     <title>JPA - 연관관계 매핑(Realation Mapping)</title>
-    <link href="https://jaehyun8719.github.io/2022/05/28/jpa/relation-mapping/"/>
-    <id>https://jaehyun8719.github.io/2022/05/28/jpa/relation-mapping/</id>
+    <link href="https://jaehyun8719.github.io/2022/05/28/jpa/basic/relation-mapping/"/>
+    <id>https://jaehyun8719.github.io/2022/05/28/jpa/basic/relation-mapping/</id>
     <published>2022-05-27T15:00:00.000Z</published>
     <updated>2022-05-28T09:58:56.262Z</updated>
     
@@ -471,8 +471,8 @@
   
   <entry>
     <title>JPA - 엔티티 매핑(Entity Mapping)</title>
-    <link href="https://jaehyun8719.github.io/2022/05/23/jpa/entity-mapping/"/>
-    <id>https://jaehyun8719.github.io/2022/05/23/jpa/entity-mapping/</id>
+    <link href="https://jaehyun8719.github.io/2022/05/23/jpa/basic/entity-mapping/"/>
+    <id>https://jaehyun8719.github.io/2022/05/23/jpa/basic/entity-mapping/</id>
     <published>2022-05-22T15:00:00.000Z</published>
     <updated>2022-05-23T13:28:27.216Z</updated>
     
@@ -505,8 +505,8 @@
   
   <entry>
     <title>JPA - 영속성 컨텍스트(Persistence Context)</title>
-    <link href="https://jaehyun8719.github.io/2022/05/14/jpa/persistence-context/"/>
-    <id>https://jaehyun8719.github.io/2022/05/14/jpa/persistence-context/</id>
+    <link href="https://jaehyun8719.github.io/2022/05/14/jpa/basic/persistence-context/"/>
+    <id>https://jaehyun8719.github.io/2022/05/14/jpa/basic/persistence-context/</id>
     <published>2022-05-13T15:00:00.000Z</published>
     <updated>2022-05-14T18:41:52.766Z</updated>
     
