@@ -3,6 +3,41 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/EAGER/</loc>
+        <lastmod>2022-09-02T13:01:25.757Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/LAZY/</loc>
+        <lastmod>2022-09-02T13:01:25.757Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/%EC%A6%89%EC%8B%9C%EB%A1%9C%EB%94%A9/</loc>
+        <lastmod>2022-09-02T13:01:25.757Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/%EC%A7%80%EC%97%B0%EB%A1%9C%EB%94%A9/</loc>
+        <lastmod>2022-09-02T13:01:25.757Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/JPA/</loc>
+        <lastmod>2022-09-02T13:01:25.757Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/%EA%B3%A0%EA%B8%89-%EB%A7%B5%ED%95%91/</loc>
         <lastmod>2022-09-01T11:51:08.003Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -11,13 +46,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Advancded-Mapping/</loc>
-        <lastmod>2022-09-01T11:51:08.003Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/JPA/</loc>
         <lastmod>2022-09-01T11:51:08.003Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
