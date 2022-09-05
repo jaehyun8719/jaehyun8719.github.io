@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2022/09/05/jpa/basic/cascade-orphan/</loc>
+        <lastmod>2022-09-05T12:25:31.816Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2022/09/02/jpa/basic/lazy-eager/</loc>
-        <lastmod>2022-09-02T13:10:30.351Z</lastmod>
+        <lastmod>2022-09-05T12:12:02.233Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
