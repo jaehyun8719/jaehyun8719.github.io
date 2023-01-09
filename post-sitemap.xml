@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2023/01/09/jpa/basic/embedded-type/</loc>
+        <lastmod>2023-01-09T13:14:22.817Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2022/09/02/jpa/basic/lazy-eager/</loc>
         <lastmod>2022-09-06T04:55:56.973Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,16 +40,16 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/08/26/kotlin/basic/chapter15/</loc>
-        <lastmod>2022-08-26T11:12:26.373Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/</loc>
+        <lastmod>2022-09-01T09:58:33.782Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2022/08/24/kotlin/basic/chapter14/</loc>
-        <lastmod>2022-08-24T12:34:30.393Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2022/08/26/kotlin/basic/chapter15/</loc>
+        <lastmod>2022-08-26T11:12:26.373Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -137,7 +145,7 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2022/08/11/kotlin/basic/chapter2/</loc>
-        <lastmod>2022-08-11T11:20:02.163Z</lastmod>
+        <lastmod>2022-08-11T11:20:58.723Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -176,14 +184,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
-        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2020/06/10/webpack/plugin/</loc>
         <lastmod>2022-04-08T07:52:50.128Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -192,8 +192,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
-        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/06/04/webpack/setup/</loc>
+        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -208,15 +208,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
-        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -232,7 +224,23 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
+        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
+        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -241,14 +249,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/05/28/springboot/auto-configuration/</loc>
-        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -273,6 +273,14 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
+        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -368,22 +376,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
-        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
-        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -400,7 +392,23 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
+        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/06/23/java/java8inaction/chapter4/</loc>
+        <lastmod>2022-04-08T07:52:50.123Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2019/07/06/java/java8inaction/chapter6/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

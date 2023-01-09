@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/embedded-type/</loc>
+        <lastmod>2023-01-09T13:14:22.817Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/value-type/</loc>
+        <lastmod>2023-01-09T13:14:22.817Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/JPA/</loc>
+        <lastmod>2023-01-09T13:14:22.817Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/EAGER/</loc>
         <lastmod>2022-09-06T04:55:56.973Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,13 +52,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/JPA/</loc>
-        <lastmod>2022-09-06T04:55:56.973Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/tags/koltin-JPA/</loc>
         <lastmod>2022-09-06T04:55:56.972Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,14 +74,14 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/kotlin-basic/</loc>
-        <lastmod>2022-08-26T11:12:26.373Z</lastmod>
+        <lastmod>2022-09-01T09:58:33.782Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/kotlin/</loc>
-        <lastmod>2022-08-26T11:12:26.373Z</lastmod>
+        <lastmod>2022-09-01T09:58:33.782Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -136,20 +150,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</loc>
-        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-plugin/</loc>
-        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/tags/webpack-output/</loc>
         <lastmod>2022-04-08T07:52:50.128Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -164,6 +164,20 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8/</loc>
+        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-plugin/</loc>
+        <lastmod>2022-04-08T07:52:50.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/webpack/</loc>
         <lastmod>2022-04-08T07:52:50.128Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -171,14 +185,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-%EB%A1%9C%EB%8D%94/</loc>
-        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-loader/</loc>
+        <loc>https://jaehyun8719.github.io/tags/webpack-dev-server/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -199,7 +206,14 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-dev-server/</loc>
+        <loc>https://jaehyun8719.github.io/tags/webpack-%EB%A1%9C%EB%8D%94/</loc>
+        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-loader/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -248,6 +262,13 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
+        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/React/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -277,13 +298,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Auto-Configuration/</loc>
-        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Mybatis/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
