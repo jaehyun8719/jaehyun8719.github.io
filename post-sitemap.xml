@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization/</loc>
+        <lastmod>2023-06-03T09:24:56.947Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2023/05/27/jpa/api-optimization/lazyloadng-optimization/</loc>
         <lastmod>2023-05-27T07:49:30.560Z</lastmod>
         <changefreq>weekly</changefreq>
