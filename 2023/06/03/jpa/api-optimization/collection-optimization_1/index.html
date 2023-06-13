@@ -21,22 +21,22 @@
     var CONFIG = {"hostname":"jaehyun8719.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="API 개발 고급 - collection 조회 최적화collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
+  <meta name="description" content="API 개발 고급 - collection 조회 최적화 - 엔티티를 DTO로 변환collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
 <meta name="keywords" content="JPA Optimization, Collection Optimization, Fetch Join, 페이징, 지연 로딩, Hibernate5Module, SQL, JPQL, 네이티브 SQL, 스프링 JDBC Template">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JPA Collection 조회 최적화 1 - Fetch Join, 페이징, 지연 로딩">
-<meta property="og:url" content="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization/index.html">
+<meta property="og:url" content="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
-<meta property="og:description" content="API 개발 고급 - collection 조회 최적화collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
+<meta property="og:description" content="API 개발 고급 - collection 조회 최적화 - 엔티티를 DTO로 변환collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2023-06-03T14:52:49.003Z">
+<meta property="og:updated_time" content="2023-06-13T11:46:02.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JPA Collection 조회 최적화 1 - Fetch Join, 페이징, 지연 로딩">
-<meta name="twitter:description" content="API 개발 고급 - collection 조회 최적화collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
+<meta name="twitter:description" content="API 개발 고급 - collection 조회 최적화 - 엔티티를 DTO로 변환collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/github.png">
 
-<link rel="canonical" href="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization/">
+<link rel="canonical" href="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/">
 
 
 <script id="page-configurations">
@@ -138,17 +138,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">63</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">66</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">16</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">17</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">58</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">59</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -202,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization/">
+    <link itemprop="mainEntityOfPage" href="https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -233,7 +233,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JPA-Optimizaion/" itemprop="url" rel="index"><span itemprop="name">JPA Optimizaion</span></a>
+                  <a href="/categories/JPA-Optimization/" itemprop="url" rel="index"><span itemprop="name">JPA Optimization</span></a>
                 </span>
             </span>
 
@@ -246,8 +246,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/2023/06/03/jpa/api-optimization/collection-optimization/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/06/03/jpa/api-optimization/collection-optimization/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2023/06/03/jpa/api-optimization/collection-optimization_1/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023/06/03/jpa/api-optimization/collection-optimization_1/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -264,7 +264,7 @@
       
         <hr>
 <ul>
-<li>API 개발 고급 - collection 조회 최적화<br>collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법<a id="more"></a>
+<li>API 개발 고급 - collection 조회 최적화 - 엔티티를 DTO로 변환<br>collection인 일대다 관계(OneToMany)를 조회하고, 최적화하는 방법<a id="more"></a>
 </li>
 </ul>
 <h2 id="fetch-join-최적화"><a href="#fetch-join-최적화" class="headerlink" title="fetch join 최적화"></a>fetch join 최적화</h2><figure class="highlight kotlin"><figcaption><span>Order.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table(name = <span class="meta-string">"orders"</span>)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Order</span></span>(</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="meta">@Column(name = <span class="meta-string">"order_id"</span>)</span></span><br><span class="line">    <span class="keyword">var</span> id: <span class="built_in">Long</span>? = <span class="literal">null</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> orderDate: LocalDateTime? = <span class="literal">null</span>, <span class="comment">//주문시간</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Enumerated(EnumType.STRING)</span></span><br><span class="line">    <span class="keyword">var</span> status: OrderStatus? = <span class="literal">null</span>, <span class="comment">//주문상태 [ORDER, CANCEL]</span></span><br><span class="line">) &#123;</span><br><span class="line">    <span class="meta">@OneToMany(mappedBy = <span class="meta-string">"order"</span>, cascade = [CascadeType.ALL])</span></span><br><span class="line">    <span class="keyword">var</span> orderItems: MutableList&lt;OrderItem&gt; = ArrayList()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -302,10 +302,10 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/JPA-Optimizaion/" rel="tag"># JPA Optimizaion</a>
               <a href="/tags/fetch-join/" rel="tag"># fetch join</a>
-              <a href="/tags/Collection-Optimizaion/" rel="tag"># Collection Optimizaion</a>
               <a href="/tags/oneToMany-Paging/" rel="tag"># oneToMany Paging</a>
+              <a href="/tags/JPA-Optimization/" rel="tag"># JPA Optimization</a>
+              <a href="/tags/Collection-Optimization/" rel="tag"># Collection Optimization</a>
           </div>
 
         
@@ -317,7 +317,10 @@
     <a href="/2023/05/27/jpa/api-optimization/lazyloadng-optimization/" rel="prev" title="JPA - 지연 로딩과 조회 성능 최적화">
       <i class="fa fa-chevron-left"></i> JPA - 지연 로딩과 조회 성능 최적화
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/06/13/jpa/api-optimization/collection-optimization_2/" rel="next" title="JPA Collection 조회 최적화 2 - 컬렉션 조회, 플랫 데이터 최적화">
+      JPA Collection 조회 최적화 2 - 컬렉션 조회, 플랫 데이터 최적화 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -397,20 +400,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-count">66</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -529,8 +532,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization/";
-    this.page.identifier = "2023/06/03/jpa/api-optimization/collection-optimization/";
+    this.page.url = "https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/";
+    this.page.identifier = "2023/06/03/jpa/api-optimization/collection-optimization_1/";
     this.page.title = "JPA Collection 조회 최적화 1 - Fetch Join, 페이징, 지연 로딩";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
