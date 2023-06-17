@@ -8,8 +8,16 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2023/06/17/jpa/api-optimization/osiv/</loc>
+        <lastmod>2023-06-17T09:41:18.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2023/06/13/jpa/api-optimization/collection-optimization_2/</loc>
-        <lastmod>2023-06-13T12:50:06.101Z</lastmod>
+        <lastmod>2023-06-13T12:53:56.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -240,7 +248,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -248,7 +256,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/24/webpack/dev-server/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -304,6 +312,14 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
+        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -312,8 +328,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
-        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <loc>https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/</loc>
+        <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -328,7 +344,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/05/21/nodejs/nodejs-npm/</loc>
+        <loc>https://jaehyun8719.github.io/2019/09/17/javascript/es6/chapter5/</loc>
         <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -352,15 +368,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/09/17/javascript/es6/chapter5/</loc>
-        <lastmod>2022-04-08T07:52:50.125Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
+        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -368,7 +376,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
+        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -416,7 +424,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -432,7 +440,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/29/java/java8inaction/chapter5/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

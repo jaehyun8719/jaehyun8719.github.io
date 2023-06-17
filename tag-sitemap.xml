@@ -3,22 +3,36 @@
 
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/Open-Session-In-View/</loc>
+        <lastmod>2023-06-17T09:41:18.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/tags/JPA-OSIV/</loc>
+        <lastmod>2023-06-17T09:41:18.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/flat-data-Optimization/</loc>
-        <lastmod>2023-06-13T12:50:06.101Z</lastmod>
+        <lastmod>2023-06-13T12:53:56.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Collection-Optimization/</loc>
-        <lastmod>2023-06-13T12:50:06.101Z</lastmod>
+        <lastmod>2023-06-13T12:53:56.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/JPA-Optimization/</loc>
-        <lastmod>2023-06-13T12:50:06.101Z</lastmod>
+        <lastmod>2023-06-13T12:53:56.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -255,6 +269,13 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/webpack-dev-server/</loc>
+        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/sass/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -283,13 +304,6 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/tags/webpack-dev-server/</loc>
-        <lastmod>2022-04-08T07:52:50.127Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/tags/Logback/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -304,6 +318,13 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-WebServer/</loc>
+        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/React/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -312,13 +333,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/Spring-Boot-with-React/</loc>
-        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-WebServer/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -381,6 +395,13 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
+        <lastmod>2022-04-08T07:52:50.125Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/tags/NodeJs/</loc>
         <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -396,13 +417,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/tags/javascript/</loc>
-        <lastmod>2022-04-08T07:52:50.125Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/tags/Spring-Boot-Admin/</loc>
         <lastmod>2022-04-08T07:52:50.125Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
