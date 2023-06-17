@@ -8,32 +8,8 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/</loc>
-        <lastmod>2023-06-17T13:53:18.997Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2023/06/13/jpa/api-optimization/collection-optimization_2/</loc>
-        <lastmod>2023-06-17T13:53:18.956Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2023/06/17/jpa/api-optimization/osiv/</loc>
-        <lastmod>2023-06-17T13:53:18.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://jaehyun8719.github.io/2023/05/27/jpa/api-optimization/lazyloadng-optimization/</loc>
-        <lastmod>2023-05-27T07:49:30.560Z</lastmod>
+        <lastmod>2023-06-17T13:56:14.915Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -41,7 +17,31 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2023/03/30/jpa/api-optimization/basic/</loc>
-        <lastmod>2023-03-30T11:16:31.062Z</lastmod>
+        <lastmod>2023-06-17T13:56:05.688Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2023/06/17/jpa/api-optimization/osiv/</loc>
+        <lastmod>2023-06-17T13:56:05.687Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2023/06/03/jpa/api-optimization/collection-optimization_1/</loc>
+        <lastmod>2023-06-17T13:56:05.654Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/2023/06/13/jpa/api-optimization/collection-optimization_2/</loc>
+        <lastmod>2023-06-17T13:56:05.653Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -248,7 +248,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -264,7 +264,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/17/webpack/babel/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -272,7 +272,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/06/05/webpack/loader/</loc>
+        <loc>https://jaehyun8719.github.io/2020/06/22/webpack/eslint-prettier/</loc>
         <lastmod>2022-04-08T07:52:50.127Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -288,6 +288,14 @@
     </url>
 
     <url>
+        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
+        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://jaehyun8719.github.io/2019/05/17/springboot/logback-spring/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -296,7 +304,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/15/springboot/mybatis/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -313,14 +321,6 @@
 
     <url>
         <loc>https://jaehyun8719.github.io/2019/09/25/springboot/with-react/</loc>
-        <lastmod>2022-04-08T07:52:50.126Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://jaehyun8719.github.io/2019/06/06/springboot/web-server/</loc>
         <lastmod>2022-04-08T07:52:50.126Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -368,7 +368,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
+        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -376,7 +376,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/07/14/java/java8inaction/chapter7/</loc>
+        <loc>https://jaehyun8719.github.io/2019/07/15/java/java8inaction/chapter8/</loc>
         <lastmod>2022-04-08T07:52:50.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -416,7 +416,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -424,7 +424,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2019/06/16/java/java8inaction/chapter3/</loc>
+        <loc>https://jaehyun8719.github.io/2019/06/03/java/java8inaction/chapter2/</loc>
         <lastmod>2022-04-08T07:52:50.123Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -456,7 +456,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/</loc>
+        <loc>https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -464,7 +464,7 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/2020/04/22/aws/blue-green-deployment/</loc>
+        <loc>https://jaehyun8719.github.io/2020/02/20/aws/auto-scaling/</loc>
         <lastmod>2022-04-08T07:52:50.122Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
