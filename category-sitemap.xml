@@ -8,14 +8,21 @@
     </url>
 
     <url>
-        <loc>https://jaehyun8719.github.io/categories/JPA/JPA-Optimizaion/</loc>
-        <lastmod>2023-06-17T13:56:14.915Z</lastmod>
+        <loc>https://jaehyun8719.github.io/categories/JPA/Data-JPA/</loc>
+        <lastmod>2023-07-03T13:32:12.859Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://jaehyun8719.github.io/categories/JPA/</loc>
+        <lastmod>2023-07-03T13:32:12.859Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://jaehyun8719.github.io/categories/JPA/JPA-Optimizaion/</loc>
         <lastmod>2023-06-17T13:56:14.915Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
