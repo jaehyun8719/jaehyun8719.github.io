@@ -30,7 +30,7 @@
 <meta property="og:description" content="Spring Data JPA 쿼리 메소드 기능@Query, 리포지토리 메소드에 쿼리 정의하기, Dto조회하기, 파라미터 바인딩">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2023-08-12T09:21:26.273Z">
+<meta property="og:updated_time" content="2023-08-12T09:24:21.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Data JPA - Query">
 <meta name="twitter:description" content="Spring Data JPA 쿼리 메소드 기능@Query, 리포지토리 메소드에 쿼리 정의하기, Dto조회하기, 파라미터 바인딩">
@@ -282,7 +282,7 @@
 <p>  이 방식의 단점은 파라미터의 순서가 바뀌면 쿼리의 의미가 달라질 수 있습니다.</p>
 </li>
 <li><p><strong>이름 기반 바인딩</strong>:<br>  쿼리 내부에서 사용할 변수명 앞에 <code>:</code>를 붙여 사용합니다. 이후 <code>@Param</code> 어노테이션을 이용해 메서드 파라미터와 매핑시킵니다.</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Query(&quot;select m from Member m where m.username = :name&quot;)</span><br><span class="line">fun findMembers(@Param(&quot;name&quot;) username: String);</span><br></pre></td></tr></table></figure>
+  <figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Query(<span class="meta-string">"select m from Member m where m.username = :name"</span>)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findMembers</span><span class="params">(<span class="meta">@Param(<span class="meta-string">"name"</span>)</span> username: <span class="type">String</span>)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>  이 방식의 장점은 쿼리의 의미가 바뀌지 않고, 코드의 가독성이 좋아집니다.</p>
 </li>
 </ul>
