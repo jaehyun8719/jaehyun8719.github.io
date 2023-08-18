@@ -24,15 +24,15 @@
   <meta name="description" content="Spring Data JPA 반환 타입">
 <meta name="keywords" content="스프링 데이터 JPA, 반환 타입, Kotlin, 컬렉션 반환, 단건 반환, Optional, Nullable, JPQL, Query.getSingleResult(), javax.persistence.NonUniqueResultException, javax.persistence.NoResultException, 스프링 데이터 JPA 공식 문서, null safety, 데이터 처리">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Data JPA - 반환 타ㅂ">
+<meta property="og:title" content="Spring Data JPA - 반환 타입">
 <meta property="og:url" content="https://jaehyun8719.github.io/2023/08/17/jpa/data-jpa/query-method/04-return-type/index.html">
 <meta property="og:site_name" content="Jaehyun&#39;s Dev Story">
 <meta property="og:description" content="Spring Data JPA 반환 타입">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://jaehyun8719.github.io/images/github.png">
-<meta property="og:updated_time" content="2023-08-18T07:21:27.324Z">
+<meta property="og:updated_time" content="2023-08-18T08:32:40.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Data JPA - 반환 타ㅂ">
+<meta name="twitter:title" content="Spring Data JPA - 반환 타입">
 <meta name="twitter:description" content="Spring Data JPA 반환 타입">
 <meta name="twitter:image" content="https://jaehyun8719.github.io/images/github.png">
 
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>Spring Data JPA - 반환 타ㅂ | Jaehyun's Dev Story</title>
+  <title>Spring Data JPA - 반환 타입 | Jaehyun's Dev Story</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158660323-1"></script>
     <script>
@@ -148,7 +148,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">65</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">66</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -215,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Spring Data JPA - 반환 타ㅂ
+          Spring Data JPA - 반환 타입
         </h1>
 
         <div class="post-meta">
@@ -269,7 +269,7 @@
         <hr>
 <p>Spring Data JPA 반환 타입<br><a id="more"></a></p>
 <h1 id="스프링-데이터-JPA의-유연한-반환-타입-이해하기"><a href="#스프링-데이터-JPA의-유연한-반환-타입-이해하기" class="headerlink" title="스프링 데이터 JPA의 유연한 반환 타입 이해하기"></a>스프링 데이터 JPA의 유연한 반환 타입 이해하기</h1><p>스프링 데이터 JPA는 개발자의 생산성 향상을 위해 다양한 반환 타입을 지원하며, 이에 따른 다양한 케이스에 대응할 수 있게 해줍니다.</p>
-<h2 id="지원되는-반환-타입"><a href="#지원되는-반환-타입" class="headerlink" title="지원되는 반환 타입"></a>지원되는 반환 타입</h2><p>스프링 데이터 JPA는 다음과 같은 반환 타입을 지원합니다:<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: List&lt;Member&gt; <span class="comment">//컬렉션 반환</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: Member?      <span class="comment">//단건 반환 (Nullable)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: Optional&lt;Member&gt; <span class="comment">//단건 Optional 반환</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="지원되는-반환-타입"><a href="#지원되는-반환-타입" class="headerlink" title="지원되는 반환 타입"></a>지원되는 반환 타입</h2><p>스프링 데이터 JPA는 다음과 같은 반환 타입을 지원합니다:<br><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: List&lt;Member&gt; <span class="comment">//컬렉션 반환 </span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: Member?      <span class="comment">//단건 반환 (Nullable)</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">findByUsername</span><span class="params">(name: <span class="type">String</span>)</span></span>: Optional&lt;Member&gt; <span class="comment">//단건 Optional 반환</span></span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><strong>컬렉션 반환</strong>: 조회 결과가 여러 개일 경우 사용합니다.</li>
 <li><strong>단건 반환</strong>: 조회 결과가 하나만 있을 경우 사용합니다.</li>
@@ -318,7 +318,10 @@
     <a href="/2023/08/12/jpa/data-jpa/query-method/03-query/" rel="prev" title="Spring Data JPA - Query">
       <i class="fa fa-chevron-left"></i> Spring Data JPA - Query
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/08/18/jpa/data-jpa/query-method/05-paging/" rel="next" title="Spring Data JPA - 페이징과 정렬">
+      Spring Data JPA - 페이징과 정렬 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -398,7 +401,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -532,7 +535,7 @@ if (document.querySelectorAll('pre.mermaid').length) {
   var disqus_config = function() {
     this.page.url = "https://jaehyun8719.github.io/2023/08/17/jpa/data-jpa/query-method/04-return-type/";
     this.page.identifier = "2023/08/17/jpa/data-jpa/query-method/04-return-type/";
-    this.page.title = "Spring Data JPA - 반환 타ㅂ";
+    this.page.title = "Spring Data JPA - 반환 타입";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
